@@ -307,7 +307,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
     <p>Fünf Schritte von der Anfrage bis zur leeren Fläche.</p>
   </div>
   <ol class="steps">
-    <li class="reveal"><h3>Anfrage</h3><p>Formular, Anruf oder WhatsApp. Fotos helfen bei der ersten Einschätzung.</p></li>
+    <li class="reveal"><h3>Anfrage</h3><p>Formular, Anruf oder E-Mail. Fotos helfen bei der ersten Einschätzung.</p></li>
     <li class="reveal"><h3>Besichtigung</h3><p>Wir sehen uns alles vor Ort an. Kostenlos und unverbindlich.</p></li>
     <li class="reveal"><h3>Festpreis</h3><p>Schriftliches Angebot mit allen Kosten, auch für die Entsorgung.</p></li>
     <li class="reveal"><h3>Ausführung</h3><p>Abriss und Rückbau zum vereinbarten Termin, Schutt wird getrennt entsorgt.</p></li>
@@ -364,7 +364,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
       <p>Kostenlos und unverbindlich. Wir melden uns innerhalb eines Werktags.</p>
     </div>
     <div class="direct">
-      <div><span class="label">Telefon und WhatsApp</span><strong><a href="tel:+4917632896617">0176 32896617</a></strong></div>
+      <div><span class="label">Telefon</span><strong><a href="tel:+4917632896617">0176 32896617</a></strong></div>
       <div><span class="label">E-Mail</span><strong><a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a></strong></div>
       <div><span class="label">Adresse</span><span>Dosestraße 11, 22767 Hamburg</span></div>
       <div class="slot" aria-live="polite"><span class="label">Nächster möglicher Besichtigungstermin</span><strong id="slot">Mo–Fr ab 16:30, Sa ab 9:00</strong></div>
@@ -384,11 +384,10 @@ input[aria-invalid="true"]{border-color:var(--danger)}
     <label for="wunsch">Wunschtermin<input id="wunsch" name="wunsch"></label>
     <label for="text">Was soll gemacht werden?<textarea id="text" name="text" placeholder="z. B. Gartenhaus aus Holz, ca. 3 × 4 m, soll komplett weg"></textarea></label>
     <div class="send">
-      <button class="btn" type="submit">Per WhatsApp senden <span class="arr" aria-hidden="true">→</span></button>
-      <button class="btn alt" type="button" id="mail">Per E-Mail senden</button>
+      <button class="btn" type="submit">Anfrage per E-Mail senden <span class="arr" aria-hidden="true">→</span></button>
     </div>
     <p class="err" id="err" role="alert" hidden>Bitte Name und Telefonnummer eintragen.</p>
-    <p class="ok" id="ok" hidden>WhatsApp oder Ihr E-Mail-Programm öffnet sich mit Ihrer Anfrage. Bitte dort noch auf Senden tippen.</p>
+    <p class="ok" id="ok" hidden>Ihr E-Mail-Programm öffnet sich mit Ihrer Anfrage. Bitte dort noch auf Senden tippen. Öffnet sich nichts? Schreiben Sie direkt an <a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a>.</p>
   </form>
 </div></section>
 </main>
@@ -441,10 +440,6 @@ input[aria-invalid="true"]{border-color:var(--danger)}
   }
   f.addEventListener('submit',function(e){
     e.preventDefault(); if(!valid()) return; ok.hidden=false;
-    location.href='https://wa.me/4917632896617?text='+encodeURIComponent(msg());
-  });
-  document.getElementById('mail').addEventListener('click',function(){
-    if(!valid()) return; ok.hidden=false;
     location.href='mailto:info@ta-abriss-hamburg.de?subject='+encodeURIComponent('Anfrage Besichtigung')+'&body='+encodeURIComponent(msg());
   });
 })();
