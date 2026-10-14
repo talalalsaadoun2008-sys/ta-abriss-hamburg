@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ta-abriss-hamburg.de/sitemap.xml

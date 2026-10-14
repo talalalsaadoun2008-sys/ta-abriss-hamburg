@@ -1,0 +1,15 @@
+:root{--bg:#f3f4f2;--surface:#fff;--ink:#1c2328;--muted:#5b656c;--line:#d5d9d6;--accent:#e2571c;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#14191c;--surface:#1c2328;--ink:#e8ebe9;--muted:#9aa4aa;--line:#2f383e;--accent:#f2733a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3","Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:1rem;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;color:var(--ink);font:600 1.3rem/1 "Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase}
+.brand b{color:var(--accent);font-weight:800}
+main{padding-block:2.5rem 3rem}
+h1{font:800 2.6rem/1.05 "Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;margin:0 0 1.5rem}
+h2{font:700 1.4rem/1.2 "Barlow Condensed","Arial Narrow",sans-serif;margin:2rem 0 .4rem}
+p{margin:0 0 .8rem;max-width:65ch}
+a{color:var(--accent)}
+.stand{color:var(--muted);margin-top:2rem}
+footer{padding-block:1.5rem 2.5rem;border-top:1px solid var(--line);color:var(--muted)}
