@@ -1,0 +1,56 @@
+{
+  "base_url": "https://ta-abriss-hamburg.de/",
+  "firma": {
+    "name": "T&A Abriss & Rückbau",
+    "inhaber": "Talal Al Saadoun",
+    "strasse": "Dosestraße 11",
+    "plz": "22767",
+    "ort": "Hamburg",
+    "telefon": "0176 32896617",
+    "telefon_link": "+4917632896617",
+    "telefon_schema": "+49 176 32896617",
+    "email": "info@ta-abriss-hamburg.de",
+    "beschreibung": "Abriss, Entkernung, Innenabbruch und Trockenbau in Hamburg."
+  },
+  "startseite_anker": [
+    {"name": "Startseite", "anker": "start"},
+    {"name": "Leistungen", "anker": "leistungen", "kopfzeile": "Leistungen"},
+    {"name": "Ablauf", "anker": "ablauf", "kopfzeile": "Ablauf"},
+    {"name": "Einsatzgebiet", "anker": "gebiet", "kopfzeile": "Einsatzgebiet"},
+    {"name": "Häufige Fragen", "anker": "fragen", "kopfzeile": "Fragen"},
+    {"name": "Kontakt", "anker": "anfrage"}
+  ],
+  "leistungen": [
+    {"slug": "kleinabriss-hamburg", "name": "Kleinabriss", "bild": "abriss",
+     "kurz": "Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage."},
+    {"slug": "entkernung-hamburg", "name": "Entkernung", "bild": "entkernung",
+     "kurz": "Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung."},
+    {"slug": "innenabbruch-hamburg", "name": "Innenabbruch", "bild": "innenabbruch",
+     "kurz": "Gezielter Rückbau einzelner Bauteile in bewohnten Häusern."},
+    {"slug": "trockenbau-hamburg", "name": "Trockenbau", "bild": "trockenbau",
+     "kurz": "Nach dem Abriss direkt neu aufbauen, ohne zweite Firma."}
+  ],
+  "bezirke": [
+    {"slug": "abriss-hamburg-altona", "name": "Altona", "gebiet": "Hamburg-Altona", "entfernung": "Sitz"},
+    {"slug": "abriss-hamburg-eimsbuettel", "name": "Eimsbüttel", "gebiet": "Hamburg-Eimsbüttel", "entfernung": "ca. 4 km"},
+    {"slug": "abriss-hamburg-mitte", "name": "Hamburg-Mitte", "gebiet": "Hamburg-Mitte", "entfernung": "ca. 4 km"},
+    {"slug": "abriss-hamburg-nord", "name": "Hamburg-Nord", "gebiet": "Hamburg-Nord", "entfernung": "ca. 8 km"},
+    {"slug": "abriss-hamburg-wandsbek", "name": "Wandsbek", "gebiet": "Hamburg-Wandsbek", "entfernung": "ca. 12 km"},
+    {"slug": "abriss-hamburg-harburg", "name": "Harburg", "gebiet": "Hamburg-Harburg", "entfernung": "ca. 12 km"},
+    {"slug": "abriss-hamburg-bergedorf", "name": "Bergedorf", "gebiet": "Hamburg-Bergedorf", "entfernung": "ca. 22 km"}
+  ],
+  "ratgeber": [
+    {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"}
+  ],
+  "rechtliches": [
+    {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},
+    {"slug": "datenschutz", "name": "Datenschutz", "title": "Datenschutz · T&A Abriss & Rückbau"}
+  ],
+  "bilder": {
+    "abriss": {"w": 1024, "h": 559, "alt": "Abriss einer Ziegelwand mit dem Vorschlaghammer"},
+    "entkernung": {"w": 678, "h": 452, "alt": "Entkernte Wohnung mit Schutt auf dem Boden"},
+    "innenabbruch": {"w": 640, "h": 480, "alt": "Wanddurchbruch mit dem Abbruchhammer"},
+    "trockenbau": {"w": 900, "h": 806, "alt": "Montage einer abgehängten Decke im Trockenbau"}
+  },
+  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Weiß ich noch nicht"]
+}

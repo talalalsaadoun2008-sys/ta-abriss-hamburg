@@ -12,223 +12,84 @@
 <meta property="og:description" content="Kleinabriss, Entkernung, Innenabbruch und Trockenbau. Festpreis nach kostenloser Besichtigung, auch abends und samstags.">
 <meta property="og:image" content="https://ta-abriss-hamburg.de/img/abriss.jpg">
 <meta property="og:url" content="https://ta-abriss-hamburg.de/">
-<link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "name": "T&A Abriss & Rückbau", "description": "Abriss, Entkernung, Innenabbruch und Trockenbau in Hamburg.", "url": "https://ta-abriss-hamburg.de/", "image": "https://ta-abriss-hamburg.de/img/abriss.jpg", "telephone": "+49 176 32896617", "email": "info@ta-abriss-hamburg.de", "address": {"@type": "PostalAddress", "streetAddress": "Dosestraße 11", "postalCode": "22767", "addressLocality": "Hamburg", "addressCountry": "DE"}, "areaServed": {"@type": "City", "name": "Hamburg"}}</script>
 <title>Abriss, Entkernung &amp; Trockenbau in Hamburg | T&amp;A Abriss &amp; Rückbau</title>
 <meta name="description" content="Abriss, Entkernung, Innenabbruch und Trockenbau in Hamburg. Kostenlose Besichtigung, Festpreis-Angebot, besenreine Übergabe.">
-<style>
-/* Layout: Foto-Hero mit Laufband, dann klare Abschnitte; Signalorange nur für Handlungen. Bewegung: Hero beim Laden, sanfte Einblendung beim Scrollen, Hover an Karten und Buttons */
-:root{
-  --bg:#f3f4f2; --surface:#ffffff; --ink:#1c2328; --muted:#5b656c; --line:#d5d9d6;
-  --accent:#e2571c; --accent-ink:#ffffff; --band:#1c2328; --band-ink:#eef0ee;
-  --on-photo:#ffffff; --photo-shade:rgba(12,16,19,.78);
-  --draft:#fff3c4; --draft-ink:#5a4600;
-  --header:rgba(255,255,255,.82);
-  --shadow:0 18px 40px -18px rgba(20,28,34,.35);
-  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --f-body:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  --s2:.5rem;--s3:1rem;--s4:1.5rem;--s5:2.5rem;--s6:4.5rem;
-  --ease-out:cubic-bezier(.16,1,.3,1);
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#14191c;--surface:#1c2328;--ink:#e8ebe9;--muted:#9aa4aa;--line:#2f383e;
-  --accent:#f2733a;--accent-ink:#14191c;--band:#0d1113;--band-ink:#e8ebe9;
-  --draft:#3a3210;--draft-ink:#f3e3a0;--header:rgba(20,25,28,.82);--shadow:0 18px 40px -18px rgba(0,0,0,.7);color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#14191c;--surface:#1c2328;--ink:#e8ebe9;--muted:#9aa4aa;--line:#2f383e;
-  --accent:#f2733a;--accent-ink:#14191c;--band:#0d1113;--band-ink:#e8ebe9;
-  --draft:#3a3210;--draft-ink:#f3e3a0;--header:rgba(20,25,28,.82);--shadow:0 18px 40px -18px rgba(0,0,0,.7);color-scheme:dark}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
-.wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--f-display);line-height:1.02;text-wrap:balance;margin:0;letter-spacing:.01em}
-h2{font-size:clamp(2.1rem,4.8vw,3rem);text-transform:uppercase}
-h3{font-size:1.55rem}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.label{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.ph{background:var(--draft);color:var(--draft-ink);padding:0 .25em;border-radius:3px;font-family:var(--f-mono);font-size:.9em}
-
-.draft{background:var(--draft);color:var(--draft-ink);font-size:.9rem}
-.draft .wrap{padding-block:.45rem}
-
-/* Kopfzeile */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--header);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:.7rem}
-.brand{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;min-width:0}
-.brand b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1;color:var(--accent)}
-.brand span{font-family:var(--f-display);font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-nav.links{display:flex;gap:1.4rem;font-weight:600;font-size:.98rem}
-nav.links a{text-decoration:none;position:relative;padding-block:.3rem}
-nav.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out)}
-nav.links a:hover::after{transform:scaleX(1)}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:48px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border:0;border-radius:8px;padding:.8rem 1.25rem;font-family:var(--f-body);font-size:1rem;cursor:pointer;transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out),filter .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--accent);filter:brightness(1.06)}
-.btn:active{transform:translateY(0)}
-.btn .arr{transition:transform .3s var(--ease-out)}
-.btn:hover .arr{transform:translateX(4px)}
-.btn.line{background:transparent;color:var(--on-photo);box-shadow:inset 0 0 0 2px rgba(255,255,255,.75)}
-.btn.line:hover{background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 2px #fff}
-.header-cta{min-height:44px;padding:.55rem 1rem}
-
-/* Hero */
-.hero{position:relative;isolation:isolate;color:var(--on-photo);overflow:hidden}
-.hero .photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:70% 50%;animation:zoom 14s var(--ease-out) both}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,var(--photo-shade) 0%,rgba(12,16,19,.62) 50%,rgba(12,16,19,.2) 100%)}
-.hero .wrap{padding-block:clamp(4rem,11vw,8rem) clamp(3rem,7vw,5rem);display:grid;gap:var(--s4)}
-.hero .label{color:rgba(255,255,255,.8)}
-.hero h1{font-size:clamp(2.9rem,8vw,5.6rem);font-weight:800;text-transform:uppercase;max-width:14ch}
-.hero h1 .w{display:inline-block;animation:rise .8s var(--ease-out) both}
-.hero h1 .w:nth-child(2){animation-delay:.08s}.hero h1 .w:nth-child(3){animation-delay:.16s}.hero h1 .w:nth-child(4){animation-delay:.24s}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero .lead{max-width:36rem;font-size:1.2rem;color:rgba(255,255,255,.9);animation:rise .8s .3s var(--ease-out) both}
-.hero .ctas{display:flex;gap:var(--s2);flex-wrap:wrap;animation:rise .8s .4s var(--ease-out) both}
-.facts{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2);animation:rise .8s .5s var(--ease-out) both}
-.facts span{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:999px;padding:.4rem .85rem;font-weight:600;font-size:.95rem}
-.facts svg{width:16px;height:16px;flex:none;stroke:var(--accent);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
-
-/* Laufband */
-.ticker{background:var(--accent);color:var(--accent-ink);overflow:hidden;border-block:3px solid var(--band)}
-.ticker .track{display:flex;width:max-content;animation:slide 32s linear infinite}
-.ticker ul{display:flex;list-style:none;margin:0;padding:.7rem 0;gap:0}
-.ticker li{font-family:var(--f-display);font-weight:800;font-size:1.35rem;text-transform:uppercase;letter-spacing:.04em;padding-inline:1.4rem;white-space:nowrap;display:flex;align-items:center;gap:1.4rem}
-.ticker li::after{content:"";width:9px;height:9px;background:var(--band);transform:rotate(45deg)}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-/* Abschnitte */
-section{padding-block:var(--s6)}
-.head{display:grid;gap:var(--s2);margin-bottom:var(--s5);max-width:42rem}
-.head p{color:var(--muted)}
-
-/* Leistungen */
-.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4)}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .45s var(--ease-out),box-shadow .45s var(--ease-out),border-color .3s}
-.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
-.svc .pic{position:relative;overflow:hidden;aspect-ratio:16/10;max-width:100%}
-.svc .pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease-out)}
-.svc:hover .pic img{transform:scale(1.06)}
-.svc .tag{position:absolute;left:12px;top:12px;background:var(--band);color:var(--band-ink);font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .55rem;border-radius:4px}
-.svc .body{padding:var(--s4);display:grid;gap:var(--s2);flex:1;align-content:start}
-.svc .body>p{color:var(--muted)}
-.svc ul{margin:.25rem 0 0;padding:0;list-style:none;display:grid;gap:.3rem}
-.svc li{display:flex;gap:.55rem;align-items:baseline}
-.svc li::before{content:"";flex:none;width:7px;height:7px;background:var(--accent);transform:rotate(45deg) translateY(-2px)}
-.svc .more{margin-top:var(--s2);font-weight:700;text-decoration:none;display:inline-flex;gap:.4rem;align-items:center;color:var(--accent);min-height:44px}
-.svc .more span{transition:transform .3s var(--ease-out)}
-.svc .more:hover span{transform:translateX(5px)}
-
-/* Ablauf */
-.band{background:var(--band);color:var(--band-ink)}
-.band .label{color:color-mix(in srgb,var(--band-ink) 65%,transparent)}
-.band .head p{color:color-mix(in srgb,var(--band-ink) 75%,transparent)}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s3);counter-reset:s}
-.steps li{counter-increment:s;padding:var(--s4) var(--s3) var(--s3);border-radius:10px;background:color-mix(in srgb,var(--band-ink) 6%,transparent);display:grid;gap:var(--s2);align-content:start;min-width:0;position:relative;transition:background .3s}
-.steps li:hover{background:color-mix(in srgb,var(--band-ink) 10%,transparent)}
-.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--accent)}
-.steps h3{font-size:1.35rem}
-.steps p{color:color-mix(in srgb,var(--band-ink) 75%,transparent);font-size:.98rem}
-
-/* Gebiet */
-.area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s5);align-items:start}
-.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:var(--s3)}
-.chips span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.35rem .85rem;font-size:.95rem;transition:border-color .2s,color .2s}
-.chips span:hover{border-color:var(--accent);color:var(--accent)}
-.districts{width:100%;border-collapse:collapse;margin-top:var(--s4);font-variant-numeric:tabular-nums}
-.districts td{padding:.7rem 0;border-bottom:1px solid var(--line);vertical-align:baseline}
-.districts tr:first-child td{border-top:1px solid var(--line)}
-.districts td:first-child{font-weight:700;padding-right:1rem;white-space:nowrap}
-.districts td:nth-child(2){color:var(--muted)}
-.districts td:last-child{text-align:right;white-space:nowrap;padding-left:1rem;font-family:var(--f-display);font-size:1.2rem}
-.districts tr{transition:background .2s}
-@media (hover:hover){.districts tr:hover td:first-child{color:var(--accent)}}
-.small{font-size:.9rem;color:var(--muted);margin-top:var(--s2)}
-.slot{background:color-mix(in srgb,var(--band-ink) 8%,transparent);border-left:4px solid var(--accent);padding:var(--s3);border-radius:6px}
-.slot strong{display:block;font-family:var(--f-display);font-size:2rem;line-height:1.1;color:var(--band-ink)}
-@media (max-width:560px){.districts td:nth-child(2){display:none}}
-.note{border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--surface);padding:var(--s4);display:grid;gap:var(--s2);border-radius:8px}
-
-/* FAQ */
-.faq{display:grid;border-top:1px solid var(--line);max-width:50rem}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;font-weight:700;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding-block:var(--s3);min-height:48px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--f-mono);font-size:1.3rem;color:var(--accent);transition:transform .35s var(--ease-out)}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq p{padding-bottom:var(--s3);color:var(--muted);max-width:44rem;animation:fade .4s var(--ease-out)}
-@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-
-/* Kontakt */
-.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:var(--s5);align-items:start}
-.direct{display:grid;gap:var(--s3)}
-.direct div{display:grid;gap:.1rem}
-.direct strong{font-family:var(--f-display);font-size:1.75rem}
-form{background:var(--surface);color:var(--ink);border-radius:12px;padding:var(--s4);display:grid;gap:var(--s3);min-width:0;box-shadow:var(--shadow)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
-label{display:grid;gap:.3rem;font-weight:600;font-size:.95rem}
-input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;width:100%;min-height:48px;transition:border-color .2s,box-shadow .2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
-textarea{min-height:7rem;resize:vertical}
-.ok{background:var(--draft);color:var(--draft-ink);padding:var(--s3);border-radius:6px}
-
-footer{background:var(--surface);border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
-footer .wrap{padding-block:var(--s5);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
-footer h3{font-size:1.2rem;color:var(--ink);margin-bottom:var(--s2);text-transform:uppercase}
-
-/* Mobiler Anfrage-Button */
-.fab.on{opacity:1;pointer-events:auto;transform:none}
-.fab{display:inline-flex;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s var(--ease-out),transform .3s var(--ease-out),box-shadow .25s,filter .2s;position:fixed;z-index:30;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
-
-/* Sanftes Einblenden beim Scrollen (Inhalt bleibt ohne Unterstützung sichtbar) */
-@supports (animation-timeline: view()){
-  .reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
-  @keyframes reveal{from{opacity:.25;transform:translateY(28px)}to{opacity:1;transform:none}}
-}
-
-@media (max-width:900px){
-  nav.links{display:none}
-  .area,.contact{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  footer .wrap{grid-template-columns:1fr}
-}
-@media (max-width:600px){
-  .services,.row,.steps{grid-template-columns:1fr}
-  section{padding-block:var(--s5)}
-  .header-cta{display:none}
-  .brand span{font-size:1rem}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-}
-
-:root{--danger:#b3261e}
-@media (prefers-color-scheme: dark){:root{--danger:#ff8a80}}
-.send{display:flex;flex-wrap:wrap;gap:var(--s2)}
-.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
-.btn.alt:hover{box-shadow:inset 0 0 0 2px var(--ink)}
-.err{color:var(--danger);font-weight:600}
-input[aria-invalid="true"]{border-color:var(--danger)}
-</style>
+<!-- @head -->
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+<noscript><style>button.burger{display:none}.menu:target{display:block}</style></noscript>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": "https://ta-abriss-hamburg.de/#firma", "name": "T&A Abriss & Rückbau", "description": "Abriss, Entkernung, Innenabbruch und Trockenbau in Hamburg.", "url": "https://ta-abriss-hamburg.de/", "image": "https://ta-abriss-hamburg.de/img/abriss.jpg", "telephone": "+49 176 32896617", "email": "info@ta-abriss-hamburg.de", "address": {"@type": "PostalAddress", "streetAddress": "Dosestraße 11", "postalCode": "22767", "addressLocality": "Hamburg", "addressCountry": "DE"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Hamburg-Altona"}, {"@type": "AdministrativeArea", "name": "Hamburg-Eimsbüttel"}, {"@type": "AdministrativeArea", "name": "Hamburg-Mitte"}, {"@type": "AdministrativeArea", "name": "Hamburg-Nord"}, {"@type": "AdministrativeArea", "name": "Hamburg-Wandsbek"}, {"@type": "AdministrativeArea", "name": "Hamburg-Harburg"}, {"@type": "AdministrativeArea", "name": "Hamburg-Bergedorf"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet ein Abriss?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt von Größe, Material und Entsorgung ab. Nach der kostenlosen Besichtigung bekommen Sie einen Festpreis, der sich nicht ändert, solange der Umfang gleich bleibt."}}, {"@type": "Question", "name": "Brauche ich eine Genehmigung?", "acceptedAnswer": {"@type": "Answer", "text": "Für kleine Bauten wie ein Gartenhaus meist nicht. Bei größeren Gebäuden kann in Hamburg eine Anzeige oder Genehmigung beim Bezirksamt nötig sein. Wir sagen Ihnen bei der Besichtigung, was in Ihrem Fall gilt. <a href=\"https://ta-abriss-hamburg.de/abriss-genehmigung-hamburg.html\">Mehr dazu im Ratgeber<\/a>"}}, {"@type": "Question", "name": "Kümmern Sie sich um die Entsorgung?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Bauschutt, Holz und Metall werden getrennt und fachgerecht entsorgt. Die Kosten stehen im Angebot."}}, {"@type": "Question", "name": "Arbeiten Sie auch abends oder am Wochenende?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, montags bis freitags auch abends und samstags, im Rahmen der Lärmschutzregeln. Das passt gut, wenn Sie tagsüber arbeiten."}}]}</script>
+<!-- /@head -->
 </head>
 <body>
 
-
+<!-- @header -->
 <header class="top"><div class="wrap">
   <a class="brand" href="#start"><b>T&amp;A</b><span>Abriss &amp; Rückbau</span></a>
   <nav class="links" aria-label="Hauptnavigation">
     <a href="#leistungen">Leistungen</a><a href="#ablauf">Ablauf</a><a href="#gebiet">Einsatzgebiet</a><a href="#fragen">Fragen</a>
   </nav>
-  <a class="btn header-cta" href="#anfrage">Anfrage <span class="arr" aria-hidden="true">→</span></a>
+  <div class="tools">
+    <a class="btn header-cta" href="#anfrage">Anfrage <span class="arr" aria-hidden="true">→</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <noscript><a class="burger" href="#menu" aria-label="Menü öffnen"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></a></noscript>
+  </div>
 </div></header>
+<nav id="menu" class="menu" aria-label="Menü">
+  <div class="grp g-main">
+    <ul>
+      <li><a href="#start" aria-current="page">Startseite</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#gebiet">Einsatzgebiet</a></li>
+      <li><a href="#fragen">Häufige Fragen</a></li>
+      <li><a href="#anfrage">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="grp g-leist">
+    <p class="menu-h" id="m-leist">Leistungen</p>
+    <ul aria-labelledby="m-leist" class="cols">
+      <li><a href="kleinabriss-hamburg.html">Kleinabriss</a></li>
+      <li><a href="entkernung-hamburg.html">Entkernung</a></li>
+      <li><a href="innenabbruch-hamburg.html">Innenabbruch</a></li>
+      <li><a href="trockenbau-hamburg.html">Trockenbau</a></li>
+    </ul>
+  </div>
+  <div class="grp g-bez">
+    <p class="menu-h" id="m-bez">Abriss nach Bezirk</p>
+    <ul aria-labelledby="m-bez" class="cols">
+      <li><a href="abriss-hamburg-altona.html">Altona</a></li>
+      <li><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></li>
+      <li><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></li>
+      <li><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></li>
+      <li><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></li>
+      <li><a href="abriss-hamburg-harburg.html">Harburg</a></li>
+      <li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li>
+    </ul>
+  </div>
+  <div class="grp g-rat">
+    <p class="menu-h" id="m-rat">Ratgeber</p>
+    <ul aria-labelledby="m-rat">
+      <li><a href="abriss-genehmigung-hamburg.html">Abriss-Genehmigung in Hamburg</a></li>
+    </ul>
+  </div>
+  <div class="grp g-recht">
+    <p class="menu-h" id="m-recht">Rechtliches</p>
+    <ul aria-labelledby="m-recht" class="cols">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+    </ul>
+  </div>
+  <div class="menu-cta">
+    <a class="btn alt" href="tel:+4917632896617"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0176 32896617</a>
+    <a class="btn" href="#anfrage">Kostenlose Besichtigung <span class="arr" aria-hidden="true">→</span></a>
+    <noscript><a class="btn alt" href="#start">Menü schließen</a></noscript>
+  </div>
+</nav>
+<!-- /@header -->
 
 <main id="start">
 <div class="hero">
@@ -267,7 +128,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
         <h3>Kleinabriss</h3>
         <p>Bauten und Bauteile, die komplett weg sollen.</p>
         <ul><li>Gartenhaus und Schuppen</li><li>Carport und Garage</li><li>Terrasse, Zaun, Mauer</li></ul>
-        <a class="more" href="#anfrage">Kleinabriss anfragen <span aria-hidden="true">→</span></a>
+        <a class="more" href="kleinabriss-hamburg.html">Mehr zu Kleinabriss <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="svc reveal">
@@ -276,7 +137,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
         <h3>Entkernung</h3>
         <p>Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung.</p>
         <ul><li>Böden, Decken und Verkleidungen</li><li>Küche und Bad ausbauen</li><li>Wohnungen und Gewerbeflächen</li></ul>
-        <a class="more" href="#anfrage">Entkernung anfragen <span aria-hidden="true">→</span></a>
+        <a class="more" href="entkernung-hamburg.html">Mehr zu Entkernung <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="svc reveal">
@@ -285,7 +146,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
         <h3>Innenabbruch</h3>
         <p>Gezielter Rückbau einzelner Bauteile in bewohnten Häusern.</p>
         <ul><li>Nichttragende Wände entfernen</li><li>Fliesen und Estrich abtragen</li><li>Staubarm, übrige Räume geschützt</li></ul>
-        <a class="more" href="#anfrage">Innenabbruch anfragen <span aria-hidden="true">→</span></a>
+        <a class="more" href="innenabbruch-hamburg.html">Mehr zu Innenabbruch <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="svc reveal">
@@ -294,7 +155,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
         <h3>Trockenbau</h3>
         <p>Nach dem Abriss direkt neu aufbauen, ohne zweite Firma.</p>
         <ul><li>Trennwände aus Gipskarton</li><li>Abgehängte Decken</li><li>Vorsatzschalen und Dämmung</li></ul>
-        <a class="more" href="#anfrage">Trockenbau anfragen <span aria-hidden="true">→</span></a>
+        <a class="more" href="trockenbau-hamburg.html">Mehr zu Trockenbau <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </div>
@@ -325,20 +186,20 @@ input[aria-invalid="true"]{border-color:var(--danger)}
     <table class="districts">
       <caption style="position:absolute;left:-9999px">Bezirke, Stadtteile und ungefähre Entfernung</caption>
       <tbody>
-        <tr><td>Altona</td><td>Ottensen, Bahrenfeld, Blankenese</td><td>Sitz</td></tr>
-        <tr><td>Hamburg-Mitte</td><td>St. Pauli, Hamm, Billstedt</td><td>ca. 4 km</td></tr>
-        <tr><td>Eimsbüttel</td><td>Stellingen, Lokstedt, Niendorf</td><td>ca. 4 km</td></tr>
-        <tr><td>Hamburg-Nord</td><td>Winterhude, Barmbek, Langenhorn</td><td>ca. 8 km</td></tr>
-        <tr><td>Wandsbek</td><td>Bramfeld, Rahlstedt, Volksdorf</td><td>ca. 12 km</td></tr>
-        <tr><td>Harburg</td><td>Heimfeld, Neugraben, Wilstorf</td><td>ca. 12 km</td></tr>
-        <tr><td>Bergedorf</td><td>Lohbrügge, Neuallermöhe, Kirchwerder</td><td>ca. 22 km</td></tr>
+        <tr><td><a href="abriss-hamburg-altona.html">Altona</a></td><td>Ottensen, Bahrenfeld, Blankenese</td><td>Sitz</td></tr>
+        <tr><td><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></td><td>St. Pauli, Hamm, Billstedt</td><td>ca. 4 km</td></tr>
+        <tr><td><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></td><td>Stellingen, Lokstedt, Niendorf</td><td>ca. 4 km</td></tr>
+        <tr><td><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></td><td>Winterhude, Barmbek, Langenhorn</td><td>ca. 8 km</td></tr>
+        <tr><td><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></td><td>Bramfeld, Rahlstedt, Volksdorf</td><td>ca. 12 km</td></tr>
+        <tr><td><a href="abriss-hamburg-harburg.html">Harburg</a></td><td>Heimfeld, Neugraben, Wilstorf</td><td>ca. 12 km</td></tr>
+        <tr><td><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></td><td>Lohbrügge, Neuallermöhe, Kirchwerder</td><td>ca. 22 km</td></tr>
       </tbody>
     </table>
     <p class="small">Entfernung ungefähr, von unserem Sitz bis zur Bezirksmitte.</p>
   </div>
   <div class="note reveal">
     <p class="label">Wichtig vor dem Abriss</p>
-    <p>Bei älteren Gebäuden kann Asbest verbaut sein, etwa in Platten, Bodenbelägen oder Klebern. Bei Verdacht lassen wir das vorher prüfen und ziehen einen zertifizierten Fachbetrieb hinzu.</p>
+    <p>Bei älteren Gebäuden kann Asbest verbaut sein, etwa in Platten, Bodenbelägen oder Klebern. Bei Verdacht wird das vorher geprüft. Den Ausbau übernimmt ein dafür zugelassener Fachbetrieb.</p>
     <p>Tragende Wände entfernen wir nur mit Statiker.</p>
   </div>
 </div></section>
@@ -350,9 +211,9 @@ input[aria-invalid="true"]{border-color:var(--danger)}
   </div>
   <div class="faq reveal">
     <details><summary>Was kostet ein Abriss?</summary><p>Das hängt von Größe, Material und Entsorgung ab. Nach der kostenlosen Besichtigung bekommen Sie einen Festpreis, der sich nicht ändert, solange der Umfang gleich bleibt.</p></details>
-    <details><summary>Brauche ich eine Genehmigung?</summary><p>Für kleine Bauten wie ein Gartenhaus meist nicht. Bei größeren Gebäuden kann in Hamburg eine Anzeige oder Genehmigung beim Bezirksamt nötig sein. Wir sagen Ihnen bei der Besichtigung, was in Ihrem Fall gilt.</p></details>
+    <details><summary>Brauche ich eine Genehmigung?</summary><p>Für kleine Bauten wie ein Gartenhaus meist nicht. Bei größeren Gebäuden kann in Hamburg eine Anzeige oder Genehmigung beim Bezirksamt nötig sein. Wir sagen Ihnen bei der Besichtigung, was in Ihrem Fall gilt. <a href="abriss-genehmigung-hamburg.html">Mehr dazu im Ratgeber</a></p></details>
     <details><summary>Kümmern Sie sich um die Entsorgung?</summary><p>Ja. Bauschutt, Holz und Metall werden getrennt und fachgerecht entsorgt. Die Kosten stehen im Angebot.</p></details>
-    <details><summary>Arbeiten Sie auch abends oder am Wochenende?</summary><p>Ja, werktags auch abends und samstags, im Rahmen der Lärmschutzregeln. Das passt gut, wenn Sie tagsüber arbeiten.</p></details>
+    <details><summary>Arbeiten Sie auch abends oder am Wochenende?</summary><p>Ja, montags bis freitags auch abends und samstags, im Rahmen der Lärmschutzregeln. Das passt gut, wenn Sie tagsüber arbeiten.</p></details>
   </div>
 </div></section>
 
@@ -370,7 +231,7 @@ input[aria-invalid="true"]{border-color:var(--danger)}
       <div class="slot" aria-live="polite"><span class="label">Nächster möglicher Besichtigungstermin</span><strong id="slot">Mo–Fr ab 16:30, Sa ab 9:00</strong></div>
     </div>
   </div>
-  <form id="f" class="reveal" novalidate>
+  <form id="f" class="reveal" novalidate data-page="Startseite">
     <div class="row">
       <label for="name">Name<input id="name" name="name" autocomplete="name" required></label>
       <label for="tel">Telefon<input id="tel" name="tel" type="tel" autocomplete="tel" required></label>
@@ -392,58 +253,19 @@ input[aria-invalid="true"]{border-color:var(--danger)}
 </div></section>
 </main>
 
-<footer><div class="wrap">
-  <div><h3>T&amp;A Abriss &amp; Rückbau</h3><p>Inh. Talal Al Saadoun<br>Dosestraße 11<br>22767 Hamburg</p></div>
-  <div><h3>Kontakt</h3><p>Telefon: <a href="tel:+4917632896617">0176 32896617</a><br>E-Mail: <a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a></p></div>
-  <div><h3>Rechtliches</h3><p><a href="impressum.html">Impressum</a><br><a href="datenschutz.html">Datenschutzerklärung</a></p></div>
+<!-- @footer -->
+<footer><div class="wrap foot">
+  <div class="firma">
+    <h3>T&amp;A Abriss &amp; Rückbau</h3>
+    <p>Inh. Talal Al Saadoun<br>Dosestraße 11<br>22767 Hamburg</p>
+    <ul><li><a href="tel:+4917632896617">Telefon: 0176 32896617</a></li><li><a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a></li></ul>
+  </div>
+  <div><h3>Leistungen</h3><ul class="two"><li><a href="kleinabriss-hamburg.html">Kleinabriss</a></li><li><a href="entkernung-hamburg.html">Entkernung</a></li><li><a href="innenabbruch-hamburg.html">Innenabbruch</a></li><li><a href="trockenbau-hamburg.html">Trockenbau</a></li></ul></div>
+  <div><h3>Bezirke</h3><ul class="two"><li><a href="abriss-hamburg-altona.html">Altona</a></li><li><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></li><li><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></li><li><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></li><li><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></li><li><a href="abriss-hamburg-harburg.html">Harburg</a></li><li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li></ul></div>
+  <div><h3>Ratgeber &amp; Rechtliches</h3><ul><li><a href="abriss-genehmigung-hamburg.html">Abriss-Genehmigung in Hamburg</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
 </div></footer>
-
 <a class="btn fab" href="#anfrage">Anfrage <span class="arr" aria-hidden="true">→</span></a>
-
-<script>
-(function(){
-  var days=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
-  var t=new Date(Date.now()+60*60000), s=null;
-  for(var i=0;i<14&&!s;i++){
-    var d=new Date(t.getFullYear(),t.getMonth(),t.getDate()+i), wd=d.getDay(), o=null, c=null;
-    if(wd>=1&&wd<=5){o=[16,30];c=[19,0]} else if(wd===6){o=[9,0];c=[15,0]}
-    if(!o) continue;
-    var a=new Date(d); a.setHours(o[0],o[1],0,0); var b=new Date(d); b.setHours(c[0],c[1],0,0);
-    if(i===0&&t>a){a=new Date(t); a.setMinutes(a.getMinutes()<=30?30:60,0,0);}
-    if(a<=b) s=a;
-  }
-  if(s){
-    var today=new Date(); today.setHours(0,0,0,0);
-    var diff=Math.round((new Date(s.getFullYear(),s.getMonth(),s.getDate())-today)/864e5);
-    var label=(diff===0?'Heute':diff===1?'Morgen':days[s.getDay()])+', '+s.getHours()+':'+String(s.getMinutes()).padStart(2,'0')+' Uhr';
-    document.getElementById('slot').textContent=label;
-    document.getElementById('wunsch').value=label;
-  }
-  var fab=document.querySelector('.fab'), hero=document.querySelector('.hero'), contact=document.getElementById('anfrage'), tick=false;
-  function sync(){
-    var past=hero.getBoundingClientRect().bottom<0, atForm=contact.getBoundingClientRect().top<innerHeight*0.6;
-    fab.classList.toggle('on',past&&!atForm);
-  }
-  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(function(){sync();tick=false;});}},{passive:true});
-  sync();
-})();
-(function(){
-  var f=document.getElementById('f'), err=document.getElementById('err'), ok=document.getElementById('ok');
-  function v(id){return (document.getElementById(id).value||'').trim();}
-  function valid(){
-    var bad=null;
-    ['name','tel'].forEach(function(id){var el=document.getElementById(id), empty=!el.value.trim(); el.setAttribute('aria-invalid',empty?'true':'false'); if(empty&&!bad) bad=el;});
-    err.hidden=!bad; if(bad) bad.focus(); return !bad;
-  }
-  function msg(){
-    return 'Hallo T&A Abriss & Rückbau, ich möchte eine Besichtigung anfragen.\n\nName: '+v('name')+'\nTelefon: '+v('tel')+'\nOrt: '+(v('ort')||'-')+'\nLeistung: '+v('art')+'\nWunschtermin: '+(v('wunsch')||'-')+(v('text')?'\n\n'+v('text'):'');
-  }
-  f.addEventListener('submit',function(e){
-    e.preventDefault(); if(!valid()) return; ok.hidden=false;
-    location.href='mailto:info@ta-abriss-hamburg.de?subject='+encodeURIComponent('Anfrage Besichtigung')+'&body='+encodeURIComponent(msg());
-  });
-})();
-</script>
+<!-- /@footer -->
 
 </body>
 </html>

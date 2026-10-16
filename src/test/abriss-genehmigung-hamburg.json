@@ -1,0 +1,47 @@
+{
+  "slug": "abriss-genehmigung-hamburg",
+  "type": "ratgeber",
+  "menu": "Abriss-Genehmigung",
+  "title": "Abriss-Genehmigung in Hamburg | T&A Abriss & Rückbau (Test)",
+  "description": "Testseite: Wann braucht man in Hamburg eine Genehmigung oder Anzeige für den Abriss?",
+  "label": "Ratgeber",
+  "h1": "Abriss-Genehmigung in Hamburg",
+  "lead": "Testtext: Wann ein Abriss genehmigungsfrei ist, wann eine Anzeige reicht und wann Sie zum Bezirksamt müssen.",
+  "facts": [
+    "Kurz erklärt",
+    "Mit Quellen",
+    "Stand 2026"
+  ],
+  "image": "innenabbruch",
+  "form_leistung": "Kleinabriss",
+  "form_ort": "",
+  "sections": [
+    {
+      "h2": "Kurz gesagt",
+      "html": "<p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können.</p><ul><li><em>Kleine Bauten</em>: meist genehmigungsfrei</li><li>Größere Gebäude: Anzeige beim Bezirksamt</li></ul>"
+    },
+    {
+      "h2": "Was gilt in Hamburg?",
+      "html": "<p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können.</p><h3>Zwischenüberschrift</h3><p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können. Siehe auch <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> und <a href=\"abriss-hamburg-altona.html\">Abriss in Altona</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wer ist zuständig?",
+      "a": "Testantwort: das Bauamt des Bezirksamts."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hamburgische Bauordnung (HBauO)",
+      "url": "https://www.landesrecht-hamburg.de/bsha/document/jlr-BauOHA2005rahmen"
+    },
+    {
+      "title": "Bauen in Hamburg – hamburg.de",
+      "url": "https://www.hamburg.de/"
+    }
+  ],
+  "notes_for_review": [
+    "GEHEIMNOTIZ-789"
+  ]
+}
