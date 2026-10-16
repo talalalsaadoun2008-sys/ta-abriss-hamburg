@@ -7,9 +7,13 @@ Aufruf (im Repo-Hauptordner):
   python3 src/build.py --content src/test ...  anderes Inhaltsverzeichnis verwenden
 
 Erzeugt:
-  <slug>.html je JSON in src/content/, impressum.html, datenschutz.html,
-  index.html (nur die Bereiche zwischen den Markern @head, @header, @footer),
+  <slug>.html je JSON in src/content/ (Leistungen, Bezirke, Stadtteile, Umland, Ratgeber),
+  einsatzgebiet.html (Übersicht aus src/site.json), impressum.html, datenschutz.html,
+  index.html (nur die Bereiche zwischen den Markern @head, @header, @umland, @footer),
   sitemap.xml; prüft robots.txt.
+
+Fehlt für eine Seite aus src/site.json die JSON-Datei, wird sie übersprungen und nirgends
+verlinkt (Menü, Footer, Chips, Übersicht, Sitemap; Links im Inhalt werden zu reinem Text).
 """
 import argparse
 import datetime
@@ -24,18 +28,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 
-TYPES = ("leistung", "bezirk", "ratgeber")
+TYPES = ("leistung", "bezirk", "stadtteil", "umland", "ratgeber")
+ORTSTYPEN = ("bezirk", "stadtteil", "umland")
+UEBERSICHT = "einsatzgebiet"  # erzeugte Übersichtsseite einsatzgebiet.html
 SECTION_TAGS = {"p", "ul", "ol", "li", "strong", "em", "h3", "a"}
 INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
 REQUIRED = ("slug", "type", "menu", "title", "description", "label", "h1", "lead", "facts",
             "image", "form_leistung", "form_ort", "sections", "faq")
 KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review"}
+MAX_WEITERE_ORTE = 8
 
 CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>'
 PHONE_SVG = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5'
              'L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>')
 ARR = '<span class="arr" aria-hidden="true">→</span>'
+A_RE = re.compile(r'<a\s[^>]*?href=(["\'])(.*?)\1[^>]*>(.*?)</a>', re.S)
 
 
 class BuildError(Exception):
@@ -44,6 +52,10 @@ class BuildError(Exception):
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+
+def is_str(v):
+    return isinstance(v, str) and v.strip() != ""
 
 
 def jsonld(obj):
@@ -64,25 +76,66 @@ class Site:
         self.anker = d["startseite_anker"]
         self.leistungen = d["leistungen"]
         self.bezirke = d["bezirke"]
+        self.stadtteile = d.get("stadtteile", [])
+        self.umland = d.get("umland", [])
         self.ratgeber = d["ratgeber"]
         self.rechtliches = d["rechtliches"]
         self.bilder = d["bilder"]
         self.form_options = d["formular_leistungen"]
+        self.uebersicht = d.get("einsatzgebiet") or {}
+        self.menue_umland = d.get("menue_umland", [])
+        self.startseite_umland = d.get("startseite_umland", [])
         self.kind = {}
         self.entry = {}
         for kind, items in (("leistung", self.leistungen), ("bezirk", self.bezirke),
+                            ("stadtteil", self.stadtteile), ("umland", self.umland),
                             ("ratgeber", self.ratgeber), ("recht", self.rechtliches)):
             for it in items:
-                if it["slug"] in self.kind:
-                    raise BuildError(f"site.json: Slug doppelt: {it['slug']}")
-                self.kind[it["slug"]] = kind
-                self.entry[it["slug"]] = it
+                slug = it.get("slug")
+                if not (isinstance(slug, str) and re.fullmatch(r"[a-z0-9-]+", slug)):
+                    raise BuildError(f"site.json: ungültiger Slug {slug!r} ({kind})")
+                if slug in (UEBERSICHT, "index", "sitemap"):
+                    raise BuildError(f"site.json: Slug '{slug}' ist für den Build reserviert")
+                if slug in self.kind:
+                    raise BuildError(f"site.json: Slug doppelt: {slug}")
+                if not is_str(it.get("name")):
+                    raise BuildError(f"site.json: {slug} braucht 'name'")
+                self.kind[slug] = kind
+                self.entry[slug] = it
+        for st in self.stadtteile:
+            if self.kind.get(st.get("bezirk")) != "bezirk":
+                raise BuildError(f"site.json: Stadtteil {st['slug']}: 'bezirk' muss der Slug einer Bezirksseite sein "
+                                 f"(ist {st.get('bezirk')!r})")
+        for u in self.umland:
+            for k in ("kreis", "land"):
+                if not is_str(u.get(k)):
+                    raise BuildError(f"site.json: Umland {u['slug']} braucht '{k}'")
+        for key in ("menue_umland", "startseite_umland"):
+            for x in d.get(key, []):
+                if self.kind.get(x) != "umland":
+                    raise BuildError(f"site.json: {key}: '{x}' steht nicht in 'umland'")
+        for k in ("title", "description", "label", "h1", "lead", "hinweis"):
+            if not is_str(self.uebersicht.get(k)):
+                raise BuildError(f"site.json: einsatzgebiet.{k} fehlt")
 
     def content_slugs(self):
-        return [it["slug"] for it in self.leistungen + self.bezirke + self.ratgeber]
+        return [it["slug"] for it in self.leistungen + self.bezirke + self.ratgeber + self.stadtteile + self.umland]
 
     def url(self, slug):
         return self.base + slug + ".html"
+
+    def bezirk_of(self, stadtteil):
+        return self.entry[stadtteil["bezirk"]]
+
+
+def internal_slug(site, href):
+    """Slug einer internen Unterseite (<slug>.html, auch als volle Adresse) oder None."""
+    if re.match(r"https?://", href):
+        if not href.startswith(site.base):
+            return None
+        href = href[len(site.base):]
+    m = re.fullmatch(r"([a-z0-9-]+)\.html", href.partition("#")[0])
+    return m.group(1) if m else None
 
 
 # ---------------------------------------------------------------------------
@@ -184,16 +237,12 @@ class Linker:
         if not m:
             return f"Link {href}: keine bekannte Seite (Seiten relativ als <slug>.html verlinken)"
         slug = m.group(1)
-        if slug in self.generated or self.site.kind.get(slug) == "recht":
+        if slug in self.generated or slug == UEBERSICHT or self.site.kind.get(slug) == "recht":
             return None
         if slug in self.site.kind:
             self.pending.setdefault(slug, []).append(where.split(" ")[0])
             return None
         return f"Link {href}: Seite {slug}.html gibt es nicht (nicht in src/site.json)"
-
-
-def is_str(v):
-    return isinstance(v, str) and v.strip() != ""
 
 
 def validate(c, path, site, errors, warn):
@@ -243,10 +292,15 @@ def validate(c, path, site, errors, warn):
         for i, f in enumerate(c["faq"], 1):
             if not (isinstance(f, dict) and is_str(f.get("q")) and is_str(f.get("a"))):
                 e(f"faq[{i}] braucht 'q' und 'a'")
+    st = c.get("stadtteile")
     if c["type"] == "bezirk":
-        st = c.get("stadtteile")
         if not (isinstance(st, list) and st and all(is_str(x) for x in st)):
             e("bezirk braucht 'stadtteile' (Liste mit Texten)")
+    elif c["type"] in ("stadtteil", "umland") and st is not None:
+        if not (isinstance(st, list) and all(is_str(x) for x in st)):
+            e("'stadtteile' muss eine Liste mit Texten sein (darf leer sein)")
+        elif st and c["type"] == "stadtteil":
+            warn(f"{where}: 'stadtteile' wird bei Stadtteil-Seiten nicht angezeigt")
     if c["type"] == "ratgeber":
         src = c.get("sources")
         if not (isinstance(src, list) and src):
@@ -255,7 +309,7 @@ def validate(c, path, site, errors, warn):
             for i, s in enumerate(src, 1):
                 if not (isinstance(s, dict) and is_str(s.get("title")) and re.match(r"https?://", str(s.get("url", "")))):
                     e(f"sources[{i}] braucht 'title' und eine http(s)-'url'")
-    # Bei leistung/bezirk bleiben 'sources' als interner Beleg in der JSON-Datei (nicht ausgegeben).
+    # Bei leistung/bezirk/stadtteil/umland bleiben 'sources' als interner Beleg in der JSON-Datei (nicht ausgegeben).
     if is_str(c.get("title")) and len(c["title"]) > 65:
         warn(f"{where}: title ist {len(c['title'])} Zeichen lang (Google zeigt ca. 60)")
     if is_str(c.get("description")) and len(c["description"]) > 160:
@@ -290,6 +344,13 @@ class Ctx:
         self.home_src = home_src
         self.content_rel = "src/content"
 
+    def has(self, slug):
+        """Gibt es die Seite im Build? Nur dann wird sie verlinkt."""
+        return slug in self.generated or slug == UEBERSICHT or self.site.kind.get(slug) == "recht"
+
+    def pages(self, items):
+        return [x for x in items if self.has(x["slug"])]
+
     def home_link(self, anchor, on_home):
         if on_home:
             return "#" + anchor
@@ -302,6 +363,18 @@ class Ctx:
         if not self.preview:
             return text
         return re.sub(r'href="\./(#[^"]*)?"', lambda m: f'href="index.html{m.group(1) or ""}"', text)
+
+    def drop_dead_links(self, text):
+        """Links auf Seiten aus site.json, für die es (noch) keinen Inhalt gibt, werden zu reinem Text."""
+        def rep(m):
+            slug = internal_slug(self.site, html.unescape(m.group(2)))
+            if slug and slug in self.site.kind and not self.has(slug):
+                return m.group(3)
+            return m.group(0)
+        return A_RE.sub(rep, text)
+
+    def content_html(self, text):
+        return self.fix_home_links(self.drop_dead_links(text))
 
 
 def head_assets(ctx, extra_noindex=False):
@@ -355,16 +428,27 @@ def render_menu(ctx, current, on_home, contact_href):
     s, f = ctx.site, ctx.site.firma
     main = [(ctx.home_link(a["anker"], on_home), a["name"], on_home and a["anker"] == "start") for a in s.anker]
     page = lambda it: (it["slug"] + ".html", it["name"], it["slug"] == current)
+    alle = (f'<a class="menu-all" href="{UEBERSICHT}.html"{cur(current == UEBERSICHT)}>Alle Stadtteile und Orte '
+            f'<span aria-hidden="true">→</span></a>')
     groups = [
-        ("g-leist", "m-leist", "Leistungen", [page(x) for x in s.leistungen], "cols"),
-        ("g-bez", "m-bez", "Abriss nach Bezirk", [page(x) for x in s.bezirke], "cols"),
-        ("g-rat", "m-rat", "Ratgeber", [page(x) for x in s.ratgeber], ""),
-        ("g-recht", "m-recht", "Rechtliches", [page(x) for x in s.rechtliches], "cols"),
+        ("g-leist", "m-leist", "Leistungen", [page(x) for x in ctx.pages(s.leistungen)], "cols", ""),
+        ("g-bez", "m-bez", "Abriss nach Bezirk", [page(x) for x in ctx.pages(s.bezirke)], "cols", ""),
+        ("g-uml", "m-uml", "Umland", [page(s.entry[x]) for x in s.menue_umland if ctx.has(x)], "cols", alle),
+        ("g-rat", "m-rat", "Ratgeber", [page(x) for x in ctx.pages(s.ratgeber)], "", ""),
+        ("g-recht", "m-recht", "Rechtliches", [page(x) for x in s.rechtliches], "cols", ""),
     ]
     parts = [f'<div class="grp g-main">\n    {menu_list(main)}\n  </div>']
-    for gcls, hid, title, items, lcls in groups:
-        lst = menu_list(items, lcls).replace("<ul", f'<ul aria-labelledby="{hid}"', 1)
-        parts.append(f'<div class="grp {gcls}">\n    <p class="menu-h" id="{hid}">{esc(title)}</p>\n    {lst}\n  </div>')
+    for gcls, hid, title, items, lcls, extra in groups:
+        inner = []
+        if items:
+            lst = menu_list(items, lcls).replace("<ul", f'<ul aria-labelledby="{hid}"', 1)
+            inner += [f'<p class="menu-h" id="{hid}">{esc(title)}</p>', lst]
+        if extra:
+            if not items:  # noch keine Umland-Seite: Link bekommt eine eigene Überschrift
+                inner.append(f'<p class="menu-h" id="{hid}">Einsatzgebiet</p>')
+            inner.append(extra)
+        if inner:
+            parts.append(f'<div class="grp {gcls}">\n    ' + "\n    ".join(inner) + '\n  </div>')
     parts.append(f'''<div class="menu-cta">
     <a class="btn alt" href="tel:{esc(f["telefon_link"])}">{PHONE_SVG}{esc(f["telefon"])}</a>
     <a class="btn" href="{esc(contact_href)}">Kostenlose Besichtigung {ARR}</a>
@@ -376,19 +460,23 @@ def render_menu(ctx, current, on_home, contact_href):
 def render_footer(ctx, current, on_home, fab_href):
     s, f = ctx.site, ctx.site.firma
     li = lambda it: f'<li><a href="{esc(it["slug"])}.html"{cur(it["slug"] == current)}>{esc(it["name"])}</a></li>'
-    leist = "".join(li(x) for x in s.leistungen)
-    bez = "".join(li(x) for x in s.bezirke)
-    rest = "".join(li(x) for x in s.ratgeber + s.rechtliches)
+    leist = "".join(li(x) for x in ctx.pages(s.leistungen))
+    bez = "".join(li(x) for x in ctx.pages(s.bezirke))
+    rest = "".join(li(x) for x in ctx.pages(s.ratgeber) + s.rechtliches)
+    alle = (f'<p class="foot-all"><a href="{UEBERSICHT}.html"{cur(current == UEBERSICHT)}>Alle Orte im Einsatzgebiet '
+            f'<span aria-hidden="true">→</span></a></p>')
+    cols = []
+    if leist:
+        cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul></div>')
+    cols.append(f'  <div><h3>Bezirke</h3>' + (f'<ul class="two">{bez}</ul>' if bez else "") + f'{alle}</div>')
+    cols.append(f'  <div><h3>Ratgeber &amp; Rechtliches</h3><ul>{rest}</ul></div>')
     out = [f'''<footer><div class="wrap foot">
   <div class="firma">
     <h3>{esc(f["name"])}</h3>
     <p>Inh. {esc(f["inhaber"])}<br>{esc(f["strasse"])}<br>{esc(f["plz"])} {esc(f["ort"])}</p>
     <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>
   </div>
-  <div><h3>Leistungen</h3><ul class="two">{leist}</ul></div>
-  <div><h3>Bezirke</h3><ul class="two">{bez}</ul></div>
-  <div><h3>Ratgeber &amp; Rechtliches</h3><ul>{rest}</ul></div>
-</div></footer>''']
+''' + "\n".join(cols) + '\n</div></footer>']
     if fab_href:
         out.append(f'\n<a class="btn fab" href="{esc(fab_href)}">Anfrage {ARR}</a>')
     return "".join(out)
@@ -422,6 +510,26 @@ def faq_jsonld(site, pairs):
          "acceptedAnswer": {"@type": "Answer", "text": absolutize(site, a)}} for q, a in pairs]}
 
 
+def breadcrumb_ld(items):
+    """items: Liste (Name, absolute URL); Einträge ohne URL werden ausgelassen."""
+    items = [(n, u) for n, u in items if u]
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": n, "item": u} for i, (n, u) in enumerate(items, 1)]}
+
+
+def crumbs_html(items):
+    """items: Liste (Name, href oder None); der letzte Eintrag ist die aktuelle Seite."""
+    lis = []
+    for i, (name, href) in enumerate(items):
+        if i == len(items) - 1:
+            lis.append(f'  <li><span aria-current="page">{esc(name)}</span></li>')
+        elif href:
+            lis.append(f'  <li><a href="{esc(href)}">{esc(name)}</a></li>')
+        else:
+            lis.append(f'  <li><span>{esc(name)}</span></li>')
+    return '<nav class="crumbs wrap" aria-label="Brotkrumen"><ol>\n' + "\n".join(lis) + '\n</ol></nav>'
+
+
 def mini_card(ctx, it):
     b = ctx.site.bilder[it["bild"]]
     return f'''<article class="mini reveal">
@@ -438,7 +546,22 @@ def chip_links(items):
     return "".join(f'<a href="{esc(it["slug"])}.html">{esc(it["name"])}</a>' for it in items)
 
 
-def contact_section(ctx, c, data_page):
+def stadtteil_page(ctx, bezirk_slug, name):
+    """Stadtteil-Seite zu einem Eintrag der Bezirksliste ('Barmbek-Nord' gehört zu 'Barmbek')."""
+    for st in ctx.pages(ctx.site.stadtteile):
+        if st["bezirk"] == bezirk_slug and (name == st["name"] or name.startswith(st["name"] + "-")):
+            return st
+    return None
+
+
+def weitere_orte(ctx, entry):
+    """Andere Umland-Seiten: gleicher Kreis zuerst, dann gleiches Bundesland, dann die übrigen."""
+    others = [u for u in ctx.pages(ctx.site.umland) if u["slug"] != entry["slug"]]
+    rank = lambda u: 0 if u["kreis"] == entry["kreis"] else 1 if u["land"] == entry["land"] else 2
+    return sorted(others, key=rank)[:MAX_WEITERE_ORTE]  # sorted ist stabil: sonst Reihenfolge aus site.json
+
+
+def contact_section(ctx, form_leistung, form_ort, data_page):
     m = re.findall(r'<section class="band" id="anfrage">.*?</section>', ctx.home_src, re.S)
     if len(m) != 1:
         raise BuildError('index.html: Kontaktbereich <section class="band" id="anfrage"> nicht eindeutig gefunden')
@@ -451,11 +574,33 @@ def contact_section(ctx, c, data_page):
         sec = sec.replace(old, new)
 
     need('data-page="Startseite"', f'data-page="{esc(data_page)}"')
-    opt = f"<option>{esc(c['form_leistung'])}</option>"
-    need(opt, f"<option selected>{esc(c['form_leistung'])}</option>")
-    if c["form_ort"].strip():
-        need('<input id="ort" name="ort"', f'<input id="ort" name="ort" value="{esc(c["form_ort"].strip())}"')
+    if form_leistung:
+        opt = f"<option>{esc(form_leistung)}</option>"
+        need(opt, f"<option selected>{esc(form_leistung)}</option>")
+    if form_ort.strip():
+        need('<input id="ort" name="ort"', f'<input id="ort" name="ort" value="{esc(form_ort.strip())}"')
     return sec
+
+
+def subhero(ctx, image, label, h1, lead, facts=None):
+    f = ctx.site.firma
+    img = ctx.site.bilder[image]
+    facts_div = f'''
+    <div class="facts">
+      {facts_html(facts)}
+    </div>''' if facts else ""
+    return f'''<div class="subhero">
+  <img class="photo" src="img/{esc(image)}.jpg" alt="" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
+  <div class="wrap">
+    <p class="label">{esc(label)}</p>
+    <h1>{esc(h1)}</h1>
+    <p class="lead">{esc(lead)}</p>
+    <div class="ctas">
+      <a class="btn" href="#anfrage">Kostenlose Besichtigung {ARR}</a>
+      <a class="btn line" href="tel:{esc(f["telefon_link"])}">{PHONE_SVG}{esc(f["telefon"])}</a>
+    </div>{facts_div}
+  </div>
+</div>'''
 
 
 # ---------------------------------------------------------------------------
@@ -487,33 +632,49 @@ def render_content_page(ctx, c):
     slug, kind = c["slug"], c["type"]
     entry = s.entry[slug]
     url = s.url(slug)
-    img = s.bilder[c["image"]]
     firma_ref = {"@id": s.base + "#firma"}
-    mid = {"leistung": ("Leistungen", "leistungen"), "bezirk": ("Einsatzgebiet", "gebiet"),
-           "ratgeber": ("Ratgeber", "fragen")}[kind]
     data_page = c["menu"].strip()
-    if kind == "bezirk" and "abriss" not in data_page.lower():
+    if kind in ORTSTYPEN and "abriss" not in data_page.lower():
         data_page = "Abriss " + data_page
+    bezirk = s.bezirk_of(entry) if kind == "stadtteil" else None
 
-    ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Startseite", "item": s.base},
-        {"@type": "ListItem", "position": 2, "name": mid[0], "item": s.base + "#" + mid[1]},
-        {"@type": "ListItem", "position": 3, "name": c["h1"], "item": url}]}]
+    # Brotkrumen: (Name, Link auf der Seite, URL im JSON-LD)
+    trail = [("Startseite", ctx.home, s.base)]
+    if kind == "leistung":
+        trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
+    elif kind == "ratgeber":
+        trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
+    else:
+        trail.append(("Einsatzgebiet", UEBERSICHT + ".html", s.url(UEBERSICHT)))
+    if bezirk:
+        ok = ctx.has(bezirk["slug"])
+        trail.append((bezirk["name"], bezirk["slug"] + ".html" if ok else None, s.url(bezirk["slug"]) if ok else None))
+
+    ld = [breadcrumb_ld([(n, u) for n, _, u in trail] + [(c["h1"], url)])]
+    service = {"@context": "https://schema.org", "@type": "Service", "name": c["h1"],
+               "serviceType": "Abriss und Rückbau", "description": c["description"], "provider": firma_ref}
     if kind == "leistung":
         ld.append({"@context": "https://schema.org", "@type": "Service", "name": c["h1"], "serviceType": c["menu"],
                    "description": c["description"], "provider": firma_ref,
                    "areaServed": {"@type": "City", "name": "Hamburg"}, "url": url})
     elif kind == "bezirk":
-        ld.append({"@context": "https://schema.org", "@type": "Service", "name": c["h1"],
-                   "serviceType": "Abriss und Rückbau", "description": c["description"], "provider": firma_ref,
-                   "areaServed": {"@type": "AdministrativeArea", "name": entry["gebiet"]}, "url": url})
+        ld.append(dict(service, areaServed={"@type": "AdministrativeArea", "name": entry["gebiet"]}, url=url))
+    elif kind == "stadtteil":
+        ld.append(dict(service, areaServed={"@type": "Place", "name": "Hamburg-" + entry["name"],
+                                            "containedInPlace": {"@type": "AdministrativeArea", "name": bezirk["gebiet"]}},
+                       url=url))
+    elif kind == "umland":
+        ld.append(dict(service, areaServed={"@type": "City", "name": entry["name"],
+                                            "containedInPlace": {"@type": "AdministrativeArea", "name": entry["kreis"]}},
+                       url=url))
     else:
         ld.append({"@context": "https://schema.org", "@type": "Article", "headline": c["h1"],
                    "description": c["description"], "datePublished": ctx.today, "dateModified": ctx.today,
                    "author": firma_ref, "publisher": firma_ref, "mainEntityOfPage": url,
                    "image": f"{s.base}img/{c['image']}.jpg", "inLanguage": "de-DE"})
-    if c["faq"]:
-        ld.append(faq_jsonld(s, [(x["q"], x["a"]) for x in c["faq"]]))
+    faq = [(x["q"], ctx.drop_dead_links(inline_html(x["a"]))) for x in c["faq"]]  # (Frage, fertiges HTML)
+    if faq:
+        ld.append(faq_jsonld(s, [(x["q"], ctx.drop_dead_links(x["a"])) for x in c["faq"]]))
 
     og = [("type", "article" if kind == "ratgeber" else "website"), ("locale", "de_DE"),
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
@@ -523,12 +684,18 @@ def render_content_page(ctx, c):
     # Inhalt
     secs = []
     for sec in c["sections"]:
-        secs.append(f'<section>\n      <h2>{esc(sec["h2"])}</h2>\n      {ctx.fix_home_links(sec["html"].strip())}\n    </section>')
+        secs.append(f'<section>\n      <h2>{esc(sec["h2"])}</h2>\n      {ctx.content_html(sec["html"].strip())}\n    </section>')
     if kind == "bezirk":
+        chips = []
+        for x in c["stadtteile"]:
+            st = stadtteil_page(ctx, slug, x)
+            chips.append(f'<a class="chip-page" href="{esc(st["slug"])}.html">{esc(x)}</a>' if st else f"<span>{esc(x)}</span>")
+        secs.append(f'<section>\n      <h2>Stadtteile im Bezirk {esc(entry["name"])}</h2>\n      <div class="chips">{"".join(chips)}</div>\n    </section>')
+    if kind == "umland" and c.get("stadtteile"):
         chips = "".join(f"<span>{esc(x)}</span>" for x in c["stadtteile"])
-        secs.append(f'<section>\n      <h2>Stadtteile im Bezirk {esc(entry["name"])}</h2>\n      <div class="chips">{chips}</div>\n    </section>')
-    if kind == "leistung":
-        secs.append(f'<section>\n      <h2>In diesen Bezirken sind wir im Einsatz</h2>\n      <div class="chips">{chip_links(s.bezirke)}</div>\n    </section>')
+        secs.append(f'<section>\n      <h2>Ortsteile von {esc(entry["name"])}</h2>\n      <div class="chips">{chips}</div>\n    </section>')
+    if kind == "leistung" and ctx.pages(s.bezirke):
+        secs.append(f'<section>\n      <h2>In diesen Bezirken sind wir im Einsatz</h2>\n      <div class="chips">{chip_links(ctx.pages(s.bezirke))}</div>\n    </section>')
     if kind == "ratgeber":
         items = []
         for src in c["sources"]:
@@ -549,8 +716,11 @@ def render_content_page(ctx, c):
   </aside>'''
 
     after = []
-    if kind == "bezirk":
-        cards = "\n    ".join(mini_card(ctx, x) for x in s.leistungen)
+    cards_shown = False
+    leist = ctx.pages(s.leistungen)
+    if kind in ORTSTYPEN and leist:
+        cards_shown = True
+        cards = "\n    ".join(mini_card(ctx, x) for x in leist)
         after.append(f'''<section class="sec-alt"><div class="wrap">
   <div class="head reveal">
     <p class="label">Leistungen</p>
@@ -560,9 +730,9 @@ def render_content_page(ctx, c):
     {cards}
   </div>
 </div></section>''')
-    if c["faq"]:
-        qa = "\n    ".join(f'<details><summary>{esc(x["q"])}</summary><p>{ctx.fix_home_links(inline_html(x["a"]))}</p></details>' for x in c["faq"])
-        tight = ' class="sec-tight"' if kind != "bezirk" else ""
+    if faq:
+        qa = "\n    ".join(f'<details><summary>{esc(q)}</summary><p>{ctx.fix_home_links(a)}</p></details>' for q, a in faq)
+        tight = "" if cards_shown else ' class="sec-tight"'
         after.append(f'''<section id="fragen"{tight}><div class="wrap">
   <div class="head reveal">
     <p class="label">Häufige Fragen</p>
@@ -572,49 +742,53 @@ def render_content_page(ctx, c):
     {qa}
   </div>
 </div></section>''')
-    after.append(contact_section(ctx, c, data_page))
+    after.append(contact_section(ctx, c["form_leistung"], c["form_ort"], data_page))
+
+    def nav_section(label, h2, chips, extra=""):
+        return f'''<section><div class="wrap">
+  <div class="head reveal">
+    <p class="label">{esc(label)}</p>
+    <h2>{esc(h2)}</h2>
+  </div>
+  <div class="chips">{chips}</div>{extra}
+</div></section>'''
+
     if kind == "leistung":
-        others = [x for x in s.leistungen if x["slug"] != slug]
-        cards = "\n    ".join(mini_card(ctx, x) for x in others)
-        after.append(f'''<section><div class="wrap">
+        others = [x for x in leist if x["slug"] != slug]
+        if others:
+            cards = "\n    ".join(mini_card(ctx, x) for x in others)
+            n3 = " n3" if len(others) == 3 else ""
+            after.append(f'''<section><div class="wrap">
   <div class="head reveal">
     <p class="label">Alles aus einer Hand</p>
     <h2>Weitere Leistungen</h2>
   </div>
-  <div class="minis n3">
+  <div class="minis{n3}">
     {cards}
   </div>
 </div></section>''')
     if kind == "bezirk":
-        others = [x for x in s.bezirke if x["slug"] != slug]
-        after.append(f'''<section><div class="wrap">
-  <div class="head reveal">
-    <p class="label">Einsatzgebiet</p>
-    <h2>Weitere Bezirke</h2>
-  </div>
-  <div class="chips">{chip_links(others)}</div>
-</div></section>''')
+        others = [x for x in ctx.pages(s.bezirke) if x["slug"] != slug]
+        if others:
+            after.append(nav_section("Einsatzgebiet", "Weitere Bezirke", chip_links(others)))
+    if kind == "stadtteil":
+        others = [x for x in ctx.pages(s.stadtteile) if x["bezirk"] == bezirk["slug"] and x["slug"] != slug]
+        chips = chip_links(others)
+        if ctx.has(bezirk["slug"]):
+            chips += f'<a class="chip-all" href="{esc(bezirk["slug"])}.html">Ganzer Bezirk {esc(bezirk["name"])}</a>'
+        if chips:
+            after.append(nav_section("Einsatzgebiet", f"Weitere Stadtteile im Bezirk {bezirk['name']}", chips))
+    if kind == "umland":
+        alle = (f'\n  <p class="go-wrap"><a class="go-all" href="{UEBERSICHT}.html">Alle Orte im Einsatzgebiet '
+                f'<span aria-hidden="true">→</span></a></p>')
+        others = weitere_orte(ctx, entry)
+        if others:
+            after.append(nav_section("Einsatzgebiet", "Weitere Orte im Umland", chip_links(others), alle))
+        else:
+            after.append(f'<section><div class="wrap">{alle}\n</div></section>')
 
-    crumbs = f'''<nav class="crumbs wrap" aria-label="Brotkrumen"><ol>
-  <li><a href="{esc(ctx.home)}">Startseite</a></li>
-  <li><a href="{esc(ctx.home_link(mid[1], False))}">{esc(mid[0])}</a></li>
-  <li><span aria-current="page">{esc(entry["name"])}</span></li>
-</ol></nav>'''
-    hero = f'''<div class="subhero">
-  <img class="photo" src="img/{esc(c["image"])}.jpg" alt="" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
-  <div class="wrap">
-    <p class="label">{esc(c["label"])}</p>
-    <h1>{esc(c["h1"])}</h1>
-    <p class="lead">{esc(c["lead"])}</p>
-    <div class="ctas">
-      <a class="btn" href="#anfrage">Kostenlose Besichtigung {ARR}</a>
-      <a class="btn line" href="tel:{esc(f["telefon_link"])}">{PHONE_SVG}{esc(f["telefon"])}</a>
-    </div>
-    <div class="facts">
-      {facts_html(c["facts"])}
-    </div>
-  </div>
-</div>'''
+    crumbs = crumbs_html([(n, h) for n, h, _ in trail] + [(entry["name"], None)])
+    hero = subhero(ctx, c["image"], c["label"], c["h1"], c["lead"], c["facts"])
     body = "\n\n".join([
         render_header(ctx, slug, False, "#anfrage"),
         '<main id="start">\n' + crumbs + "\n" + hero + '\n\n<div class="wrap page">\n  <div class="prose">\n    '
@@ -622,6 +796,73 @@ def render_content_page(ctx, c):
         render_footer(ctx, slug, False, "#anfrage"),
     ])
     return doc(head, body, f"{ctx.content_rel}/{slug}.json")
+
+
+def render_einsatzgebiet(ctx):
+    """Übersicht aller Orte: Bezirke mit ihren Stadtteil-Seiten, Umland nach Kreis."""
+    s, f, e = ctx.site, ctx.site.firma, ctx.site.uebersicht
+    url = s.url(UEBERSICHT)
+    ld = [breadcrumb_ld([("Startseite", s.base), ("Einsatzgebiet", url)])]
+    og = [("type", "website"), ("locale", "de_DE"), ("site_name", f["name"]), ("title", e["title"]),
+          ("description", e["description"]), ("image", f"{s.base}img/abriss.jpg"), ("url", url)]
+    head = page_head(ctx, title=e["title"], description=e["description"], canonical=url, og=og, ld=ld)
+
+    def row(title_html, chips, sub=""):
+        sub = f'<p class="label">{esc(sub)}</p>' if sub else ""
+        chips = f'\n      <div class="chips">{chips}</div>' if chips else ""
+        return f'<li>\n      <div class="ort-h"><h3>{title_html}</h3>{sub}</div>{chips}\n    </li>'
+
+    def area(sid, label, h2, rows, cls="", extra=""):
+        rows = "\n    ".join(rows)
+        return f'''<section id="{sid}"{cls}><div class="wrap">
+  <div class="head reveal">
+    <p class="label">{esc(label)}</p>
+    <h2>{esc(h2)}</h2>
+  </div>
+  <ul class="orte reveal">
+    {rows}
+  </ul>{extra}
+</div></section>'''
+
+    bez_rows = []
+    for b in s.bezirke:
+        st = ctx.pages([x for x in s.stadtteile if x["bezirk"] == b["slug"]])
+        if ctx.has(b["slug"]):
+            title = f'<a href="{esc(b["slug"])}.html">{esc(b["name"])} <span aria-hidden="true">→</span></a>'
+        else:
+            title = esc(b["name"])
+        bez_rows.append(row(title, chip_links(st)))
+
+    kreise = {}
+    for u in ctx.pages(s.umland):
+        kreise.setdefault((u["kreis"], u["land"]), []).append(u)
+    uml_rows = [row(esc(k), chip_links(orte), land) for (k, land), orte in kreise.items()]
+    laender = " · ".join(dict.fromkeys(land for _, land in kreise))
+
+    q, sep, rest = e["hinweis"].partition("? ")
+    text = f"<strong>{esc(q)}?</strong> {esc(rest)}" if sep else esc(e["hinweis"])
+    hinweis = f'''
+  <div class="note hinweis reveal">
+    <p>{text}</p>
+    <a class="btn" href="#anfrage">Zum Anfrageformular {ARR}</a>
+  </div>'''
+
+    sections = []
+    if uml_rows:
+        sections.append(area("bezirke", "Hamburg", "Hamburger Bezirke", bez_rows))
+        sections.append(area("umland", laender, "Umland", uml_rows, ' class="sec-alt"', hinweis))
+    else:
+        sections.append(area("bezirke", "Hamburg", "Hamburger Bezirke", bez_rows, "", hinweis))
+    sections.append(contact_section(ctx, "Weiß ich noch nicht", "", "Einsatzgebiet"))
+
+    crumbs = crumbs_html([("Startseite", ctx.home), ("Einsatzgebiet", None)])
+    hero = subhero(ctx, "abriss", e["label"], e["h1"], e["lead"])
+    body = "\n\n".join([
+        render_header(ctx, UEBERSICHT, False, "#anfrage"),
+        '<main id="start">\n' + crumbs + "\n" + hero + "\n\n" + "\n\n".join(sections) + "\n</main>",
+        render_footer(ctx, UEBERSICHT, False, "#anfrage"),
+    ])
+    return doc(head, body, "src/site.json")
 
 
 def render_legal(ctx, entry, fragment):
@@ -659,6 +900,20 @@ def home_faq_pairs(src):
     return pairs
 
 
+def home_umland(ctx):
+    """Satz unter der Bezirkstabelle der Startseite; Orte ohne Seite stehen als reiner Text da."""
+    s = ctx.site
+    names = [f'<a href="{esc(x)}.html">{esc(s.entry[x]["name"])}</a>' if ctx.has(x) else esc(s.entry[x]["name"])
+             for x in s.startseite_umland]
+    out = []
+    if names:
+        joined = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " oder " + names[-1]
+        out.append(f'    <p class="gebiet-mehr">Auch im Umland, z. B. in {joined}.</p>')
+    out.append(f'    <p class="go-wrap"><a class="go-all" href="{UEBERSICHT}.html">Alle Stadtteile und Orte im Einsatzgebiet '
+               f'<span aria-hidden="true">→</span></a></p>')
+    return "\n".join(out)
+
+
 def render_index(ctx):
     s, f = ctx.site, ctx.site.firma
     src = ctx.home_src
@@ -673,6 +928,7 @@ def render_index(ctx):
     head = head_assets(ctx, extra_noindex=True) + [jsonld(business), jsonld(faq_jsonld(s, home_faq_pairs(src)))]
     out = fill_marker(src, "head", "\n".join(head))
     out = fill_marker(out, "header", render_header(ctx, "index", True, "#anfrage"))
+    out = fill_marker(out, "umland", home_umland(ctx))
     out = fill_marker(out, "footer", render_footer(ctx, "index", True, "#anfrage"))
     return out
 
@@ -690,6 +946,16 @@ def check_home_links(ctx, linker, errors):
         msg = linker.check(href, "index.html")
         if msg:
             errors.append(f"index.html: {msg}")
+
+
+def check_stadtteil_chips(site, contents, warn):
+    """Jede Stadtteil-Seite sollte in der Stadtteil-Liste ihres Bezirks vorkommen (dort wird sie verlinkt)."""
+    for st in site.stadtteile:
+        bez = contents.get(st["bezirk"])
+        if st["slug"] not in contents or not bez:
+            continue
+        if not any(x == st["name"] or x.startswith(st["name"] + "-") for x in bez["stadtteile"]):
+            warn(f"{st['bezirk']}.json: Stadtteil '{st['name']}' fehlt in 'stadtteile' – dort nicht verlinkt")
 
 
 def sitemap(site, slugs, today):
@@ -737,7 +1003,7 @@ def main(argv=None):
                 contents[c["slug"]] = c
     missing = [x for x in site.content_slugs() if x not in contents]
     if missing:
-        warn(f"Kein Inhalt für {len(missing)} Seite(n) in {content_dir.name}/ – übersprungen, im Menü trotzdem verlinkt: "
+        warn(f"Kein Inhalt für {len(missing)} Seite(n) in {content_dir.name}/ – übersprungen und nirgends verlinkt: "
              + ", ".join(missing))
 
     home_src = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -750,9 +1016,16 @@ def main(argv=None):
     for c in contents.values():
         check_links_in(c, linker, errors)
     check_home_links(ctx, linker, errors)
-    if linker.pending:
-        warn("Links auf Seiten, die (noch) nicht gebaut werden: " + "; ".join(
-            f"{k}.html ← {', '.join(sorted(set(v)))}" for k, v in linker.pending.items()))
+    check_stadtteil_chips(site, contents, warn)
+    sub = {k: sorted(set(v) - {"index.html"}) for k, v in linker.pending.items()}
+    sub = {k: v for k, v in sub.items() if v}
+    if sub:
+        warn("Links auf Seiten ohne Inhalt, als reiner Text ausgegeben: " + "; ".join(
+            f"{k}.html ← {', '.join(v)}" for k, v in sub.items()))
+    home_dead = [k for k, v in linker.pending.items() if "index.html" in v]
+    if home_dead:
+        warn("index.html (von Hand gepflegt) verlinkt Seiten ohne Inhalt – bitte dort anpassen: "
+             + ", ".join(f"{k}.html" for k in home_dead))
 
     if errors:
         for w in warnings:
@@ -770,8 +1043,11 @@ def main(argv=None):
     order = [x for x in site.content_slugs() if x in contents]
     for slug in order:
         files[f"{slug}.html"] = render_content_page(ctx, contents[slug])
+    files[f"{UEBERSICHT}.html"] = render_einsatzgebiet(ctx)
     if not args.preview:
-        files["sitemap.xml"] = sitemap(site, order, today)
+        has = lambda items: [x["slug"] for x in ctx.pages(items)]
+        slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
+        files["sitemap.xml"] = sitemap(site, slugs, today)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     if out_dir != ROOT:

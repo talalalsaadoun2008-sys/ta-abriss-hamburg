@@ -39,6 +39,52 @@
     {"slug": "abriss-hamburg-harburg", "name": "Harburg", "gebiet": "Hamburg-Harburg", "entfernung": "ca. 12 km"},
     {"slug": "abriss-hamburg-bergedorf", "name": "Bergedorf", "gebiet": "Hamburg-Bergedorf", "entfernung": "ca. 22 km"}
   ],
+  "stadtteile": [
+    {"slug": "abriss-hamburg-ottensen", "name": "Ottensen", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-blankenese", "name": "Blankenese", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-rissen", "name": "Rissen", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-niendorf", "name": "Niendorf", "bezirk": "abriss-hamburg-eimsbuettel"},
+    {"slug": "abriss-hamburg-schnelsen", "name": "Schnelsen", "bezirk": "abriss-hamburg-eimsbuettel"},
+    {"slug": "abriss-hamburg-eppendorf", "name": "Eppendorf", "bezirk": "abriss-hamburg-nord"},
+    {"slug": "abriss-hamburg-winterhude", "name": "Winterhude", "bezirk": "abriss-hamburg-nord"},
+    {"slug": "abriss-hamburg-barmbek", "name": "Barmbek", "bezirk": "abriss-hamburg-nord"},
+    {"slug": "abriss-hamburg-wilhelmsburg", "name": "Wilhelmsburg", "bezirk": "abriss-hamburg-mitte"},
+    {"slug": "abriss-hamburg-neugraben-fischbek", "name": "Neugraben-Fischbek", "bezirk": "abriss-hamburg-harburg"},
+    {"slug": "abriss-hamburg-lohbruegge", "name": "Lohbrügge", "bezirk": "abriss-hamburg-bergedorf"},
+    {"slug": "abriss-hamburg-rahlstedt", "name": "Rahlstedt", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-bramfeld", "name": "Bramfeld", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-volksdorf", "name": "Volksdorf", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-poppenbuettel", "name": "Poppenbüttel", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-sasel", "name": "Sasel", "bezirk": "abriss-hamburg-wandsbek"}
+  ],
+  "umland": [
+    {"slug": "abriss-norderstedt", "name": "Norderstedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-pinneberg", "name": "Pinneberg", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-wedel", "name": "Wedel", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-schenefeld", "name": "Schenefeld", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-halstenbek", "name": "Halstenbek", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-quickborn", "name": "Quickborn", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ahrensburg", "name": "Ahrensburg", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-bargteheide", "name": "Bargteheide", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-reinbek", "name": "Reinbek", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-glinde", "name": "Glinde", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-geesthacht", "name": "Geesthacht", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-seevetal", "name": "Seevetal", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-buchholz", "name": "Buchholz in der Nordheide", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-winsen-luhe", "name": "Winsen (Luhe)", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-buxtehude", "name": "Buxtehude", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-stade", "name": "Stade", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
+  ],
+  "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
+  "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
+  "einsatzgebiet": {
+    "title": "Einsatzgebiet: Hamburg und Umland | T&A Abriss & Rückbau",
+    "description": "Abriss, Entkernung, Innenabbruch und Trockenbau in allen sieben Hamburger Bezirken und im Umland. Alle Stadtteile und Orte mit eigener Seite im Überblick.",
+    "label": "Einsatzgebiet",
+    "h1": "Abriss und Rückbau in Hamburg und Umgebung",
+    "lead": "Unser Sitz ist in Hamburg-Altona. Wir arbeiten in allen sieben Bezirken und im Umland in Schleswig-Holstein und Niedersachsen.",
+    "hinweis": "Ihr Ort ist nicht dabei? Wir kommen auch dorthin. Fragen Sie einfach an."
+  },
   "ratgeber": [
     {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"}
   ],

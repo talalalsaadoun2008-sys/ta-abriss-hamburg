@@ -1,0 +1,56 @@
+{
+  "slug": "abriss-hamburg-barmbek",
+  "type": "stadtteil",
+  "menu": "Barmbek",
+  "title": "Abriss & Entkernung Hamburg-Barmbek | T&A Abriss & Rückbau",
+  "description": "Testseite: Abriss, Entkernung und Innenabbruch in Hamburg-Barmbek. Kostenlose Besichtigung und Festpreis inklusive Entsorgung.",
+  "label": "Stadtteil Barmbek · Bezirk Hamburg-Nord",
+  "h1": "Abriss und Entkernung in Hamburg-Barmbek",
+  "lead": "Testtext: Platzhalter für den Einleitungstext der Stadtteilseite Barmbek, höchstens zwei Sätze lang.",
+  "facts": [
+    "Testpunkt eins",
+    "Testpunkt zwei",
+    "Testpunkt drei"
+  ],
+  "image": "entkernung",
+  "form_leistung": "Entkernung",
+  "form_ort": "Barmbek",
+  "sections": [
+    {
+      "h2": "Testabschnitt Barmbek",
+      "html": "<p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können.</p><p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können. Mehr zum Bezirk auf der Seite <a href=\"abriss-hamburg-nord.html\">Hamburg-Nord</a>.</p>"
+    },
+    {
+      "h2": "Typische Aufträge (Test)",
+      "html": "<h3>Testunterpunkt</h3><ul><li>Testpunkt Altbau</li><li>Testpunkt Nachkriegsbau</li></ul><p>Genehmigung: siehe <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber</a>. Nachbarstadtteil (Seite fehlt, Link muss zu Text werden): <a href=\"abriss-hamburg-winterhude.html\">Winterhude</a>.</p>"
+    },
+    {
+      "h2": "Anfrage (Test)",
+      "html": "<p>Platzhaltertext für den Test der Seitenvorlage. Dieser Absatz steht für den echten Inhalt, der später aus src/content kommt, und ist absichtlich etwas länger, damit Zeilenlänge und Lesbarkeit beurteilt werden können. Am einfachsten über das <a href=\"index.html#anfrage\">Anfrageformular</a>.</p>"
+    }
+  ],
+  "stadtteile": [],
+  "faq": [
+    {
+      "q": "Testfrage eins zu Barmbek?",
+      "a": "Testantwort eins."
+    },
+    {
+      "q": "Testfrage zwei zu Barmbek?",
+      "a": "Testantwort mit Link auf eine fehlende Seite: <a href=\"abriss-hamburg-eppendorf.html\">Eppendorf</a> &amp; Text."
+    },
+    {
+      "q": "Testfrage drei?",
+      "a": "Testantwort drei mit <strong>Hervorhebung</strong>."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Testquelle",
+      "url": "https://example.org/"
+    }
+  ],
+  "notes_for_review": [
+    "GEHEIMNOTIZ-STADTTEIL"
+  ]
+}

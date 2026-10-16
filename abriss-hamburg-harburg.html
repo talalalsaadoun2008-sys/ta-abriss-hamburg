@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js" defer></script>
 <noscript><style>button.burger{display:none}.menu:target{display:block}</style></noscript>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ta-abriss-hamburg.de/"}, {"@type": "ListItem", "position": 2, "name": "Einsatzgebiet", "item": "https://ta-abriss-hamburg.de/#gebiet"}, {"@type": "ListItem", "position": 3, "name": "Abriss und Entkernung in Hamburg-Harburg", "item": "https://ta-abriss-hamburg.de/abriss-hamburg-harburg.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ta-abriss-hamburg.de/"}, {"@type": "ListItem", "position": 2, "name": "Einsatzgebiet", "item": "https://ta-abriss-hamburg.de/einsatzgebiet.html"}, {"@type": "ListItem", "position": 3, "name": "Abriss und Entkernung in Hamburg-Harburg", "item": "https://ta-abriss-hamburg.de/abriss-hamburg-harburg.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Abriss und Entkernung in Hamburg-Harburg", "serviceType": "Abriss und Rückbau", "description": "Entkernung, Innenabbruch und Kleinabriss in Hamburg-Harburg, vom Phoenix-Viertel bis Neuenfelde. Sie erhalten vorab einen schriftlichen Festpreis.", "provider": {"@id": "https://ta-abriss-hamburg.de/#firma"}, "areaServed": {"@type": "AdministrativeArea", "name": "Hamburg-Harburg"}, "url": "https://ta-abriss-hamburg.de/abriss-hamburg-harburg.html"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ich weiß noch nicht, ob ich eine Entkernung oder einen Innenabbruch brauche. Was nun?", "acceptedAnswer": {"@type": "Answer", "text": "Wählen Sie im Formular „Weiß ich noch nicht“. Bei der kostenlosen Besichtigung sehen wir uns die Räume an und sagen Ihnen, was sinnvoll ist. Danach bekommen Sie ein schriftliches Festpreis-Angebot."}}, {"@type": "Question", "name": "Wir möchten eine Gewerbefläche im Hafengebiet entkernen. Ist das Bezirksamt Harburg zuständig?", "acceptedAnswer": {"@type": "Answer", "text": "Im Hafennutzungsgebiet ist für die Bauprüfung nicht das Bezirksamt zuständig, sondern die Bauprüfabteilung Hafen der Hamburg Port Authority. Was in Ihrem Fall nötig ist, klären wir bei der Besichtigung. Im Zweifel fragen Sie dort direkt nach."}}, {"@type": "Question", "name": "Auf unserem Hof in Neuenfelde steht ein alter Schuppen. Übernehmen Sie das?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, Schuppen gehören zu unserem Kleinabriss. Steht der Hof unter Denkmalschutz, braucht auch das Beseitigen von Teilen eine Genehmigung des Denkmalschutzamts. Das sollte vor dem Termin geklärt sein."}}, {"@type": "Question", "name": "Können Sie nach der Entkernung einer Altbauwohnung auch die neuen Wände setzen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Trennwände aus Gipskarton, abgehängte Decken, Vorsatzschalen und Dämmung bauen wir direkt im Anschluss ein. Eine zweite Firma brauchen Sie dafür nicht."}}]}</script>
 </head>
@@ -70,6 +70,18 @@
       <li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li>
     </ul>
   </div>
+  <div class="grp g-uml">
+    <p class="menu-h" id="m-uml">Umland</p>
+    <ul aria-labelledby="m-uml" class="cols">
+      <li><a href="abriss-norderstedt.html">Norderstedt</a></li>
+      <li><a href="abriss-pinneberg.html">Pinneberg</a></li>
+      <li><a href="abriss-ahrensburg.html">Ahrensburg</a></li>
+      <li><a href="abriss-reinbek.html">Reinbek</a></li>
+      <li><a href="abriss-wedel.html">Wedel</a></li>
+      <li><a href="abriss-buxtehude.html">Buxtehude</a></li>
+    </ul>
+    <a class="menu-all" href="einsatzgebiet.html">Alle Stadtteile und Orte <span aria-hidden="true">→</span></a>
+  </div>
   <div class="grp g-rat">
     <p class="menu-h" id="m-rat">Ratgeber</p>
     <ul aria-labelledby="m-rat">
@@ -93,7 +105,7 @@
 <main id="start">
 <nav class="crumbs wrap" aria-label="Brotkrumen"><ol>
   <li><a href="./">Startseite</a></li>
-  <li><a href="./#gebiet">Einsatzgebiet</a></li>
+  <li><a href="einsatzgebiet.html">Einsatzgebiet</a></li>
   <li><span aria-current="page">Harburg</span></li>
 </ol></nav>
 <div class="subhero">
@@ -130,11 +142,11 @@
     </section>
     <section>
       <h2>Container und Halteverbot in Harburger Straßen</h2>
-      <p>Bei einer Entkernung kommt viel Material zusammen. Passt der Container nicht auf das Grundstück, muss er auf die Straße. Dafür gilt in Hamburg:</p><ul><li>Container auf Gehweg oder Fahrbahn brauchen vorher eine Sondernutzungserlaubnis des Bezirksamts.</li><li>Eine Halteverbotszone muss rechtzeitig beantragt werden, in Hamburg mindestens 14 Tage vorher.</li></ul><p>Bei der Besichtigung schauen wir, wo ein Container Platz hat. Was in Ihrem Fall nötig ist, klären wir dabei, und wir legen den Starttermin so, dass genug Vorlauf bleibt.</p>
+      <p>Bei einer Entkernung kommt viel Material zusammen. Passt der Container nicht auf das Grundstück, muss er auf die Straße. Dafür gilt in Hamburg:</p><ul><li>Container auf Gehweg oder Fahrbahn brauchen vorher eine Sondernutzungserlaubnis des Bezirksamts.</li><li>Eine Halteverbotszone für Container oder Transporter ist in Hamburg mindestens 14 Tage vorher zu beantragen.</li></ul><p>Bei der Besichtigung schauen wir, wo ein Container Platz hat. Was in Ihrem Fall nötig ist, klären wir dabei, und wir legen den Starttermin so, dass genug Vorlauf bleibt.</p>
     </section>
     <section>
       <h2>Stadtteile im Bezirk Harburg</h2>
-      <div class="chips"><span>Altenwerder</span><span>Cranz</span><span>Eißendorf</span><span>Francop</span><span>Gut Moor</span><span>Harburg</span><span>Hausbruch</span><span>Heimfeld</span><span>Langenbek</span><span>Marmstorf</span><span>Moorburg</span><span>Neuenfelde</span><span>Neugraben-Fischbek</span><span>Neuland</span><span>Rönneburg</span><span>Sinstorf</span><span>Wilstorf</span></div>
+      <div class="chips"><span>Altenwerder</span><span>Cranz</span><span>Eißendorf</span><span>Francop</span><span>Gut Moor</span><span>Harburg</span><span>Hausbruch</span><span>Heimfeld</span><span>Langenbek</span><span>Marmstorf</span><span>Moorburg</span><span>Neuenfelde</span><a class="chip-page" href="abriss-hamburg-neugraben-fischbek.html">Neugraben-Fischbek</a><span>Neuland</span><span>Rönneburg</span><span>Sinstorf</span><span>Wilstorf</span></div>
     </section>
   </div>
   <aside class="side" aria-labelledby="side-h">
@@ -254,7 +266,7 @@
     <ul><li><a href="tel:+4917632896617">Telefon: 0176 32896617</a></li><li><a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a></li></ul>
   </div>
   <div><h3>Leistungen</h3><ul class="two"><li><a href="kleinabriss-hamburg.html">Kleinabriss</a></li><li><a href="entkernung-hamburg.html">Entkernung</a></li><li><a href="innenabbruch-hamburg.html">Innenabbruch</a></li><li><a href="trockenbau-hamburg.html">Trockenbau</a></li></ul></div>
-  <div><h3>Bezirke</h3><ul class="two"><li><a href="abriss-hamburg-altona.html">Altona</a></li><li><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></li><li><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></li><li><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></li><li><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></li><li><a href="abriss-hamburg-harburg.html" aria-current="page">Harburg</a></li><li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li></ul></div>
+  <div><h3>Bezirke</h3><ul class="two"><li><a href="abriss-hamburg-altona.html">Altona</a></li><li><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></li><li><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></li><li><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></li><li><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></li><li><a href="abriss-hamburg-harburg.html" aria-current="page">Harburg</a></li><li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li></ul><p class="foot-all"><a href="einsatzgebiet.html">Alle Orte im Einsatzgebiet <span aria-hidden="true">→</span></a></p></div>
   <div><h3>Ratgeber &amp; Rechtliches</h3><ul><li><a href="abriss-genehmigung-hamburg.html">Abriss-Genehmigung in Hamburg</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
 </div></footer>
 <a class="btn fab" href="#anfrage">Anfrage <span class="arr" aria-hidden="true">→</span></a>

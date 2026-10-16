@@ -1,0 +1,67 @@
+{
+  "slug": "abriss-hamburg-harburg",
+  "type": "bezirk",
+  "menu": "Harburg",
+  "title": "Abriss & Entkernung Hamburg-Harburg | T&A Abriss & Rückbau",
+  "description": "Entkernung, Innenabbruch und Kleinabriss in Hamburg-Harburg, vom Phoenix-Viertel bis Neuenfelde. Sie erhalten vorab einen schriftlichen Festpreis.",
+  "label": "Bezirk Harburg",
+  "h1": "Abriss und Entkernung in Hamburg-Harburg",
+  "lead": "Altbauwohnung im Phoenix-Viertel, Siedlungswohnung in Neuwiedenthal, Schuppen in Neuenfelde: In Harburg entkernen wir, bauen zurück und auf Wunsch gleich neu auf.",
+  "facts": ["Besichtigung Mo–Fr ab 16:30", "Schriftlicher Festpreis", "Trockenbau ohne zweite Firma"],
+  "image": "entkernung",
+  "form_leistung": "Weiß ich noch nicht",
+  "form_ort": "Harburg",
+  "sections": [
+    {
+      "h2": "Harburg: 17 Stadtteile zwischen Hafen und Altem Land",
+      "html": "<p>Harburg liegt ganz im Süden Hamburgs und hat 17 Stadtteile. Dazu gehören das Zentrum mit dem Binnenhafen, Teile des Hamburger Hafens, Wohngebiete und ländliche Gegenden bis ins Alte Land. Das Bezirksamt beschreibt den Bezirk als urbanes Zentrum im Hamburger Süden, das sich zugleich als Gewerbe- und Technologiestandort entwickelt hat. Von unserem Sitz in Altona sind es rund 12 km.</p><p>So unterschiedlich wie die Stadtteile sind auch die Aufträge. Viele Kunden wissen am Anfang nicht genau, welche Leistung sie brauchen. Das ist kein Problem: Wählen Sie im Formular einfach „Weiß ich noch nicht“. Bei der kostenlosen Besichtigung klären wir, ob es um Entkernung, Innenabbruch, Kleinabriss oder Trockenbau geht.</p>"
+    },
+    {
+      "h2": "Typische Aufträge in Harburg nach Stadtteil",
+      "html": "<h3>Phoenix-Viertel und Harburger Zentrum: Entkernung zwischen zwei Mietern</h3><p>Das Phoenix-Viertel war von 2005 bis 2015 Sanierungsgebiet. In älteren Mietshäusern steht vor einer neuen Vermietung oft die Entkernung an: alte Böden, Deckenverkleidungen, Küche und Bad raus, bis die Räume für die Sanierung frei sind. Für Vermieter und Hausverwaltungen übergeben wir die Wohnung danach besenrein. Mehr dazu auf der Seite <a href=\"entkernung-hamburg.html\">Entkernung in Hamburg</a>.</p><h3>Neuwiedenthal: Wohnungen in der großen Siedlung</h3><p>Im Stadtteil Hausbruch liegt die große Wohnsiedlung Neuwiedenthal. In solchen Wohnungen reicht oft ein Rückbau einzelner Bauteile: Fliesen und Estrich im Bad abtragen oder eine nichttragende Wand zwischen Küche und Wohnraum entfernen. Bei älteren Gebäuden wird vor dem <a href=\"innenabbruch-hamburg.html\">Innenabbruch</a> geprüft, ob Asbest oder andere Schadstoffe im Spiel sein können. Der Ausbau läuft dann nach den geltenden Schutzregeln, wenn nötig durch einen dafür zugelassenen Fachbetrieb.</p><h3>Neugraben-Fischbek: neue Häuser, neue Grundrisse</h3><p>In Neugraben-Fischbek sind in den letzten Jahren neue Wohngebiete entstanden, darunter Vogelkamp Neugraben mit Einfamilien-, Reihen- und Mehrfamilienhäusern sowie Fischbeker Heidbrook. In neuen Häusern geht es eher um Umbau als um Abriss: Ein Kinderzimmer soll geteilt, eine Decke abgehängt oder eine Wand gedämmt werden. Das erledigen wir im <a href=\"trockenbau-hamburg.html\">Trockenbau</a>.</p><h3>Neuenfelde, Cranz und Francop: Höfe im Alten Land</h3><p>Diese drei Stadtteile gehören zum Alten Land und sind vom Obstanbau geprägt, vor allem von Äpfeln und Kirschen. Typisch sind reich verzierte Fachwerk-Bauernhäuser. Auf Höfen und großen Grundstücken bauen wir alte Schuppen, Carports, Zäune und Mauern zurück, siehe <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>.</p>"
+    },
+    {
+      "h2": "Was im Bezirk Harburg zu beachten ist",
+      "html": "<ul><li><strong>Bauprüfung:</strong> Zuständig ist die Bauprüfung im Zentrum für Wirtschaftsförderung, Bauen und Umwelt des Bezirksamts Harburg, Harburger Rathausforum 2.</li><li><strong>Hafengebiet:</strong> Liegt ein Grundstück im Hafennutzungsgebiet, ist nicht das Bezirksamt zuständig, sondern die Bauprüfabteilung Hafen der Hamburg Port Authority.</li><li><strong>Denkmalschutz:</strong> Wer ein Denkmal ganz oder teilweise beseitigen oder verändern will, braucht eine Genehmigung des Denkmalschutzamts. Bei alten Bauernhäusern im Alten Land lohnt es sich, das früh zu klären.</li><li><strong>Soziale Erhaltungsverordnung:</strong> Im Bericht der Stadtentwicklungsbehörde vom Februar 2025 (Gebietsstand Ende 2022) ist für Harburg kein solches Gebiet aufgeführt. Ob sich daran etwas geändert hat, erfahren Sie beim Bezirksamt. Anders ist es zum Beispiel in Eilbek, siehe <a href=\"abriss-hamburg-wandsbek.html\">Abriss in Wandsbek</a>.</li></ul><p>Ob für Ihr Grundstück ein Bebauungsplan oder andere Vorgaben gelten, erfahren Sie bei der Bauprüfung. Den Überblick über Genehmigungen gibt unser <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber zur Abrissgenehmigung</a>.</p>"
+    },
+    {
+      "h2": "Container und Halteverbot in Harburger Straßen",
+      "html": "<p>Bei einer Entkernung kommt viel Material zusammen. Passt der Container nicht auf das Grundstück, muss er auf die Straße. Dafür gilt in Hamburg:</p><ul><li>Container auf Gehweg oder Fahrbahn brauchen vorher eine Sondernutzungserlaubnis des Bezirksamts.</li><li>Eine Halteverbotszone muss rechtzeitig beantragt werden, in Hamburg mindestens 14 Tage vorher.</li></ul><p>Bei der Besichtigung schauen wir, wo ein Container Platz hat. Was in Ihrem Fall nötig ist, klären wir dabei, und wir legen den Starttermin so, dass genug Vorlauf bleibt.</p>"
+    }
+  ],
+  "stadtteile": ["Altenwerder", "Cranz", "Eißendorf", "Francop", "Gut Moor", "Harburg", "Hausbruch", "Heimfeld", "Langenbek", "Marmstorf", "Moorburg", "Neuenfelde", "Neugraben-Fischbek", "Neuland", "Rönneburg", "Sinstorf", "Wilstorf"],
+  "faq": [
+    {
+      "q": "Ich weiß noch nicht, ob ich eine Entkernung oder einen Innenabbruch brauche. Was nun?",
+      "a": "Wählen Sie im Formular „Weiß ich noch nicht“. Bei der kostenlosen Besichtigung sehen wir uns die Räume an und sagen Ihnen, was sinnvoll ist. Danach bekommen Sie ein schriftliches Festpreis-Angebot."
+    },
+    {
+      "q": "Wir möchten eine Gewerbefläche im Hafengebiet entkernen. Ist das Bezirksamt Harburg zuständig?",
+      "a": "Im Hafennutzungsgebiet ist für die Bauprüfung nicht das Bezirksamt zuständig, sondern die Bauprüfabteilung Hafen der Hamburg Port Authority. Was in Ihrem Fall nötig ist, klären wir bei der Besichtigung. Im Zweifel fragen Sie dort direkt nach."
+    },
+    {
+      "q": "Auf unserem Hof in Neuenfelde steht ein alter Schuppen. Übernehmen Sie das?",
+      "a": "Ja, Schuppen gehören zu unserem Kleinabriss. Steht der Hof unter Denkmalschutz, braucht auch das Beseitigen von Teilen eine Genehmigung des Denkmalschutzamts. Das sollte vor dem Termin geklärt sein."
+    },
+    {
+      "q": "Können Sie nach der Entkernung einer Altbauwohnung auch die neuen Wände setzen?",
+      "a": "Ja. Trennwände aus Gipskarton, abgehängte Decken, Vorsatzschalen und Dämmung bauen wir direkt im Anschluss ein. Eine zweite Firma brauchen Sie dafür nicht."
+    }
+  ],
+  "sources": [
+    {"title": "Bezirk Harburg – Stadtentwicklung, Broschüre des Bezirksamts Harburg (2016/2017)", "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2018/76689/pdf/Stadtentwicklung_Harburg.pdf"},
+    {"title": "Harburg, Hamburg – Wikipedia (Stadtteile, Hafen, ländliche Gebiete)", "url": "https://en.wikipedia.org/wiki/Harburg,_Hamburg"},
+    {"title": "Hausbruch – Wikipedia (Siedlung Neuwiedenthal)", "url": "https://en.wikipedia.org/wiki/Hausbruch"},
+    {"title": "Altes Land – Wikipedia (Neuenfelde, Cranz, Francop, Obstbau, Bauernhäuser)", "url": "https://en.wikipedia.org/wiki/Altes_Land"},
+    {"title": "Adressliste der Bauprüfdienststellen Hamburg (Stand 16.04.2025)", "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"},
+    {"title": "Denkmalrechtliche Genehmigung – Leistungsbeschreibung Hamburg (FIM-Portal)", "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012667/de/pdf"},
+    {"title": "Bericht zu sozialen Erhaltungsverordnungen, Behörde für Stadtentwicklung und Wohnen (Februar 2025)", "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2025/189915/pdf/d_faltblatt_sozerhvo_februar_2025_data.pdf"},
+    {"title": "Sondernutzung von Straßen bei Baumaßnahmen – Leistungsbeschreibung Hamburg (FIM-Portal)", "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012878/de/pdf"},
+    {"title": "Halteverbotszone beantragen – Leistungsbeschreibung Hamburg (FIM-Portal)", "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000001683/de/pdf"},
+    {"title": "Halteverbotszone beantragen – Leistungsbeschreibung Herausgeber Hamburg (Verwaltungsportal des Bundes)", "url": "https://verwaltung.bund.de/leistungsverzeichnis/DE/leistung/99108011153000/herausgeber/HH-S1000020010000001683/region/020000000000"}
+  ],
+  "notes_for_review": [
+    "Soziale Erhaltungsverordnung: Der Bericht vom Februar 2025 hat den Gebietsstand Ende 2022. Ob in Harburg seitdem ein Gebiet dazugekommen ist, konnte ich nicht prüfen; der Text verweist deshalb aufs Bezirksamt. Eine städtebauliche Erhaltungsverordnung behauptet die Seite nicht.",
+    "Zuständigkeit der HPA im Hafennutzungsgebiet stammt aus der Adressliste der Bauprüfdienststellen (Stand 16.04.2025, also vor der neuen HBauO). Eine Änderung zum 1.1.2026 habe ich nicht gefunden, aber auch nicht ausschließen können."
+  ]
+}

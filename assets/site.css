@@ -241,12 +241,17 @@ header.top .tools{display:flex;align-items:center;gap:.5rem;flex:none}
 @media (min-width:760px){
   .scrim{display:none}
   .menu{left:auto;bottom:auto;right:var(--menu-right);width:min(46rem,calc(100vw - 32px));max-height:calc(100vh - var(--menu-top) - 24px);padding:.25rem 1.75rem 0;transform-origin:top right}
-  .menu.open{display:grid;grid-template-columns:minmax(0,13.5rem) minmax(0,1fr);column-gap:2.5rem;align-items:start;grid-template-areas:"main leist" "main bez" "recht rat" "cta cta"}
+  .menu.open{display:grid;grid-template-columns:minmax(0,13.5rem) minmax(0,1fr);column-gap:2.5rem;align-items:start;grid-template-areas:"main leist" "main bez" "rat uml" "recht uml" "cta cta";grid-template-rows:auto auto auto minmax(max-content,1fr) auto}
   .menu .g-main{grid-area:main;padding-top:calc(1.5rem + .74rem*1.2 + .55rem)}
   .menu .g-main ul{border-top:1px solid var(--line)}
-  .menu .g-leist{grid-area:leist}.menu .g-bez{grid-area:bez}.menu .g-rat{grid-area:rat}.menu .g-recht{grid-area:recht}
+  .menu .g-leist{grid-area:leist}.menu .g-bez{grid-area:bez}.menu .g-uml{grid-area:uml}.menu .g-rat{grid-area:rat}.menu .g-recht{grid-area:recht}
   .menu-cta{grid-area:cta;grid-template-columns:auto auto;justify-content:end;margin:1.75rem -1.75rem 0;padding:1rem 1.75rem}
   .menu-cta .btn{width:auto}
+}
+/* Breite Bildschirme: drei Spalten, damit das Panel nicht höher als der Bildschirm wird */
+@media (min-width:1024px){
+  .menu{width:min(62rem,calc(100vw - 32px))}
+  .menu.open{grid-template-columns:minmax(0,13.5rem) minmax(0,1fr) minmax(0,1fr);column-gap:2.25rem;grid-template-areas:"main leist uml" "main bez uml" "main bez rat" "main bez recht" "cta cta cta"}
 }
 html.menu-open .fab{opacity:0;pointer-events:none}
 
@@ -375,3 +380,59 @@ nav.links a::after{bottom:calc(50% - .8em - .3rem)}
 .direct strong a,.side .lines strong a{display:inline-block;padding-block:10px;margin-block:-10px}
 footer li a{min-width:44px}
 .legal h1{font-size:clamp(1.9rem,8.2vw,2.6rem);overflow-wrap:break-word;hyphens:auto}
+
+/* ===================================================================
+   Stadtteil-, Umland- und Übersichtsseiten (einsatzgebiet.html)
+   =================================================================== */
+/* Menü: Link „Alle Stadtteile und Orte“ unter der Gruppe Umland */
+.menu .menu-all{display:flex;align-items:center;gap:.5rem;min-height:48px;padding:.55rem 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:700;line-height:1.25;color:var(--accent-text)}
+.menu .menu-all span{transition:transform .3s var(--ease-out)}
+.menu .menu-all:hover span{transform:translateX(4px)}
+.menu .menu-h+.menu-all{border-top:1px solid var(--line)}
+
+/* Footer: Link unter den Bezirken */
+footer .foot-all a{display:inline-flex;align-items:center;gap:.35rem;min-height:44px;font-weight:600;color:var(--ink);text-decoration:none}
+footer .foot-all a:hover{text-decoration:underline;text-underline-offset:3px}
+footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
+
+/* Textlink mit Pfeil („Alle Orte im Einsatzgebiet →“) */
+.go-wrap{margin-top:var(--s3)}
+.go-all{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;font-weight:700;color:var(--accent-text);text-decoration:none}
+.go-all span{transition:transform .3s var(--ease-out)}
+.go-all:hover{text-decoration:underline;text-underline-offset:3px}
+.go-all:hover span{transform:translateX(5px)}
+
+/* Startseite: Umland-Satz unter der Bezirkstabelle */
+.gebiet-mehr{margin-top:var(--s3)}
+.gebiet-mehr a{font-weight:600;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 70%,transparent);display:inline-block;padding-block:10px;margin-block:-10px}
+.gebiet-mehr a:hover{color:var(--accent-text)}
+.gebiet-mehr+.go-wrap{margin-top:.25rem}
+
+/* Chips: Stadtteile mit eigener Seite (gleiche Form wie Text-Chips, aber als Link erkennbar) */
+.chips a.chip-page{position:relative;min-height:0;padding:.35rem .85rem;gap:.3rem;color:var(--accent-text);border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.chips a.chip-page::before{content:"";position:absolute;inset:-4px 0}
+.chips a.chip-page::after,.chips a.chip-all::after{content:"→";content:"→"/"";font-weight:600;transition:transform .3s var(--ease-out)}
+.chips a.chip-page:hover::after,.chips a.chip-all:hover::after{transform:translateX(3px)}
+.chips a.chip-page:hover{border-color:var(--accent)}
+.chips a.chip-all{gap:.4rem;font-weight:700;color:var(--accent-text)}
+
+/* Übersicht: Zeilen je Bezirk bzw. Kreis */
+.orte{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.orte>li{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:.4rem var(--s4);align-items:start;padding-block:var(--s3);border-bottom:1px solid var(--line)}
+.orte .ort-h{display:grid;align-content:start;min-width:0}
+.orte h3{display:flex;align-items:center;min-height:44px;font-size:1.6rem}
+.orte h3 a{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;text-decoration:none;transition:color .2s}
+.orte h3 a span{font-family:var(--f-body);font-size:1.05rem;font-weight:600;color:var(--accent);transition:transform .3s var(--ease-out)}
+.orte h3 a:hover{color:var(--accent-text)}
+.orte h3 a:hover span{transform:translateX(4px)}
+.orte .ort-h .label{margin-top:-.2rem}
+.orte .chips{margin-top:0}
+.sec-alt .orte .chips a{background:var(--bg)}
+.hinweis{margin-top:var(--s5);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3) var(--s4)}
+.hinweis p{font-size:1.15rem;max-width:42rem}
+.hinweis strong{font-weight:700}
+.sec-alt .hinweis{background:var(--bg)}
+@media (max-width:600px){
+  .orte>li{grid-template-columns:1fr;gap:.35rem}
+  .hinweis .btn{width:100%;justify-content:center}
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "abriss-hamburg-volksdorf",
+  "type": "stadtteil",
+  "menu": "Volksdorf",
+  "title": "Abriss & Entkernung Hamburg-Volksdorf | T&A Abriss & Rückbau",
+  "description": "Gartenhaus, Garage oder Terrasse abreißen in Hamburg-Volksdorf, mit Rücksicht auf alte Bäume. Schriftlicher Festpreis vorab, Entsorgung inklusive.",
+  "label": "Stadtteil Volksdorf · Bezirk Wandsbek",
+  "h1": "Gartenhaus und Garage abreißen in Hamburg-Volksdorf",
+  "lead": "Volksdorf ist ein Walddorf mit großen Gärten und viel Grün. Wir reißen hier Gartenhäuser, Garagen, Carports und Terrassen ab und achten auf Wurzeln und Erhaltungsbereiche.",
+  "facts": [
+    "Kleinabriss im Garten",
+    "Festpreis inkl. Entsorgung",
+    "Besenreine Übergabe"
+  ],
+  "image": "abriss",
+  "form_leistung": "Kleinabriss",
+  "form_ort": "Volksdorf",
+  "sections": [
+    {
+      "h2": "Volksdorf: Walddorf mit Landhäusern und großen Grundstücken",
+      "html": "<p>Volksdorf gehört seit dem Spätmittelalter zu Hamburg. 1437 wurde das Dorf an die Stadt verpfändet und nie wieder ausgelöst, seitdem zählt es zu den Walddörfern. Mit der Kleinbahn ab 1904 und später der Walddörferbahn bekam das Dorf Anschluss an die Stadt. Ab etwa 1900 bauten wohlhabende Hamburger Familien Villen im Landhausstil, später wurden Flächen mit Grundstücken von etwa 1.000 bis 1.200 m² parzelliert. Bis 1948 entstanden vor allem Einzel- und Doppelhäuser, danach auch Reihenhaussiedlungen und ab 1972 höhere Wohnblocks. Heute ist Volksdorf überwiegend mit Einfamilienhäusern bebaut.</p><p>Wie das Dorf früher aussah, zeigt das 1962 gegründete Museumsdorf Volksdorf mit seinen alten Bauernhäusern. Im Süden liegt der Volksdorfer Wald, dazu kommen die Naturschutzgebiete Volksdorfer Teichwiesen und Duvenwischen.</p>"
+    },
+    {
+      "h2": "Kleinabriss auf großen Gartengrundstücken",
+      "html": "<p>Auf großen Grundstücken sammelt sich über Jahrzehnte einiges an: ein Geräteschuppen hinter der Hecke, eine Garage mit Flachdach, ein Carport, eine Terrasse aus Waschbetonplatten oder eine alte Gartenmauer. Beim <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> bauen wir solche Bauten ab, sortieren Holz, Metall und Bauschutt getrennt und übergeben die Fläche besenrein. Steht der Schuppen weit hinten im Garten, wird das Material bis zum Container getragen. Wie weit, sehen wir bei der Besichtigung, und der Aufwand steht von Anfang an im Festpreis.</p>"
+    },
+    {
+      "h2": "Alte Bäume: Was die Baumschutzverordnung beim Abriss bedeutet",
+      "html": "<p>Wo große Bäume stehen, gilt die Hamburgische Baumschutzverordnung. Sie schützt einzelne Bäume, deren Stamm in 130 cm Höhe mindestens 80 cm Umfang hat, für Bäume in Gruppen gelten niedrigere Werte. Obstbäume sind ausgenommen, außer Walnuss und Esskastanie. Geschützt ist auch der Wurzelbereich: der Boden unter der Krone und noch 1,5 m darüber hinaus. Abgrabungen, Ausschachtungen und das Versiegeln des Bodens sind dort verboten.</p><p>Für einen Kleinabriss heißt das: Steht die alte Garage unter einer großen Eiche, kann schon das Herausnehmen der Bodenplatte in die Wurzeln eingreifen. Ob Fundament und Bodenplatte herauskommen, legen wir deshalb vor dem Angebot fest. Wer Wurzeln eines geschützten Baums kappen oder ihn fällen will, braucht eine Genehmigung des Bezirksamts.</p>"
+    },
+    {
+      "h2": "Erhaltungsbereiche in Volksdorfer Bebauungsplänen",
+      "html": "<p>In Volksdorf gibt es Bebauungspläne mit Erhaltungsbereichen nach § 172 Baugesetzbuch. Der Plan Volksdorf 40 für das Gebiet zwischen der U-Bahn-Trasse Volksdorf–Buchenkamp und dem Volksdorfer Wald weist solche Bereiche aus. Auch der Plan Volksdorf 41 setzt Erhaltungsbereiche fest, nach einer Senatsantwort von 2021 zum Beispiel an der Schemmannstraße. Innerhalb dieser Bereiche ist bereits der Abbruch baulicher Anlagen genehmigungspflichtig, etwa eines Gartenhauses oder einer Mauer, unabhängig davon, ob das Bauordnungsrecht einen Antrag fordert. Eine Ablehnung ist nur möglich, wenn die Anlage das Ortsbild oder die Stadtgestalt prägt oder von städtebaulicher, geschichtlicher oder künstlerischer Bedeutung ist.</p><p>Ob Ihr Grundstück in einem Erhaltungsbereich liegt, sagt Ihnen das Bezirksamt Wandsbek. Dort ist auch das Fachamt Bauprüfung für Volksdorf zuständig. Die allgemeinen Regeln stehen im <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber Abriss-Genehmigung</a>, zum ganzen Bezirk siehe <a href=\"abriss-hamburg-wandsbek.html\">Abriss in Wandsbek</a>.</p>"
+    }
+  ],
+  "stadtteile": [],
+  "faq": [
+    {
+      "q": "Unser Grundstück liegt zwischen U-Bahn und Volksdorfer Wald. Brauchen wir für den Abriss des Gartenhauses eine Genehmigung?",
+      "a": "Möglicherweise. Liegt das Gartenhaus in einem Erhaltungsbereich des Bebauungsplans Volksdorf 40, braucht schon der Rückbau eine Genehmigung. Das Bezirksamt Wandsbek kann Ihnen sagen, ob Ihr Grundstück betroffen ist."
+    },
+    {
+      "q": "Neben unserer Garage steht eine große Buche. Was ist beim Abriss zu beachten?",
+      "a": "Hat die Buche in 130 cm Höhe 80 cm Stammumfang oder mehr, sind Baum und Wurzelbereich geschützt, Abgrabungen dort sind verboten. Für Eingriffe in die Wurzeln braucht es eine Genehmigung des Bezirksamts. Wie die Garage dann abgebaut wird, besprechen wir bei der Besichtigung."
+    },
+    {
+      "q": "Das Gartenhaus steht ganz hinten auf unserem großen Grundstück. Ist das ein Problem?",
+      "a": "Nein, das Material wird dann bis zur Zufahrt getragen, und dieser Aufwand steht schon im Festpreis. Den Weg sehen wir uns beim Besichtigungstermin an. Möglich sind Termine Mo–Fr ab 16:30 Uhr und Sa ab 9:00 Uhr."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hamburg-Volksdorf – Wikipedia (Verpfändung 1437, Walddörfer, Kleinbahn 1904, Landhausvillen, Grundstücksgrößen, Bebauung bis 1948 und ab 1972, Museumsdorf 1962, Naturschutzgebiete)",
+      "url": "https://de.wikipedia.org/wiki/Hamburg-Volksdorf"
+    },
+    {
+      "title": "HmbGVBl. Nr. 20 vom 21.06.2005: Verordnung über den Bebauungsplan Volksdorf 40, § 2 Nr. 1 Erhaltungsbereiche (Archivkopie)",
+      "url": "https://www.luewu.de/wp-content/uploads/2025/07/GVBL_HH_2005-20.pdf"
+    },
+    {
+      "title": "HmbGVBl. Nr. 13 vom 26.04.2019: Feststellung und rückwirkende Inkraftsetzung des Bebauungsplans Volksdorf 40 (Archivkopie)",
+      "url": "https://www.luewu.de/wp-content/uploads/2025/08/GVBL_HH_2019-13.pdf"
+    },
+    {
+      "title": "Bürgerschaft Drs. 22/5094 (06.07.2021), Schriftliche Kleine Anfrage: Bebauung an der Schemmannstraße, Erhaltungsbereiche im Bebauungsplan Volksdorf 41",
+      "url": "https://www.kleibauer-cdu.de/image/inhalte/738_bebauung_an_der_schemmannstrasse_und_erhalt_der_hammerschen_villa_wie_gut_sind_volksdorfs_bebauungsplaene_fuer_den_schutz_und_eine_massvolle_weiterent.pdf"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28.02.2023, § 1 (Einzelbäume ab 80 cm, Baumgruppen ab 30 cm, Messhöhe 130 cm) und § 4 (Wurzelbereich Krone plus 1,5 m) (umwelt-online, Stand 12.05.2026)",
+      "url": "https://umwelt-online.de/recht/natursch/laender/hh/baum23.htm"
+    },
+    {
+      "title": "Hamburg: Bäume fällen – Ausnahmegenehmigung, auch für Wurzelrückschnitt, bezirkliche Naturschutzbehörde (FIM-Portal)",
+      "url": "https://www.fimportal.de/api/v0/xzufi-services/S100002/S1000020010000000139/de/pdf"
+    },
+    {
+      "title": "Adressliste der Bauprüfdienststellen Hamburg, Stand 16.04.2025 (Fachamt Bauprüfung Wandsbek, Schloßgarten 9)",
+      "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"
+    }
+  ],
+  "notes_for_review": [
+    "Erhaltungsbereiche: Volksdorf 40 laut HmbGVBl. 20/2005 und rückwirkender Inkraftsetzung 2019, Volksdorf 41 laut Senatsantwort Drs. 22/5094 (2021) „weiterhin rechtsverbindlich“. Genaue Lage nur in den Planzeichnungen; im Geoportal prüfen, ob weitere Volksdorfer Pläne Erhaltungsbereiche haben.",
+    "Frage an den Inhaber: Werden Fundamente und Bodenplatten beim Kleinabriss mit entfernt? Der Text sagt nur, dass das vor dem Angebot festgelegt wird."
+  ]
+}
