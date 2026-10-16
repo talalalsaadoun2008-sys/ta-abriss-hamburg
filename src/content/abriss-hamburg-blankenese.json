@@ -6,7 +6,7 @@
   "description": "Kleinabriss in Hamburg-Blankenese: Gartenhaus, Garage oder Mauer am Elbhang und im Treppenviertel. Kostenlose Besichtigung und schriftlicher Festpreis.",
   "label": "Stadtteil Blankenese · Bezirk Altona",
   "h1": "Kleinabriss und Rückbau in Hamburg-Blankenese",
-  "lead": "Am Elbhang fehlt oft die Zufahrt, Mauern halten den Hang, und für das Ortsbild gelten eigene Regeln. Wie ein Abriss dort ablaufen kann, klären wir bei der Besichtigung.",
+  "lead": "Am Elbhang fehlt oft die Zufahrt, Mauern halten den Hang, und für das Ortsbild gelten eigene Regeln. Fehlt die Zufahrt, zerlegen wir und tragen alles selbst heraus.",
   "facts": [
     "Kostenlose Besichtigung vor Ort",
     "Besichtigung auch Sa ab 9:00",
@@ -22,7 +22,7 @@
     },
     {
       "h2": "Kleinabriss am Elbhang: Treppen statt Zufahrt",
-      "html": "<p>Im Hanggebiet haben viele Häuser keine Zufahrt, keinen Stellplatz und keine Garage. Selbst Baumaterial wird dort mit der Schubkarre bewegt. Für einen <strong>Kleinabriss</strong> heißt das: Ob ein Gartenhaus, ein Schuppen oder eine Holzterrasse dort in Teilen über Treppen und schmale Wege abtransportiert werden kann, sprechen wir bei der Besichtigung ab. Ist der Weg geklärt, ist er im Festpreis berücksichtigt.</p><p>Auch die befahrbaren Straßen im Treppenviertel sind schmal und steil, seit 1959 verkehren dort kleine Busse, die „Bergziege“. Ein Container braucht deshalb einen gut gewählten Platz. Steht er auf öffentlicher Fläche, ist vorher eine Sondernutzungserlaubnis des Bezirksamts nötig.</p><p>Am Hang halten Stützmauern aus Naturstein Grundstücke und Häuser. Bevor eine alte Mauer oder Gartentreppe abgerissen wird, muss geklärt sein, ob sie Erdreich abfängt. Im Zweifel gehört ein Statiker dazu.</p>"
+      "html": "<p>Im Hanggebiet haben viele Häuser keine Zufahrt, keinen Stellplatz und keine Garage. Selbst Baumaterial wird dort mit der Schubkarre bewegt. Für einen <strong>Kleinabriss</strong> heißt das: Ein Gartenhaus, ein Schuppen oder eine Holzterrasse wird zerlegt, und wir tragen alles selbst über Treppen und schmale Wege zum nächsten Stellplatz. Das ist mehr Arbeit als mit Zufahrt und kostet deshalb mehr. Den Aufpreis sehen Sie vorher im schriftlichen Festpreis.</p><p>Auch die befahrbaren Straßen im Treppenviertel sind schmal und steil, seit 1959 verkehren dort kleine Busse, die „Bergziege“. Ein Container braucht deshalb einen gut gewählten Platz. Steht er auf öffentlicher Fläche, ist vorher eine Sondernutzungserlaubnis des Bezirksamts nötig.</p><p>Am Hang halten Stützmauern aus Naturstein Grundstücke und Häuser. Bevor eine alte Mauer oder Gartentreppe abgerissen wird, muss geklärt sein, ob sie Erdreich abfängt. Im Zweifel gehört ein Statiker dazu.</p>"
     },
     {
       "h2": "Erhaltungsbereiche und Denkmalschutz in Blankenese",
@@ -37,7 +37,7 @@
   "faq": [
     {
       "q": "Unser Haus im Treppenviertel hat keine Zufahrt. Können Sie den alten Schuppen trotzdem abreißen?",
-      "a": "Das sprechen wir bei der Besichtigung ab. Wir sehen uns den Weg vom Schuppen bis zum nächsten Stellplatz an und klären, ob ein Rückbau in Teilen über die Treppen machbar ist. Wenn ja, steht alles im schriftlichen Festpreis."
+      "a": "Ja. Wir zerlegen den Schuppen und tragen alles selbst über die Treppen bis zum nächsten Stellplatz. Weil das mehr Aufwand ist, kostet es mehr als mit Zufahrt. Bei der Besichtigung sehen wir uns den Weg an, der Aufpreis steht dann vorher im Festpreis."
     },
     {
       "q": "Brauche ich für den Abriss einer Garage in Dockenhuden eine Genehmigung?",
@@ -92,7 +92,6 @@
   ],
   "notes_for_review": [
     "Treppenviertel: Ob es (oder Teile davon) als Ensemble in der Denkmalliste steht, ließ sich nicht klären (Bezirksamtsseite nicht abrufbar, Wikipedia-Liste ohne Treppenviertel). Deshalb steht dazu nichts im Text.",
-    "Erhaltungsverordnungen Dockenhuden I/II und Bebauungsplan Blankenese 45 nach lexaris bzw. HmbGVBl. Eine Gesamtliste aller Erhaltungsgebiete in Blankenese war nicht abrufbar; es kann weitere geben.",
-    "Frage an den Inhaber: Übernimmt T&A Rückbau ohne Zufahrt (Zerlegen und Tragen über Treppen) grundsätzlich? Der Text sagt jetzt nur „sprechen wir bei der Besichtigung ab“."
+    "Erhaltungsverordnungen Dockenhuden I/II und Bebauungsplan Blankenese 45 nach lexaris bzw. HmbGVBl. Eine Gesamtliste aller Erhaltungsgebiete in Blankenese war nicht abrufbar; es kann weitere geben."
   ]
 }
