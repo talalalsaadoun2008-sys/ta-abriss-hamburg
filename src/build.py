@@ -36,7 +36,7 @@ INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
 REQUIRED = ("slug", "type", "menu", "title", "description", "label", "h1", "lead", "facts",
             "image", "form_leistung", "form_ort", "sections", "faq")
-KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review"}
+KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review", "note_stellen"}
 MAX_WEITERE_ORTE = 8
 
 CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>'
@@ -708,7 +708,8 @@ def render_content_page(ctx, c):
             host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*$", r"\1", src["url"]))
             items.append(f'<li><a href="{esc(src["url"])}" rel="noopener">{esc(src["title"])}</a><span class="host">{esc(host)}</span></li>')
         secs.append('<section>\n      <h2>Quellen</h2>\n      <ol class="sources">' + "".join(items) + '</ol>\n'
-                    '      <p class="note">Diese Übersicht ersetzt keine Rechtsberatung. Im Zweifel fragen Sie bei der zuständigen Stelle nach, etwa beim Bezirksamt oder bei der Stadtreinigung.</p>\n    </section>')
+                    '      <p class="note">Diese Übersicht ersetzt keine Rechtsberatung. Im Zweifel fragen Sie bei der zuständigen Stelle nach, etwa '
+                    + esc(c.get("note_stellen", "beim Bezirksamt oder bei der Stadtreinigung")) + '.</p>\n    </section>')
 
     side = f'''<aside class="side" aria-labelledby="side-h">
     <p class="label">Kostenlos &amp; unverbindlich</p>
