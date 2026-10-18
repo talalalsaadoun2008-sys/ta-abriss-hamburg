@@ -87,7 +87,8 @@
   },
   "ratgeber": [
     {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"},
-    {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"}
+    {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"},
+    {"slug": "asbest-erkennen-vor-abriss", "name": "Asbest vor Abriss und Umbau"}
   ],
   "rechtliches": [
     {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},
