@@ -86,7 +86,8 @@
     "hinweis": "Ihr Ort ist nicht dabei? Wir kommen auch dorthin. Fragen Sie einfach an."
   },
   "ratgeber": [
-    {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"}
+    {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"},
+    {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"}
   ],
   "rechtliches": [
     {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},

@@ -708,7 +708,7 @@ def render_content_page(ctx, c):
             host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*$", r"\1", src["url"]))
             items.append(f'<li><a href="{esc(src["url"])}" rel="noopener">{esc(src["title"])}</a><span class="host">{esc(host)}</span></li>')
         secs.append('<section>\n      <h2>Quellen</h2>\n      <ol class="sources">' + "".join(items) + '</ol>\n'
-                    '      <p class="note">Diese Übersicht ersetzt keine Rechtsberatung. Im Zweifel fragen Sie beim zuständigen Bezirksamt nach.</p>\n    </section>')
+                    '      <p class="note">Diese Übersicht ersetzt keine Rechtsberatung. Im Zweifel fragen Sie bei der zuständigen Stelle nach, etwa beim Bezirksamt oder bei der Stadtreinigung.</p>\n    </section>')
 
     side = f'''<aside class="side" aria-labelledby="side-h">
     <p class="label">Kostenlos &amp; unverbindlich</p>
