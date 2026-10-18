@@ -590,7 +590,7 @@ def subhero(ctx, image, label, h1, lead, facts=None):
       {facts_html(facts)}
     </div>''' if facts else ""
     return f'''<div class="subhero">
-  <img class="photo" src="img/{esc(image)}.jpg" alt="" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
+  <img class="photo" src="img/{esc(image)}.jpg" alt="{esc(img["alt"])}" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
   <div class="wrap">
     <p class="label">{esc(label)}</p>
     <h1>{esc(h1)}</h1>
@@ -606,6 +606,12 @@ def subhero(ctx, image, label, h1, lead, facts=None):
 # ---------------------------------------------------------------------------
 # Seiten
 # ---------------------------------------------------------------------------
+ICON_LINKS = ['<link rel="icon" href="favicon.ico" sizes="48x48">',
+              '<link rel="icon" href="favicon.svg" type="image/svg+xml">',
+              '<link rel="apple-touch-icon" href="apple-touch-icon.png">']
+ICON_FILES = ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "logo.png")
+
+
 def page_head(ctx, *, title, description, canonical=None, og=None, ld=(), noindex=False):
     s = ctx.site
     out = ['<meta charset="utf-8">',
@@ -621,7 +627,7 @@ def page_head(ctx, *, title, description, canonical=None, og=None, ld=(), noinde
         for k, v in og:
             out.append(f'<meta property="og:{k}" content="{esc(v)}">')
     out.append('<meta name="theme-color" content="#e2571c">')
-    out.append('<link rel="icon" href="favicon.svg" type="image/svg+xml">')
+    out += ICON_LINKS
     out += head_assets(ctx, extra_noindex=not noindex)
     out += [jsonld(x) for x in ld]
     return "\n".join(out)
@@ -876,6 +882,32 @@ def render_legal(ctx, entry, fragment):
     return doc(head, body, f"src/legal/{entry['slug']}.html")
 
 
+def render_404(ctx):
+    """Fehlerseite für GitHub Pages."""
+    s = ctx.site
+    head = page_head(ctx, title="Seite nicht gefunden | " + s.firma["name"], description=None, noindex=True)
+    links = "\n".join(f'      <li><a href="{esc(x["slug"])}.html">{esc(x["name"])}</a></li>' for x in ctx.pages(s.leistungen))
+    body = "\n\n".join([
+        render_header(ctx, "404", False, ctx.home_link("anfrage", False)),
+        f'''<main id="start" class="wrap legal"><div>
+<h1>Diese Seite gibt es nicht</h1>
+<p>Vielleicht hat sich die Adresse geändert oder es war ein Tippfehler. Hier geht es weiter:</p>
+<ul>
+      <li><a href="{ctx.home_link("start", False)}">Zur Startseite</a></li>
+{links}
+      <li><a href="{UEBERSICHT}.html">Alle Stadtteile und Orte im Einsatzgebiet</a></li>
+      <li><a href="{ctx.home_link("anfrage", False)}">Kostenlose Besichtigung anfragen</a></li>
+</ul>
+</div></main>''',
+        render_footer(ctx, "404", False, None),
+    ])
+    out = doc(head, body, "src/build.py (render_404)")
+    if not ctx.preview:  # GitHub zeigt die Seite unter jeder falschen Adresse, auch /a/b/c – daher Pfade ab Wurzel
+        out = re.sub(r'(\s(?:href|src)=")(?!https?:|mailto:|tel:|#|/|data:)', r"\1/", out)
+        out = out.replace('="/./', '="/')
+    return out
+
+
 def doc(head, body, source):
     return (f'<!doctype html>\n<!-- Erzeugt von src/build.py aus {source} – Änderungen bitte dort vornehmen -->\n'
             f'<html lang="de">\n<head>\n{head}\n</head>\n<body>\n\n{body}\n\n</body>\n</html>\n')
@@ -920,10 +952,12 @@ def render_index(ctx):
     business = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": s.base + "#firma",
         "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.base + "img/abriss.jpg",
+        "logo": s.base + "logo.png",
         "telephone": f["telefon_schema"], "email": f["email"],
         "address": {"@type": "PostalAddress", "streetAddress": f["strasse"], "postalCode": f["plz"],
                     "addressLocality": f["ort"], "addressCountry": "DE"},
-        "areaServed": [{"@type": "AdministrativeArea", "name": b["gebiet"]} for b in s.bezirke],
+        "areaServed": [{"@type": "AdministrativeArea", "name": b["gebiet"]} for b in s.bezirke]
+                      + [{"@type": "City", "name": u["name"]} for u in ctx.pages(s.umland)],
     }
     head = head_assets(ctx, extra_noindex=True) + [jsonld(business), jsonld(faq_jsonld(s, home_faq_pairs(src)))]
     out = fill_marker(src, "head", "\n".join(head))
@@ -1044,6 +1078,7 @@ def main(argv=None):
     for slug in order:
         files[f"{slug}.html"] = render_content_page(ctx, contents[slug])
     files[f"{UEBERSICHT}.html"] = render_einsatzgebiet(ctx)
+    files["404.html"] = render_404(ctx)
     if not args.preview:
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
         slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
@@ -1055,7 +1090,8 @@ def main(argv=None):
             if (out_dir / d).exists():
                 shutil.rmtree(out_dir / d)
             shutil.copytree(ROOT / d, out_dir / d)
-        shutil.copy2(ROOT / "favicon.svg", out_dir / "favicon.svg")
+        for name in ICON_FILES:
+            shutil.copy2(ROOT / name, out_dir / name)
         if not args.preview:
             shutil.copy2(ROOT / "robots.txt", out_dir / "robots.txt")
     for name, text in files.items():
