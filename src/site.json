@@ -90,7 +90,8 @@
     {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"},
     {"slug": "asbest-erkennen-vor-abriss", "name": "Asbest vor Abriss und Umbau"},
     {"slug": "tragende-wand-entfernen-hamburg", "name": "Tragende Wand entfernen"},
-    {"slug": "laube-abreissen-hamburg", "name": "Laube im Kleingarten abreißen"}
+    {"slug": "laube-abreissen-hamburg", "name": "Laube im Kleingarten abreißen"},
+    {"slug": "bad-rausreissen-hamburg", "name": "Bad rausreißen"}
   ],
   "rechtliches": [
     {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},
