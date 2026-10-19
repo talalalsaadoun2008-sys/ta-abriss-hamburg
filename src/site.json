@@ -89,7 +89,7 @@
     {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"},
     {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"},
     {"slug": "asbest-erkennen-vor-abriss", "name": "Asbest vor Abriss und Umbau"},
-    {"slug": "tragende-wand-entfernen-hamburg", "name": "Wand entfernen: tragend oder nicht?"}
+    {"slug": "tragende-wand-entfernen-hamburg", "name": "Tragende Wand entfernen"}
   ],
   "rechtliches": [
     {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},

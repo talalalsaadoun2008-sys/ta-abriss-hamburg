@@ -1,7 +1,7 @@
 {
   "slug": "tragende-wand-entfernen-hamburg",
   "type": "ratgeber",
-  "menu": "Wand entfernen: tragend oder nicht?",
+  "menu": "Tragende Wand entfernen",
   "title": "Tragende Wand entfernen in Hamburg | T&A Abriss & Rückbau",
   "description": "Wand rausnehmen in Hamburg: woran Sie eine tragende Wand erkennen, wann ein Statiker nötig ist und was in Miet- und Eigentumswohnungen gilt.",
   "label": "Ratgeber Wand entfernen",
@@ -15,6 +15,7 @@
   "image": "innenabbruch",
   "form_leistung": "Innenabbruch",
   "form_ort": "",
+  "note_stellen": "beim Fachamt Bauprüfung Ihres Bezirksamts",
   "sections": [
     {
       "h2": "Kurz gesagt: Wand entfernen in Hamburg",
