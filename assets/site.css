@@ -41,7 +41,10 @@ a{color:inherit}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--header);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:.7rem}
 .brand{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;min-width:0}
-.brand b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1;color:var(--accent)}
+.brand b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1;color:var(--ink);position:relative;display:inline-block}
+.brand b i{font-style:normal;display:block}
+.brand b i:first-child{clip-path:polygon(0 0,100% 0,100% 36%,0 60%)}
+.brand b i+i{position:absolute;left:0;top:0;color:var(--accent);clip-path:polygon(0 60%,100% 36%,100% 100%,0 100%);transform:translate(.05em,.09em)}
 .brand span{font-family:var(--f-display);font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
 nav.links{display:flex;gap:1.4rem;font-weight:600;font-size:.98rem}
 nav.links a{text-decoration:none;position:relative;padding-block:.3rem}

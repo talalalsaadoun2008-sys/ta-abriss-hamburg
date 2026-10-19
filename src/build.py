@@ -404,7 +404,7 @@ def render_header(ctx, current, on_home, contact_href):
     if ctx.preview:
         out.append('<div class="draft" role="note"><div class="wrap">Vorschau – noch nicht online</div></div>')
     out.append(f'''<header class="top"><div class="wrap">
-  <a class="brand" href="{esc(brand)}"><b>T&amp;A</b><span>Abriss &amp; Rückbau</span></a>
+  <a class="brand" href="{esc(brand)}"><b><i>T&amp;A</i><i aria-hidden="true">T&amp;A</i></b><span>Abriss &amp; Rückbau</span></a>
   <nav class="links" aria-label="Hauptnavigation">
     {nav}
   </nav>
