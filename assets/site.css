@@ -439,3 +439,21 @@ footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
   .orte>li{grid-template-columns:1fr;gap:.35rem}
   .hinweis .btn{width:100%;justify-content:center}
 }
+
+/* Startseite: Über uns (#ueber-uns, noch hidden bis Partnername, Rolle und Foto da sind) */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--s5);align-items:center}
+.about figure{margin:0;display:grid;gap:var(--s2);min-width:0}
+.about figcaption{font-size:.95rem;color:var(--muted)}
+.about-text{display:grid;gap:var(--s3);max-width:38rem}
+.ph-photo{aspect-ratio:4/3;display:grid;place-content:center;justify-items:center;gap:var(--s2);padding:var(--s4);text-align:center;background:var(--draft);color:var(--draft-ink);border:2px dashed color-mix(in srgb,var(--draft-ink) 40%,transparent);border-radius:12px}
+.ph-photo svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.ph-photo span:last-child{max-width:24rem}
+.promise{margin-top:var(--s5)}
+.promise h3{margin-bottom:var(--s3)}
+.promise ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3)}
+.promise li{display:grid;gap:.35rem;align-content:start;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:var(--s3) var(--s3) var(--s4)}
+.promise strong{display:flex;align-items:flex-start;gap:.5rem;font-family:var(--f-display);font-size:1.35rem;line-height:1.1}
+.promise svg{width:18px;height:18px;flex:none;margin-top:.1em;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.promise li span{color:var(--muted);font-size:.98rem}
+@media (max-width:900px){.about{grid-template-columns:1fr}.promise ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.promise ul{grid-template-columns:1fr}}
