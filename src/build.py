@@ -479,8 +479,10 @@ def render_footer(ctx, current, on_home, fab_href):
     <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>
   </div>
 ''' + "\n".join(cols) + '\n</div></footer>']
-    if fab_href:
-        out.append(f'\n<a class="btn fab" href="{esc(fab_href)}">Anfrage {ARR}</a>')
+    if fab_href:  # Handy: feste Leiste „Anrufen“ + „Anfrage“; PC: nur der schwebende Anfrage-Knopf
+        out.append(f'\n<div class="fab-bar"><div class="fab">'
+                   f'<a class="btn alt fab-tel" href="tel:{esc(f["telefon_link"])}" aria-label="Anrufen: {esc(f["telefon"])}">'
+                   f'{PHONE_SVG}Anrufen</a><a class="btn fab-req" href="{esc(fab_href)}">Anfrage {ARR}</a></div></div>')
     return "".join(out)
 
 
