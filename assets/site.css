@@ -454,3 +454,14 @@ footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
   .orte>li{grid-template-columns:1fr;gap:.35rem}
   .hinweis .btn{width:100%;justify-content:center}
 }
+
+/* Startseite: Wissenstext, zweite Hälfte hinter „Mehr lesen“ (details/summary, geht ohne JavaScript) */
+.wissen>h3:first-child{margin-top:0}
+.weiter{border-top:1px solid var(--line)}
+.weiter summary{display:flex;align-items:center;gap:.6rem;min-height:48px;padding-block:.6rem;cursor:pointer;list-style:none;font-weight:700;color:var(--accent-text)}
+.weiter summary::-webkit-details-marker{display:none}
+.weiter summary::after{content:"+";content:"+"/"";font-family:var(--f-mono);font-size:1.3rem;line-height:1;transition:transform .35s var(--ease-out)}
+.weiter[open] summary::after{transform:rotate(45deg)}
+.weiter summary:hover span{text-decoration:underline;text-underline-offset:3px}
+.weiter[open] .zu,.weiter:not([open]) .auf{display:none}
+.weiter[open]>:not(summary){animation:fade .4s var(--ease-out)}
