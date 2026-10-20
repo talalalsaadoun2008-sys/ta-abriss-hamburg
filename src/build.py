@@ -9,7 +9,7 @@ Aufruf (im Repo-Hauptordner):
 Erzeugt:
   <slug>.html je JSON in src/content/ (Leistungen, Bezirke, Stadtteile, Umland, Ratgeber),
   einsatzgebiet.html (Übersicht aus src/site.json), impressum.html, datenschutz.html,
-  index.html (nur die Bereiche zwischen den Markern @head, @header, @umland, @footer),
+  index.html (nur die Bereiche zwischen den Markern @head, @header, @zahlen, @umland, @footer),
   sitemap.xml; prüft robots.txt.
 
 Fehlt für eine Seite aus src/site.json die JSON-Datei, wird sie übersprungen und nirgends
@@ -938,7 +938,24 @@ def home_faq_pairs(src):
         pairs.append((html.unescape(q.strip()), html.unescape(a.strip())))
     if not pairs:
         raise BuildError("index.html: keine Fragen im Abschnitt #fragen gefunden")
+    shown = m.group(0).count("<details")
+    if shown != len(pairs):  # sonst stünde eine sichtbare Frage nicht im FAQ-JSON-LD
+        raise BuildError(f"index.html: {shown} Fragen in #fragen, aber nur {len(pairs)} in der Form "
+                         "<details><summary>Frage</summary><p>Antwort</p></details>")
     return pairs
+
+
+def home_zahlen(ctx):
+    """Zähler-Streifen der Startseite: Bezirke und Umland-Orte, gezählt aus src/site.json (Umland nur mit Seite)."""
+    s = ctx.site
+    b = s.bezirke
+    out = [f'  <li><a href="#gebiet"><b>{len(b)}</b> <span class="u">Bezirke</span> '
+           f'<span class="t">in Hamburg, von {esc(b[0]["name"])} bis {esc(b[-1]["name"])}</span></a></li>']
+    n = len(ctx.pages(s.umland))
+    if n:
+        out.append(f'  <li><a href="{UEBERSICHT}.html#umland"><b>{n}</b> <span class="u">{"Ort" if n == 1 else "Orte"}</span> '
+                   f'<span class="t">im Hamburger Umland</span></a></li>')
+    return "\n".join(out)
 
 
 def home_umland(ctx):
@@ -972,6 +989,7 @@ def render_index(ctx):
     out = fill_marker(src, "head", "\n".join(head))
     out = fill_marker(out, "header", render_header(ctx, "index", True, "#anfrage"))
     out = fill_marker(out, "umland", home_umland(ctx))
+    out = fill_marker(out, "zahlen", home_zahlen(ctx))
     out = fill_marker(out, "footer", render_footer(ctx, "index", True, "#anfrage"))
     return out
 

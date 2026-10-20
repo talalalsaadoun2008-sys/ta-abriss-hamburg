@@ -439,3 +439,22 @@ footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
   .orte>li{grid-template-columns:1fr;gap:.35rem}
   .hinweis .btn{width:100%;justify-content:center}
 }
+
+/* Startseite: Zähler-Streifen unter dem Laufband (nur echte, prüfbare Werte) */
+.zahlen{background:var(--surface);border-bottom:1px solid var(--line)}
+.zahlen ul{list-style:none;margin-block:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.zahlen li{min-width:0;padding:1.1rem var(--s4);border-left:1px solid var(--line)}
+.zahlen li:first-child{border-left:0;padding-left:0}
+.zahlen a{display:block;text-decoration:none;margin:-.25rem;padding:.25rem;border-radius:6px}
+.zahlen b{font-family:var(--f-display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.zahlen .u{font-family:var(--f-display);font-weight:700;font-size:1.3rem;line-height:1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent-text)}
+.zahlen .t{display:block;margin-top:.3rem;font-size:.95rem;line-height:1.35;color:var(--muted)}
+.zahlen a .t::after{content:"\a0→";content:"\a0→"/"";color:var(--accent-text)}
+.zahlen a:hover .t{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){
+  .zahlen ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .zahlen li{padding:.8rem 0 .8rem var(--s3)}
+  .zahlen li:nth-child(odd){border-left:0;padding-left:0}
+  .zahlen li:nth-child(n+3){border-top:1px solid var(--line)}
+  .zahlen b{font-size:2.2rem}
+}
