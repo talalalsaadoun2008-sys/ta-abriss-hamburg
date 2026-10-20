@@ -47,6 +47,9 @@
     {"slug": "abriss-hamburg-ottensen", "name": "Ottensen", "bezirk": "abriss-hamburg-altona"},
     {"slug": "abriss-hamburg-blankenese", "name": "Blankenese", "bezirk": "abriss-hamburg-altona"},
     {"slug": "abriss-hamburg-rissen", "name": "Rissen", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-bahrenfeld", "name": "Bahrenfeld", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-lurup", "name": "Lurup", "bezirk": "abriss-hamburg-altona"},
+    {"slug": "abriss-hamburg-osdorf", "name": "Osdorf", "bezirk": "abriss-hamburg-altona"},
     {"slug": "abriss-hamburg-niendorf", "name": "Niendorf", "bezirk": "abriss-hamburg-eimsbuettel"},
     {"slug": "abriss-hamburg-schnelsen", "name": "Schnelsen", "bezirk": "abriss-hamburg-eimsbuettel"},
     {"slug": "abriss-hamburg-lokstedt", "name": "Lokstedt", "bezirk": "abriss-hamburg-eimsbuettel"},
@@ -64,7 +67,9 @@
     {"slug": "abriss-hamburg-bramfeld", "name": "Bramfeld", "bezirk": "abriss-hamburg-wandsbek"},
     {"slug": "abriss-hamburg-volksdorf", "name": "Volksdorf", "bezirk": "abriss-hamburg-wandsbek"},
     {"slug": "abriss-hamburg-poppenbuettel", "name": "Poppenbüttel", "bezirk": "abriss-hamburg-wandsbek"},
-    {"slug": "abriss-hamburg-sasel", "name": "Sasel", "bezirk": "abriss-hamburg-wandsbek"}
+    {"slug": "abriss-hamburg-sasel", "name": "Sasel", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-farmsen-berne", "name": "Farmsen-Berne", "bezirk": "abriss-hamburg-wandsbek"},
+    {"slug": "abriss-hamburg-jenfeld", "name": "Jenfeld", "bezirk": "abriss-hamburg-wandsbek"}
   ],
   "umland": [
     {"slug": "abriss-norderstedt", "name": "Norderstedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
