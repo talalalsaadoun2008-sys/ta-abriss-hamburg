@@ -61,7 +61,8 @@
     });
   })();
 
-  /* Schwebender Anfrage-Button: sichtbar nach dem Hero, aus am Kontaktbereich */
+  /* Schnellkontakt (.fab: Handy = Leiste „Anrufen“ + „Anfrage“, PC = Anfrage-Knopf):
+     sichtbar nach dem Hero, aus am Kontaktbereich */
   (function(){
     var fab = $('.fab'), hero = $('.hero, .subhero'), contact = document.getElementById('anfrage'), tick = false;
     if (!fab || !hero) return;
