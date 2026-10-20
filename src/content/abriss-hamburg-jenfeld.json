@@ -9,7 +9,7 @@
   "lead": "Geschosswohnungen im Osten, Einfamilienhäuser im Westen, Neubau in der Jenfelder Au: Jenfeld hat viele Gesichter. Wir bauen zurück, was weg soll, und nennen Ihnen vorher einen schriftlichen Festpreis.",
   "facts": [
     "Kostenlose Besichtigung vor Ort",
-    "Rückmeldung in einem Werktag",
+    "Rückmeldung innerhalb eines Werktags",
     "Festpreis inkl. Entsorgung"
   ],
   "image": "innenabbruch",
@@ -26,11 +26,11 @@
     },
     {
       "h2": "Einfamilienhäuser im Westen und die Jenfelder Au",
-      "html": "<p>Im Westen prägen Einfamilienhäuser und die Universität der Bundeswehr das Bild. Auf den Grundstücken bauen wir Gartenhaus, Garage, Carport oder Terrasse als <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> zurück. Bei der Besichtigung schauen wir auf Zufahrt, Platz für den Container und Fundamente.</p><p>Auf dem früheren Gelände der Lettow-Vorbeck-Kaserne liegt das neue Quartier Jenfelder Au. Geplant sind dort rund 770 Wohnungen, davon 140 in umgebauten Kasernengebäuden, als Stadthäuser, Doppel-, Einzel- und Reihenhäuser und in Geschossbauten. Für das Quartier ist der HAMBURG WATER Cycle vorgesehen: Regenwasser, Grauwasser und das Schwarzwasser aus den Toiletten werden getrennt abgeleitet, das Schwarzwasser dient der Gewinnung von Biogas. Wer dort ein Bad umbaut, sollte deshalb früh einen Installationsbetrieb einbinden, der die Anschlüsse kennt. Wir bauen Fliesen und nichttragende Wände zurück, Sanitär- und Installationsarbeiten übernehmen wir nicht.</p>"
+      "html": "<p>Im Westen prägen Einfamilienhäuser und die Universität der Bundeswehr das Bild. Auf den Grundstücken bauen wir Gartenhaus, Garage, Carport oder Terrasse als <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> zurück. Bei der Besichtigung schauen wir auf Zufahrt, Platz für den Container und Fundamente.</p><p>Auf dem früheren Gelände der Lettow-Vorbeck-Kaserne ist das Quartier Jenfelder Au entstanden, mit Stadthäusern, Doppel-, Einzel- und Reihenhäusern, Geschossbauten und umgebauten Kasernengebäuden. Dort ist der HAMBURG WATER Cycle in Betrieb: Regenwasser, Grauwasser und das Schwarzwasser aus den Toiletten werden getrennt abgeleitet, das Schwarzwasser dient der Gewinnung von Biogas. Wer dort ein Bad umbaut, sollte deshalb früh einen Installationsbetrieb einbinden, der die Anschlüsse kennt. Wir bauen Fliesen und nichttragende Wände zurück, Sanitär- und Installationsarbeiten übernehmen wir nicht.</p>"
     },
     {
       "h2": "Abriss in Jenfeld: Bauprüfung, Container und Anfrage",
-      "html": "<p>Bauanträge aus Jenfeld gehen an das Fachamt Bauprüfung des Bezirksamts Wandsbek. Ob Ihr Abriss überhaupt ein Verfahren braucht, zeigt der <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber zur Abriss-Genehmigung</a>. Soll vor einem Mehrfamilienhaus ein Container auf öffentlichem Straßengrund stehen, muss das Bezirksamt das vorher als Sondernutzung erlauben. Ein Halteverbot für die Ladefläche ist in Hamburg spätestens 14 Tage vorher zu beantragen. Was davon Ihr Auftrag braucht, klären wir bei der Besichtigung.</p><p>Auf Ihre Anfrage über das <a href=\"index.html#anfrage\">Formular</a> melden wir uns innerhalb eines Werktags. Rahlstedt, Tonndorf und alle anderen Stadtteile des Bezirks führt die Seite <a href=\"abriss-hamburg-wandsbek.html\">Wandsbek</a> auf.</p>"
+      "html": "<p>Bauanträge aus Jenfeld gehen an das Fachamt Bauprüfung des Bezirksamts Wandsbek. Ob Ihr Abriss überhaupt ein Verfahren braucht, zeigt der <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber zur Abriss-Genehmigung</a>. Soll ein Container auf öffentlichem Straßengrund stehen, muss das Bezirksamt das vorher als Sondernutzung erlauben. Ein Halteverbot für die Ladefläche ist in Hamburg spätestens 14 Tage vorher zu beantragen. Was davon Ihr Auftrag braucht, klären wir bei der Besichtigung.</p><p>Auf Ihre Anfrage über das <a href=\"index.html#anfrage\">Formular</a> melden wir uns innerhalb eines Werktags. Rahlstedt, Tonndorf und alle anderen Stadtteile des Bezirks führt die Seite <a href=\"abriss-hamburg-wandsbek.html\">Wandsbek</a> auf.</p>"
     }
   ],
   "stadtteile": [],
@@ -66,6 +66,14 @@
       "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2013/24308/pdf/download_pdf_broschuere_gestaltungsleitfaden_west8.pdf"
     },
     {
+      "title": "sdg21: Jenfelder Au (getrenntes Schwarz-/Grauwassernetz seit Herbst 2016 in Betrieb)",
+      "url": "https://sdg21.eu/en/db/jenfelder-au"
+    },
+    {
+      "title": "HAMBURG WASSER, Pressemitteilung 9.9.2024: Fertigstellung und Inbetriebnahme der GREY-Brauchwassernutzung (HAMBURG WATER Cycle in der Jenfelder Au in Betrieb)",
+      "url": "https://hamburgwasser.de/fileadmin/Redakteur/Presse/Pressemitteilungen/2024/240909_Pressemitteilung_Fertigstellung_und_Inbetriebnahme_GREY_Brauchwassernutzung.pdf"
+    },
+    {
       "title": "City Population: Stadtteile des Bezirks Wandsbek, gemeldete Einwohner 31.12.2024 (nach Statistisches Amt für Hamburg und Schleswig-Holstein): Jenfeld 29.391",
       "url": "https://citypopulation.de/en/germany/hamburg/admin/HH5__wandsbek/"
     },
@@ -88,7 +96,7 @@
   ],
   "notes_for_review": [
     "Die Stadtteilseite von hamburg.de zu Jenfeld war nicht abrufbar (Serverfehler). Die Ortsfakten stammen aus Wikipedia, dem Wohnungsbauprogramm Wandsbek 2015 und dem Gestaltungsleitfaden Jenfelder Au.",
-    "HAMBURG WATER Cycle: Die Quellen beschreiben den Planungsstand (Wikipedia „soll“, Gestaltungsleitfaden von 2011). Ob alle Häuser so angeschlossen sind, ist nicht geprüft; Text und FAQ sagen deshalb „vorgesehen“ bzw. „ob und wie“.",
+    "HAMBURG WATER Cycle: Laut sdg21 ist das getrennte Schwarz- und Grauwassernetz seit Herbst 2016 in Betrieb, HAMBURG WASSER beschreibt es 2024 als in Betrieb. Ob jedes einzelne Haus so angeschlossen ist, ist nicht geprüft; die FAQ sagt deshalb „ob und wie“. Die Wohnungszahl (Leitfaden 2011: rund 770, spätere Planzahlen 835) nennt der Text nicht mehr.",
     "Plattenbau: Dass dort auch Innenwände tragen können, ist allgemeines Fachwissen ohne eigene Quelle. Es steht deshalb nur als „können“ im Text, verbunden mit der Prüfung durch den Statiker.",
     "Erhaltungsverordnungen und Denkmäler in Jenfeld nennt der Text nicht. Der Wikipedia-Auszug der Denkmalliste (Stand 2020) zeigt kein Wohngebiet als Denkmal; amtlich nicht geprüft."
   ]
