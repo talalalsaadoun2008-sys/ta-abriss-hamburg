@@ -21,6 +21,7 @@ import html
 import json
 import re
 import shutil
+import subprocess
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -512,6 +513,40 @@ def faq_jsonld(site, pairs):
          "acceptedAnswer": {"@type": "Answer", "text": absolutize(site, a)}} for q, a in pairs]}
 
 
+def ld_bild(site, name):
+    """Absolute Bildadresse für JSON-LD (gleiches Muster wie subhero/mini_card: img/<name>.jpg)."""
+    return f"{site.base}img/{name}.jpg"
+
+
+def ld_adresse(f):
+    return {"@type": "PostalAddress", "streetAddress": f["strasse"], "postalCode": f["plz"],
+            "addressLocality": f["ort"], "addressCountry": "DE"}
+
+
+def ld_firma(site):
+    """Kurzform der Firma für Unterseiten (provider, author, publisher). Gleiche @id wie auf der Startseite;
+    Name, Adresse und Telefon stehen mit drin, damit jede Seite für sich vollständig ist."""
+    f = site.firma
+    return {"@type": "HomeAndConstructionBusiness", "@id": site.base + "#firma", "name": f["name"], "url": site.base,
+            "telephone": f["telefon_schema"], "address": ld_adresse(f)}
+
+
+def git_daten(path):
+    """(erste, letzte) Version einer Datei laut Git als Datum JJJJ-MM-TT. Ohne Git-Historie heute;
+    ungespeicherte Änderungen zählen als heute. So bleibt datePublished bei jedem Build gleich."""
+    heute = datetime.date.today().isoformat()
+    git = lambda *a: subprocess.run(["git", "-C", str(path.parent), *a], capture_output=True, text=True,
+                                    timeout=20, check=True).stdout
+    try:
+        tage = [x[:10] for x in git("log", "--follow", "--format=%aI", "--", path.name).split()]
+        offen = git("status", "--porcelain", "--", path.name).strip()
+    except (OSError, subprocess.SubprocessError):
+        return heute, heute
+    if not tage:
+        return heute, heute
+    return tage[-1], heute if offen else tage[0]
+
+
 def breadcrumb_ld(items):
     """items: Liste (Name, absolute URL); Einträge ohne URL werden ausgelassen."""
     items = [(n, u) for n, u in items if u]
@@ -645,7 +680,7 @@ def render_content_page(ctx, c):
     slug, kind = c["slug"], c["type"]
     entry = s.entry[slug]
     url = s.url(slug)
-    firma_ref = {"@id": s.base + "#firma"}
+    firma_ref = ld_firma(s)
     data_page = c["menu"].strip()
     if kind in ORTSTYPEN and "abriss" not in data_page.lower():
         data_page = "Abriss " + data_page
@@ -663,13 +698,13 @@ def render_content_page(ctx, c):
         ok = ctx.has(bezirk["slug"])
         trail.append((bezirk["name"], bezirk["slug"] + ".html" if ok else None, s.url(bezirk["slug"]) if ok else None))
 
-    ld = [breadcrumb_ld([(n, u) for n, _, u in trail] + [(c["h1"], url)])]
-    service = {"@context": "https://schema.org", "@type": "Service", "name": c["h1"],
+    # letzter Eintrag heißt wie in der sichtbaren Brotkrumen-Leiste
+    ld = [breadcrumb_ld([(n, u) for n, _, u in trail] + [(entry["name"], url)])]
+    service = {"@context": "https://schema.org", "@type": "Service", "@id": url + "#leistung", "name": c["h1"],
                "serviceType": "Abriss und Rückbau", "description": c["description"], "provider": firma_ref}
-    if kind == "leistung":
-        ld.append({"@context": "https://schema.org", "@type": "Service", "name": c["h1"], "serviceType": c["menu"],
-                   "description": c["description"], "provider": firma_ref,
-                   "areaServed": {"@type": "City", "name": "Hamburg"}, "url": url})
+    if kind == "leistung":  # Name wie im Leistungskatalog der Startseite (gleiche @id)
+        ld.append(dict(service, name=entry["name"], serviceType=c["menu"],
+                       areaServed={"@type": "City", "name": "Hamburg"}, url=url))
     elif kind == "bezirk":
         ld.append(dict(service, areaServed={"@type": "AdministrativeArea", "name": entry["gebiet"]}, url=url))
     elif kind == "stadtteil":
@@ -681,10 +716,11 @@ def render_content_page(ctx, c):
                                             "containedInPlace": {"@type": "AdministrativeArea", "name": entry["kreis"]}},
                        url=url))
     else:
+        erst, zuletzt = git_daten(ROOT / ctx.content_rel / f"{slug}.json")
         ld.append({"@context": "https://schema.org", "@type": "Article", "headline": c["h1"],
-                   "description": c["description"], "datePublished": ctx.today, "dateModified": ctx.today,
+                   "description": c["description"], "datePublished": erst, "dateModified": zuletzt,
                    "author": firma_ref, "publisher": firma_ref, "mainEntityOfPage": url,
-                   "image": f"{s.base}img/{c['image']}.jpg", "inLanguage": "de-DE"})
+                   "image": ld_bild(s, c["image"]), "inLanguage": "de-DE"})
     faq = [(x["q"], ctx.drop_dead_links(inline_html(x["a"]))) for x in c["faq"]]  # (Frage, fertiges HTML)
     if faq:
         ld.append(faq_jsonld(s, [(x["q"], ctx.drop_dead_links(x["a"])) for x in c["faq"]]))
@@ -958,16 +994,26 @@ def home_umland(ctx):
 def render_index(ctx):
     s, f = ctx.site, ctx.site.firma
     src = ctx.home_src
+    # Keine Öffnungszeiten, keine Preisspanne: beides ist nicht festgelegt und wird nicht erfunden.
     business = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": s.base + "#firma",
-        "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.base + "img/abriss.jpg",
+        "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": ld_bild(s, "abriss"),
         "logo": s.base + "logo.png",
         "telephone": f["telefon_schema"], "email": f["email"],
-        "address": {"@type": "PostalAddress", "streetAddress": f["strasse"], "postalCode": f["plz"],
-                    "addressLocality": f["ort"], "addressCountry": "DE"},
+        "address": ld_adresse(f),
         "areaServed": [{"@type": "AdministrativeArea", "name": b["gebiet"]} for b in s.bezirke]
                       + [{"@type": "City", "name": u["name"]} for u in ctx.pages(s.umland)],
     }
+    geo = f.get("geo")  # nur mit belegten Koordinaten in site.json, z. B. "geo": {"breite": 53.12345, "laenge": 9.12345}
+    if geo:
+        if not all(isinstance(geo.get(k), (int, float)) for k in ("breite", "laenge")):
+            raise BuildError("site.json: firma.geo braucht 'breite' und 'laenge' als Zahlen")
+        business["geo"] = {"@type": "GeoCoordinates", "latitude": geo["breite"], "longitude": geo["laenge"]}
+    leist = ctx.pages(s.leistungen)
+    if leist:
+        business["hasOfferCatalog"] = {"@type": "OfferCatalog", "name": "Leistungen", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "@id": s.url(x["slug"]) + "#leistung",
+                                               "name": x["name"], "url": s.url(x["slug"])}} for x in leist]}
     head = head_assets(ctx, extra_noindex=True) + [jsonld(business), jsonld(faq_jsonld(s, home_faq_pairs(src)))]
     out = fill_marker(src, "head", "\n".join(head))
     out = fill_marker(out, "header", render_header(ctx, "index", True, "#anfrage"))
