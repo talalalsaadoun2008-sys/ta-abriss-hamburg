@@ -359,6 +359,8 @@ html.menu-open .fab{opacity:0;visibility:hidden;pointer-events:none}
 /* Startseite: Links in Bezirkstabelle und FAQ */
 .districts td:first-child a{display:block;padding-block:.7rem;margin-block:-.7rem;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:color-mix(in srgb,var(--accent) 70%,transparent)}
 .faq p a{color:var(--accent-text);font-weight:600;text-underline-offset:3px}
+.partner{margin-top:var(--s5);max-width:50rem}
+.partner a{color:var(--accent-text);font-weight:600;text-underline-offset:3px}
 
 /* Rechtliches (vorher assets/legal.css) */
 .legal{padding-block:var(--s5) var(--s6)}
