@@ -6,7 +6,7 @@
   "description": "Entkernung in Hamburg-Hamm: kleine Wohnungen in Backsteinbauten des Wiederaufbaus, Gewerbe in Hamm-Süd.",
   "label": "Stadtteil Hamm · Bezirk Hamburg-Mitte",
   "h1": "Abriss in Hamburg-Hamm: Entkernung und Innenabbruch",
-  "lead": "1943 fast vollständig zerstört, danach in rotem Backstein neu gebaut: In Hamm entkernen wir Wohnungen aus dem Wiederaufbau, nehmen Bäder und Wände heraus und räumen Gewerbeflächen in Hamm-Süd leer.",
+  "lead": "1943 fast vollständig zerstört, danach in rotem Backstein neu gebaut: In Hamm entkernen wir Wohnungen aus dem Wiederaufbau, nehmen Bäder und Wände heraus und bauen alte Einbauten in Gewerbeflächen in Hamm-Süd zurück.",
   "facts": [
     "Kostenlose Besichtigung vor Ort",
     "Festpreis inkl. Entsorgung",
@@ -18,7 +18,7 @@
   "sections": [
     {
       "h2": "Hamm: vom Sommersitz der Kaufleute zum Backsteinviertel",
-      "html": "<p>Hamm wurde 1256 erstmals erwähnt und kam im Spätmittelalter an Hamburg. Im 17. Jahrhundert ließen sich wohlhabende Kaufleute hier Sommervillen in Parkgrundstücken bauen. Aus dem Landschaftsgarten der Familien Chapeaurouge und Sieveking wurde später der Hammer Park. Ab dem späten 19. Jahrhundert entstanden Etagenhäuser und Backsteinblocks: in Hamm-Süd und Hamm-Mitte Arbeiterquartiere, im Norden Wohnungen für Beamte und Besserverdienende. Östlich des Hammer Steindamms wurde zwischen den Weltkriegen nach Plänen von Fritz Schumacher ein neues Wohngebiet angelegt.</p><p>Nach den Luftangriffen der „Operation Gomorrha“ im Juli 1943 lagen 96 Prozent der Bebauung in Trümmern. Vor dem Krieg hatten rund 90.000 Menschen in Hamm gelebt. Von 1951 bis Ende 2010 war der Stadtteil in Hamm-Nord, Hamm-Mitte und Hamm-Süd geteilt. Seit dem 1. Januar 2011 ist Hamm wieder ein einziger Stadtteil im Bezirk Hamburg-Mitte.</p>"
+      "html": "<p>Hamm wurde 1256 erstmals erwähnt, der größte Teil kam im 14. Jahrhundert an Hamburg. Im 17. Jahrhundert ließen sich wohlhabende Kaufleute hier Sommervillen in Parkgrundstücken bauen. Aus dem Landschaftsgarten der Familien Chapeaurouge und Sieveking wurde später der Hammer Park. Ab dem späten 19. Jahrhundert entstanden Etagenhäuser und Backsteinblocks: in Hamm-Süd und Hamm-Mitte Arbeiterquartiere, im Norden Wohnungen für Beamte und Besserverdienende. Östlich des Hammer Steindamms wurde zwischen den Weltkriegen nach Plänen von Fritz Schumacher ein neues Wohngebiet angelegt.</p><p>Nach den Luftangriffen der „Operation Gomorrha“ im Juli 1943 lagen 96 Prozent der Bebauung in Trümmern. Vor dem Krieg hatten rund 90.000 Menschen in Hamm gelebt. Von 1951 bis Ende 2010 war der Stadtteil in Hamm-Nord, Hamm-Mitte und Hamm-Süd geteilt. Seit dem 1. Januar 2011 ist Hamm wieder ein einziger Stadtteil im Bezirk Hamburg-Mitte.</p>"
     },
     {
       "h2": "Wiederaufbau in Backstein: was das für die Entkernung heißt",
@@ -30,7 +30,7 @@
     },
     {
       "h2": "Gewerbe in Hamm-Süd und Zuständigkeit beim Abriss in Hamm",
-      "html": "<p>Der früher dicht bewohnte Süden wurde nach dem Krieg fast vollständig gewerblich genutzt, Wohnhäuser gibt es dort heute vor allem im Osterbrookviertel. In Hamm-Süd liegen Lagerhallen, Speditionen und Händler. Wird eine Büro- oder Gewerbefläche frei, nehmen wir die alten Einbauten heraus: Systemwände, Rasterdecken, Teppichböden, Teeküche. Auf Wunsch stellen wir danach mit <a href=\"trockenbau-hamburg.html\">Trockenbau</a> neue Wände für den nächsten Nutzer. Damit der Betrieb nebenan weiterlaufen kann, arbeiten wir auch abends und samstags, soweit der Lärmschutz es erlaubt.</p><p>Bauanträge für Hamm gehen an das Fachamt Bauprüfung des Bezirksamts Hamburg-Mitte. Was im übrigen Bezirk gilt, etwa in der Innenstadt, steht auf der Seite <a href=\"abriss-hamburg-mitte.html\">Hamburg-Mitte</a>. Den Termin für die kostenlose Besichtigung vereinbaren Sie über das <a href=\"index.html#anfrage\">Anfrageformular</a>.</p>"
+      "html": "<p>Der früher dicht bewohnte Süden wurde nach dem Krieg fast vollständig gewerblich genutzt, Wohnhäuser gibt es dort heute vor allem im Osterbrookviertel. In Hamm-Süd liegen Lagerhallen, Speditionen und Händler. Wird eine Büro- oder Gewerbefläche frei, nehmen wir die alten Einbauten heraus: Systemwände, Rasterdecken, Teppichböden, Teeküche. Wasser- und Stromanschlüsse legt vorher ein Installations- bzw. Elektrobetrieb still. Auf Wunsch stellen wir danach mit <a href=\"trockenbau-hamburg.html\">Trockenbau</a> neue Wände für den nächsten Nutzer. Damit der Betrieb nebenan weiterlaufen kann, arbeiten wir auch abends und samstags, soweit der Lärmschutz es erlaubt.</p><p>Bauanträge für Hamm gehen an das Fachamt Bauprüfung des Bezirksamts Hamburg-Mitte. Was im übrigen Bezirk gilt, etwa in der Innenstadt, steht auf der Seite <a href=\"abriss-hamburg-mitte.html\">Hamburg-Mitte</a>. Den Termin für die kostenlose Besichtigung vereinbaren Sie über das <a href=\"index.html#anfrage\">Anfrageformular</a>.</p>"
     }
   ],
   "stadtteile": [],
@@ -81,7 +81,7 @@
   "notes_for_review": [
     "Soziale Erhaltungsverordnung: Für Hamm keine gefunden (in Hamburg-Mitte gelten soziale Erhaltungsverordnungen laut Bezirksseite in Neustadt, St. Georg und St. Pauli). Deshalb nichts dazu im Text.",
     "Ob die Gewerbeflächen in Hamm-Süd im Erhaltungsgebiet liegen, ist nur aus der Karte zur Verordnung ablesbar; der Text behauptet dazu nichts.",
-    "Erwerb durch Hamburg: Wikipedia nennt 1383, das Gutachten 1358. Der Text sagt deshalb nur „im Spätmittelalter“.",
+    "Erwerb durch Hamburg: Wikipedia nennt 1383, das Gutachten 1358. Der Text sagt deshalb nur „im 14. Jahrhundert“.",
     "Die Erhaltungsverordnung Hamm erscheint nicht in HmbGVBl. 29/2025 (Anpassung an die neue HBauO); ihr Text spricht bereits allgemein von „bauordnungsrechtlichen Vorschriften“."
   ]
 }
