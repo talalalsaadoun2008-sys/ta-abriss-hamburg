@@ -117,6 +117,22 @@ class Site:
         for k in ("title", "description", "label", "h1", "lead", "hinweis"):
             if not is_str(self.uebersicht.get(k)):
                 raise BuildError(f"site.json: einsatzgebiet.{k} fehlt")
+        for key, b in self.bilder.items():
+            datei = b.get("datei")
+            if not (isinstance(datei, str) and re.fullmatch(r"[a-z0-9-]+\.(jpg|jpeg|png|webp)", datei)):
+                raise BuildError(f"site.json: bilder.{key} braucht 'datei' (z. B. 'abriss-ziegelwand.jpg', nur a-z, 0-9, -)")
+            if not (ROOT / "img" / datei).is_file():
+                raise BuildError(f"site.json: bilder.{key}: img/{datei} fehlt")
+        for it in self.leistungen:
+            if it.get("bild") not in self.bilder:
+                raise BuildError(f"site.json: Leistung {it['slug']}: 'bild' muss eines von {', '.join(self.bilder)} sein")
+
+    def bild_src(self, key):
+        """Relativer Pfad eines Bildes aus 'bilder' (Schlüssel bleibt gleich, Dateiname steht in 'datei')."""
+        return "img/" + self.bilder[key]["datei"]
+
+    def bild_url(self, key):
+        return self.base + self.bild_src(key)
 
     def content_slugs(self):
         return [it["slug"] for it in self.leistungen + self.bezirke + self.ratgeber + self.stadtteile + self.umland]
@@ -535,7 +551,7 @@ def crumbs_html(items):
 def mini_card(ctx, it):
     b = ctx.site.bilder[it["bild"]]
     return f'''<article class="mini reveal">
-      <img src="img/{esc(it["bild"])}.jpg" width="{b["w"]}" height="{b["h"]}" alt="{esc(b["alt"])}" loading="lazy">
+      <img src="{esc(ctx.site.bild_src(it["bild"]))}" width="{b["w"]}" height="{b["h"]}" alt="{esc(b["alt"])}" loading="lazy">
       <div class="body">
         <h3><a href="{esc(it["slug"])}.html">{esc(it["name"])}</a></h3>
         <p>{esc(it["kurz"])}</p>
@@ -592,7 +608,7 @@ def subhero(ctx, image, label, h1, lead, facts=None):
       {facts_html(facts)}
     </div>''' if facts else ""
     return f'''<div class="subhero">
-  <img class="photo" src="img/{esc(image)}.jpg" alt="{esc(img["alt"])}" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
+  <img class="photo" src="{esc(ctx.site.bild_src(image))}" alt="{esc(img["alt"])}" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
   <div class="wrap">
     <p class="label">{esc(label)}</p>
     <h1>{esc(h1)}</h1>
@@ -684,14 +700,14 @@ def render_content_page(ctx, c):
         ld.append({"@context": "https://schema.org", "@type": "Article", "headline": c["h1"],
                    "description": c["description"], "datePublished": ctx.today, "dateModified": ctx.today,
                    "author": firma_ref, "publisher": firma_ref, "mainEntityOfPage": url,
-                   "image": f"{s.base}img/{c['image']}.jpg", "inLanguage": "de-DE"})
+                   "image": s.bild_url(c["image"]), "inLanguage": "de-DE"})
     faq = [(x["q"], ctx.drop_dead_links(inline_html(x["a"]))) for x in c["faq"]]  # (Frage, fertiges HTML)
     if faq:
         ld.append(faq_jsonld(s, [(x["q"], ctx.drop_dead_links(x["a"])) for x in c["faq"]]))
 
     og = [("type", "article" if kind == "ratgeber" else "website"), ("locale", "de_DE"),
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
-          ("image", f"{s.base}img/{c['image']}.jpg"), ("url", url)]
+          ("image", s.bild_url(c["image"])), ("url", url)]
     meta = c["description"] if kind == "ratgeber" else c["description"] + meta_suffix(s)
     head = page_head(ctx, title=c["title"], description=meta, canonical=url, og=og, ld=ld)
 
@@ -819,7 +835,7 @@ def render_einsatzgebiet(ctx):
     url = s.url(UEBERSICHT)
     ld = [breadcrumb_ld([("Startseite", s.base), ("Einsatzgebiet", url)])]
     og = [("type", "website"), ("locale", "de_DE"), ("site_name", f["name"]), ("title", e["title"]),
-          ("description", e["description"]), ("image", f"{s.base}img/abriss.jpg"), ("url", url)]
+          ("description", e["description"]), ("image", s.bild_url("abriss")), ("url", url)]
     head = page_head(ctx, title=e["title"], description=e["description"] + meta_suffix(s), canonical=url, og=og, ld=ld)
 
     def row(title_html, chips, sub=""):
@@ -960,7 +976,7 @@ def render_index(ctx):
     src = ctx.home_src
     business = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": s.base + "#firma",
-        "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.base + "img/abriss.jpg",
+        "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.bild_url("abriss"),
         "logo": s.base + "logo.png",
         "telephone": f["telefon_schema"], "email": f["email"],
         "address": {"@type": "PostalAddress", "streetAddress": f["strasse"], "postalCode": f["plz"],
@@ -989,6 +1005,16 @@ def check_home_links(ctx, linker, errors):
         msg = linker.check(href, "index.html")
         if msg:
             errors.append(f"index.html: {msg}")
+
+
+def check_home_images(ctx, errors):
+    """Von Hand eingetragene Bilder der Startseite (<img src>, og:image) müssen in img/ liegen."""
+    src = re.sub(r"<!-- @(\w+) -->.*?<!-- /@\1 -->", "", ctx.home_src, flags=re.S)
+    refs = re.findall(r'<img\s[^>]*?src="([^"]+)"', src) + re.findall(r'<meta property="og:image" content="([^"]+)"', src)
+    for ref in refs:
+        rel = ref[len(ctx.site.base):] if ref.startswith(ctx.site.base) else ref
+        if not re.match(r"[a-z]+:", rel) and not (ROOT / rel).is_file():
+            errors.append(f"index.html: Bild {ref} fehlt")
 
 
 def check_stadtteil_chips(site, contents, warn):
@@ -1059,6 +1085,7 @@ def main(argv=None):
     for c in contents.values():
         check_links_in(c, linker, errors)
     check_home_links(ctx, linker, errors)
+    check_home_images(ctx, errors)
     check_stadtteil_chips(site, contents, warn)
     sub = {k: sorted(set(v) - {"index.html"}) for k, v in linker.pending.items()}
     sub = {k: v for k, v in sub.items() if v}

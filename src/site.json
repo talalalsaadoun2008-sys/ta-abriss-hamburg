@@ -98,10 +98,14 @@
     {"slug": "datenschutz", "name": "Datenschutz", "title": "Datenschutz · T&A Abriss & Rückbau"}
   ],
   "bilder": {
-    "abriss": {"w": 1024, "h": 559, "alt": "Abriss einer Ziegelwand mit dem Vorschlaghammer"},
-    "entkernung": {"w": 678, "h": 452, "alt": "Entkernte Wohnung mit Schutt auf dem Boden"},
-    "innenabbruch": {"w": 640, "h": 480, "alt": "Wanddurchbruch mit dem Abbruchhammer"},
-    "trockenbau": {"w": 900, "h": 806, "alt": "Montage einer abgehängten Decke im Trockenbau"}
+    "abriss": {"datei": "abriss-ziegelwand-vorschlaghammer.jpg", "w": 1024, "h": 559,
+               "alt": "Abriss: Arbeiter mit Schutzhelm trägt eine Ziegelwand mit dem Vorschlaghammer ab"},
+    "entkernung": {"datei": "entkernung-wohnung-schutt.jpg", "w": 678, "h": 452,
+                   "alt": "Entkernung: Wohnung mit herausgebrochenen Wänden, Schutt liegt auf dem Boden"},
+    "innenabbruch": {"datei": "innenabbruch-wanddurchbruch-abbruchhammer.jpg", "w": 640, "h": 480,
+                     "alt": "Innenabbruch: Wanddurchbruch in einer verputzten Ziegelwand mit dem Abbruchhammer"},
+    "trockenbau": {"datei": "trockenbau-abgehaengte-decke-gipskarton.jpg", "w": 900, "h": 806,
+                   "alt": "Trockenbau: Arbeiter auf einem Rollgerüst schraubt Gipskartonplatten an eine abgehängte Decke"}
   },
   "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Weiß ich noch nicht"]
 }
