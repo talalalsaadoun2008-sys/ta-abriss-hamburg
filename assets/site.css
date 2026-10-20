@@ -397,6 +397,8 @@ footer li a{min-width:44px}
 footer .foot-all a{display:inline-flex;align-items:center;gap:.35rem;min-height:44px;font-weight:600;color:var(--ink);text-decoration:none}
 footer .foot-all a:hover{text-decoration:underline;text-underline-offset:3px}
 footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
+/* Footer: Spalte Umland (kurze Ortsliste); ab 901 px fünf Spalten nach Inhaltsbreite, gleichmäßig verteilt */
+@media (min-width:901px){footer .wrap.foot:has(> .foot-uml){grid-template-columns:repeat(5,auto);justify-content:space-between;column-gap:var(--s4)}}
 
 /* Textlink mit Pfeil („Alle Orte im Einsatzgebiet →“) */
 .go-wrap{margin-top:var(--s3)}
