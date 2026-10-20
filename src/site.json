@@ -87,7 +87,12 @@
     {"slug": "abriss-buchholz", "name": "Buchholz in der Nordheide", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-winsen-luhe", "name": "Winsen (Luhe)", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-buxtehude", "name": "Buxtehude", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
-    {"slug": "abriss-stade", "name": "Stade", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
+    {"slug": "abriss-stade", "name": "Stade", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-oststeinbek", "name": "Oststeinbek", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-rellingen", "name": "Rellingen", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-boenningstedt", "name": "Bönningstedt", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ellerbek", "name": "Ellerbek", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-hasloh", "name": "Hasloh", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
