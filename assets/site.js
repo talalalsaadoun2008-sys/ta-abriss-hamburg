@@ -57,7 +57,7 @@
       e.preventDefault();
       if (!valid()) return;
       if (ok) ok.hidden = false;
-      location.href = 'mailto:info@ta-abriss-hamburg.de?subject=' + encodeURIComponent('Anfrage Besichtigung') + '&body=' + encodeURIComponent(msg());
+      location.href = 'mailto:info@ta-abriss-hamburg.de?subject=' + encodeURIComponent(['Anfrage Besichtigung', (f.getAttribute('data-page') || '').trim()].filter(Boolean).join(' – ')) + '&body=' + encodeURIComponent(msg());
     });
   })();
 
