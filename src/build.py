@@ -1332,6 +1332,307 @@ def sitemap(site, slugs, today):
 
 
 # ---------------------------------------------------------------------------
+# Vorlagen-Prüfung: fertige Seiten auf typische Vorlagen- und Kopierfehler prüfen.
+# Nur Warnungen, die Ausgabe wird dadurch nicht verändert.
+# ---------------------------------------------------------------------------
+VP_VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
+VP_BLOCK = {"p", "li", "ul", "ol", "div", "section", "article", "aside", "nav", "header", "footer", "main", "h1", "h2",
+            "h3", "h4", "summary", "details", "br", "option", "select", "label", "td", "th", "tr", "form", "button",
+            "title", "input", "textarea", "noscript"}
+VP_FILLED = {"title", "h1", "h2", "h3", "h4", "p", "li", "ul", "ol", "summary", "a", "button", "label", "option", "strong", "em"}
+VP_RES = {"img": ("src", "srcset"), "source": ("src", "srcset"), "script": ("src",), "iframe": ("src",),
+          "video": ("src", "poster"), "audio": ("src",), "embed": ("src",), "object": ("data",)}
+VP_RELS = {"stylesheet", "preload", "modulepreload", "icon", "apple-touch-icon", "manifest", "mask-icon"}
+VP_PLATZHALTER = re.compile(r"(?i:\b(?:todo|fixme|lorem|ipsum)\b)|\b(?:TBD|XXX|undefined|None|NaN)\b"
+                            r"|\{[^{}]{0,40}\}|\[[^\[\]]{0,40}\]|[\[\]{}]|%s")
+VP_DOPPELT_OK = {"die", "der", "das", "den", "dem", "des"}
+VP_ENDUNG_OK = {"r", "rn", "rs", "er", "ern", "ers", "erin", "erinnen", "s", "es", "isch", "ische", "ischen", "ischer", "isches",
+                "weit"}
+VP_PRAEP = re.compile(r"\b(in|im|am|bei|beim|von|vom|zu|zum|zur|nach|aus|für|mit|auf|ins)\s+(in|im|am|zum|zur|vom|beim|ins|auf)\b")
+
+
+class VorlagenParser(HTMLParser):
+    """Sammelt aus einer fertigen Seite, was die Vorlagen-Prüfung braucht."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.lang = None
+        self.titles = self.h1 = 0
+        self.meta = {}
+        self.refs = []      # (Tag, Attribut, Adresse)
+        self.links = []     # href aller <a>
+        self.ids = set()
+        self.problems = []
+        self.texts = []     # sichtbarer Text, Blöcke durch \n getrennt
+        self.attr_texts = []
+        self.stack = []     # [tag, gefüllt, Abschnitt mit Inhalt, aria-hidden, class]
+        self.prev_end = False
+        self.raw = 0        # in <script>/<style>
+
+    def _fill(self, gives_name):
+        """Inhalt gefunden: Elemente im Stapel sind nicht leer (Links/Buttons nur bei lesbarem Namen)."""
+        for ent in self.stack:
+            if gives_name or ent[0] not in ("a", "button"):
+                ent[1] = True
+        for t in reversed(self.stack):  # Abschnitt hat Inhalt außer Überschriften
+            if t[0] in ("h1", "h2", "h3", "h4") or (t[0] == "p" and t[4] == "label"):
+                break
+            if t[0] == "section":
+                t[2] = True
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if a.get("id"):
+            self.ids.add(a["id"])
+        if tag == "html":
+            self.lang = a.get("lang")
+        elif tag == "title":
+            self.titles += 1
+        elif tag == "h1":
+            self.h1 += 1
+        elif tag == "meta":
+            key = a.get("name") or a.get("property")
+            if key:
+                self.meta[key] = a.get("content", "")
+        elif tag == "link" and set((a.get("rel") or "").split()) & VP_RELS:
+            self.refs.append(("link", "href", a.get("href", "")))
+        elif tag == "a":
+            self.links.append(a.get("href"))
+            if not a.get("href"):
+                self.problems.append("<a> ohne href")
+        for attr in VP_RES.get(tag, ()):
+            for part in (a.get(attr) or "").split(","):
+                if part.strip():
+                    self.refs.append((tag, attr, part.strip().split()[0]))
+        for u in re.findall(r"url\(\s*['\"]?([^'\")]+)", a.get("style") or ""):
+            self.refs.append((tag, "style", u))
+        if tag == "img" and "alt" not in a:
+            self.problems.append(f"<img src=\"{a.get('src')}\"> ohne alt-Text")
+        for k in ("alt", "title", "aria-label", "placeholder", "value"):
+            if a.get(k):
+                self.attr_texts.append(a[k])
+        if tag in ("script", "style"):
+            self.raw += 1
+        if tag in VP_BLOCK:
+            self.texts.append("\n")
+        elif self.prev_end:
+            self.texts.append(" ")
+        self.prev_end = False
+        if (tag == "img" and a.get("alt", "").strip()) or tag in ("input", "select", "textarea"):
+            self._fill(True)
+        elif tag in ("svg", "img"):
+            self._fill(False)
+        if tag in VP_VOID:
+            self.prev_end = True
+            return
+        self.stack.append([tag, bool((a.get("aria-label") or "").strip()), False, a.get("aria-hidden") == "true",
+                           a.get("class", "")])
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in VP_VOID:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style") and self.raw:
+            self.raw -= 1
+        if not any(e[0] == tag for e in self.stack):
+            return
+        while self.stack:
+            ent = self.stack.pop()
+            if ent[0] in VP_FILLED and not ent[1]:
+                self.problems.append(f"leeres <{ent[0]}>" + (" (Link ohne Text)" if ent[0] == "a" else ""))
+            if ent[0] == "section" and ent[1] and not ent[2]:
+                self.problems.append("Abschnitt <section> nur mit Überschrift, ohne Inhalt")
+            elif ent[0] == "section" and not ent[1]:
+                self.problems.append("leerer Abschnitt <section>")
+            if ent[0] == tag:
+                break
+        if tag in VP_BLOCK:
+            self.texts.append("\n")
+        self.prev_end = True
+
+    def handle_data(self, data):
+        if self.raw:
+            return
+        self.texts.append(data)
+        self.prev_end = False
+        if data.strip():
+            self._fill(not any(e[3] for e in self.stack))
+
+
+def _vp_slug(text):
+    t = text.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def _vp_ortsnamen(site, contents):
+    """(Namen, die nicht an anderen Wörtern kleben dürfen; bekannte Wörter aus Orts- und Ortsteilnamen)."""
+    alle = {"Hamburg"} | {it["name"] for it in site.bezirke + site.stadtteile + site.umland}
+    alle |= {b.get("gebiet", "") for b in site.bezirke}
+    for c in contents.values():
+        alle |= set(c.get("stadtteile") or [])
+    bekannt = {w for n in alle for w in re.findall(r"[A-Za-zÄÖÜäöüß]+", n)}
+    namen = {"Hamburg"}
+    for it in site.bezirke + site.stadtteile + site.umland:
+        namen |= {w for w in re.split(r"[ ()\-]+", it["name"]) if len(w) >= 5 and w[0].isupper() and w != "Mitte"}
+    return namen, bekannt
+
+
+def vorlage_check_text(text, namen, bekannt, where, warn):
+    """Platzhalter, doppelte Wörter und angeklebte Ortsnamen in sichtbarem Text."""
+    alt = "|".join(sorted((re.escape(n) for n in namen), key=len, reverse=True))
+    klebt_hinten = re.compile(r"(?<![A-Za-zÄÖÜäöüß])(" + alt + r")([A-Za-zÄÖÜäöüß]+)")
+    klebt_vorn = re.compile(r"([a-zäöüß])(" + alt + r")(?![a-zäöüß])")
+    seen = set()
+
+    def w(msg):
+        if msg not in seen:
+            seen.add(msg)
+            warn(f"{where}: {msg}")
+
+    for line in text.split("\n"):
+        line = re.sub(r"\s+", " ", line).strip()
+        if not line:
+            continue
+        cut = lambda m: "…" + line[max(0, m.start() - 25):m.end() + 25] + "…"
+        for m in VP_PLATZHALTER.finditer(line):
+            w(f"Platzhalter/Rest „{m.group(0)}“ im Text {cut(m)}")
+        for m in re.finditer(r"\b([A-Za-zÄÖÜäöüß]{2,})\s+\1\b", line):
+            if m.group(1).lower() not in VP_DOPPELT_OK:
+                w(f"doppeltes Wort „{m.group(0)}“ {cut(m)}")
+        for m in VP_PRAEP.finditer(line):
+            if m.group(1) != m.group(2):  # gleiche Wörter meldet schon die Prüfung oben
+                w(f"doppelte Präposition „{m.group(0)}“ {cut(m)}")
+        for m in re.finditer(r"[a-zäöüß]{2}[.!?][A-ZÄÖÜ][a-zäöüß]|\S [,.;:!?](?![\d.])", line):
+            w(f"Leerzeichen fehlt oder steht vor dem Satzzeichen {cut(m)}")
+        for m in klebt_hinten.finditer(line):
+            wort, endung = m.group(0), m.group(2)
+            if endung not in VP_ENDUNG_OK and wort not in bekannt:
+                w(f"Ortsname „{m.group(1)}“ klebt am Wort: „{wort}“ {cut(m)}")
+        for m in klebt_vorn.finditer(line):
+            w(f"Ortsname „{m.group(2)}“ klebt am Wort davor {cut(m)}")
+
+
+def vorlage_check_orte(site, contents, warn):
+    """Ortsseiten: Ortsname passt zu Slug, Titel, h1, Formular; keine Stadtteile aus fremden Bezirken."""
+    seen = set()
+    warn = lambda msg, _w=warn: msg in seen or seen.add(msg) or _w(msg)
+    bez_of = {}
+    for b in site.bezirke:
+        for x in (contents.get(b["slug"]) or {}).get("stadtteile") or []:
+            bez_of.setdefault(x, []).append(b)
+    for x, bs in bez_of.items():
+        if len(bs) > 1:
+            warn(f"Stadtteil '{x}' steht in der Stadtteil-Liste mehrerer Bezirke: {', '.join(b['slug'] + '.json' for b in bs)}")
+    bez_by_name = {}
+    for b in site.bezirke:
+        bez_by_name[b["name"]] = bez_by_name[b.get("gebiet") or b["name"]] = b
+    seiten_orte = {it["name"] for it in site.bezirke + site.umland}
+    for slug, c in contents.items():
+        kind, where = c["type"], slug + ".json"
+        if kind not in ORTSTYPEN:
+            continue
+        e = site.entry[slug]
+        own = e if kind == "bezirk" else site.bezirk_of(e) if kind == "stadtteil" else None
+        ns = _vp_slug(e["name"])
+        if not any((i == 0 or slug[i - 1] == "-") and (ns == slug[i:] or ns.startswith(slug[i:] + "-"))
+                   for i in range(len(slug))):
+            warn(f"{where}: Slug passt nicht zum Ortsnamen '{e['name']}'")
+        short = re.split(r"[ (]", e["name"])[0]
+        for k in ("h1", "title", "description", "menu", "form_ort"):
+            if (k != "form_ort" or c[k].strip()) and short not in c[k]:
+                warn(f"{where}: {k} nennt den Ort '{short}' nicht: {c[k]}")
+        m = re.search(r"\bBezirk ([^·]+?)\s*(?:·|$)", c["label"])
+        if own and m and m.group(1) not in (own["name"], own.get("gebiet")):
+            warn(f"{where}: label nennt einen anderen Bezirk: {c['label']}")
+        if kind == "umland" and "Kreis" in c["label"] and e["kreis"] not in c["label"]:
+            warn(f"{where}: label nennt einen anderen Kreis: {c['label']} (laut site.json {e['kreis']})")
+        for x in c.get("stadtteile") or []:
+            if x in seiten_orte and x != e["name"]:
+                warn(f"{where}: '{x}' steht als Stadt-/Ortsteil von {e['name']} in 'stadtteile', ist aber ein eigener Ort")
+        txt = " ".join([c["lead"]] + [s["html"] for s in c["sections"]] + [f["a"] for f in c["faq"]])
+        txt = html.unescape(re.sub(r"<[^>]+>", "", txt))
+        if own:
+            for m in re.finditer(r"\b(?:im|des) Bezirks? (Hamburg-[A-ZÄÖÜ][a-zäöüß]+|[A-ZÄÖÜ][a-zäöüß]+)", txt):
+                b = bez_by_name.get(m.group(1))
+                if b and b is not own:
+                    warn(f"{where}: Text nennt „{m.group(0)}“, die Seite gehört aber zum Bezirk {own['name']}")
+        if kind == "umland":
+            for m in re.finditer(r"\b(?:Orts|Stadt)teil(?:e|en)? (?:von|der Stadt|der Gemeinde) ([A-ZÄÖÜ][\wäöüß-]+)", txt):
+                if m.group(1) != short and m.group(1) in {re.split(r"[ (]", x)[0] for x in seiten_orte}:
+                    warn(f"{where}: Text nennt „{m.group(0)}“ auf der Seite für {e['name']}")
+            pat = re.escape(short) + r" (?:gehört|liegt) (?:\S+ ){0,3}?(?:zum|im) (?:Land)?[Kk]reis ([A-ZÄÖÜ][\wäöüß-]+)"
+            for m in re.finditer(pat, txt):
+                if m.group(1) not in e["kreis"]:
+                    warn(f"{where}: Text nennt „{m.group(0)}“, laut site.json liegt {e['name']} im {e['kreis']}")
+        for st, bs in bez_of.items():
+            pat = r"(?<![\w-])" + re.escape(st) + r"(?![\w-]) (?:liegt |gehört )?(?:im|zum) Bezirk (Hamburg-[A-ZÄÖÜ][a-zäöüß]+|[A-ZÄÖÜ][a-zäöüß]+)"
+            for m in re.finditer(pat, txt):
+                b = bez_by_name.get(m.group(1))
+                if b and b not in bs:
+                    warn(f"{where}: „{m.group(0)}“ – {st} gehört zum Bezirk {bs[0]['name']}")
+        for i, s in enumerate(c["sections"], 1):
+            if re.search(r"</h3>\s*(?:<h3>|$)", s["html"].strip()):
+                warn(f"{where} sections[{i}]: Zwischenüberschrift <h3> ohne Text darunter")
+
+
+def vorlage_check_pages(site, contents, files, warn):
+    """Alle fertigen Seiten: Sprache, genau ein h1, Titel/Beschreibung, nur lokale Quellen, alt-Texte,
+    Links mit Text, keine leeren Abschnitte, keine Platzhalter, keine doppelten oder angeklebten Ortsnamen."""
+    namen, bekannt = _vp_ortsnamen(site, contents)
+    ids, links = {}, []
+    for name, src in files.items():
+        if not name.endswith(".html"):
+            continue
+        p = VorlagenParser()
+        p.feed(src)
+        p.close()
+        ids[name] = p.ids
+        w = lambda msg: warn(f"{name}: {msg}")
+        if p.lang != "de":
+            w(f'<html lang="{p.lang}"> statt lang="de"')
+        if p.h1 != 1:
+            w(f"{p.h1} Hauptüberschriften <h1> statt genau einer")
+        if p.titles != 1:
+            w(f"{p.titles} <title> statt genau einem")
+        if "noindex" not in p.meta.get("robots", "") and not p.meta.get("description", "").strip():
+            w("Meta-Beschreibung fehlt")
+        for tag, attr, u in p.refs:
+            if re.match(r"(?:[a-z][a-z0-9+.-]*:)?//", u, re.I) or re.match(r"https?:", u, re.I):
+                w(f"<{tag} {attr}> lädt von fremder Adresse: {u}")
+            elif not u.startswith("data:"):
+                path = u.partition("#")[0].partition("?")[0].lstrip("/")
+                if path and path not in files and not (ROOT / path).is_file():
+                    w(f"<{tag} {attr}> verweist auf fehlende Datei: {u}")
+        for k in ("og:image", "og:url"):
+            if p.meta.get(k) and not p.meta[k].startswith(site.base):
+                w(f"{k} zeigt auf fremde Adresse: {p.meta[k]}")
+        for msg in dict.fromkeys(p.problems):
+            n = p.problems.count(msg)
+            w(msg + (f" ({n}×)" if n > 1 else ""))
+        for m in re.finditer(r"\b([A-ZÄÖÜ][a-zäöüß]{2,})-\1\b", src):
+            w(f"doppelter Ortsname „{m.group(0)}“ (auch in Attributen/JSON-LD)")
+        text = "".join(p.texts) + "\n" + "\n".join(p.attr_texts) + "\n" + "\n".join(
+            [p.meta.get(k, "") for k in ("description", "og:title", "og:description")])
+        vorlage_check_text(text, namen, bekannt, name, warn)
+        links += [(name, h) for h in p.links if h]
+    for name, href in links:
+        if re.match(r"(?:[a-z]+:|//)", href, re.I):
+            continue
+        path, _, frag = href.partition("#")
+        if path.startswith("/"):  # 404.html der Live-Seite: Pfade ab Wurzel
+            path = path.lstrip("/") or "index.html"
+        target = name if not path else "index.html" if path in ("./", ".", "index.html") else path
+        if target not in ids:
+            if not (ROOT / target).is_file():
+                warn(f"{name}: Link auf fehlende Seite {href}")
+        elif frag and frag not in ids[target]:
+            warn(f"{name}: Link {href}: Anker #{frag} gibt es dort nicht")
+    vorlage_check_orte(site, contents, warn)
+
+
+# ---------------------------------------------------------------------------
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Baut die Website ta-abriss-hamburg.de")
     ap.add_argument("--out", help="Ausgabeordner (Standard: Repo-Hauptordner)")
@@ -1419,6 +1720,7 @@ def main(argv=None):
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
         slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
         files["sitemap.xml"] = sitemap(site, slugs, today)
+    vorlage_check_pages(site, contents, files, warn)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     if out_dir != ROOT:
