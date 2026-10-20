@@ -14,6 +14,9 @@ Erzeugt:
 
 Fehlt für eine Seite aus src/site.json die JSON-Datei, wird sie übersprungen und nirgends
 verlinkt (Menü, Footer, Chips, Übersicht, Sitemap; Links im Inhalt werden zu reinem Text).
+
+Richtpreise stehen in src/preise.json (optional). Nur Leistungsseiten mit eingetragenen Zahlen
+bekommen vor dem Kontaktformular einen Abschnitt „Richtpreise“ (Tabelle, mit JavaScript Rechner).
 """
 import argparse
 import datetime
@@ -362,6 +365,7 @@ class Ctx:
         self.home = "index.html" if preview else "./"
         self.home_src = home_src
         self.content_rel = "src/content"
+        self.preise = None  # Richtpreise aus src/preise.json (load_preise)
 
     def has(self, slug):
         """Gibt es die Seite im Build? Nur dann wird sie verlinkt."""
@@ -663,6 +667,176 @@ def subhero(ctx, image, label, h1, lead, facts=None):
 
 
 # ---------------------------------------------------------------------------
+# Richtpreise (src/preise.json) – kein Preis-Markup im JSON-LD, nur sichtbarer Text
+# ---------------------------------------------------------------------------
+PREIS_EINHEITEN = ("pauschal", "m2")
+PREIS_FELDER = {"name", "einheit", "flaeche", "ab", "bis", "mindestens"}
+PREIS_TEXTE = ("inklusive", "zuzueglich")
+
+
+def is_num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0
+
+
+def load_preise(path, site, preview, errors, warn):
+    """Liest die Richtpreise: {'inklusive', 'zuzueglich', 'seiten': {slug: [Zeile, …]}}.
+    Nur Zeilen mit Zahl in 'ab' zählen. Fehlt die Datei oder ist alles null, gibt es keine Preis-Abschnitte."""
+    leer = {"inklusive": "", "zuzueglich": "", "seiten": {}}
+    if not path.exists():
+        return leer
+    where = path.name
+    e = lambda msg: errors.append(f"{where}: {msg}")
+    try:
+        d = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as ex:
+        e(f"kein gültiges JSON ({ex})")
+        return leer
+    if not (isinstance(d, dict) and isinstance(d.get("leistungen"), dict)):
+        e("braucht ein Objekt 'leistungen' (Slug der Leistungsseite → Liste von Preiszeilen)")
+        return leer
+    for k in d:
+        if k not in ("hinweis", "leistungen") + PREIS_TEXTE:
+            warn(f"{where}: unbekanntes Feld '{k}' wird ignoriert")
+    texte = {}
+    for k in PREIS_TEXTE:
+        v = d.get(k)
+        if v is not None and not isinstance(v, str):
+            e(f"'{k}' muss ein Text sein")
+        texte[k] = v.strip() if isinstance(v, str) else ""
+    seiten = {}
+    for slug, rows in d["leistungen"].items():
+        if site.kind.get(slug) != "leistung":
+            e(f"'{slug}' ist keine Leistungsseite aus src/site.json")
+            continue
+        if not isinstance(rows, list):
+            e(f"{slug}: braucht eine Liste von Preiszeilen")
+            continue
+        gut = []
+        for i, r in enumerate(rows, 1):
+            w = f"{slug}[{i}]"
+            if not isinstance(r, dict):
+                e(f"{w}: Preiszeile muss ein Objekt sein")
+                continue
+            for k in r:
+                if k not in PREIS_FELDER:
+                    warn(f"{where}: {w}: unbekanntes Feld '{k}' wird ignoriert")
+            if not is_str(r.get("name")):
+                e(f"{w}: 'name' fehlt")
+                continue
+            if r.get("einheit") not in PREIS_EINHEITEN:
+                e(f"{w}: 'einheit' muss {' oder '.join(PREIS_EINHEITEN)} sein")
+                continue
+            if r.get("flaeche") is not None and not isinstance(r["flaeche"], str):
+                e(f"{w}: 'flaeche' muss ein Text sein")
+            z = {}
+            for k in ("ab", "bis", "mindestens"):
+                v = r.get(k)
+                if v is not None and not is_num(v):
+                    e(f"{w}: '{k}' muss null oder eine Zahl über 0 sein (ohne Anführungszeichen, Punkt statt Komma), "
+                      f"ist {v!r}")
+                z[k] = v if is_num(v) else None
+            if z["ab"] is None:
+                if z["bis"] or z["mindestens"]:
+                    e(f"{w}: 'bis' oder 'mindestens' ohne 'ab'")
+                continue
+            if z["bis"] is not None and z["bis"] < z["ab"]:
+                e(f"{w}: 'bis' ist kleiner als 'ab'")
+            if z["mindestens"] is not None and r["einheit"] != "m2":
+                e(f"{w}: 'mindestens' gibt es nur bei einheit 'm2'")
+            fl = r.get("flaeche")
+            gut.append(dict(z, name=r["name"].strip(), einheit=r["einheit"],
+                            flaeche=fl.strip() if isinstance(fl, str) else ""))
+        if gut:
+            seiten[slug] = gut
+    fehlt = [k for k in PREIS_TEXTE if not texte[k]]
+    if seiten and fehlt:
+        folge = ("Vorschau zeigt gelbe Platzhalter, live erscheinen die Richtpreise erst mit Text" if preview
+                 else "Richtpreise werden erst mit Text ausgegeben")
+        warn(f"{where}: Preise eingetragen, aber {' und '.join(repr(k) for k in fehlt)} leer – {folge}")
+    return dict(texte, seiten=seiten)
+
+
+def zahl(n):
+    """1500 -> '1.500', 42.5 -> '42,50'."""
+    s = f"{int(n):,}" if float(n).is_integer() else f"{n:,.2f}"
+    return s.replace(",", "_").replace(".", ",").replace("_", ".")
+
+
+def preis_text(r):
+    """(Preis, Zusatz) für die Tabelle, z. B. ('ab 1.200 €', '') oder ('40 – 55 €', 'pro m² Wohnfläche')."""
+    nb = " "
+    if r["bis"] and r["bis"] > r["ab"]:
+        main = f"{zahl(r['ab'])}{nb}–{nb}{zahl(r['bis'])}{nb}€"
+    else:
+        main = f"ab {zahl(r['ab'])}{nb}€"
+    sub = ""
+    if r["einheit"] == "m2":
+        sub = "pro m²" + (" " + r["flaeche"] if r["flaeche"] else "")
+        if r["mindestens"]:
+            sub += f", mindestens {zahl(r['mindestens'])}{nb}€"
+    return main, sub
+
+
+def preis_section(ctx, slug, name):
+    """Abschnitt „Richtpreise“ vor dem Kontaktformular einer Leistungsseite – nur mit Zahlen aus preise.json.
+    Die Tabelle steht immer im HTML (geht ohne JavaScript); der Rechner (nur bei Preisen pro m²) ist
+    'hidden' und wird von assets/site.js eingeschaltet."""
+    p = ctx.preise
+    rows = p["seiten"].get(slug) if p else None
+    if not rows:
+        return None
+    if not all(p[k] for k in PREIS_TEXTE) and not ctx.preview:
+        return None  # nie mit Platzhalter live
+
+    def text(k):
+        return esc(p[k]) if p[k] else '<span class="ph">bitte eintragen – bestätigt Talal</span>'
+
+    trs = []
+    for r in rows:
+        main, sub = preis_text(r)
+        sub = f"<span>{esc(sub)}</span>" if sub else ""
+        trs.append(f'<tr><th scope="row">{esc(r["name"])}</th><td><b>{esc(main)}</b>{sub}</td></tr>')
+    rechner = ""
+    if any(r["einheit"] == "m2" for r in rows):
+        data = json.dumps([{k: r[k] for k in ("name", "einheit", "flaeche", "ab", "bis", "mindestens")} for r in rows],
+                          ensure_ascii=False, separators=(",", ":"))
+        sel, out_for = "", "rp-flaeche"
+        if len(rows) > 1:
+            opts = "".join(f'<option value="{i}">{esc(r["name"])}</option>' for i, r in enumerate(rows))
+            sel = f'\n      <label for="rp-pos">Was soll gemacht werden?<select id="rp-pos">{opts}</select></label>'
+            out_for = "rp-pos rp-flaeche"
+        fl = next(r["flaeche"] for r in rows if r["einheit"] == "m2") or "Fläche"
+        rechner = f'''
+    <div class="rechner" role="group" aria-labelledby="rp-h" data-rechner="{esc(data)}" hidden>
+      <p class="label" id="rp-h">Richtpreis berechnen</p>{sel}
+      <label for="rp-flaeche" class="rp-flaeche"><span>{esc(fl)} in m²</span><input id="rp-flaeche" type="text" inputmode="decimal" autocomplete="off" placeholder="z. B. 80"></label>
+      <output id="rp-out" for="{out_for}" aria-live="polite"></output>
+    </div>'''
+    tbody = "\n        ".join(trs)
+    return f'''<section id="richtpreis" class="sec-alt"><div class="wrap">
+  <div class="head reveal">
+    <p class="label">Kosten</p>
+    <h2>Richtpreise für {esc(name)}</h2>
+    <p>Richtpreis – den verbindlichen Festpreis gibt es nach der kostenlosen Besichtigung.</p>
+  </div>
+  <div class="preis">
+    <table class="preise">
+      <thead><tr><th scope="col">Leistung</th><th scope="col">Richtpreis</th></tr></thead>
+      <tbody>
+        {tbody}
+      </tbody>
+    </table>{rechner}
+    <div class="preis-info">
+      <p><strong>Im Richtpreis enthalten:</strong> {text("inklusive")}</p>
+      <p><strong>Nicht enthalten:</strong> {text("zuzueglich")}</p>
+      <p>Den Festpreis nennen wir nach der kostenlosen Besichtigung vor Ort oder per Video. Er hängt davon ab, was wir sehen, z. B. Zugang, Material und Menge.</p>
+      <a class="btn" href="#anfrage" data-rp-cta>Festpreis anfragen {ARR}</a>
+    </div>
+  </div>
+</div></section>'''
+
+
+# ---------------------------------------------------------------------------
 # Seiten
 # ---------------------------------------------------------------------------
 ICON_LINKS = ['<link rel="icon" href="favicon.ico" sizes="48x48">',
@@ -815,6 +989,9 @@ def render_content_page(ctx, c):
     {qa}
   </div>
 </div></section>''')
+    preise = preis_section(ctx, slug, entry["name"]) if kind == "leistung" else None
+    if preise:
+        after.append(preise)
     after.append(contact_section(ctx, c["form_leistung"], c["form_ort"], data_page))
 
     def nav_section(label, h2, chips, extra=""):
@@ -1195,8 +1372,10 @@ def main(argv=None):
         warn(f"Kein Inhalt für {len(missing)} Seite(n) in {content_dir.name}/ – übersprungen und nirgends verlinkt: "
              + ", ".join(missing))
 
+    preise = load_preise(SRC / "preise.json", site, args.preview, errors, warn)
     home_src = (ROOT / "index.html").read_text(encoding="utf-8")
     ctx = Ctx(site, args.preview, today, contents.keys(), home_src)
+    ctx.preise = preise
     try:
         ctx.content_rel = content_dir.relative_to(ROOT).as_posix()
     except ValueError:

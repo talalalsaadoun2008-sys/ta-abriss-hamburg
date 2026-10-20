@@ -511,3 +511,31 @@ footer .partner a{display:inline-block;padding-block:10px;margin-block:-10px;col
 /* Startseite: Hinweis auf weitere Leistungen unter den Karten */
 .svc-mehr{margin-top:var(--s4);font-size:1.1rem}
 .svc-mehr a{font-weight:700}
+/* ===================================================================
+   Richtpreise auf Leistungsseiten (nur wenn src/preise.json Zahlen hat).
+   Ohne JavaScript: nur Tabelle; mit JavaScript daneben der Rechner.
+   =================================================================== */
+.preis{display:grid;gap:var(--s4) var(--s5);align-items:start;max-width:46rem}
+.preise{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.preise th,.preise td{padding:.8rem 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:baseline}
+.preise thead th{padding-top:0;font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.preise thead th+th,.preise td{text-align:right;padding-left:1rem}
+.preise tbody th{font-weight:700}
+.preise td b{font-family:var(--f-display);font-size:1.45rem;font-weight:700;line-height:1.1;white-space:nowrap}
+.preise td span{display:block;font-size:.9rem;color:var(--muted)}
+.preis-info{display:grid;gap:var(--s2);justify-items:start}
+.preis-info p{max-width:40rem}
+.preis-info .btn{margin-top:var(--s2)}
+.rechner{display:grid;gap:var(--s3);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:var(--s4);box-shadow:var(--shadow);min-width:0}
+.rechner[hidden],.rechner [hidden]{display:none}
+.rechner input,.rechner select{background:var(--surface)}
+.rechner output{display:grid;gap:.2rem;align-content:center;min-height:5.75rem;background:color-mix(in srgb,var(--accent) 9%,transparent);border-left:4px solid var(--accent);border-radius:6px;padding:var(--s3)}
+.rechner output span{color:var(--muted);font-size:.95rem}
+.rechner output strong{font-family:var(--f-display);font-size:clamp(1.9rem,6vw,2.4rem);line-height:1.05}
+@media (min-width:900px){
+  .preis:has(>.rechner:not([hidden])){max-width:none;grid-template-columns:minmax(0,1fr) minmax(0,25rem);grid-template-areas:"liste rechner" "info rechner"}
+  .preis:has(>.rechner:not([hidden]))>.preise{grid-area:liste}
+  .preis:has(>.rechner:not([hidden]))>.rechner{grid-area:rechner}
+  .preis:has(>.rechner:not([hidden]))>.preis-info{grid-area:info}
+}
+@media (max-width:600px){.preis-info .btn{width:100%;justify-content:center}}

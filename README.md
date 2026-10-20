@@ -12,6 +12,7 @@ Live unter https://ta-abriss-hamburg.de (GitHub Pages).
 - `assets/fonts*` – Schriften (lokal, SIL Open Font License)
 - `img/` – Fotos
 - `src/site.json` – feste Seitenliste (Menü, Footer, Firmendaten)
+- `src/preise.json` – Richtpreise je Leistungsseite (Anleitung im Feld `hinweis`); ohne Zahlen erscheint kein Preis-Abschnitt
 - `src/build.py` – Generator (Python 3, nur Standardbibliothek)
 - `src/test/`, `src/test2/` – Testinhalte für die Vorlage (`test2` mit Stadtteil- und Umland-Seite)
 - `robots.txt`, `sitemap.xml` – für Google (Sitemap erzeugt der Build)

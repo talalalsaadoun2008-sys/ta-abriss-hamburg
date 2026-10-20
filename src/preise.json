@@ -1,0 +1,22 @@
+{
+  "hinweis": "Richtpreise für die vier Leistungsseiten. Solange bei einer Zeile 'ab' null ist, erscheint sie nicht. Hat eine Leistung keine einzige Zahl, gibt es auf ihrer Seite keinen Preis-Abschnitt. Zahlen ohne Anführungszeichen eintragen, z. B. 1500 oder 42.5 (Punkt statt Komma). einheit 'pauschal' = Preis für den ganzen Auftrag (Anzeige 'ab … €'), einheit 'm2' = Preis pro Quadratmeter (die Seite rechnet mit der Fläche, die der Besucher eingibt; 'flaeche' sagt, welche Fläche gemeint ist). 'bis' ist freiwillig: dann zeigt die Seite eine Spanne statt 'ab'. 'mindestens' (nur bei m2, freiwillig) = kleinster Betrag, den der Rechner anzeigt. Weitere Zeilen: eine Zeile kopieren und anpassen. Preise für Privatkunden als Endpreis inklusive Umsatzsteuer eintragen (Preisangabenverordnung). 'inklusive' und 'zuzueglich' gelten für alle Seiten und müssen ausgefüllt sein, bevor der Rechner online erscheint (ohne Text zeigt nur die Vorschau einen gelben Platzhalter). Den verbindlichen Festpreis gibt es immer erst nach der kostenlosen Besichtigung.",
+  "inklusive": "",
+  "zuzueglich": "",
+  "leistungen": {
+    "kleinabriss-hamburg": [
+      {"name": "Gartenhaus", "einheit": "pauschal", "ab": null, "bis": null},
+      {"name": "Garage", "einheit": "pauschal", "ab": null, "bis": null},
+      {"name": "Carport", "einheit": "pauschal", "ab": null, "bis": null}
+    ],
+    "entkernung-hamburg": [
+      {"name": "Entkernung", "einheit": "m2", "flaeche": "Wohnfläche", "ab": null, "bis": null, "mindestens": null}
+    ],
+    "innenabbruch-hamburg": [
+      {"name": "Bad rausreißen", "einheit": "pauschal", "ab": null, "bis": null},
+      {"name": "Nichttragende Wand entfernen", "einheit": "pauschal", "ab": null, "bis": null}
+    ],
+    "trockenbau-hamburg": [
+      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": null, "bis": null, "mindestens": null}
+    ]
+  }
+}

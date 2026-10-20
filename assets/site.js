@@ -140,4 +140,64 @@
     });
     addEventListener('resize', function(){ if (isOpen) place(); });
   })();
+
+  /* Richtpreis-Rechner auf Leistungsseiten (Zahlen aus src/preise.json, nur bei Preisen pro m²).
+     Ohne Skript bleibt der Rechner verborgen und die Preistabelle daneben zeigt alle Richtpreise. */
+  (function(){
+    var box = $('[data-rechner]');
+    if (!box) return;
+    var rows;
+    try { rows = JSON.parse(box.getAttribute('data-rechner')); } catch (e) { return; }
+    var sel = $('#rp-pos', box), input = $('#rp-flaeche', box), wrap = $('.rp-flaeche', box), out = $('#rp-out', box);
+    if (!rows || !rows.length || !input || !wrap || !out) return;
+    var lab = $('span', wrap), cta = $('[data-rp-cta]'), touched = false, summary = '';
+    var nf = new Intl.NumberFormat('de-DE', {maximumFractionDigits: 2});
+    var nf0 = new Intl.NumberFormat('de-DE', {maximumFractionDigits: 0});
+    function eur(n){ return nf0.format(Math.round(n)) + ' €'; }
+    function price(a, b){ return b && Math.round(b) > Math.round(a) ? nf0.format(Math.round(a)) + ' – ' + eur(b) : 'ab ' + eur(a); }
+    function area(){
+      var v = (input.value || '').replace(/\s/g, '').replace(',', '.');
+      if (!/^\d+(\.\d+)?$/.test(v)) return null;
+      var n = parseFloat(v);
+      return n > 0 && n <= 100000 ? n : null;
+    }
+    function show(sub, main){
+      out.textContent = '';
+      var s = document.createElement('span'); s.textContent = sub; out.appendChild(s);
+      if (main){ var b = document.createElement('strong'); b.textContent = main; out.appendChild(b); }
+    }
+    function render(){
+      var r = rows[sel ? +sel.value : 0] || rows[0];
+      if (r.einheit !== 'm2'){
+        wrap.hidden = true;
+        var t = price(r.ab, r.bis);
+        show('Richtpreis für ' + r.name, t);
+        summary = r.name + '. Richtpreis auf der Website: ' + t + '.';
+        return;
+      }
+      wrap.hidden = false;
+      var fl = r.flaeche || 'Fläche', a = area();
+      if (lab) lab.textContent = fl + ' in m²';
+      if (a === null){
+        show(input.value.trim() ? 'Bitte die Fläche als Zahl eingeben, z. B. 80.' : 'Geben Sie die ' + fl + ' ein, dann steht hier der Richtpreis.', '');
+        summary = '';
+        return;
+      }
+      var min = r.mindestens || 0, lo = Math.max(r.ab * a, min), hi = r.bis ? Math.max(r.bis * a, min) : 0;
+      var p = price(lo, hi);
+      if (p.indexOf('ab ') !== 0) p = 'ca. ' + p;
+      show('Richtpreis für ' + nf.format(a) + ' m² ' + fl, p);
+      summary = r.name + ', ca. ' + nf.format(a) + ' m² ' + fl + '. Richtpreis auf der Website: ' + p + '.';
+    }
+    function change(){ touched = true; render(); }
+    if (sel) sel.addEventListener('change', change);
+    input.addEventListener('input', change);
+    /* „Festpreis anfragen“: Angaben aus dem Rechner ins leere Nachrichtenfeld übernehmen */
+    if (cta) cta.addEventListener('click', function(){
+      var t = document.getElementById('text');
+      if (touched && summary && t && !t.value.trim()) t.value = summary.replace(/\u00a0/g, ' ') + '\n';
+    });
+    box.hidden = false;
+    render();
+  })();
 })();
