@@ -1033,6 +1033,7 @@ def check_home_links(ctx, linker, errors):
 def check_home_images(ctx, errors):
     """Von Hand eingetragene Bilder der Startseite (<img src>, og:image) müssen in img/ liegen."""
     src = re.sub(r"<!-- @(\w+) -->.*?<!-- /@\1 -->", "", ctx.home_src, flags=re.S)
+    src = re.sub(r"<!--.*?-->", "", src, flags=re.S)  # Beispiele in Kommentaren nicht prüfen
     refs = re.findall(r'<img\s[^>]*?src="([^"]+)"', src) + re.findall(r'<meta property="og:image" content="([^"]+)"', src)
     for ref in refs:
         rel = ref[len(ctx.site.base):] if ref.startswith(ctx.site.base) else ref

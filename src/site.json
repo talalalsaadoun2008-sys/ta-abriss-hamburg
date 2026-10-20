@@ -27,8 +27,12 @@
      "kurz": "Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung."},
     {"slug": "innenabbruch-hamburg", "name": "Innenabbruch", "bild": "innenabbruch",
      "kurz": "Gezielter Rückbau einzelner Bauteile in bewohnten Häusern."},
+    {"slug": "wanddurchbruch-hamburg", "name": "Wanddurchbruch", "bild": "innenabbruch",
+     "kurz": "Öffnung für eine neue Tür oder Durchreiche, tragend nur mit Statiker."},
     {"slug": "trockenbau-hamburg", "name": "Trockenbau", "bild": "trockenbau",
-     "kurz": "Nach dem Abriss direkt neu aufbauen, ohne zweite Firma."}
+     "kurz": "Nach dem Abriss direkt neu aufbauen, ohne zweite Firma."},
+    {"slug": "schuttabholung-hamburg", "name": "Schuttabholung", "bild": "entkernung",
+     "kurz": "Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss."}
   ],
   "bezirke": [
     {"slug": "abriss-hamburg-altona", "name": "Altona", "gebiet": "Hamburg-Altona", "entfernung": "Sitz"},
@@ -78,10 +82,10 @@
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
   "einsatzgebiet": {
-    "title": "Einsatzgebiet: Abriss in Hamburg und Umland | T&A Abriss",
+    "title": "Abriss in Hamburg und Umland: Einsatzgebiet | T&A Abriss",
     "description": "Abriss, Entkernung, Innenabbruch und Trockenbau in allen sieben Hamburger Bezirken und im Umland.",
     "label": "Einsatzgebiet",
-    "h1": "Abriss und Rückbau in Hamburg und Umgebung",
+    "h1": "Abriss in allen Hamburger Bezirken und im Umland",
     "lead": "Unser Sitz ist in Hamburg-Altona. Wir arbeiten in allen sieben Bezirken und im Umland in Schleswig-Holstein und Niedersachsen.",
     "hinweis": "Ihr Ort ist nicht dabei? Wir kommen auch dorthin. Fragen Sie einfach an."
   },
@@ -107,5 +111,5 @@
     "trockenbau": {"datei": "trockenbau-abgehaengte-decke-gipskarton.jpg", "w": 900, "h": 806,
                    "alt": "Trockenbau: Arbeiter auf einem Rollgerüst schraubt Gipskartonplatten an eine abgehängte Decke"}
   },
-  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Weiß ich noch nicht"]
+  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Weiß ich noch nicht"]
 }
