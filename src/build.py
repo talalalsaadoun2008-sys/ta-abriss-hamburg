@@ -312,8 +312,10 @@ def validate(c, path, site, errors, warn):
     # Bei leistung/bezirk/stadtteil/umland bleiben 'sources' als interner Beleg in der JSON-Datei (nicht ausgegeben).
     if is_str(c.get("title")) and len(c["title"]) > 65:
         warn(f"{where}: title ist {len(c['title'])} Zeichen lang (Google zeigt ca. 60)")
-    if is_str(c.get("description")) and len(c["description"]) > 160:
-        warn(f"{where}: description ist {len(c['description'])} Zeichen lang (Google zeigt ca. 155)")
+    if is_str(c.get("description")):
+        n = len(c["description"]) + (0 if c.get("type") == "ratgeber" else len(meta_suffix(site)))
+        if n > 160:
+            warn(f"{where}: Google-Beschreibung ist mit Häkchen-Zeile {n} Zeichen lang (Google zeigt ca. 155)")
     return len(errors) == before  # nur fehlerfreie Inhalte gehen in die Linkprüfung
 
 
@@ -612,6 +614,11 @@ ICON_LINKS = ['<link rel="icon" href="favicon.ico" sizes="48x48">',
 ICON_FILES = ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "logo.png")
 
 
+def meta_suffix(site):
+    """Häkchen-Zeile für die Google-Beschreibung der Leistungs- und Ortsseiten (Telefon aus site.json)."""
+    return f" ✓ Kostenlose Besichtigung ✓ Festpreis ☎ {site.firma['telefon']}"
+
+
 def page_head(ctx, *, title, description, canonical=None, og=None, ld=(), noindex=False):
     s = ctx.site
     out = ['<meta charset="utf-8">',
@@ -685,7 +692,8 @@ def render_content_page(ctx, c):
     og = [("type", "article" if kind == "ratgeber" else "website"), ("locale", "de_DE"),
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
           ("image", f"{s.base}img/{c['image']}.jpg"), ("url", url)]
-    head = page_head(ctx, title=c["title"], description=c["description"], canonical=url, og=og, ld=ld)
+    meta = c["description"] if kind == "ratgeber" else c["description"] + meta_suffix(s)
+    head = page_head(ctx, title=c["title"], description=meta, canonical=url, og=og, ld=ld)
 
     # Inhalt
     secs = []
@@ -812,7 +820,7 @@ def render_einsatzgebiet(ctx):
     ld = [breadcrumb_ld([("Startseite", s.base), ("Einsatzgebiet", url)])]
     og = [("type", "website"), ("locale", "de_DE"), ("site_name", f["name"]), ("title", e["title"]),
           ("description", e["description"]), ("image", f"{s.base}img/abriss.jpg"), ("url", url)]
-    head = page_head(ctx, title=e["title"], description=e["description"], canonical=url, og=og, ld=ld)
+    head = page_head(ctx, title=e["title"], description=e["description"] + meta_suffix(s), canonical=url, og=og, ld=ld)
 
     def row(title_html, chips, sub=""):
         sub = f'<p class="label">{esc(sub)}</p>' if sub else ""
