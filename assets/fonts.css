@@ -6,3 +6,8 @@
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/source-sans-3-latin-600-normal.woff2") format("woff2")}
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/source-sans-3-latin-700-normal.woff2") format("woff2")}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2")}
+/* Ersatzschrift für den Fließtext, bis Source Sans 3 geladen ist: Arial, auf deren Laufweite angepasst (size-adjust).
+   So brechen Zeilen (z. B. Brotkrumen) gleich um und die Seite springt nicht, wenn die Webschrift kommt. */
+@font-face{font-family:"Source Sans Ersatz";font-weight:400;src:local("Arial"),local("ArialMT"),local("Liberation Sans");size-adjust:93.3%;ascent-override:109.8%;descent-override:42.9%;line-gap-override:0%}
+@font-face{font-family:"Source Sans Ersatz";font-weight:600;src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold");size-adjust:90.3%;ascent-override:113.4%;descent-override:44.3%;line-gap-override:0%}
+@font-face{font-family:"Source Sans Ersatz";font-weight:700;src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold");size-adjust:91.7%;ascent-override:111.7%;descent-override:43.6%;line-gap-override:0%}
