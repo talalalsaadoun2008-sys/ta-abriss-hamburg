@@ -4,20 +4,20 @@
   "zuzueglich": "Asbestsanierung, Fundament oder Bodenplatte, Elektro- und Sanitärarbeiten",
   "leistungen": {
     "kleinabriss-hamburg": [
-      {"name": "Gartenhaus aus Holz", "einheit": "pauschal", "ab": 950, "bis": 3600},
-      {"name": "Blech- oder Fertiggarage", "einheit": "pauschal", "ab": 1400, "bis": 4000},
-      {"name": "Gemauerte Garage", "einheit": "pauschal", "ab": 3500, "bis": 7000},
+      {"name": "Gartenhaus aus Holz", "einheit": "pauschal", "ab": 950, "bis": null},
+      {"name": "Blech- oder Fertiggarage", "einheit": "pauschal", "ab": 1400, "bis": null},
+      {"name": "Gemauerte Garage", "einheit": "pauschal", "ab": 3500, "bis": null},
       {"name": "Carport", "einheit": "pauschal", "ab": null, "bis": null}
     ],
     "entkernung-hamburg": [
-      {"name": "Entkernung", "einheit": "m2", "flaeche": "Wohnfläche", "ab": 50, "bis": 120, "mindestens": null}
+      {"name": "Entkernung", "einheit": "m2", "flaeche": "Wohnfläche", "ab": 50, "bis": null, "mindestens": null}
     ],
     "innenabbruch-hamburg": [
-      {"name": "Bad rausreißen (6–10 m²)", "einheit": "pauschal", "ab": 1100, "bis": 3200},
-      {"name": "Nichttragende Wand entfernen", "einheit": "pauschal", "ab": 600, "bis": 2500}
+      {"name": "Bad rausreißen (6–10 m²)", "einheit": "pauschal", "ab": 1100, "bis": null},
+      {"name": "Nichttragende Wand entfernen", "einheit": "pauschal", "ab": 600, "bis": null}
     ],
     "trockenbau-hamburg": [
-      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": 70, "bis": 110, "mindestens": null}
+      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": 70, "bis": null, "mindestens": null}
     ]
   }
 }
