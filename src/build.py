@@ -1001,6 +1001,55 @@ def check_stadtteil_chips(site, contents, warn):
             warn(f"{st['bezirk']}.json: Stadtteil '{st['name']}' fehlt in 'stadtteile' – dort nicht verlinkt")
 
 
+def check_nap(site, home_src, contents, warn):
+    """NAP (Name, Adresse, Telefon): überall genau die Schreibweise aus src/site.json.
+    Von Hand gepflegte Kopien (index.html: Beschreibung und Kontaktbereich, der auf jede Seite kommt;
+    src/legal/*.html; assets/site.js) und die Inhaltstexte werden gegen site.json geprüft,
+    damit z. B. eine neue Telefonnummer nicht nur an einem Teil der Stellen ankommt."""
+    f = site.firma
+    hand = {"index.html": re.sub(r"<!-- @(\w+) -->.*?<!-- /@\1 -->|<title>.*?</title>", "", home_src, flags=re.S)}
+    for p in sorted((SRC / "legal").glob("*.html")):
+        hand[f"src/legal/{p.name}"] = p.read_text(encoding="utf-8")
+    js = ROOT / "assets" / "site.js"
+    texts = dict(hand, **({"assets/site.js": js.read_text(encoding="utf-8")} if js.exists() else {}))
+    for slug, c in contents.items():  # sichtbare Texte ohne title (Kurzform „| T&A“ im Titel ist gewollt)
+        parts = [c[k] for k in ("label", "h1", "lead", "description") if is_str(c.get(k))] + list(c["facts"])
+        parts += [s["h2"] + " " + s["html"] for s in c["sections"]] + [x["q"] + " " + x["a"] for x in c["faq"]]
+        texts[f"{slug}.json"] = "\n".join(parts)
+    nsn = f["telefon_link"].removeprefix("+49")
+    own_tel = re.compile(r"(?<![\w+])(?:\+49|0049|0)(?:\s*\(0\))?[\s/().-]{0,3}"
+                         + r"[\s/().-]{0,3}".join(nsn) + r"(?!\d)")
+    mobile = re.compile(r"(?<![\w+])(?:\+49|0049|0)(?:\s*\(0\))?[\s/().-]{0,3}1[5-7]\d(?:[\s/().-]{0,3}\d){6,9}(?!\d)")
+    tel_ok = {f["telefon"], f["telefon_link"], f["telefon_schema"]}
+    street = re.sub(r"\s*\d+\s*[a-zA-Z]?$", "", f["strasse"])
+    stem = re.sub(r"(?i)[\s-]*(straße|strasse|str\.?)$", "", street)
+    street_re = re.compile(re.escape(stem) + r"[\s-]*(?:straße|strasse|str\b\.?)(?:\s*\d+\s*[a-zA-Z]?\b)?", re.I)
+    plz_re = re.compile(r"\b" + re.escape(f["plz"]) + r"\b(?!\s+" + re.escape(f["ort"]) + r"(?![\w-]))(?:\s+[^\s<,.;]+)?")
+    domain = f["email"].partition("@")[2]
+    for where, raw in texts.items():
+        t = html.unescape(raw)
+        bad = {m.group(0) for m in own_tel.finditer(t) if m.group(0) not in tel_ok}
+        bad |= {m.group(0) for m in mobile.finditer(t) if re.sub(r"\D", "", m.group(0)).lstrip("0").removeprefix("49").lstrip("0") != nsn}
+        bad |= {m.group(0).strip() for m in street_re.finditer(t) if m.group(0).strip() not in (f["strasse"], street)}
+        bad |= {m.group(0) for m in plz_re.finditer(t)}
+        bad |= {m.group(0) for m in re.finditer(r"[\w.+-]+@" + re.escape(domain), t) if m.group(0) != f["email"]}
+        bad |= {m.group(0) for m in re.finditer(r"mailto:([^?\"'\s<>]+)", t) if m.group(1) != f["email"]}
+        bad |= {m.group(0) for m in re.finditer(r"\bT\s*[&+]\s*A\s+(?:Abriss|Abbruch|Rückbau)\b(?:\s*[&+]\s*\w+)?", t)
+                if m.group(0) != f["name"]}
+        bad |= {m.group(0) for m in re.finditer(r"\bT(?:\s+[&+]\s*|[&+]\s+|\+)A\b", t)}
+        for x in sorted(bad):
+            warn(f"{where}: Schreibweise '{x}' weicht von src/site.json ab (NAP: Name, Adresse, Telefon, E-Mail)")
+    need = {"index.html": ("telefon", "email", "adresse"),
+            "src/legal/impressum.html": ("name", "inhaber", "strasse", "plz_ort", "telefon", "email"),
+            "src/legal/datenschutz.html": ("name", "inhaber", "adresse", "telefon", "email")}
+    werte = dict(f, adresse=f"{f['strasse']}, {f['plz']} {f['ort']}", plz_ort=f"{f['plz']} {f['ort']}")
+    for where, keys in need.items():
+        if where in hand:
+            for k in keys:
+                if werte[k] not in html.unescape(hand[where]):
+                    warn(f"{where}: {k} '{werte[k]}' aus src/site.json fehlt – Kontaktdaten dort von Hand angleichen")
+
+
 def sitemap(site, slugs, today):
     urls = [site.base] + [site.url(x) for x in slugs]
     rows = "\n".join(f"  <url><loc>{esc(u)}</loc><lastmod>{today}</lastmod></url>" for u in urls)
@@ -1060,6 +1109,7 @@ def main(argv=None):
         check_links_in(c, linker, errors)
     check_home_links(ctx, linker, errors)
     check_stadtteil_chips(site, contents, warn)
+    check_nap(site, home_src, contents, warn)
     sub = {k: sorted(set(v) - {"index.html"}) for k, v in linker.pending.items()}
     sub = {k: v for k, v in sub.items() if v}
     if sub:
