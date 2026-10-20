@@ -361,9 +361,9 @@ class Ctx:
         return self.home + "#" + anchor
 
     def fix_home_links(self, text):
-        """Links auf die Startseite in Inhalten an den Build anpassen (Vorschau: index.html)."""
+        """Links auf die Startseite in Inhalten an den Build anpassen (Vorschau: index.html, live: ./ wie canonical)."""
         if not self.preview:
-            return text
+            return re.sub(r'href="index\.html(#[^"]*)?"', lambda m: f'href="./{m.group(1) or ""}"', text)
         return re.sub(r'href="\./(#[^"]*)?"', lambda m: f'href="index.html{m.group(1) or ""}"', text)
 
     def drop_dead_links(self, text):
