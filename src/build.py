@@ -11,6 +11,8 @@ Erzeugt:
   einsatzgebiet.html (Übersicht aus src/site.json), impressum.html, datenschutz.html,
   index.html (nur die Bereiche zwischen den Markern @head, @header, @zahlen, @umland, @footer),
   sitemap.xml; prüft robots.txt.
+Fotos: Liegt neben img/x.jpg eine gleich große img/x.webp (src/tools/make_webp.py), wird das Foto als
+<picture> mit WebP und dem JPG als Rückfall ausgegeben; sonst als <img> wie bisher.
 
 Fehlt für eine Seite aus src/site.json die JSON-Datei, wird sie übersprungen und nirgends
 verlinkt (Menü, Footer, Chips, Übersicht, Sitemap; Links im Inhalt werden zu reinem Text).
@@ -20,6 +22,7 @@ bekommen vor dem Kontaktformular einen Abschnitt „Richtpreise“ (Tabelle, mit
 """
 import argparse
 import datetime
+import functools
 import html
 import json
 import re
@@ -593,10 +596,76 @@ def crumbs_html(items):
     return '<nav class="crumbs wrap" aria-label="Brotkrumen"><ol>\n' + "\n".join(lis) + '\n</ol></nav>'
 
 
+def image_size(path):
+    """(Breite, Höhe) einer JPG- oder WebP-Datei aus dem Dateikopf (nur Standardbibliothek), sonst None."""
+    try:
+        data = Path(path).read_bytes()
+    except OSError:
+        return None
+    le = lambda a, b: int.from_bytes(data[a:b], "little")
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        chunk = data[12:16]
+        if chunk == b"VP8 " and data[23:26] == b"\x9d\x01\x2a":  # verlustbehaftet
+            return le(26, 28) & 0x3FFF, le(28, 30) & 0x3FFF
+        if chunk == b"VP8L" and data[20:21] == b"\x2f":  # verlustfrei
+            bits = le(21, 25)
+            return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+        if chunk == b"VP8X":  # erweitert (z. B. mit Farbprofil)
+            return le(24, 27) + 1, le(27, 30) + 1
+        return None
+    if data[:2] != b"\xff\xd8":
+        return None
+    i = 2
+    while i + 9 < len(data):  # JPEG: Segmente bis zum Bildkopf (SOFn) durchgehen
+        if data[i] != 0xFF:
+            return None
+        m = data[i + 1]
+        if m == 0xFF or m == 0x01 or 0xD0 <= m <= 0xD8:  # Füllbyte oder Marker ohne Länge
+            i += 1 if m == 0xFF else 2
+            continue
+        if 0xC0 <= m <= 0xCF and m not in (0xC4, 0xC8, 0xCC):
+            return int.from_bytes(data[i + 7:i + 9], "big"), int.from_bytes(data[i + 5:i + 7], "big")
+        i += 2 + int.from_bytes(data[i + 2:i + 4], "big")
+    return None
+
+
+@functools.lru_cache(maxsize=None)
+def webp_for(src):
+    """'img/x.webp', wenn neben dem Foto img/x.jpg eine gleich große x.webp liegt, sonst None.
+
+    Ist die WebP anders groß als das JPG (z. B. Foto ersetzt, WebP nicht neu erzeugt), wird sie nicht
+    benutzt; check_images() meldet das als Warnung."""
+    jpg = ROOT / src
+    if jpg.suffix.lower() not in (".jpg", ".jpeg"):
+        return None
+    webp = jpg.with_suffix(".webp")
+    if not webp.is_file() or image_size(webp) != image_size(jpg):
+        return None
+    return Path(src).with_suffix(".webp").as_posix()
+
+
+def picture_html(src, attrs):
+    """Foto aus img/: <img>, oder <picture> mit WebP und dem JPG als Rückfall, wenn es die .webp daneben gibt.
+
+    src: Pfad wie im HTML, z. B. "img/abriss.jpg" (unabhängig vom Dateinamen).
+    attrs: weitere <img>-Attribute als dict in Ausgabereihenfolge ("class" steht vor src; Wert None = ohne Wert).
+    Ohne .webp ist die Ausgabe genau das bisherige <img>."""
+    attrs = dict(attrs)
+    parts = [f'class="{esc(attrs.pop("class"))}"'] if "class" in attrs else []
+    parts.append(f'src="{esc(src)}"')
+    parts += [esc(k) if v is None else f'{esc(k)}="{esc(v)}"' for k, v in attrs.items()]
+    img = "<img " + " ".join(parts) + ">"
+    webp = webp_for(src)
+    if not webp:
+        return img
+    return f'<picture><source type="image/webp" srcset="{esc(webp)}">{img}</picture>'
+
+
 def mini_card(ctx, it):
     b = ctx.site.bilder[it["bild"]]
+    img = picture_html(ctx.site.bild_src(it["bild"]), {"width": b["w"], "height": b["h"], "alt": b["alt"], "loading": "lazy"})
     return f'''<article class="mini reveal">
-      <img src="{esc(ctx.site.bild_src(it["bild"]))}" width="{b["w"]}" height="{b["h"]}" alt="{esc(b["alt"])}" loading="lazy">
+      {img}
       <div class="body">
         <h3><a href="{esc(it["slug"])}.html">{esc(it["name"])}</a></h3>
         <p>{esc(it["kurz"])}</p>
@@ -652,8 +721,10 @@ def subhero(ctx, image, label, h1, lead, facts=None):
     <div class="facts">
       {facts_html(facts)}
     </div>''' if facts else ""
+    photo = picture_html(ctx.site.bild_src(image), {"class": "photo", "alt": img["alt"], "width": img["w"], "height": img["h"],
+                                              "fetchpriority": "high"})
     return f'''<div class="subhero">
-  <img class="photo" src="{esc(ctx.site.bild_src(image))}" alt="{esc(img["alt"])}" width="{img["w"]}" height="{img["h"]}" fetchpriority="high">
+  {photo}
   <div class="wrap">
     <p class="label">{esc(label)}</p>
     <h1>{esc(h1)}</h1>
@@ -1322,6 +1393,39 @@ def check_nap(site, home_src, contents, warn):
             for k in keys:
                 if werte[k] not in html.unescape(hand[where]):
                     warn(f"{where}: {k} '{werte[k]}' aus src/site.json fehlt – Kontaktdaten dort von Hand angleichen")
+def check_images(files, warn):
+    """Fotos in den fertigen Seiten (auch Handbereiche von index.html): Datei vorhanden, width/height im
+    Seitenverhältnis des echten Bildes (sonst springt die Seite beim Laden), jede WebP passt zu ihrem JPG."""
+    found = {}
+    for name, text in files.items():
+        for tag in re.findall(r"<(?:img|source)\s[^>]*>", text if name.endswith(".html") else ""):
+            a = dict(re.findall(r'([\w-]+)="([^"]*)"', tag))
+            src = html.unescape(a.get("src") or a.get("srcset") or "").lstrip("/")
+            if not src.startswith("img/"):
+                continue
+            size = image_size(ROOT / src)
+            w, h = a.get("width", ""), a.get("height", "")
+            if not (ROOT / src).is_file():
+                msg = f"{src} fehlt"
+            elif tag.startswith("<source"):
+                continue
+            elif not (w.isdigit() and h.isdigit() and int(h)):
+                msg = f'<img src="{src}"> ohne width/height'
+            elif size and abs(int(w) / int(h) - size[0] / size[1]) > 0.01:
+                msg = f"{src}: width/height {w}×{h} passt nicht zum Bild ({size[0]}×{size[1]})"
+            else:
+                continue
+            found.setdefault(msg, set()).add(name)
+    for msg, pages in found.items():
+        pages = sorted(pages)
+        warn(f"Bild: {msg} ({', '.join(pages[:3])}{' …' if len(pages) > 3 else ''})")
+    for webp in sorted((ROOT / "img").glob("*.webp")):
+        jpg = next((p for p in (webp.with_suffix(".jpg"), webp.with_suffix(".jpeg")) if p.is_file()), None)
+        if not jpg:
+            warn(f"img/{webp.name}: kein gleichnamiges JPG daneben – wird nicht benutzt")
+        elif image_size(webp) != image_size(jpg):
+            warn(f"img/{webp.name} ist anders groß als {jpg.name} (veraltet?) – wird nicht benutzt, bitte "
+                 "python3 src/tools/make_webp.py ausführen")
 
 
 def sitemap(site, slugs, today):
@@ -1721,6 +1825,7 @@ def main(argv=None):
         slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
         files["sitemap.xml"] = sitemap(site, slugs, today)
     vorlage_check_pages(site, contents, files, warn)
+    check_images(files, warn)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     if out_dir != ROOT:
