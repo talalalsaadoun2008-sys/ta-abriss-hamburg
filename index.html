@@ -188,7 +188,7 @@
   </div>
   <ol class="steps">
     <li class="reveal"><h3>Anfrage</h3><p>Formular, Anruf oder E-Mail. Fotos helfen bei der ersten Einschätzung.</p></li>
-    <li class="reveal"><h3>Besichtigung</h3><p>Wir sehen uns alles vor Ort an. Kostenlos und unverbindlich.</p></li>
+    <li class="reveal"><h3>Besichtigung</h3><p>Wir sehen uns alles vor Ort an, auf Wunsch auch per Video. Kostenlos und unverbindlich.</p></li>
     <li class="reveal"><h3>Festpreis</h3><p>Schriftliches Angebot mit allen Kosten, auch für die Entsorgung.</p></li>
     <li class="reveal"><h3>Ausführung</h3><p>Abriss und Rückbau zum vereinbarten Termin, Schutt wird getrennt entsorgt.</p></li>
     <li class="reveal"><h3>Übergabe</h3><p>Besenrein. Auf Wunsch bauen wir mit Trockenbau direkt neu auf.</p></li>
@@ -245,7 +245,7 @@
     <div class="head" style="margin-bottom:var(--s4)">
       <p class="label">Kontakt</p>
       <h2>Besichtigung anfragen</h2>
-      <p>Kostenlos und unverbindlich. Wir melden uns innerhalb eines Werktags.</p>
+      <p>Kostenlos und unverbindlich, vor Ort oder per Video. Wir melden uns innerhalb eines Werktags.</p>
     </div>
     <div class="direct">
       <div><span class="label">Telefon</span><strong><a href="tel:+4917632896617">0176 32896617</a></strong></div>
@@ -265,7 +265,12 @@
         <option>Kleinabriss</option><option>Entkernung</option><option>Innenabbruch</option><option>Trockenbau</option><option>Weiß ich noch nicht</option>
       </select></label>
     </div>
-    <label for="wunsch">Wunschtermin<input id="wunsch" name="wunsch"></label>
+    <div class="row">
+      <label for="besichtigung">Besichtigung<select id="besichtigung" name="besichtigung">
+        <option>Vor Ort</option><option>Per Video</option>
+      </select></label>
+      <label for="wunsch">Wunschtermin<input id="wunsch" name="wunsch"></label>
+    </div>
     <label for="text">Was soll gemacht werden?<textarea id="text" name="text" placeholder="z. B. Gartenhaus aus Holz, ca. 3 × 4 m, soll komplett weg"></textarea></label>
     <div class="send">
       <button class="btn" type="submit">Anfrage per E-Mail senden <span class="arr" aria-hidden="true">→</span></button>
