@@ -10,6 +10,7 @@ Geprüft wird je Seite:
 - Bauaufsicht und die richtige Landesbauordnung werden genannt
 - kein Satz (ab 8 Wörtern) steht fast gleich auf einer anderen Seite (Ortsnamen werden dafür neutralisiert)
 - höchstens 8 % der 8-Wort-Folgen kommen auf irgendeiner anderen einzelnen Seite vor
+- kein Satz klingt wie Vorlage: sehr ähnlich (≥ 80 %) auf einer anderen Seite oder ähnlich (≥ 55 %) auf zwei anderen
 """
 import json, re, sys
 from pathlib import Path
@@ -62,7 +63,40 @@ def sentences(t):
     return [s for s in re.split(r"(?<=[.!?:])\s+", t) if len(s.split()) >= 8]
 
 
-def check(slug, corpus):
+def grams(sentence, k=3):
+    w = norm(sentence).split()
+    return {" ".join(w[i:i + k]) for i in range(len(w) - k + 1)}
+
+
+def near_dupes(slug, t, index, sent_grams):
+    """Fast gleiche Sätze (Jaccard der 3-Wort-Folgen): >= 0,8 mit einer anderen Seite
+    oder >= 0,55 mit zwei oder mehr anderen Seiten = klingt nach Vorlage."""
+    out = []
+    for s in sentences(t):
+        g = grams(s)
+        if len(g) < 6:
+            continue
+        hits = {}
+        for x in g:
+            for sid in index.get(x, ()):
+                hits[sid] = hits.get(sid, 0) + 1
+        pages_hi, pages_mid = set(), set()
+        for sid, n in hits.items():
+            other, og = sent_grams[sid]
+            if other == slug:
+                continue
+            j = n / len(g | og)
+            if j >= 0.8:
+                pages_hi.add(other)
+            if j >= 0.55:
+                pages_mid.add(other)
+        if pages_hi or len(pages_mid) >= 2:
+            ps = sorted(pages_hi or pages_mid)
+            out.append(f"Satz klingt wie Vorlage (ähnlich auf {', '.join(ps[:3])}{' …' if len(ps) > 3 else ''}): „{s[:90]}…“")
+    return out
+
+
+def check(slug, corpus, index=None, sent_grams=None):
     errs = []
     p = CONTENT / f"{slug}.json"
     if not p.exists():
@@ -102,19 +136,28 @@ def check(slug, corpus):
             errs.append(f"{len(same)} Satz/Sätze fast gleich wie auf {other}, z. B. „{next(iter(same))[:80]}…“")
         if own and len(own & osh) / len(own) > 0.08:
             errs.append(f"{len(own & osh) / len(own):.0%} gleiche Wortfolgen mit {other} (max. 8 %)")
+    if index is not None:
+        errs += near_dupes(slug, t, index, sent_grams)
     return errs
 
 
 def main(slugs):
-    corpus = {}
+    corpus, index, sent_grams = {}, {}, []
     for p in CONTENT.glob("*.json"):
         c = json.loads(p.read_text(encoding="utf-8"))
         if c.get("type") in ("umland", "stadtteil", "bezirk"):
             t = text_of(c)
             corpus[p.stem] = (shingles(t), {norm(s).strip() for s in sentences(t)})
+            for sen in sentences(t):
+                g = grams(sen)
+                if len(g) >= 6:
+                    sid = len(sent_grams)
+                    sent_grams.append((p.stem, g))
+                    for x in g:
+                        index.setdefault(x, []).append(sid)
     bad = 0
     for s in slugs:
-        e = check(s, corpus)
+        e = check(s, corpus, index, sent_grams)
         print(("FEHLER " if e else "ok     ") + s + ("" if not e else "\n  - " + "\n  - ".join(e)))
         bad += bool(e)
     print(f"{len(slugs) - bad} bestanden, {bad} durchgefallen")
