@@ -13,11 +13,11 @@
       {"name": "Entkernung", "einheit": "m2", "flaeche": "Wohnfläche", "ab": 50, "bis": 120, "mindestens": null}
     ],
     "innenabbruch-hamburg": [
-      {"name": "Bad rausreißen (6–10 m²)", "einheit": "pauschal", "ab": 900, "bis": 2800},
+      {"name": "Bad rausreißen (6–10 m²)", "einheit": "pauschal", "ab": 1100, "bis": 3200},
       {"name": "Nichttragende Wand entfernen", "einheit": "pauschal", "ab": 600, "bis": 2500}
     ],
     "trockenbau-hamburg": [
-      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": 45, "bis": 95, "mindestens": null}
+      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": 70, "bis": 110, "mindestens": null}
     ]
   }
 }
