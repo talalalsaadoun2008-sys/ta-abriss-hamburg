@@ -54,6 +54,10 @@
     {
       "q": "Wird das Fundament auch entfernt?",
       "a": "Auf Wunsch ja, gegen Aufpreis. Ob Fundament oder Bodenplatte im Boden bleiben oder mit raus sollen, entscheiden Sie. Es steht ausdrücklich im Angebot, weil es den Aufwand stark verändert."
+    },
+    {
+      "q": "Räumen Sie Garage oder Schuppen vorher auch leer?",
+      "a": "Das übernimmt unser Partner HafenRäumer. Die Hamburger Firma entrümpelt unter anderem Garagen, Keller und Gärten. Mehr auf <a href=\"https://hafenraeumer.de\">hafenraeumer.de</a>. Danach reißen wir den leeren Bau ab."
     }
   ],
   "sources": [
