@@ -415,6 +415,11 @@ footer .foot-all a[aria-current="page"]{color:var(--accent-text)}
 /* Footer: Spalte Umland (kurze Ortsliste); ab 901 px fünf Spalten nach Inhaltsbreite, gleichmäßig verteilt */
 @media (min-width:901px){footer .wrap.foot:has(> .foot-uml){grid-template-columns:repeat(5,auto);justify-content:space-between;column-gap:var(--s4)}}
 
+/* Footer: Partner-Hinweis im Firmenblock (bricht bei schmaler Spalte zwischen Text und Name um) */
+footer .firma .partner{margin:var(--s2) 0 0}
+footer .partner span{display:inline-block}
+footer .partner a{display:inline-block;padding-block:10px;margin-block:-10px;color:var(--accent-text);font-weight:600;text-underline-offset:3px}
+
 /* Textlink mit Pfeil („Alle Orte im Einsatzgebiet →“) */
 .go-wrap{margin-top:var(--s3)}
 .go-all{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;font-weight:700;color:var(--accent-text);text-decoration:none}
