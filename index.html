@@ -350,6 +350,47 @@
   </div>
 </div></section>
 
+<!-- ÜBER UNS (SEO-Punkt 26): noch versteckt (Attribut hidden), bis Talal die fehlenden Angaben schickt.
+     Platzhalter zum Suchen: [PARTNERNAME], [ROLLE], [FOTO]. In der Vorschau gelb markiert über <span class="ph">.
+     Vor dem Freischalten:
+     1. [PARTNERNAME] und [ROLLE] ersetzen und die <span class="ph">…</span> drumherum entfernen.
+     2. [FOTO]: den Rahmen <div class="ph-photo">…</div> durch das echte Foto ersetzen (kein Stockfoto), z. B.
+        <img src="img/team.jpg" width="1200" height="900" alt="Talal Al Saadoun und [PARTNERNAME] von T&amp;A Abriss &amp; Rückbau" loading="lazy">
+     3. Das Attribut hidden an <section id="ueber-uns"> entfernen.
+     4. Optional Menüeintrag: in src/site.json unter startseite_anker vor „Kontakt“ {"name": "Über uns", "anker": "ueber-uns"} -->
+<section class="sec-alt" id="ueber-uns" hidden><div class="wrap">
+  <div class="head reveal">
+    <p class="label">Über uns</p>
+    <h2>Wer hinter T&amp;A steht</h2>
+    <p>Ein Abrissbetrieb aus Hamburg-Altona. Unser Sitz ist in der Dosestraße 11.</p>
+  </div>
+  <div class="about">
+    <figure class="reveal">
+      <div class="ph-photo" role="img" aria-label="Platzhalter für das Foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span class="ph">[FOTO]</span>
+        <span>Hier kommt ein echtes Foto von Talal Al Saadoun und seinem Partner hin. Kein Stockfoto.</span>
+      </div>
+      <figcaption>Talal Al Saadoun, Inhaber, und <span class="ph">[PARTNERNAME]</span>, <span class="ph">[ROLLE]</span></figcaption>
+    </figure>
+    <div class="about-text reveal">
+      <p>Das „T“ in T&amp;A steht für Talal Al Saadoun, den Inhaber. Das „A“ steht für <span class="ph">[PARTNERNAME]</span>, <span class="ph">[ROLLE]</span>.</p>
+      <p>Wir übernehmen Kleinabriss, Entkernung, Innenabbruch und Trockenbau. Den Schutt nehmen wir mit. Wir holen ihn auch ab, wenn Sie nichts abreißen lassen.</p>
+      <p>Bevor Sie einen Preis bekommen, sehen wir uns die Arbeit an, vor Ort oder per Video. Wir arbeiten auch abends und samstags, im Rahmen der Lärmschutzregeln. Für tragende Wände bringen wir einen Statiker mit.</p>
+      <p>Elektro-, Sanitär-, Abdichtungs- und Fliesenlegerarbeiten machen wir nicht.</p>
+    </div>
+  </div>
+  <div class="promise reveal">
+    <h3>Darauf können Sie sich verlassen</h3>
+    <ul>
+      <li><strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Festpreis</strong><span>Inklusive Entsorgung. Eine Asbestsanierung ist nicht enthalten.</span></li>
+      <li><strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Kostenlose Besichtigung</strong><span>Vor Ort oder per Video.</span></li>
+      <li><strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Schnelle Rückmeldung</strong><span>Auf Ihre Anfrage melden wir uns innerhalb eines Werktags.</span></li>
+      <li><strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Asbest nur vom Fachbetrieb</strong><span>Asbest bauen wir nie selbst aus. Auf Wunsch vermitteln wir einen dafür berechtigten Fachbetrieb.</span></li>
+    </ul>
+  </div>
+</div></section>
+
 <section class="band" id="anfrage"><div class="wrap contact">
   <div class="reveal">
     <div class="head" style="margin-bottom:var(--s4)">
