@@ -481,12 +481,15 @@ def render_footer(ctx, current, on_home, fab_href):
     leist = "".join(li(x) for x in ctx.pages(s.leistungen))
     bez = "".join(li(x) for x in ctx.pages(s.bezirke))
     rest = "".join(li(x) for x in ctx.pages(s.ratgeber) + s.rechtliches)
+    uml = "".join(li(s.entry[x]) for x in s.menue_umland if ctx.has(x))  # kurze Ortsliste, Linktext = Ortsname
     alle = (f'<p class="foot-all"><a href="{UEBERSICHT}.html"{cur(current == UEBERSICHT)}>Alle Orte im Einsatzgebiet '
             f'<span aria-hidden="true">→</span></a></p>')
     cols = []
     if leist:
         cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul></div>')
     cols.append(f'  <div><h3>Bezirke</h3>' + (f'<ul class="two">{bez}</ul>' if bez else "") + f'{alle}</div>')
+    if uml:
+        cols.append(f'  <div class="foot-uml"><h3>Umland</h3><ul class="two">{uml}</ul></div>')
     cols.append(f'  <div><h3>Ratgeber &amp; Rechtliches</h3><ul>{rest}</ul></div>')
     out = [f'''<footer><div class="wrap foot">
   <div class="firma">
