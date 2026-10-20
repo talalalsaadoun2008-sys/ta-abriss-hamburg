@@ -50,6 +50,7 @@
       var page = (f.getAttribute('data-page') || '').trim();
       return 'Hallo T&A Abriss & Rückbau, ich möchte eine Besichtigung anfragen.\n\nName: ' + v('name') +
         '\nTelefon: ' + v('tel') + '\nOrt: ' + (v('ort') || '-') + '\nLeistung: ' + v('art') +
+        (v('besichtigung') ? '\nBesichtigung: ' + v('besichtigung') : '') +
         '\nWunschtermin: ' + (v('wunsch') || '-') + (page ? '\nSeite: ' + page : '') +
         (v('text') ? '\n\n' + v('text') : '');
     }
