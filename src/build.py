@@ -1450,6 +1450,7 @@ VP_RELS = {"stylesheet", "preload", "modulepreload", "icon", "apple-touch-icon",
 VP_PLATZHALTER = re.compile(r"(?i:\b(?:todo|fixme|lorem|ipsum)\b)|\b(?:TBD|XXX|undefined|None|NaN)\b"
                             r"|\{[^{}]{0,40}\}|\[[^\[\]]{0,40}\]|[\[\]{}]|%s")
 VP_DOPPELT_OK = {"die", "der", "das", "den", "dem", "des"}
+VP_WORT_OK = {"Stellen", "Heistmer", "Bernekesbutle"}  # normale Wörter, die nur zufällig mit einem Ortsnamen beginnen
 VP_ENDUNG_OK = {"r", "rn", "rs", "er", "ern", "ers", "erin", "erinnen", "s", "es", "isch", "ische", "ischen", "ischer", "isches",
                 "weit"}
 VP_PRAEP = re.compile(r"\b(in|im|am|bei|beim|von|vom|zu|zum|zur|nach|aus|für|mit|auf|ins)\s+(in|im|am|zum|zur|vom|beim|ins|auf)\b")
@@ -1602,7 +1603,7 @@ def vorlage_check_text(text, namen, bekannt, where, warn):
         cut = lambda m: "…" + line[max(0, m.start() - 25):m.end() + 25] + "…"
         for m in VP_PLATZHALTER.finditer(line):
             w(f"Platzhalter/Rest „{m.group(0)}“ im Text {cut(m)}")
-        for m in re.finditer(r"\b([A-Za-zÄÖÜäöüß]{2,})\s+\1\b", line):
+        for m in re.finditer(r"\b([A-Za-zÄÖÜäöüß]{2,})\s+\1\b(?!-)", line):
             if m.group(1).lower() not in VP_DOPPELT_OK:
                 w(f"doppeltes Wort „{m.group(0)}“ {cut(m)}")
         for m in VP_PRAEP.finditer(line):
@@ -1612,7 +1613,7 @@ def vorlage_check_text(text, namen, bekannt, where, warn):
             w(f"Leerzeichen fehlt oder steht vor dem Satzzeichen {cut(m)}")
         for m in klebt_hinten.finditer(line):
             wort, endung = m.group(0), m.group(2)
-            if endung not in VP_ENDUNG_OK and wort not in bekannt:
+            if endung not in VP_ENDUNG_OK and wort not in bekannt and wort not in VP_WORT_OK:
                 w(f"Ortsname „{m.group(1)}“ klebt am Wort: „{wort}“ {cut(m)}")
         for m in klebt_vorn.finditer(line):
             w(f"Ortsname „{m.group(2)}“ klebt am Wort davor {cut(m)}")

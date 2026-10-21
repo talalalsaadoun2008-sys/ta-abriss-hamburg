@@ -92,7 +92,17 @@
     {"slug": "abriss-rellingen", "name": "Rellingen", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-boenningstedt", "name": "Bönningstedt", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-ellerbek", "name": "Ellerbek", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-hasloh", "name": "Hasloh", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-hasloh", "name": "Hasloh", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-tangstedt-pinneberg", "name": "Tangstedt (Pinneberg)", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-borstel-hohenraden", "name": "Borstel-Hohenraden", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-appen", "name": "Appen", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-holm", "name": "Holm", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-prisdorf", "name": "Prisdorf", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kummerfeld", "name": "Kummerfeld", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-heist", "name": "Heist", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-uetersen", "name": "Uetersen", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-tornesch", "name": "Tornesch", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-moorrege", "name": "Moorrege", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
