@@ -112,7 +112,17 @@
     {"slug": "abriss-siek", "name": "Siek", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
     {"slug": "abriss-wentorf-bei-hamburg", "name": "Wentorf bei Hamburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-boernsen", "name": "Börnsen", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-escheburg", "name": "Escheburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-escheburg", "name": "Escheburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-dassendorf", "name": "Dassendorf", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-aumuehle", "name": "Aumühle", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-wohltorf", "name": "Wohltorf", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-neu-wulmstorf", "name": "Neu Wulmstorf", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-rosengarten", "name": "Rosengarten", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-stelle", "name": "Stelle", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-hollenstedt", "name": "Hollenstedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-bendestorf", "name": "Bendestorf", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-jork", "name": "Jork", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-horneburg", "name": "Horneburg", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
