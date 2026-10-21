@@ -102,7 +102,17 @@
     {"slug": "abriss-heist", "name": "Heist", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-uetersen", "name": "Uetersen", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-tornesch", "name": "Tornesch", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-moorrege", "name": "Moorrege", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-moorrege", "name": "Moorrege", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-heidgraben", "name": "Heidgraben", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ellerau", "name": "Ellerau", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-tangstedt-stormarn", "name": "Tangstedt (Stormarn)", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-grosshansdorf", "name": "Großhansdorf", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ammersbek", "name": "Ammersbek", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-barsbuettel", "name": "Barsbüttel", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-siek", "name": "Siek", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-wentorf-bei-hamburg", "name": "Wentorf bei Hamburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-boernsen", "name": "Börnsen", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-escheburg", "name": "Escheburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
