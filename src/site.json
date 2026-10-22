@@ -142,7 +142,17 @@
     {"slug": "abriss-nahe", "name": "Nahe", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-barmstedt", "name": "Barmstedt", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-marschacht", "name": "Marschacht", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
-    {"slug": "abriss-elmshorn", "name": "Elmshorn", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-elmshorn", "name": "Elmshorn", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kaltenkirchen", "name": "Kaltenkirchen", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-klein-offenseth-sparrieshoop", "name": "Klein Offenseth-Sparrieshoop", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-elmenhorst-stormarn", "name": "Elmenhorst (Stormarn)", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-harsefeld", "name": "Harsefeld", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-hanstedt", "name": "Hanstedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-suelfeld", "name": "Sülfeld", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-handeloh", "name": "Handeloh", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-toppenstedt", "name": "Toppenstedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-heidenau", "name": "Heidenau", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-bargstedt", "name": "Bargstedt", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
