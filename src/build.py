@@ -1580,7 +1580,7 @@ def _vp_ortsnamen(site, contents):
     bekannt = {w for n in alle for w in re.findall(r"[A-Za-zÄÖÜäöüß]+", n)}
     namen = {"Hamburg"}
     for it in site.bezirke + site.stadtteile + site.umland:
-        namen |= {w for w in re.split(r"[ ()\-]+", it["name"]) if len(w) >= 5 and w[0].isupper() and w != "Mitte"}
+        namen |= {w for w in re.split(r"[ ()\-]+", it["name"]) if len(w) >= 5 and w[0].isupper() and w not in ("Mitte", "Klein")}
     return namen, bekannt
 
 

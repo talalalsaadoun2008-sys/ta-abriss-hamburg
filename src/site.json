@@ -122,7 +122,17 @@
     {"slug": "abriss-hollenstedt", "name": "Hollenstedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-bendestorf", "name": "Bendestorf", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-jork", "name": "Jork", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
-    {"slug": "abriss-horneburg", "name": "Horneburg", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
+    {"slug": "abriss-horneburg", "name": "Horneburg", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-drage", "name": "Drage", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-apensen", "name": "Apensen", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-henstedt-ulzburg", "name": "Henstedt-Ulzburg", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-jesteburg", "name": "Jesteburg", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-hoisdorf", "name": "Hoisdorf", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-hollern-twielenfleth", "name": "Hollern-Twielenfleth", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-koelln-reisiek", "name": "Kölln-Reisiek", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-alveslohe", "name": "Alveslohe", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-beckdorf", "name": "Beckdorf", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-trittau", "name": "Trittau", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
