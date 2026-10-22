@@ -1,0 +1,88 @@
+{
+  "slug": "abriss-delingsdorf",
+  "type": "umland",
+  "menu": "Delingsdorf",
+  "title": "Abriss Delingsdorf ✓ Entkernung ✓ Festpreis | T&A",
+  "description": "Entkernung in Delingsdorf: altes Backsteinhaus oder Reihenhaus innen leer, Schutt sauber entsorgt.",
+  "label": "Kreis Stormarn · Schleswig-Holstein",
+  "h1": "Abriss in Delingsdorf: Entkernung vom Bauernhaus bis zum Neubau",
+  "lead": "Delingsdorf war lange ein Bauerndorf, heute wohnt man hier vor allem. Wenn Sie ein Haus an der Lübecker Straße oder in einem jüngeren Wohngebiet umbauen wollen, räumen wir es innen bis auf den Rohbau aus.",
+  "facts": [
+    "Festpreis inklusive Entsorgung",
+    "Statiker bringen wir mit",
+    "Besenreine Übergabe"
+  ],
+  "image": "entkernung",
+  "form_leistung": "Entkernung",
+  "form_ort": "Delingsdorf",
+  "sections": [
+    {
+      "h2": "Vom Bauerndorf zum Wohnort zwischen Bargteheide und Ahrensburg",
+      "html": "<p>Delingsdorf gehört zum Amt Bargteheide-Land im Kreis Stormarn. Die Gemeinde ist gut 8 km² groß, Ende 2025 lebten hier 2.152 Menschen. Das Wappen mit Wagenrad und Eichenschössling bekam die Gemeinde im August 1990.</p><p>Ein Entwurf zur Fortschreibung des Gemeindeentwicklungskonzepts von 2021 beschreibt den Wandel: Jahrzehntelang prägten Hofstellen das Dorf, inzwischen steht das Wohnen im Vordergrund. Laut einem Bürgerbrief von 2023 haben die Neubaugebiete um die Jahrtausendwende die Einwohnerzahl verdoppelt. Grünzäsuren im Norden und Süden sollen den Ort von Bargteheide und Ahrensburg trennen, die Strusbek zieht sich von Ost nach West durch den Kern.</p>"
+    },
+    {
+      "h2": "Was in Delingsdorf steht: Backstein, Reet und junge Siedlungen",
+      "html": "<p>Das Ortsbild prägen laut Konzept typische Backsteingebäude. An der Lübecker und der Hamburger Straße stehen überwiegend traufständige Häuser mit ein oder zwei Geschossen, zum Teil mit Reetdach. Am Kannenplatz im Nordosten saßen früher Handwerksbetriebe. Im Nordwesten liegt das Wohngebiet Schäferkoppel mit Lärmschutzwällen, am Südrand kam um 2020 der Poggensiek mit dichterer Bebauung dazu.</p><p>Daraus ergeben sich ganz unterschiedliche Aufträge:</p><ul><li>Im alten Backsteinhaus nehmen wir Böden, Verkleidungen, Einbauten und nichttragende Wände heraus, damit der Umbau auf festem Grund beginnt.</li><li>Im Haus aus den Jahren um 2000 geht es eher um ein neues Bad, eine offene Küche oder einen <a href=\"wanddurchbruch-hamburg.html\">Wanddurchbruch</a>.</li><li>Für eine alte Scheune, Garage oder ein Gartenhaus gibt es den <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>.</li></ul>"
+    },
+    {
+      "h2": "So läuft eine Entkernung bei uns",
+      "html": "<p>Zuerst sehen wir uns das Haus kostenlos an, vor Ort oder per Video, Mo–Fr ab 16:30 und Sa ab 9:00. Wir nennen Ihnen anschließend eine feste Summe, Abtransport des Materials und Fahrt inbegriffen. Bei der <a href=\"entkernung-hamburg.html\">Entkernung</a> trennen wir Holz, Metall, Gipskarton und mineralischen Schutt und übergeben die Räume besenrein.</p><p>Elektro- und Sanitärarbeiten machen wir nicht. Lassen Sie Strom und Wasser vorher von Ihrem Fachbetrieb stilllegen. Ob eine Wand trägt, klärt der Statiker, den wir mitbringen. Altbauten können Asbest enthalten, zum Beispiel in Flex-Platten, Klebern oder Asbestzement an Dach und Fassade. Erlaubt war es bis Oktober 1993. Solches Material baut nur ein zugelassener Fachbetrieb aus, wir stellen den Kontakt her.</p>"
+    },
+    {
+      "h2": "Bauaufsicht in Bad Oldesloe und Landesbauordnung",
+      "html": "<p>Eine eigene Bauaufsicht hat Delingsdorf nicht. Zuständig ist der Fachdienst Bauaufsicht und Denkmalschutz des Kreises Stormarn in Bad Oldesloe, der Delingsdorf in seiner Zuständigkeitsliste führt. Rechtlich maßgeblich ist die Landesbauordnung (LBO) des Landes. Die in § 61 Abs. 3 aufgezählten Anlagen dürfen danach ohne Verfahren beseitigt werden. Ist ein Abbruch nicht verfahrensfrei, wird er der Bauaufsicht mindestens einen Monat vorher angezeigt. Kulturdenkmale sind von der Verfahrensfreiheit ausgenommen. Ob Ihre Entkernung darunter fällt, klären Sie im Zweifel mit dem Kreis.</p><p>Eine Regel für Container auf Gemeindestraßen haben wir für Delingsdorf nicht gefunden. Fragen Sie dafür beim Amt Bargteheide-Land nach. Mehr zur Nachbarstadt finden Sie auf der Seite zu <a href=\"abriss-bargteheide.html\">Bargteheide</a>. Ihr Vorhaben schicken Sie über das <a href=\"index.html#anfrage\">Anfrageformular</a>.</p>"
+    }
+  ],
+  "stadtteile": [],
+  "faq": [
+    {
+      "q": "Unser Haus in Delingsdorf hat ein Reetdach. Können Sie innen trotzdem entkernen?",
+      "a": "Ja. Das Dach bleibt dabei stehen, wir arbeiten nur innen. Wie wir Schutt und Staub vom Reet fernhalten, besprechen wir bei der Besichtigung."
+    },
+    {
+      "q": "Muss ich eine Entkernung beim Kreis Stormarn anmelden?",
+      "a": "Für den Ausbau von Böden, Einbauten und nichttragenden Wänden ist oft kein Verfahren nötig. Geht es an tragende Teile oder an ein Denkmal, klären Sie das vorher mit der Bauaufsicht des Kreises."
+    },
+    {
+      "q": "Was kostet die Entkernung eines Reihenhauses?",
+      "a": "Das hängt von Größe, Böden und Einbauten ab. Nach der kostenlosen Besichtigung bekommen Sie einen Festpreis inklusive Entsorgung und Anfahrt."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Gemeinde Delingsdorf: Entwurf Fortschreibung Gemeindeentwicklungskonzept, Stand 01.12.2021 (Bauerndorf, Backstein/Reet an Lübecker/Hamburger Straße, Kannenplatz, Schäferkoppel, Poggensiek, Grünzäsuren, Strusbek)",
+      "url": "https://www.delingsdorf.de/repository/20211201-Fortschreibung-GEK-Entwurf-Bericht-BWPA.pdf"
+    },
+    {
+      "title": "Gemeinde Delingsdorf: Bürgerbrief September 2023 (Neubaugebiete um die Jahrtausendwende verdoppelten die Einwohnerzahl)",
+      "url": "https://www.delingsdorf.de/repository/20230910-buergerbrief-delingsdorf.pdf"
+    },
+    {
+      "title": "Delingsdorf – Wikipedia (englisch): Fläche 8,09 km², 2.152 Einwohner 31.12.2025",
+      "url": "https://en.wikipedia.org/wiki/Delingsdorf"
+    },
+    {
+      "title": "Heraldry Wiki: Delingsdorf (Amt Bargteheide-Land, Wappen verliehen 13.08.1990)",
+      "url": "https://heraldry-wiki.com/wiki/Delingsdorf"
+    },
+    {
+      "title": "Kreis Stormarn: Fachdienst Bauaufsicht und Denkmalschutz, Zuständigkeiten nach Gemeinden (Stand 15.06.2026)",
+      "url": "https://www.kreis-stormarn.de/forms/FD53_48"
+    },
+    {
+      "title": "FIM-Portal: Beseitigung baulicher Anlagen in Schleswig-Holstein (§ 61 LBO, Zuständigkeit Kreise, andere Genehmigungen vor Beginn)",
+      "url": "https://www.fimportal.de/api/v0/leistung-stammtexte/L100012/8960240/pvog/de/pdf"
+    },
+    {
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, Asbestzement, Flex-Platten, Fachbetriebe)",
+      "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
+    }
+  ],
+  "notes_for_review": [
+    "Deutsche Wikipedia (dewiki.de) war nicht abrufbar; Ortsteile daher nicht belegt, stadtteile leer.",
+    "Poggensiek: GEK-Entwurf (Dez. 2021) nennt ihn 'im Vorjahr entstanden', daher 'um 2020'.",
+    "Satz zur Entkernung als nicht-Abbruch ist vorsichtig formuliert und an den Kreis verwiesen; nicht in der LBO wörtlich geprüft.",
+    "Containerregel/Sondernutzung nicht gefunden; Verweis aufs Amt Bargteheide-Land.",
+    "Denkmalliste Stormarn (opendata) war gesperrt; keine Denkmale genannt."
+  ]
+}

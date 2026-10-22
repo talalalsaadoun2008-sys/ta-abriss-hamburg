@@ -132,7 +132,17 @@
     {"slug": "abriss-koelln-reisiek", "name": "Kölln-Reisiek", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-alveslohe", "name": "Alveslohe", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-beckdorf", "name": "Beckdorf", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
-    {"slug": "abriss-trittau", "name": "Trittau", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-trittau", "name": "Trittau", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-klein-nordende", "name": "Klein Nordende", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-delingsdorf", "name": "Delingsdorf", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kisdorf", "name": "Kisdorf", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-bargfeld-stegen", "name": "Bargfeld-Stegen", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-sauensiek", "name": "Sauensiek", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-luetjensee", "name": "Lütjensee", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-nahe", "name": "Nahe", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-barmstedt", "name": "Barmstedt", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-marschacht", "name": "Marschacht", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-elmshorn", "name": "Elmshorn", "kreis": "Kreis Pinneberg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
