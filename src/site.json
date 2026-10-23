@@ -172,7 +172,17 @@
     {"slug": "abriss-salzhausen", "name": "Salzhausen", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-brietlingen", "name": "Brietlingen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
     {"slug": "abriss-egestorf", "name": "Egestorf", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
-    {"slug": "abriss-kirchgellersen", "name": "Kirchgellersen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"}
+    {"slug": "abriss-kirchgellersen", "name": "Kirchgellersen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-bad-bramstedt", "name": "Bad Bramstedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-drochtersen", "name": "Drochtersen", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-lauenburg-elbe", "name": "Lauenburg/Elbe", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kutenholz", "name": "Kutenholz", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-glueckstadt", "name": "Glückstadt", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-reppenstedt", "name": "Reppenstedt", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-himmelpforten", "name": "Himmelpforten", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-laegerdorf", "name": "Lägerdorf", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-krempe", "name": "Krempe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-adendorf", "name": "Adendorf", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
