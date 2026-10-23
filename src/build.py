@@ -504,7 +504,7 @@ def render_footer(ctx, current, on_home, fab_href):
     <h3>{esc(f["name"])}</h3>
     <p>Inh. {esc(f["inhaber"])}<br>{esc(f["strasse"])}<br>{esc(f["plz"])} {esc(f["ort"])}</p>
     <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>
-    <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a></p>
+    <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a> · <a href="https://hinnerk-entruempelung.de/">Hinnerk – Entrümpelung Hamburg</a></p>
   </div>
 ''' + "\n".join(cols) + '\n</div></footer>']
     if fab_href:  # Handy: feste Leiste „Anrufen“ + „Anfrage“; PC: nur der schwebende Anfrage-Knopf
