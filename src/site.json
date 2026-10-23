@@ -152,7 +152,17 @@
     {"slug": "abriss-handeloh", "name": "Handeloh", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-toppenstedt", "name": "Toppenstedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
     {"slug": "abriss-heidenau", "name": "Heidenau", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
-    {"slug": "abriss-bargstedt", "name": "Bargstedt", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
+    {"slug": "abriss-bargstedt", "name": "Bargstedt", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-steinburg-stormarn", "name": "Steinburg (Stormarn)", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kiebitzreihe", "name": "Kiebitzreihe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-tostedt", "name": "Tostedt", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-tespe", "name": "Tespe", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-lentfoehrden", "name": "Lentföhrden", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-itzstedt", "name": "Itzstedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-schwarzenbek", "name": "Schwarzenbek", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-fredenbeck", "name": "Fredenbeck", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-horst-holstein", "name": "Horst (Holstein)", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-deinste", "name": "Deinste", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
