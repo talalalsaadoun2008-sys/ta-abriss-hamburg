@@ -1,0 +1,90 @@
+{
+  "slug": "abriss-voegelsen",
+  "type": "umland",
+  "menu": "Vögelsen",
+  "title": "Abriss Vögelsen ✓ Entkernung ✓ Festpreis | T&A",
+  "description": "Entkernung in Vögelsen: Häuser aus den 1960ern und 70ern innen leer, Entsorgung inklusive.",
+  "label": "Landkreis Lüneburg · Niedersachsen",
+  "h1": "Abriss in Vögelsen: Entkernung von Siedlungshäusern",
+  "lead": "Das Haus Am Stadtberg ist gekauft, innen soll alles neu werden: In Vögelsen entkernen wir Einfamilienhäuser bis auf die tragende Substanz und übernehmen auch Kleinabriss und Trockenbau.",
+  "facts": [
+    "Entkernung ganzer Häuser",
+    "Rückmeldung binnen eines Werktags",
+    "Statiker bringen wir mit"
+  ],
+  "image": "entkernung",
+  "form_leistung": "Entkernung",
+  "form_ort": "Vögelsen",
+  "sections": [
+    {
+      "h2": "Vom Bauerndorf zur Wohngemeinde vor Lüneburg",
+      "html": "<p>Als Mitgliedsgemeinde der Samtgemeinde Bardowick liegt Vögelsen im Landkreis Lüneburg, nicht weit von der Hansestadt. Urkundlich taucht das Dorf 1158 auf, damals als Stiftsgut von Bardowick. Lange war es ein kleines Bauerndorf: 1880 zählte man 173 Einwohner. Eine Bahnstrecke führte seit 1873 durch den Ort, einen Haltepunkt bekam er aber erst 1948. 1968 wehrte sich die Gemeinde dagegen, nach Lüneburg eingemeindet zu werden.</p><p>Eine eigene Kirche hat Vögelsen bis heute nicht. Seit 1992 gibt es ein Kirchenzentrum in der Schulstraße.</p>"
+    },
+    {
+      "h2": "Am Stadtberg, Süderfeld: wie Vögelsen gewachsen ist",
+      "html": "<p>Den großen Sprung brachte das Baugebiet Am Stadtberg, geplant ab 1961. Bis 1966 stieg die Einwohnerzahl von etwa 370 auf 970. Laut der Begründung zur aktuellen Flächennutzungsplan-Änderung setzte die Wohnbauentwicklung in den 1970er Jahren richtig ein und ist von Einzelhäusern geprägt. 2023 lebten rund 2.490 Menschen in etwa 1.160 Wohnungen im Ort. Süderfeld III wurde ab 2018 bebaut, für Süderfeld IV und V bereitet die Samtgemeinde gerade weitere Wohnbauflächen vor.</p><p>Für unsere Arbeit heißt das: Viele Häuser stammen aus den 1960er und 1970er Jahren. Beim Eigentümerwechsel stehen dann oft ein neuer Grundriss, neue Bäder und neue Leitungen an, und davor kommt die Entkernung.</p>"
+    },
+    {
+      "h2": "Was bei einer Entkernung in Vögelsen herauskommt",
+      "html": "<p>Bei einer <a href=\"entkernung-hamburg.html\">Entkernung</a> bleibt der Rohbau stehen: tragende Wände, Decken, Dach. Alles andere bauen wir aus, also Bodenbeläge, Deckenverkleidungen, Einbauschränke, Sanitärobjekte, Fliesen und nichttragende Wände. Strom und Wasser lassen Sie vorher von einem Fachbetrieb stilllegen, diese Gewerke machen wir nicht. Soll eine tragende Wand weichen, kommt ein Statiker dazu, den wir mitbringen.</p><p>Häuser aus dieser Bauzeit können asbesthaltige Stoffe enthalten. Typisch sind Cushion-Vinyl-Beläge, Nachtspeicheröfen oder Asbestzement in Fensterbänken. Gibt es einen Verdacht, wird das Material zuerst untersucht. Belastetes Material holt ein dafür zugelassener Fachbetrieb heraus, erst danach geht es weiter.</p>"
+    },
+    {
+      "h2": "Zuständig: Landkreis Lüneburg und Gemeinde",
+      "html": "<p>Bauaufsichtsbehörde für Vögelsen ist der Landkreis Lüneburg. Eine Entkernung, bei der nichts Tragendes angetastet wird, ist nach der Niedersächsischen Bauordnung (NBauO) in aller Regel ohne Verfahren möglich. Wo die Grenze im Einzelfall liegt, kann Ihnen der Zentrale Fachdienst Bauen des Landkreises sagen. Baudenkmale gibt es im Ort nur wenige, die Liste nennt etwa eine Scheune an der Dorfstraße und ein Wirtschaftsgebäude von 1909 an der Bardowicker Straße.</p><p>Soll der Container auf eine öffentliche Straße, klären Sie die Erlaubnis bitte mit der Gemeinde Vögelsen beziehungsweise der Samtgemeinde Bardowick. Für den Flecken nebenan gibt es eine eigene Seite zu <a href=\"abriss-bardowick.html\">Bardowick</a>. Anfahrt und Entsorgung sind bei uns im Festpreis enthalten.</p>"
+    }
+  ],
+  "stadtteile": [],
+  "faq": [
+    {
+      "q": "Wir haben ein Haus aus den 1960er Jahren in Vögelsen gekauft. Was kostet die Entkernung?",
+      "a": "Das hängt von Wohnfläche, Ausstattung und Material ab. Nach der Besichtigung bekommen Sie einen Festpreis, in dem Anfahrt und Entsorgung schon stecken."
+    },
+    {
+      "q": "Muss ich die Entkernung beim Landkreis Lüneburg anmelden?",
+      "a": "Wenn nur nichttragende Teile herauskommen, in der Regel nicht. Sobald tragende Bauteile betroffen sind oder das Haus ein Denkmal ist, sprechen wir das vorher mit Ihnen und der Bauaufsicht ab."
+    },
+    {
+      "q": "Können Sie nach dem Ausräumen auch neue Wände stellen?",
+      "a": "Ja, im Trockenbau. Fliesen, Elektrik und Sanitär übernehmen andere Betriebe."
+    }
+  ],
+  "sources": [
+    {
+      "title": "voegelsen.de: Gemeinde (1158, 173 Einw. 1880, Bahn 1873/Haltestelle 1948, Am Stadtberg ab 1961, 370→970 Einw. bis 1966, 1968 gegen Eingemeindung)",
+      "url": "https://www.voegelsen.de/gemeinde/"
+    },
+    {
+      "title": "Samtgemeinde Bardowick: Vögelsen (Stiftsgut 1158, Kirchenzentrum Schulstraße 1992)",
+      "url": "https://www.bardowick.de/mitgliedsgemeinden/die-mitgliedsgemeinden/voegelsen.html"
+    },
+    {
+      "title": "Samtgemeinde Bardowick: 45. FNP-Änderung Vögelsen, Begründung 18.06.2026 (Entwicklung ab 1970er, Einzelhäuser, 2023 ca. 2.486 Einw./1.160 WE, Süderfeld III 2018, Süderfeld IV/V)",
+      "url": "https://www.bardowick.de/_Resources/Persistent/8/a/3/3/8a33cf87041c2f7d4c02d336ba7fe28cbed185a6/2026_07_FNP_45_V%C3%B6gelsen_Beteiligung_BEGR%C3%9CNDUNG_18-06-26.pdf"
+    },
+    {
+      "title": "Liste der Baudenkmale in Vögelsen – Wikipedia (Bardowicker Straße 2, 1909; Dorfstraße 8, Scheune)",
+      "url": "https://de.wikipedia.org/wiki/Liste_der_Baudenkmale_in_V%C3%B6gelsen"
+    },
+    {
+      "title": "Samtgemeinde Bardowick – Wikipedia (Vögelsen Mitgliedsgemeinde)",
+      "url": "https://de.wikipedia.org/wiki/Samtgemeinde_Bardowick"
+    },
+    {
+      "title": "Landkreis Lüneburg: Verfahren rund ums Bauen (Landkreis als untere Bauaufsichtsbehörde, bestimmte Abbrüche anzeigepflichtig)",
+      "url": "https://www.landkreis-lueneburg.de/fuer-unsere-buergerinnen-und-buerger/bauen-und-planen/verfahren-rund-ums-bauen.html"
+    },
+    {
+      "title": "Landkreis Lüneburg, Bürgerservice Bauaufsicht (Zentraler Fachdienst Bauen, Auf dem Michaeliskloster 8)",
+      "url": "https://service.landkreis-lueneburg.de/buergerservice/dienstleistungen/bauaufsicht-900000392-0.html?myMedium=1&selected_kommune=36300"
+    },
+    {
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, Fundorte, nur Fachbetriebe)",
+      "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
+    }
+  ],
+  "notes_for_review": [
+    "Einwohnerzahlen: voegelsen.de (2.419 Ende 2020) vs. FNP-Begründung (ca. 2.486 für 2023) – im Text die neuere Zahl gerundet.",
+    "Wer Sondernutzung für Container in Vögelsen erteilt, nicht gefunden (Fachdienst Tiefbau der SG verwaltet laut bardowick.de nur Straßen von Bardowick, Mechtersen und SG) – daher vorsichtig formuliert.",
+    "Baualter 'ein großer Teil 50–65 Jahre' ist abgeleitet aus Am Stadtberg ab 1961 und Entwicklung ab 1970er."
+  ]
+}

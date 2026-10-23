@@ -162,7 +162,17 @@
     {"slug": "abriss-schwarzenbek", "name": "Schwarzenbek", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-fredenbeck", "name": "Fredenbeck", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
     {"slug": "abriss-horst-holstein", "name": "Horst (Holstein)", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-deinste", "name": "Deinste", "kreis": "Landkreis Stade", "land": "Niedersachsen"}
+    {"slug": "abriss-deinste", "name": "Deinste", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-bardowick", "name": "Bardowick", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-bad-oldesloe", "name": "Bad Oldesloe", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ahlerstedt", "name": "Ahlerstedt", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-hammah", "name": "Hammah", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-voegelsen", "name": "Vögelsen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-sittensen", "name": "Sittensen", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-salzhausen", "name": "Salzhausen", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-brietlingen", "name": "Brietlingen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-egestorf", "name": "Egestorf", "kreis": "Landkreis Harburg", "land": "Niedersachsen"},
+    {"slug": "abriss-kirchgellersen", "name": "Kirchgellersen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
