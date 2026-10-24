@@ -182,7 +182,17 @@
     {"slug": "abriss-himmelpforten", "name": "Himmelpforten", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
     {"slug": "abriss-laegerdorf", "name": "Lägerdorf", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-krempe", "name": "Krempe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-adendorf", "name": "Adendorf", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"}
+    {"slug": "abriss-adendorf", "name": "Adendorf", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-scharnebeck", "name": "Scharnebeck", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-lueneburg", "name": "Lüneburg", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-hohnstorf-elbe", "name": "Hohnstorf (Elbe)", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-embsen", "name": "Embsen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-amelinghausen", "name": "Amelinghausen", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-melbeck", "name": "Melbeck", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-deutsch-evern", "name": "Deutsch Evern", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-schneverdingen", "name": "Schneverdingen", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
+    {"slug": "abriss-bispingen", "name": "Bispingen", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
+    {"slug": "abriss-moelln", "name": "Mölln", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
