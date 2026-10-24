@@ -192,7 +192,17 @@
     {"slug": "abriss-deutsch-evern", "name": "Deutsch Evern", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
     {"slug": "abriss-schneverdingen", "name": "Schneverdingen", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
     {"slug": "abriss-bispingen", "name": "Bispingen", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
-    {"slug": "abriss-moelln", "name": "Mölln", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-moelln", "name": "Mölln", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-fintel", "name": "Fintel", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-lauenbrueck", "name": "Lauenbrück", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-selsingen", "name": "Selsingen", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-scheessel", "name": "Scheeßel", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-oldendorf", "name": "Oldendorf", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-hechthausen", "name": "Hechthausen", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"},
+    {"slug": "abriss-wischhafen", "name": "Wischhafen", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
+    {"slug": "abriss-kremperheide", "name": "Kremperheide", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-itzehoe", "name": "Itzehoe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-wrist", "name": "Wrist", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
