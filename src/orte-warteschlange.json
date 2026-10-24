@@ -937,7 +937,7 @@
   {"ags": "01053057", "name": "Horst", "land": "Schleswig-Holstein", "kreis": "Herzogtum Lauenburg", "einwohner_2011": 224, "km_luftlinie": 58, "status": "offen", "lat": 53.6205, "lon": 10.8185},
   {"ags": "01053016", "name": "Brunsmark", "land": "Schleswig-Holstein", "kreis": "Herzogtum Lauenburg", "einwohner_2011": 163, "km_luftlinie": 58, "status": "offen", "lat": 53.6205, "lon": 10.8185},
   {"ags": "03355036", "name": "Thomasburg", "land": "Niedersachsen", "kreis": "Lüneburg", "einwohner_2011": 1286, "km_luftlinie": 59, "status": "offen", "lat": 53.2266, "lon": 10.6529},
-  {"ags": "01061082", "name": "Oldendorf", "land": "Schleswig-Holstein", "kreis": "Steinburg", "einwohner_2011": 1132, "km_luftlinie": 59, "status": "live", "slug": "abriss-oldendorf", "datum": "2026-10-24", "lat": 53.9769, "lon": 9.4348},
+  {"ags": "01061082", "name": "Oldendorf", "land": "Schleswig-Holstein", "kreis": "Steinburg", "einwohner_2011": 1132, "km_luftlinie": 59, "status": "offen", "lat": 53.9769, "lon": 9.4348},
   {"ags": "01060097", "name": "Wensin", "land": "Schleswig-Holstein", "kreis": "Segeberg", "einwohner_2011": 818, "km_luftlinie": 59, "status": "offen", "lat": 54.0012, "lon": 10.4183},
   {"ags": "01060010", "name": "Blunk", "land": "Schleswig-Holstein", "kreis": "Segeberg", "einwohner_2011": 599, "km_luftlinie": 59, "status": "offen", "lat": 54.0218, "lon": 10.3448},
   {"ags": "01060060", "name": "Nehms", "land": "Schleswig-Holstein", "kreis": "Segeberg", "einwohner_2011": 565, "km_luftlinie": 59, "status": "offen", "lat": 54.0218, "lon": 10.3448},
