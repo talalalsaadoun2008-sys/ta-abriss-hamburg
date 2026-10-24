@@ -202,7 +202,17 @@
     {"slug": "abriss-wischhafen", "name": "Wischhafen", "kreis": "Landkreis Stade", "land": "Niedersachsen"},
     {"slug": "abriss-kremperheide", "name": "Kremperheide", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-itzehoe", "name": "Itzehoe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-wrist", "name": "Wrist", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-wrist", "name": "Wrist", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-kellinghusen", "name": "Kellinghusen", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-brokstedt", "name": "Brokstedt", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-grossenaspe", "name": "Großenaspe", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-boostedt", "name": "Boostedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-rickling", "name": "Rickling", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-wahlstedt", "name": "Wahlstedt", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-bad-segeberg", "name": "Bad Segeberg", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-reinfeld-holstein", "name": "Reinfeld (Holstein)", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-buechen", "name": "Büchen", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-berkenthin", "name": "Berkenthin", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
