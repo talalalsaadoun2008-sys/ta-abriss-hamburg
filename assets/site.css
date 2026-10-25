@@ -162,6 +162,7 @@ input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
 textarea{min-height:7rem;resize:vertical}
 .ok{background:var(--draft);color:var(--draft-ink);padding:var(--s3);border-radius:6px}
+.ok p{margin:0 0 var(--s2)}.ok-alt{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s2) 0}.ok #copied{margin:0;font-weight:600}
 
 footer{background:var(--surface);border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
 footer .wrap{padding-block:var(--s5);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}

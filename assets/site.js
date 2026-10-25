@@ -54,10 +54,22 @@
         '\nWunschtermin: ' + (v('wunsch') || '-') + (page ? '\nSeite: ' + page : '') +
         (v('text') ? '\n\n' + v('text') : '');
     }
+    var copy = el('copy'), copied = el('copied');
+    if (copy) copy.addEventListener('click', function(){
+      var text = msg(), done = function(){ if (copied) copied.hidden = false; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function(){ fallback(text); done(); });
+      } else { fallback(text); done(); }
+    });
+    function fallback(text){
+      var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta);
+      ta.select(); try { document.execCommand('copy'); } catch (x) {} document.body.removeChild(ta);
+    }
     f.addEventListener('submit', function(e){
       e.preventDefault();
       if (!valid()) return;
-      if (ok) ok.hidden = false;
+      if (ok) { ok.hidden = false; ok.scrollIntoView({block: 'nearest'}); }
       location.href = 'mailto:info@ta-abriss-hamburg.de?subject=' + encodeURIComponent(['Anfrage Besichtigung', (f.getAttribute('data-page') || '').trim()].filter(Boolean).join(' – ')) + '&body=' + encodeURIComponent(msg());
     });
   })();

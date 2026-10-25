@@ -248,7 +248,12 @@
       <button class="btn" type="submit">Anfrage per E-Mail senden <span class="arr" aria-hidden="true">→</span></button>
     </div>
     <p class="err" id="err" role="alert" hidden>Bitte Name und Telefonnummer eintragen.</p>
-    <p class="ok" id="ok" hidden>Ihr E-Mail-Programm öffnet sich mit Ihrer Anfrage. Bitte dort noch auf Senden tippen. Öffnet sich nichts? Schreiben Sie direkt an <a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a>.</p>
+    <div class="ok" id="ok" hidden role="status">
+      <p>Ihr E-Mail-Programm öffnet sich mit Ihrer Anfrage. Bitte dort noch auf <strong>Senden</strong> tippen.</p>
+      <p>Öffnet sich nichts? Dann rufen Sie uns an oder kopieren Sie Ihre Anfrage und schicken Sie sie an <a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a>.</p>
+      <div class="ok-alt"><a class="btn" href="tel:+4917632896617">Anrufen: 0176 32896617</a><button type="button" class="btn alt" id="copy">Anfrage kopieren</button></div>
+      <p id="copied" hidden>Kopiert. Jetzt in eine E-Mail an info@ta-abriss-hamburg.de einfügen und senden.</p>
+    </div>
   </form>
 </div></section>
 
