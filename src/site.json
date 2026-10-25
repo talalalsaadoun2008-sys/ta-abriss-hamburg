@@ -212,7 +212,17 @@
     {"slug": "abriss-bad-segeberg", "name": "Bad Segeberg", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
     {"slug": "abriss-reinfeld-holstein", "name": "Reinfeld (Holstein)", "kreis": "Kreis Stormarn", "land": "Schleswig-Holstein"},
     {"slug": "abriss-buechen", "name": "Büchen", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-berkenthin", "name": "Berkenthin", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"}
+    {"slug": "abriss-berkenthin", "name": "Berkenthin", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-bleckede", "name": "Bleckede", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-hohenlockstedt", "name": "Hohenlockstedt", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-neetze", "name": "Neetze", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-zeven", "name": "Zeven", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-heeslingen", "name": "Heeslingen", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-gyhum", "name": "Gyhum", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-elsdorf", "name": "Elsdorf", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-bremervoerde", "name": "Bremervörde", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-boizenburg-elbe", "name": "Boizenburg/Elbe", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"},
+    {"slug": "abriss-hemmoor", "name": "Hemmoor", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],

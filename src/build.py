@@ -1450,7 +1450,7 @@ VP_RELS = {"stylesheet", "preload", "modulepreload", "icon", "apple-touch-icon",
 VP_PLATZHALTER = re.compile(r"(?i:\b(?:todo|fixme|lorem|ipsum)\b)|\b(?:TBD|XXX|undefined|None|NaN)\b"
                             r"|\{[^{}]{0,40}\}|\[[^\[\]]{0,40}\]|[\[\]{}]|%s")
 VP_DOPPELT_OK = {"die", "der", "das", "den", "dem", "des"}
-VP_WORT_OK = {"Stellen", "Heistmer", "Bernekesbutle", "Horstmühle", "Krempermarsch", "Deutschland", "Deutschlands", "Deutsche", "Deutschen", "Kellinghusenstraße", "Holsteinring", "Wahlstedte"}  # normale Wörter, die nur zufällig mit einem Ortsnamen beginnen
+VP_WORT_OK = {"Stellen", "Heistmer", "Bernekesbutle", "Horstmühle", "Krempermarsch", "Deutschland", "Deutschlands", "Deutsche", "Deutschen", "Kellinghusenstraße", "Holsteinring", "Wahlstedte", "Hohenasperfeld", "Wilstermarsch", "Wilsterau", "Wilsteraner", "Aukrugdörfern", "Horstweg"}  # normale Wörter, die nur zufällig mit einem Ortsnamen beginnen
 VP_ENDUNG_OK = {"r", "rn", "rs", "er", "ern", "ers", "erin", "erinnen", "s", "es", "isch", "ische", "ischen", "ischer", "isches",
                 "weit"}
 VP_PRAEP = re.compile(r"\b(in|im|am|bei|beim|von|vom|zu|zum|zur|nach|aus|für|mit|auf|ins)\s+(in|im|am|zum|zur|vom|beim|ins|auf)\b")
