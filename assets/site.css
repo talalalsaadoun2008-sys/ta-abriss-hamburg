@@ -175,11 +175,13 @@ footer h3{font-size:1.2rem;color:var(--ink);margin-bottom:var(--s2);text-transfo
 .fab .btn{justify-content:center}
 .fab-req{box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
 .fab-tel{display:none}
+.fab-wa{box-shadow:0 12px 30px -10px rgba(0,0,0,.35)}
 @media (max-width:700px){
   /* Platzhalter unter dem Footer in Leistenhöhe: am Seitenende verdeckt die Leiste nichts */
   .fab-bar{height:calc(65px + env(safe-area-inset-bottom,0px));background:var(--surface)}
-  .fab{left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;padding:8px max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--header);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-top:1px solid var(--line);transform:translateY(100%)}
-  .fab .btn{min-height:48px;padding:.6rem .75rem;transform:none}
+  .fab{left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem;padding:8px max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--header);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-top:1px solid var(--line);transform:translateY(100%)}
+  .fab .btn{min-height:48px;padding:.6rem .5rem;transform:none;font-size:.95rem;gap:.35rem}
+  .fab-wa{box-shadow:none}
   .fab-req{box-shadow:none}
   .fab-tel{display:inline-flex}
 }

@@ -66,6 +66,11 @@
       ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta);
       ta.select(); try { document.execCommand('copy'); } catch (x) {} document.body.removeChild(ta);
     }
+    var wa = el('wa');
+    if (wa) wa.addEventListener('click', function(){
+      if (!valid()) return;
+      window.open('https://wa.me/4917632896617?text=' + encodeURIComponent(msg()), '_blank', 'noopener');
+    });
     f.addEventListener('submit', function(e){
       e.preventDefault();
       if (!valid()) return;

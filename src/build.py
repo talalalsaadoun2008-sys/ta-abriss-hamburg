@@ -24,7 +24,7 @@ import argparse
 import datetime
 import functools
 import html
-import json
+import json, urllib.parse
 import re
 import shutil
 import subprocess
@@ -49,6 +49,15 @@ MAX_WEITERE_ORTE = 8
 CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>'
 PHONE_SVG = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5'
              'L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>')
+CHAT_SVG = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/>'
+            '<path d="M8 9.5h8M8 12.5h5"/></svg>')
+WA_TEXT = "Hallo T&A, ich habe eine Anfrage: "
+
+
+def wa_link(f, text=WA_TEXT):
+    return f"https://wa.me/{f['whatsapp']}?text=" + urllib.parse.quote(text)
+
+
 ARR = '<span class="arr" aria-hidden="true">→</span>'
 A_RE = re.compile(r'<a\s[^>]*?href=(["\'])(.*?)\1[^>]*>(.*?)</a>', re.S)
 
@@ -477,6 +486,7 @@ def render_menu(ctx, current, on_home, contact_href):
             parts.append(f'<div class="grp {gcls}">\n    ' + "\n    ".join(inner) + '\n  </div>')
     parts.append(f'''<div class="menu-cta">
     <a class="btn alt" href="tel:{esc(f["telefon_link"])}">{PHONE_SVG}{esc(f["telefon"])}</a>
+    <a class="btn alt" href="{esc(wa_link(f))}" target="_blank" rel="noopener">{CHAT_SVG}WhatsApp</a>
     <a class="btn" href="{esc(contact_href)}">Kostenlose Besichtigung {ARR}</a>
     <noscript><a class="btn alt" href="#start">Menü schließen</a></noscript>
   </div>''')
@@ -510,7 +520,7 @@ def render_footer(ctx, current, on_home, fab_href):
     if fab_href:  # Handy: feste Leiste „Anrufen“ + „Anfrage“; PC: nur der schwebende Anfrage-Knopf
         out.append(f'\n<div class="fab-bar"><div class="fab">'
                    f'<a class="btn alt fab-tel" href="tel:{esc(f["telefon_link"])}" aria-label="Anrufen: {esc(f["telefon"])}">'
-                   f'{PHONE_SVG}Anrufen</a><a class="btn fab-req" href="{esc(fab_href)}">Anfrage {ARR}</a></div></div>')
+                   f'{PHONE_SVG}Anrufen</a><a class="btn alt fab-wa" href="{esc(wa_link(f))}" target="_blank" rel="noopener" aria-label="WhatsApp: {esc(f["telefon"])}">{CHAT_SVG}WhatsApp</a><a class="btn fab-req" href="{esc(fab_href)}">Anfrage {ARR}</a></div></div>')
     return "".join(out)
 
 
