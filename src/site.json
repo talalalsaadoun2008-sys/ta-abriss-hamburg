@@ -222,7 +222,17 @@
     {"slug": "abriss-elsdorf", "name": "Elsdorf", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
     {"slug": "abriss-bremervoerde", "name": "Bremervörde", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
     {"slug": "abriss-boizenburg-elbe", "name": "Boizenburg/Elbe", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"},
-    {"slug": "abriss-hemmoor", "name": "Hemmoor", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"}
+    {"slug": "abriss-hemmoor", "name": "Hemmoor", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"},
+    {"slug": "abriss-hohenaspe", "name": "Hohenaspe", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-gross-kummerfeld", "name": "Groß Kummerfeld", "kreis": "Kreis Segeberg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ratzeburg", "name": "Ratzeburg", "kreis": "Kreis Herzogtum Lauenburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-neuenkirchen", "name": "Neuenkirchen", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
+    {"slug": "abriss-wilster", "name": "Wilster", "kreis": "Kreis Steinburg", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-lamstedt", "name": "Lamstedt", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"},
+    {"slug": "abriss-barendorf", "name": "Barendorf", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-bienenbuettel", "name": "Bienenbüttel", "kreis": "Landkreis Uelzen", "land": "Niedersachsen"},
+    {"slug": "abriss-boenebuettel", "name": "Bönebüttel", "kreis": "Kreis Plön", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-neumuenster", "name": "Neumünster", "kreis": "Kreisfreie Stadt", "land": "Schleswig-Holstein"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
