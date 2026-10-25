@@ -910,7 +910,7 @@ def preis_section(ctx, slug, name):
     <div class="preis-info">
       <p><strong>Im Richtpreis enthalten:</strong> {text("inklusive")}</p>
       <p><strong>Nicht enthalten:</strong> {text("zuzueglich")}</p>
-      <p>Den Festpreis nennen wir nach der kostenlosen Besichtigung vor Ort oder per Video. Er hängt davon ab, was wir sehen, z. B. Zugang, Material und Menge.</p>
+      <p>Den Festpreis nennen wir nach der kostenlosen Besichtigung vor Ort oder per Video. Er hängt davon ab, was wir sehen, z. B. Zugang, Material und Menge. Alle Preise und Rechenbeispiele: <a href="abriss-kosten-hamburg.html">Was kostet ein Abriss in Hamburg?</a></p>
       <a class="btn" href="#anfrage" data-rp-cta>Festpreis anfragen {ARR}</a>
     </div>
   </div>
@@ -1291,13 +1291,16 @@ def home_umland(ctx):
 def render_index(ctx):
     s, f = ctx.site, ctx.site.firma
     src = ctx.home_src
-    # Keine Öffnungszeiten, keine Preisspanne: beides ist nicht festgelegt und wird nicht erfunden.
+    # Öffnungszeiten Mo–Sa 8–20 (von Talal am 22.10.2026 für das Google-Profil bestätigt); keine Preisspanne.
     business = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": s.base + "#firma",
         "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.bild_url("abriss"),
         "logo": s.base + "logo.png",
         "telephone": f["telefon_schema"], "email": f["email"],
         "address": ld_adresse(f),
+        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
+                                       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                                       "opens": "08:00", "closes": "20:00"}],
         "areaServed": [{"@type": "AdministrativeArea", "name": b["gebiet"]} for b in s.bezirke]
                       + [{"@type": "City", "name": u["name"]} for u in ctx.pages(s.umland)],
     }
