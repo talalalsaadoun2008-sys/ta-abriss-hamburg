@@ -256,6 +256,7 @@
     "hinweis": "Ihr Ort ist nicht dabei? Wir kommen auch dorthin. Fragen Sie einfach an."
   },
   "ratgeber": [
+    {"slug": "abriss-kosten-hamburg", "name": "Abriss-Kosten in Hamburg"},
     {"slug": "abriss-genehmigung-hamburg", "name": "Abriss-Genehmigung in Hamburg"},
     {"slug": "bauschutt-entsorgen-hamburg", "name": "Bauschutt entsorgen in Hamburg"},
     {"slug": "asbest-erkennen-vor-abriss", "name": "Asbest vor Abriss und Umbau"},
