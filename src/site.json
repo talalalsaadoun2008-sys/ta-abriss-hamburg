@@ -35,15 +35,15 @@
      "kurz": "Nach dem Abriss direkt neu aufbauen, ohne zweite Firma."},
     {"slug": "schuttabholung-hamburg", "name": "Schuttabholung", "bild": "entkernung",
      "kurz": "Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss."},
-    {"slug": "entruempelung-hamburg", "name": "Entrümpelung", "bild": "entkernung",
+    {"slug": "entruempelung-hamburg", "name": "Entrümpelung", "bild": "entruempelung",
      "kurz": "Wohnung, Keller, Dachboden oder Garage leer räumen, auch ganze Haushalte."},
-    {"slug": "gartenraeumung-hamburg", "name": "Gartenräumung", "bild": "abriss",
+    {"slug": "gartenraeumung-hamburg", "name": "Gartenräumung", "bild": "garten",
      "kurz": "Garten oder Kleingarten komplett räumen: Laube, Platten, Grün, Gerümpel."},
-    {"slug": "pflaster-entfernen-hamburg", "name": "Pflaster entfernen", "bild": "abriss",
+    {"slug": "pflaster-entfernen-hamburg", "name": "Pflaster entfernen", "bild": "pflaster",
      "kurz": "Pflaster, Gehweg- und Terrassenplatten aufnehmen und entsorgen."},
-    {"slug": "gruenschnitt-hecke-hamburg", "name": "Hecke & Grünschnitt", "bild": "abriss",
+    {"slug": "gruenschnitt-hecke-hamburg", "name": "Hecke & Grünschnitt", "bild": "hecke",
      "kurz": "Hecke schneiden, Sträucher entfernen, Grünschnitt abfahren."},
-    {"slug": "baumfaellung-hamburg", "name": "Baumfällung", "bild": "abriss",
+    {"slug": "baumfaellung-hamburg", "name": "Baumfällung", "bild": "baum",
      "kurz": "Bäume fällen und abfahren, Genehmigung vorher geklärt."}
   ],
   "bezirke": [
@@ -318,7 +318,37 @@
     "innenabbruch": {"datei": "innenabbruch-wanddurchbruch-abbruchhammer.jpg", "w": 640, "h": 480,
                      "alt": "Innenabbruch: Wanddurchbruch in einer verputzten Ziegelwand mit dem Abbruchhammer"},
     "trockenbau": {"datei": "trockenbau-abgehaengte-decke-gipskarton.jpg", "w": 900, "h": 806,
-                   "alt": "Trockenbau: Arbeiter auf einem Rollgerüst schraubt Gipskartonplatten an eine abgehängte Decke"}
+                   "alt": "Trockenbau: Arbeiter auf einem Rollgerüst schraubt Gipskartonplatten an eine abgehängte Decke"},
+    "entruempelung": {
+      "datei": "entruempelung-transporter-beladen.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Entrümpelung: Zwei Arbeiter beladen einen Transporter mit Möbeln und Säcken"
+    },
+    "pflaster": {
+      "datei": "pflaster-entfernen-pflastersteine.jpg",
+      "w": 960,
+      "h": 602,
+      "alt": "Pflaster entfernen: Zwei Arbeiter nehmen alte Pflastersteine auf"
+    },
+    "garten": {
+      "datei": "gartenraeumung-schubkarre-gruenschnitt.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Gartenräumung: Schubkarre voller Grünschnitt vor einer Hecke"
+    },
+    "baum": {
+      "datei": "baumfaellung-kettensaege.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Baumfällung: Arbeiter mit Schutzhelm zersägt einen gefällten Baum mit der Kettensäge"
+    },
+    "hecke": {
+      "datei": "hecke-schneiden-heckenschere.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Hecke schneiden: Mann schneidet eine Hecke mit der elektrischen Heckenschere"
+    }
   },
   "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Entrümpelung", "Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Weiß ich noch nicht"]
 }
