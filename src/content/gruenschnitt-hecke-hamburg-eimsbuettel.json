@@ -1,0 +1,100 @@
+{
+  "slug": "gruenschnitt-hecke-hamburg-eimsbuettel",
+  "type": "leistung_ort",
+  "leistung": "gruenschnitt-hecke-hamburg",
+  "bezirk": "abriss-hamburg-eimsbuettel",
+  "menu": "Hecke & Grünschnitt Eimsbüttel",
+  "title": "Hecke schneiden & Grünschnitt Eimsbüttel | T&A Abriss",
+  "description": "Hecke schneiden, Sträucher entfernen und Grünschnitt abfahren in Eimsbüttel, auch im Kleingarten.",
+  "label": "Hecke & Grünschnitt · Bezirk Eimsbüttel",
+  "h1": "Hecke und Grünschnitt in Eimsbüttel: von Rotherbaum bis Schnelsen",
+  "lead": "Eimsbüttel ist der Nachbarbezirk unseres Sitzes in der Dosestraße, bis dorthin sind es rund 4 km. Wir schneiden Hecken, nehmen Sträucher heraus und fahren den Grünschnitt ab, vom Reihenhausgarten in Niendorf bis zur Parzelle im Kleingartenverein. Den Festpreis mit Entsorgung erhalten Sie nach einer kostenlosen Besichtigung.",
+  "facts": [
+    "Rund 4 km von der Dosestraße",
+    "Auch Kleingarten-Parzellen",
+    "Festpreis mit Abtransport"
+  ],
+  "image": "hecke",
+  "form_leistung": "Hecke und Grünschnitt",
+  "form_ort": "Eimsbüttel",
+  "sections": [
+    {
+      "h2": "Wo in Eimsbüttel Hecken wachsen",
+      "html": "<p>Neun Stadtteile gehören zum Bezirk, und zwischen Süden und Norden liegen Welten. Hoheluft-West ist der am dichtesten besiedelte Stadtteil Hamburgs, Gärten sind dort meist Innenhöfe. Harvestehude dagegen ist ein Villenviertel zwischen Alster und Isebekkanal, auch in Rotherbaum stehen Villen mit Grundstück. Im Norden prägen Einfamilien- und Reihenhäuser große Teile von Niendorf. Schnelsen wuchs in den 1990er Jahren um zwei Neubaugebiete, Burgwedel und das Gebiet an der Süntelstraße.</p><p>Für uns heißt das: Im Süden kürzen wir Sträucher im Hof einer Wohnanlage, im Norden die Hecke rund um den Reihenhausgarten. Die Arbeit selbst beschreibt unsere Seite <a href=\"gruenschnitt-hecke-hamburg.html\">Hecke und Grünschnitt in Hamburg</a>.</p>"
+    },
+    {
+      "h2": "Hecken im Kleingarten: was der Landesbund vorgibt",
+      "html": "<p>In Niendorf haben viele Pächter ihre Lauben nach den Weltkriegen sogar zum Wohnen ausgebaut, Kleingärten gehören hier zum Stadtbild. Für Parzellen gilt das Merkblatt des Landesbunds der Gartenfreunde und der Umweltbehörde (gültig seit 1. Januar 2021):</p><ul><li>Hecken dürfen höchstens 1,10 m hoch sein und sind jedes Jahr, spätestens im Winter, auf dieses Maß zurückzusetzen.</li><li>Roden und Schnittmaßnahmen sind nur nach dem 1. Oktober und vor dem 1. März erlaubt.</li><li>Gartenabfälle werden kompostiert. Verbrennen ist verboten, Grünschnitt im öffentlichen Raum abzuladen ebenfalls.</li></ul><p>Sprechen Sie größere Rückschnitte vorher mit dem Vorstand Ihres Vereins ab. Was nicht auf den Kompost passt, laden wir auf und fahren es ab.</p>"
+    },
+    {
+      "h2": "Bundesrecht und Baumschutzverordnung",
+      "html": "<p>Außerhalb der Kleingärten zählt vor allem § 39 Abs. 5 Bundesnaturschutzgesetz. Zwischen dem 1. März und dem 30. September darf niemand eine Hecke beseitigen oder auf den Stock setzen. Ein schonender Pflegeschnitt, der den neuen Zuwachs wegnimmt, ist in dieser Zeit erlaubt.</p><p>Die Hamburgische Baumschutzverordnung stellt außerdem jede Hecke ab 80 cm Höhe unter Schutz. Laut Bezirksamt Eimsbüttel kümmert sich dessen Naturschutzabteilung um die Verordnung, Maßnahmen an geschützten Gehölzen sind dort das ganze Jahr über antragspflichtig. Den Online-Antrag finden Sie im Serviceportal Hamburg, Fragen beantwortet die Abteilung unter baumschutz@eimsbuettel.hamburg.de.</p>"
+    },
+    {
+      "h2": "Recyclinghof Niendorf oder Abholung",
+      "html": "<p>Der Recyclinghof der Stadtreinigung im Bezirk liegt am Krähenweg 22 in Niendorf. Grünabfälle und Laub gibt ein Privathaushalt dort laut Preisliste 2026 in haushaltsüblicher Menge kostenlos ab. Die Grenze ist nicht genau beziffert, fragen Sie deshalb vor einer großen Fuhre nach. Für kleinere Mengen bleiben die Biotonne und die Laubsäcke der Stadtreinigung.</p><p>Wer eine lange Hecke kürzen lässt, braucht keinen Anhänger. Wir nehmen den Schnitt nach der Arbeit mit, die Entsorgung ist im Festpreis eingerechnet.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wir haben eine Parzelle in Niendorf. Wie hoch darf die Hecke sein?",
+      "a": "Nach dem Merkblatt für Hamburger Kleingärten höchstens 1,10 m. Zurückgesetzt wird jedes Jahr, spätestens im Winter. Schnitt und Rodung sind dort nur zwischen 1. Oktober und 1. März erlaubt."
+    },
+    {
+      "q": "Kann ich die Hecke zum Nachbarn in Lokstedt im August kürzen lassen?",
+      "a": "Einen schonenden Formschnitt ja. Ein radikaler Rückschnitt oder das Entfernen muss bis Oktober warten. Sitzt ein Nest darin, schneiden wir an der Stelle nicht."
+    },
+    {
+      "q": "Wohin geht in Eimsbüttel der Antrag, eine Hecke zu roden?",
+      "a": "An die Naturschutzabteilung des Bezirksamts Eimsbüttel, am einfachsten online über das Serviceportal Hamburg. Nötig ist das bei Hecken ab 80 cm Höhe. Wir fangen erst an, wenn die Genehmigung da ist."
+    },
+    {
+      "q": "Ich habe selbst geschnitten. Nehmen Sie nur die Äste mit?",
+      "a": "Ja. Schicken Sie uns ein Foto vom Haufen und sagen Sie, wie wir hinkommen. Danach nennen wir Ihnen einen Festpreis für Aufladen und Entsorgen."
+    }
+  ],
+  "sources": [
+    {
+      "title": "hamburg.de: Stadtteile im Bezirk Eimsbüttel (neun Stadtteile, Hoheluft-West am dichtesten besiedelt, Harvestehude Villenviertel; Quelle der Bezirksseite)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-eimsbuettel"
+    },
+    {
+      "title": "Wikipedia: Hamburg-Niendorf (Einfamilien- und Reihenhäuser, zu Wohnzwecken ausgebaute Lauben; Quelle der Bezirksseite)",
+      "url": "https://de.wikipedia.org/wiki/Hamburg-Niendorf"
+    },
+    {
+      "title": "Wikipedia: Hamburg-Schnelsen (Neubaugebiete Burgwedel und Süntelstraße in den 1990er Jahren)",
+      "url": "https://de.wikipedia.org/wiki/Hamburg-Schnelsen"
+    },
+    {
+      "title": "LGH/BUKEA: Merkblatt zur Nutzung von Kleingärten in Hamburg, gültig ab 01.01.2021 (Hecken max. 1,10 m, Rodung und Schnitt nur 01.10.–01.03., Gartenabfälle kompostieren, Verbrennen verboten)",
+      "url": "https://www.gartenfreunde-hh.de/downloads/1326/Merkblatt-zur-Nutzung-von-Kleingaerten-in-Hamburg-012021.pdf"
+    },
+    {
+      "title": "§ 39 Abs. 5 BNatSchG (Schonzeit 1. März bis 30. September, schonende Form- und Pflegeschnitte zulässig), lexetius",
+      "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung 2023, § 1 (Hecken ab 80 cm Höhe), BUND-PDF",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "Bezirksamt Eimsbüttel: Naturschutz und Baumschutz (Naturschutzabteilung, ganzjährig antragspflichtig, baumschutz@eimsbuettel.hamburg.de; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/bezirksamt-eimsbuettel/themen/umwelt-natur-klima/naturschutz-baumschutz-969618"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe ab 01.07.2026 (Niendorf, Krähenweg 22, 22459 Hamburg; Grünabfälle privat in haushaltsüblicher Menge kostenlos)",
+      "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "BUKEA: Faltblatt Wegereinigung, Stand Juli 2025 (Biotonne, saisonale Laubtonne, Laubsäcke gegen Gebühr inkl. Abholung)",
+      "url": "https://www.hamburg.de/resource/blob/159608/eb1a37a18f1960f58068dfe839606aa4/d-flyer-wegereinigung-data.pdf"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026 (Branch lo-hecke). Keine Aussagen zu Geräten, Heckenhöhen, die wir schaffen, oder Preisen.",
+    "Kleingarten-Regeln aus dem LGH-Merkblatt 01/2021; ob es eine neuere Fassung gibt, war nicht erkennbar. Vereine können strengere Regeln haben.",
+    "„Kleingärten gehören hier zum Stadtbild“ stützt sich nur auf die Lauben-Geschichte in Niendorf (Wikipedia, wie auf der Bezirksseite). Zahl der Vereine im Bezirk nicht ermittelt.",
+    "Gratis-Menge am Recyclinghof widersprüchlich belegt, daher nur „haushaltsübliche Menge laut Preisliste 2026“."
+  ]
+}
