@@ -28,11 +28,11 @@
     },
     {
       "h2": "Innenhof in St. Georg, Garten in Horn: Platz und Zufahrt",
-      "html": "<p>In der Innenstadt und in Vierteln wie St. Georg oder Borgfelde liegt ein Baum oft im Hof hinter einem Wohn- oder Geschäftshaus. Ein Fahrzeug kommt dann nicht heran. Holz und Äste müssen durch Durchfahrt oder Hausflur zur Straße. Damit der Transporter dort halten darf, kann eine Halteverbotszone nötig sein. In Hamburg beantragen Sie sie mindestens 14 Tage vor dem Termin. Soll ein Container auf Gehweg oder Fahrbahn stehen, braucht es eine Sondernutzungserlaubnis des Bezirksamts.</p><p>In Hamm, Horn, Billstedt oder Finkenwerder ist es häufig einfacher, weil zum Haus ein eigener Garten gehört. Wie nah wir mit dem Fahrzeug kommen und wie viel getragen werden muss, sehen wir uns bei der kostenlosen Besichtigung an. Das steht dann schon im Festpreis.</p>"
+      "html": "<p>In der Innenstadt und in Vierteln wie St. Georg oder Borgfelde liegt ein Baum oft im Hof hinter einem Wohn- oder Geschäftshaus. Ein Fahrzeug kommt dann nicht heran. Holz und Äste müssen durch Durchfahrt oder Hausflur zur Straße. Damit unser Fahrzeug dort halten darf, kann eine Halteverbotszone nötig sein. In Hamburg beantragen Sie sie mindestens 14 Tage vor dem Termin. Soll ein Container auf Gehweg oder Fahrbahn stehen, braucht es eine Sondernutzungserlaubnis des Bezirksamts.</p><p>In Hamm, Horn, Billstedt oder Finkenwerder ist es häufig einfacher, weil zum Haus ein eigener Garten gehört. Wie nah wir mit dem Fahrzeug kommen und wie viel getragen werden muss, sehen wir uns bei der kostenlosen Besichtigung an. Das steht dann schon im Festpreis.</p>"
     },
     {
       "h2": "Saison, Termin und Abtransport",
-      "html": "<p>Die beste Zeit für eine Fällung ist der Winter. Vom 1. März bis 30. September verbietet § 39 Bundesnaturschutzgesetz das Beseitigen von Gehölzen, Ausnahmen sind möglich. Nester und Höhlen geschützter Arten sind außerdem das ganze Jahr tabu.</p><p>Unser Sitz liegt in der Dosestraße in Altona, nach Hamburg-Mitte sind es rund 4 km. Wir besichtigen werktags ab 16:30 Uhr und samstags ab 9 Uhr, auch per Videoanruf. Nach der Fällung bleibt kein Holzstapel liegen: Stamm, Äste und Laub fahren wir ab. Kleinere Mengen Laub aus Ihrem Garten nehmen auch die Recyclinghöfe in St. Pauli, Feldstraße 69, und in Billbrook, Liebigstraße 66, an. Mehr zur Leistung lesen Sie auf der Seite <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+      "html": "<p>Die beste Zeit für eine Fällung ist der Winter. Vom 1. März bis 30. September verbietet § 39 Bundesnaturschutzgesetz, Hecken und Gebüsche zu beseitigen. Bäume in Hausgärten sind von dieser Regel ausgenommen. Nester und Höhlen geschützter Arten sind nach § 44 aber das ganze Jahr tabu. Auch die Genehmigung nach der Baumschutzverordnung braucht ein geschützter Baum in jedem Monat.</p><p>Unser Sitz liegt in der Dosestraße in Altona, nach Hamburg-Mitte sind es rund 4 km. Wir besichtigen werktags ab 16:30 Uhr und samstags ab 9 Uhr, auch per Videoanruf. Nach der Fällung bleibt kein Holzstapel liegen: Stamm, Äste und Laub fahren wir ab. Kleinere Mengen Laub aus Ihrem Garten nehmen auch die Recyclinghöfe in St. Pauli, Feldstraße 69, und in Billbrook, Liebigstraße 66, an. Mehr zur Leistung lesen Sie auf der Seite <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
     }
   ],
   "faq": [
@@ -75,7 +75,7 @@
       "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
     },
     {
-      "title": "§ 39 Abs. 5 und § 44 BNatSchG (lexetius)",
+      "title": "§ 39 Abs. 5 BNatSchG – 1. März bis 30. September: Hecken, Gebüsche und Bäume außerhalb gärtnerisch genutzter Flächen; schonende Form- und Pflegeschnitte zulässig (lexetius)",
       "url": "https://lexetius.com/BNatSchG/39"
     },
     {
@@ -89,6 +89,10 @@
     {
       "title": "hamburg.de: Recyclinghöfe der Stadtreinigung (St. Pauli, Feldstraße 69; Billbrook, Liebigstraße 66)",
       "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
+      "url": "https://lxgesetze.de/bnatschg/44"
     }
   ],
   "notes_for_review": [

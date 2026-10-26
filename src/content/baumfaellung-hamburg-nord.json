@@ -20,7 +20,7 @@
   "sections": [
     {
       "h2": "Baumschutz in Hamburg-Nord: wer zuständig ist",
-      "html": "<p>Wie in Hamburg-Mitte liegt der Baumschutz in Hamburg-Nord nicht beim Zentrum für Wirtschaftsförderung, Bauen und Umwelt. Nach Angaben der Umweltbehörde erteilt hier das Fachamt Management des öffentlichen Raumes die Ausnahmegenehmigungen. Ihre Anfrage müssen Sie aber nicht selbst dorthin schicken. Im Serviceportal Hamburg geben Sie die Adresse des Grundstücks ein, der Online-Dienst ordnet den Antrag zu.</p><p>Wann der Antrag Pflicht ist, steht in der Hamburgischen Baumschutzverordnung von 2023:</p><ul><li>Laubbaum oder Nadelbaum mit mindestens 80 cm Umfang, gemessen in 1,30 m Höhe,</li><li>Hecken ab einer Höhe von 80 cm,</li><li>nicht aber Obstbäume, solange es keine Walnuss oder Esskastanie ist.</li></ul><p>Rechnen Sie mit einer Gebühr zwischen 25 und 2.000 Euro und mit einigen Wochen Bearbeitungszeit. Ohne Bescheid darf ein geschützter Baum nicht fallen. Deshalb fragen wir bei jeder Anfrage zuerst nach Stammumfang und Baumart.</p>"
+      "html": "<p>Wie in Hamburg-Mitte liegt der Baumschutz in Hamburg-Nord nicht beim Zentrum für Wirtschaftsförderung, Bauen und Umwelt. Nach Angaben der Umweltbehörde erteilt hier das Fachamt Management des öffentlichen Raumes die Ausnahmegenehmigungen. Ihre Anfrage müssen Sie aber nicht selbst dorthin schicken. Im Serviceportal Hamburg geben Sie die Adresse des Grundstücks ein, der Online-Dienst ordnet den Antrag zu.</p><p>Wann der Antrag Pflicht ist, steht in der Hamburgischen Baumschutzverordnung von 2023:</p><ul><li>Laubbaum oder Nadelbaum mit mindestens 80 cm Umfang, gemessen in 1,30 m Höhe,</li><li>Hecken ab einer Höhe von 80 cm,</li><li>nicht aber Obstbäume, solange es keine Walnuss oder Esskastanie ist.</li></ul><p>Rechnen Sie mit einer Gebühr zwischen 25 und 2.000 Euro und mit einigen Wochen Bearbeitungszeit. Ohne Bescheid darf ein geschützter Baum nicht fallen, in keinem Monat des Jahres. Deshalb fragen wir bei jeder Anfrage zuerst nach Stammumfang und Baumart.</p>"
     },
     {
       "h2": "Eppendorfer Moor und Rothsteinsmoor",
@@ -42,7 +42,7 @@
     },
     {
       "q": "Darf in meinem Kleingarten im Sommer gefällt werden?",
-      "a": "Nach dem Merkblatt für Hamburger Kleingärten nur vom 1. Oktober bis 1. März. Auch das Bundesnaturschutzgesetz schützt Gehölze von März bis Ende September. Planen Sie die Fällung deshalb für Herbst oder Winter."
+      "a": "Nach dem Merkblatt für Hamburger Kleingärten nur vom 1. Oktober bis 1. März. Das Bundesnaturschutzgesetz nimmt Bäume auf gärtnerisch genutzten Flächen zwar von seiner Sommerregel aus, Hecken und Gebüsche aber nicht. Besetzte Nester schützt § 44 außerdem das ganze Jahr. Planen Sie die Fällung deshalb für Herbst oder Winter."
     },
     {
       "q": "Mein Haus liegt am Eppendorfer Moor. Gelten dort strengere Regeln?",
@@ -83,8 +83,12 @@
       "url": "https://www.hamburg.com/residents/neighbourhoods/hamburg-nord-19348"
     },
     {
-      "title": "§ 39 Abs. 5 BNatSchG (lexetius)",
+      "title": "§ 39 Abs. 5 BNatSchG – 1. März bis 30. September: Hecken, Gebüsche und Bäume außerhalb gärtnerisch genutzter Flächen; schonende Form- und Pflegeschnitte zulässig (lexetius)",
       "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
+      "url": "https://lxgesetze.de/bnatschg/44"
     }
   ],
   "notes_for_review": [

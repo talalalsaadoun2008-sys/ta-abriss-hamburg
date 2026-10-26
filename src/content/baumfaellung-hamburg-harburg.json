@@ -20,7 +20,7 @@
   "sections": [
     {
       "h2": "Die Abteilung Naturschutz im Bezirksamt Harburg",
-      "html": "<p>Das Bezirksamt Harburg hat eine eigene Abteilung Naturschutz. Sie berät zum Baumschutz, zum Landschafts- und Artenschutz und zu naturschutzrechtlichen Fragen bei Bauanträgen. Als Kontakt nennt das Bezirksamt den Harburger Rathausplatz 1, 21073 Hamburg, die E-Mail Bezirksamt@harburg.hamburg.de und die Behördennummer 115. Die Ausnahmegenehmigung selbst beantragen Sie online über das Serviceportal Hamburg.</p><p>Einen eigenen Hinweis gibt das Bezirksamt zur Sommerfällregelung: Vom 1. März bis 30. September dürfen Gehölze in jedem Jahr grundsätzlich nicht beseitigt werden. Grundlage ist das Bundesnaturschutzgesetz in der seit 1. März 2010 geltenden Fassung. Geplant werden sollte eine Fällung in Harburg also für die Monate Oktober bis Februar.</p>"
+      "html": "<p>Das Bezirksamt Harburg hat eine eigene Abteilung Naturschutz. Sie berät zum Baumschutz, zum Landschafts- und Artenschutz und zu naturschutzrechtlichen Fragen bei Bauanträgen. Als Kontakt nennt das Bezirksamt den Harburger Rathausplatz 1, 21073 Hamburg, und die Behördennummer 115. Die Ausnahmegenehmigung selbst beantragen Sie online über das Serviceportal Hamburg.</p><p>Einen eigenen Hinweis gibt das Bezirksamt zur Sommerfällregelung. Sie gilt jedes Jahr vom 1. März bis 30. September, Grundlage ist das Bundesnaturschutzgesetz in der seit 1. März 2010 geltenden Fassung. Nach § 39 dürfen in dieser Zeit Hecken, Gebüsche und Bäume außerhalb von Gärten nicht beseitigt werden. Bäume auf gärtnerisch genutzten Grundstücken sind ausgenommen. Unabhängig davon schützt § 44 Nester und Baumhöhlen ganzjährig, und ein geschützter Baum braucht die Genehmigung zu jeder Jahreszeit. Fällungen in Harburg planen wir deshalb am liebsten für Oktober bis Februar.</p>"
     },
     {
       "h2": "Welche Bäume unter Schutz stehen",
@@ -38,11 +38,11 @@
   "faq": [
     {
       "q": "Wo beantrage ich in Harburg eine Fällgenehmigung?",
-      "a": "Online über das Serviceportal Hamburg. Zuständig ist die Abteilung Naturschutz des Bezirksamts Harburg, die auch berät. Erreichbar ist das Bezirksamt über Bezirksamt@harburg.hamburg.de oder die Behördennummer 115."
+      "a": "Online über das Serviceportal Hamburg. Zuständig ist die Abteilung Naturschutz des Bezirksamts Harburg, die auch berät. Erreichbar ist das Bezirksamt über die Behördennummer 115 oder am Harburger Rathausplatz 1."
     },
     {
       "q": "Wir haben einen Hof im Alten Land. Sind unsere Obstbäume geschützt?",
-      "a": "Obstbäume fallen nicht unter die Hamburgische Baumschutzverordnung. Walnuss und Esskastanie sind davon ausgenommen und können geschützt sein. Die Schonzeit von März bis September gilt für alle Gehölze."
+      "a": "Obstbäume fallen nicht unter die Hamburgische Baumschutzverordnung. Walnuss und Esskastanie sind davon ausgenommen und können geschützt sein. Hecken und Gebüsche auf dem Hof dürfen von März bis September trotzdem nicht beseitigt werden. Nester in den Bäumen sind das ganze Jahr geschützt."
     },
     {
       "q": "Für unseren Anbau in Neugraben muss ein Baum weg. Was braucht das Amt?",
@@ -50,12 +50,12 @@
     },
     {
       "q": "Wann ist in Harburg Fällsaison?",
-      "a": "Von Oktober bis Ende Februar. Das Bezirksamt weist ausdrücklich auf die Sommerfällregelung vom 1. März bis 30. September hin. Nester und Baumhöhlen geschützter Tiere dürfen das ganze Jahr nicht zerstört werden."
+      "a": "Wir fällen am liebsten von Oktober bis Ende Februar. Das Bezirksamt weist ausdrücklich auf die Sommerfällregelung vom 1. März bis 30. September hin, die für Hecken immer gilt. Nester und Baumhöhlen geschützter Tiere dürfen das ganze Jahr nicht zerstört werden."
     }
   ],
   "sources": [
     {
-      "title": "Bezirksamt Harburg: Naturschutz – Abteilung Naturschutz (Baum-, Landschafts-, Artenschutz, naturschutzrechtliche Fragen bei Bauanträgen), Sommerfällregelung 1.3.–30.9., LSG Marmstorfer Flottsandplatte, Kontakt Harburger Rathausplatz 1, 21073 Hamburg, Bezirksamt@harburg.hamburg.de, Tel. 115 (abgerufen 26.10.2026)",
+      "title": "Bezirksamt Harburg: Naturschutz – Abteilung Naturschutz (Baum-, Landschafts-, Artenschutz, naturschutzrechtliche Fragen bei Bauanträgen), Sommerfällregelung 1.3.–30.9., LSG Marmstorfer Flottsandplatte, Kontakt Harburger Rathausplatz 1, 21073 Hamburg, Tel. 115 (abgerufen 26.10.2026)",
       "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/harburg/themen/klima-umwelt/naturschutz"
     },
     {
@@ -89,6 +89,10 @@
     {
       "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
       "url": "https://lxgesetze.de/bnatschg/44"
+    },
+    {
+      "title": "§ 39 Abs. 5 BNatSchG – 1. März bis 30. September: Hecken, Gebüsche und Bäume außerhalb gärtnerisch genutzter Flächen; schonende Form- und Pflegeschnitte zulässig (lexetius)",
+      "url": "https://lexetius.com/BNatSchG/39"
     }
   ],
   "notes_for_review": [

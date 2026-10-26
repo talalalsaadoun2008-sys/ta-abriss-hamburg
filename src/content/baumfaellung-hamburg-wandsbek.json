@@ -20,7 +20,7 @@
   "sections": [
     {
       "h2": "Große Gärten, alte Bäume",
-      "html": "<p>Viele Stadtteile in Wandsbek sind von Einfamilienhäusern geprägt. Die Stadt beschreibt Sasel mit vielen Einfamilienhäusern, Marienthal mit Einfamilienhäusern und Villen, Wohldorf mit Villenalleen. Auf solchen Grundstücken stehen oft Bäume, die über Jahrzehnte gewachsen sind und deren Stamm leicht über die Schutzgrenze kommt.</p><p>Eine Besonderheit ist die Gartenstadt Berne in Farmsen-Berne. Die Genossenschaftssiedlung aus den 1920er Jahren bekam große Gärten, damit die Bewohner Obst und Gemüse anbauen konnten. Für Obstbäume gilt die Hamburgische Baumschutzverordnung nicht, mit zwei Ausnahmen: Walnuss und Esskastanie sind auch als Obstbaum geschützt. Ein großer Teil der Gartenstadt steht außerdem unter Denkmalschutz.</p>"
+      "html": "<p>Viele Stadtteile in Wandsbek sind von Einfamilienhäusern geprägt. Die Stadt beschreibt Sasel mit vielen Einfamilienhäusern und Marienthal mit Einfamilienhäusern und Villen. Auf solchen Grundstücken stehen oft Bäume, die über Jahrzehnte gewachsen sind und deren Stamm leicht über die Schutzgrenze kommt.</p><p>Eine Besonderheit ist die Gartenstadt Berne in Farmsen-Berne. Die Genossenschaftssiedlung aus den 1920er Jahren bekam große Gärten, damit die Bewohner Obst und Gemüse anbauen konnten. Für Obstbäume gilt die Hamburgische Baumschutzverordnung nicht, mit zwei Ausnahmen: Walnuss und Esskastanie sind auch als Obstbaum geschützt. Ein großer Teil der Gartenstadt steht außerdem unter Denkmalschutz.</p>"
     },
     {
       "h2": "Natur- und Baumschutz im Bezirksamt Wandsbek",
@@ -32,7 +32,7 @@
     },
     {
       "h2": "Saison und Recyclinghöfe in Wandsbek",
-      "html": "<p>Vom 1. März bis 30. September ist das Fällen von Gehölzen nach § 39 Bundesnaturschutzgesetz grundsätzlich untersagt. Jetzt im Herbst beginnt also die Zeit, in der Fällungen ohne diese Einschränkung möglich sind. Sie endet Ende Februar.</p><p>Vier Recyclinghöfe der Stadtreinigung liegen im Bezirk: Hummelsbüttel (Lademannbogen 32), Steilshoop (Schwarzer Weg 10), Sasel (Volksdorfer Weg 196) und Wandsbek (Wilma-Witte-Stieg 6). Bei einer Fällung durch uns entfällt der Weg zum Hof: Holz und Äste laden wir auf.</p><p>Für eine Fällung in Wandsbek fahren wir von der Dosestraße rund 12 km. Zur kostenlosen Besichtigung kommen wir montags bis freitags nach 16:30 Uhr oder am Samstagvormittag ab 9 Uhr. Ein Videoanruf geht auch. Allgemeines zur Leistung steht unter <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+      "html": "<p>§ 39 Bundesnaturschutzgesetz schränkt Arbeiten an Gehölzen vom 1. März bis 30. September ein. Hecken und Gebüsche dürfen in dieser Zeit nie beseitigt werden. Bäume auf gärtnerisch genutzten Grundstücken sind davon ausgenommen. Für sie bleibt aber der ganzjährige Schutz von Nestern und Höhlen nach § 44. Ein geschützter Baum braucht außerdem die Genehmigung, gleich in welchem Monat. Wir fällen deshalb bevorzugt zwischen Oktober und Ende Februar, und diese Zeit beginnt jetzt im Herbst.</p><p>Vier Recyclinghöfe der Stadtreinigung liegen im Bezirk: Hummelsbüttel (Lademannbogen 32), Steilshoop (Schwarzer Weg 10), Sasel (Volksdorfer Weg 196) und Wandsbek (Wilma-Witte-Stieg 6). Bei einer Fällung durch uns entfällt der Weg zum Hof: Holz und Äste laden wir auf.</p><p>Für eine Fällung in Wandsbek fahren wir von der Dosestraße rund 12 km. Zur kostenlosen Besichtigung kommen wir montags bis freitags nach 16:30 Uhr oder am Samstagvormittag ab 9 Uhr. Ein Videoanruf geht auch. Allgemeines zur Leistung steht unter <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
     }
   ],
   "faq": [
@@ -71,7 +71,7 @@
       "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2025/181366/pdf/nsg_broschuere_hamburgs_naturschutzgebiete_data.pdf"
     },
     {
-      "title": "hamburg.de: Stadtteile im Bezirk Wandsbek (Sasel, Marienthal, Wohldorf; übernommen aus abriss-hamburg-wandsbek.json)",
+      "title": "hamburg.de: Stadtteile im Bezirk Wandsbek (Sasel, Marienthal; übernommen aus abriss-hamburg-wandsbek.json)",
       "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-wandsbek"
     },
     {
@@ -87,8 +87,12 @@
       "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
     },
     {
-      "title": "§ 39 Abs. 5 BNatSchG (lexetius)",
+      "title": "§ 39 Abs. 5 BNatSchG – 1. März bis 30. September: Hecken, Gebüsche und Bäume außerhalb gärtnerisch genutzter Flächen; schonende Form- und Pflegeschnitte zulässig (lexetius)",
       "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
+      "url": "https://lxgesetze.de/bnatschg/44"
     }
   ],
   "notes_for_review": [

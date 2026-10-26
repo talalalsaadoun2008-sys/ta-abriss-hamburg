@@ -24,7 +24,7 @@
     },
     {
       "h2": "Die Naturschutzabteilung des Bezirksamts Eimsbüttel",
-      "html": "<p>Für Bäume auf privatem Grund setzt in Eimsbüttel die Naturschutzabteilung des Bezirksamts die Hamburgische Baumschutzverordnung um. Sie erreichen sie per E-Mail an baumschutz@eimsbuettel.hamburg.de. Das Bezirksamt weist darauf hin, dass nicht nur das Fällen genehmigt werden muss. Auch Kronenpflegeschnitte, das Einkürzen der Krone und Arbeiten im Wurzelbereich sind bei geschützten Gehölzen antragspflichtig, und zwar das ganze Jahr.</p><p>Den Online-Antrag finden Sie im Serviceportal Hamburg unter „Bäume und andere Gehölze fällen oder beschneiden“. Geschützt ist ein einzelner Baum, wenn sein Stamm in 130 cm Höhe mindestens 80 cm Umfang hat. Laut hamburg.de kostet die Genehmigung 25 bis 2.000 Euro. Oft gibt es die Auflage, neu zu pflanzen oder eine Ausgleichsabgabe zu zahlen.</p><p><strong>Straßenbaum vor dem Haus?</strong> Für Bäume im öffentlichen Raum ist eine andere Stelle zuständig: die Abteilung Stadtgrün im Fachamt Management des öffentlichen Raumes, Grindelberg 62–66, E-Mail stadtgruen@eimsbuettel.hamburg.de. Solche Bäume fällen wir nicht.</p>"
+      "html": "<p>Für Bäume auf privatem Grund setzt in Eimsbüttel die Naturschutzabteilung des Bezirksamts die Hamburgische Baumschutzverordnung um. Sie erreichen sie per E-Mail an baumschutz@eimsbuettel.hamburg.de. Das Bezirksamt weist darauf hin, dass nicht nur das Fällen genehmigt werden muss. Auch Kronenpflegeschnitte, das Einkürzen der Krone und Arbeiten im Wurzelbereich sind bei geschützten Gehölzen antragspflichtig, und zwar das ganze Jahr.</p><p>Den Online-Antrag finden Sie im Serviceportal Hamburg unter „Bäume und andere Gehölze fällen oder beschneiden“. Geschützt ist ein einzelner Baum, wenn sein Stamm in 130 cm Höhe mindestens 80 cm Umfang hat. Laut hamburg.de kostet die Genehmigung 25 bis 2.000 Euro. Oft gibt es die Auflage, neu zu pflanzen oder eine Ausgleichsabgabe zu zahlen.</p><p><strong>Straßenbaum vor dem Haus?</strong> Für Bäume im öffentlichen Raum ist eine andere Stelle zuständig: die Abteilung Stadtgrün im Fachamt Management des öffentlichen Raumes, Grindelberg 62–66, E-Mail stadtgruen@eimsbuettel.hamburg.de. Straßenbäume gehören der Stadt, über sie entscheidet das Bezirksamt.</p>"
     },
     {
       "h2": "Landschaftsschutz in Niendorf, Lokstedt und am Ohmoor",
@@ -32,7 +32,7 @@
     },
     {
       "h2": "Termin, Schonzeit und was mit dem Holz passiert",
-      "html": "<ol><li><strong>Bilder schicken:</strong> den Baum im Ganzen, den Stamm mit Maßband und den Weg zur Straße.</li><li><strong>Besichtigung:</strong> kostenlos, werktags ab 16:30 Uhr oder samstags ab 9 Uhr, auf Wunsch per Video.</li><li><strong>Festpreis:</strong> Fällen, Aufladen und Abtransport stehen in einem Betrag.</li><li><strong>Fällen:</strong> zwischen Anfang Oktober und Ende Februar. In den übrigen Monaten verbietet § 39 Bundesnaturschutzgesetz das Beseitigen von Gehölzen, von Ausnahmen abgesehen.</li></ol><p>Laub aus dem Garten können Privatleute auch selbst abgeben, der nächste Recyclinghof liegt in Niendorf am Krähenweg 22. Stamm und Äste einer Fällung laden wir direkt auf und fahren sie ab.</p>"
+      "html": "<ol><li><strong>Bilder schicken:</strong> den Baum im Ganzen, den Stamm mit Maßband und den Weg zur Straße.</li><li><strong>Besichtigung:</strong> kostenlos, werktags ab 16:30 Uhr oder samstags ab 9 Uhr, auf Wunsch per Video.</li><li><strong>Festpreis:</strong> Fällen, Aufladen und Abtransport stehen in einem Betrag.</li><li><strong>Fällen:</strong> am liebsten zwischen Anfang Oktober und Ende Februar. Von März bis September verbietet § 39 Bundesnaturschutzgesetz, Hecken und Gebüsche zu beseitigen. Für Bäume auf gärtnerisch genutzten Flächen gilt diese Sommerregel nicht. Besetzte Nester und Höhlen schützt § 44 aber zu jeder Jahreszeit, und die Genehmigung für einen geschützten Baum ist in jedem Monat nötig.</li></ol><p>Laub aus dem Garten können Privatleute auch selbst abgeben, der nächste Recyclinghof liegt in Niendorf am Krähenweg 22. Stamm und Äste einer Fällung laden wir direkt auf und fahren sie ab.</p>"
     }
   ],
   "faq": [
@@ -49,8 +49,8 @@
       "a": "Bei einem geschützten Baum ja. Das Bezirksamt Eimsbüttel nennt ausdrücklich Kronenpflegeschnitte, Kroneneinkürzungen und Arbeiten im Wurzelbereich. Diese Pflicht besteht das ganze Jahr, nicht nur in der Schonzeit."
     },
     {
-      "q": "Kümmern Sie sich auch um den Straßenbaum vor meinem Haus?",
-      "a": "Nein. Bäume im öffentlichen Raum betreut in Eimsbüttel die Abteilung Stadtgrün. Schäden oder Fragen melden Sie dort per E-Mail an stadtgruen@eimsbuettel.hamburg.de."
+      "q": "Wer ist für den Straßenbaum vor meinem Haus zuständig?",
+      "a": "Straßenbäume gehören der Stadt. In Eimsbüttel betreut sie die Abteilung Stadtgrün im Fachamt Management des öffentlichen Raumes. Schäden oder Fragen melden Sie dort per E-Mail an stadtgruen@eimsbuettel.hamburg.de."
     }
   ],
   "sources": [
@@ -83,12 +83,16 @@
       "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
     },
     {
-      "title": "§ 39 Abs. 5 BNatSchG (lexetius)",
+      "title": "§ 39 Abs. 5 BNatSchG – 1. März bis 30. September: Hecken, Gebüsche und Bäume außerhalb gärtnerisch genutzter Flächen; schonende Form- und Pflegeschnitte zulässig (lexetius)",
       "url": "https://lexetius.com/BNatSchG/39"
     },
     {
       "title": "Recherche 26.10.2026 nach SRH-Preisliste 07/2026: Recyclinghof Niendorf, Krähenweg 22, 22459 Hamburg",
       "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
+      "url": "https://lxgesetze.de/bnatschg/44"
     }
   ],
   "notes_for_review": [
