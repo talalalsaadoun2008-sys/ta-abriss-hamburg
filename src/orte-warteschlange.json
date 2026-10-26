@@ -178,7 +178,7 @@
   {"ags": "13074076", "name": "Selmsdorf", "land": "Mecklenburg-Vorpommern", "kreis": "Nordwestmecklenburg", "einwohner_2011": 2745, "km_luftlinie": 68, "status": "offen", "lat": 53.8319, "lon": 10.8716},
   {"ags": "01058117", "name": "Nortorf", "land": "Schleswig-Holstein", "kreis": "Rendsburg-Eckernförde", "einwohner_2011": 6186, "km_luftlinie": 69, "status": "offen", "lat": 54.1673, "lon": 9.8516},
   {"ags": "01051016", "name": "Burg (Dithmarschen)", "land": "Schleswig-Holstein", "kreis": "Dithmarschen", "einwohner_2011": 4173, "km_luftlinie": 69, "status": "offen", "lat": 54.0026, "lon": 9.2395},
-  {"ags": "13076142", "name": "Vellahn", "land": "Mecklenburg-Vorpommern", "kreis": "Ludwigslust-Parchim", "einwohner_2011": 2724, "km_luftlinie": 69, "status": "offen", "lat": 53.3996, "lon": 10.9684},
+  {"ags": "13076142", "name": "Vellahn", "land": "Mecklenburg-Vorpommern", "kreis": "Ludwigslust-Parchim", "einwohner_2011": 2724, "km_luftlinie": 69, "status": "live", "slug": "abriss-vellahn", "datum": "2026-10-26", "lat": 53.3996, "lon": 10.9684},
   {"ags": "03357045", "name": "Sottrum", "land": "Niedersachsen", "kreis": "Rotenburg (Wümme)", "einwohner_2011": 6023, "km_luftlinie": 70, "status": "offen", "lat": 53.0987, "lon": 9.2151},
   {"ags": "03358023", "name": "Wietzendorf", "land": "Niedersachsen", "kreis": "Heidekreis", "einwohner_2011": 4022, "km_luftlinie": 70, "status": "offen", "lat": 52.9189, "lon": 9.9752},
   {"ags": "01055007", "name": "Bosau", "land": "Schleswig-Holstein", "kreis": "Ostholstein", "einwohner_2011": 3412, "km_luftlinie": 71, "status": "offen", "lat": 54.0966, "lon": 10.4973},

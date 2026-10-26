@@ -253,7 +253,8 @@
     {"slug": "abriss-gnarrenburg", "name": "Gnarrenburg", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
     {"slug": "abriss-ebstorf", "name": "Ebstorf", "kreis": "Landkreis Uelzen", "land": "Niedersachsen"},
     {"slug": "abriss-hohenwestedt", "name": "Hohenwestedt", "kreis": "Kreis Rendsburg-Eckernförde", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-zarrentin-am-schaalsee", "name": "Zarrentin am Schaalsee", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"}
+    {"slug": "abriss-zarrentin-am-schaalsee", "name": "Zarrentin am Schaalsee", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"},
+    {"slug": "abriss-vellahn", "name": "Vellahn", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
