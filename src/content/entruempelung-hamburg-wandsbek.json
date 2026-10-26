@@ -1,0 +1,92 @@
+{
+  "slug": "entruempelung-hamburg-wandsbek",
+  "type": "leistung_ort",
+  "leistung": "entruempelung-hamburg",
+  "bezirk": "abriss-hamburg-wandsbek",
+  "menu": "Entrümpelung Wandsbek",
+  "title": "Entrümpelung Wandsbek: Haus, Wohnung, Keller | T&A Abriss",
+  "description": "Entrümpelung in Wandsbek: Haus in den Walddörfern, Wohnung in Steilshoop, Keller in Eilbek. Festpreis.",
+  "label": "Entrümpelung · Bezirk Wandsbek",
+  "h1": "Entrümpelung in Wandsbek: Großsiedlung, Einfamilienhaus, Walddorf",
+  "lead": "Wandsbek zählt 18 Stadtteile, von Eilbek bis Wohldorf-Ohlstedt. Zwischen unserem Sitz in der Dosestraße und dem Bezirk liegen rund 12 km. Wir räumen Wohnungen, Häuser, Keller und Dachböden, zu einem Festpreis nach kostenloser Besichtigung, in dem Abfahren und Entsorgen schon stecken.",
+  "facts": [
+    "Etwa 12 km aus Altona",
+    "Vier Recyclinghöfe im Bezirk",
+    "Preis steht vor Beginn"
+  ],
+  "image": "entruempelung",
+  "form_leistung": "Entrümpelung",
+  "form_ort": "Wandsbek",
+  "sections": [
+    {
+      "h2": "Von Eilbek bis zu den Walddörfern",
+      "html": "<p>Die Stadt beschreibt Eilbek als geprägt vom schlichten Nachkriegs-Siedlungsbau. Steilshoop ist für seine Großsiedlung bekannt: Nördlich der Steilshooper Allee entstanden in den 1970er-Jahren Plattenbauten, deren Blöcke ringförmig um begrünte Innenhöfe stehen. In Sasel nennt hamburg.de die vielen Einfamilienhäuser, in Marienthal Einfamilienhäuser und Villen. In Bergstedt und Volksdorf stehen noch reetgedeckte Häuser, Duvenstedt und Lemsahl-Mellingstedt zählen zu den Walddörfern.</p><p>Danach richtet sich, wie eine Räumung abläuft. Allgemeine Infos stehen auf der Seite <a href=\"entruempelung-hamburg.html\">Entrümpelung in Hamburg</a>.</p>"
+    },
+    {
+      "h2": "Wohnung in der Großsiedlung oder im Nachkriegsbau",
+      "html": "<p>In Steilshoop und in den Siedlungen in Eilbek geht es oft um eine einzelne Wohnung mit Kellerraum. Über den Aufwand entscheiden der Aufzug, der Weg durch den Innenhof und die Entfernung zum nächsten Halteplatz. Diese drei Punkte prüfen wir beim Termin vor Ort. Danach bleibt der Preis, wie er ist, solange nichts dazukommt.</p><p>Gebäude aus den 1960er- und 1970er-Jahren können noch Bauteile mit Asbest enthalten, etwa alte Nachtspeicheröfen. Wir räumen um solche Teile herum. Den Ausbau übernimmt ein zugelassener Fachbetrieb.</p>"
+    },
+    {
+      "h2": "Einfamilienhaus mit Garage und Garten",
+      "html": "<p>In den Walddörfern, in Sasel oder Poppenbüttel steht oft ein ganzes Haus zur Räumung an: Wohnräume, Keller, Dachboden, Garage und manchmal noch ein Schuppen. Je nach Menge erledigen wir das an einem Tag oder an mehreren Tagen hintereinander. Hat das Haus eine Einfahrt, kann der Transporter oft direkt auf dem Grundstück stehen. Ein Halteverbot ist dann nicht nötig. Für sehr große Haushaltsauflösungen arbeiten wir mit <a href=\"https://hafenraeumer.de\" rel=\"nofollow\">HafenRäumer</a> zusammen.</p><p>Gartenabfälle und alte Lauben zählen in Hamburg nicht zum Sperrmüll. Wenn auch Beete, Hecken und Laube verschwinden sollen, hilft die <a href=\"gartenraeumung-hamburg.html\">Gartenräumung</a>.</p>"
+    },
+    {
+      "h2": "Vier Recyclinghöfe in Wandsbek",
+      "html": "<p>Die Stadtreinigung hat in Wandsbek vier Recyclinghöfe:</p><ul><li><strong>Hummelsbüttel:</strong> Lademannbogen 32, 22339 Hamburg</li><li><strong>Steilshoop:</strong> Schwarzer Weg 10, 22309 Hamburg, keine Anlieferung von Gewerbe</li><li><strong>Sasel:</strong> Volksdorfer Weg 196, 22393 Hamburg, vom 1. September bis 5. Dezember nur von der Westseite erreichbar</li><li><strong>Wandsbek:</strong> Wilma-Witte-Stieg 6, 22047 Hamburg</li></ul><p>Hummelsbüttel und Wandsbek haben werktags bis 19 Uhr geöffnet, Steilshoop und Sasel bis 17 Uhr (hamburg.de, Stand Oktober 2026). Privat geben Sie dort Möbel bis zwei Meter Länge ab, Elektroschrott kostenlos. Gut erhaltene Möbel müssen nicht in den Container. Das Gebrauchtkaufhaus Stilbruch in der Helbingstraße 63 arbeitet mit der Stadtreinigung zusammen und verkauft Möbel, die aus dem Sperrmüll gerettet wurden.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Unsere Mutter zieht aus ihrer Wohnung in Steilshoop ins Pflegeheim. Können Sie helfen?",
+      "a": "Ja. Zuerst legen Sie fest, was mitgeht oder in der Familie bleibt. Den Rest räumen wir, den Kellerraum eingeschlossen, und übergeben die Wohnung besenrein, bereit für die Rückgabe an die Vermietung."
+    },
+    {
+      "q": "Ist Wohldorf-Ohlstedt für Sie nicht zu weit weg?",
+      "a": "Nein. Für die Besichtigung kommen wir unter der Woche ab 16:30 Uhr oder samstags ab 9 Uhr. Wenn Ihnen das lieber ist, reicht für die erste Einschätzung ein Videoanruf."
+    },
+    {
+      "q": "Lohnt sich für ein paar Möbel nicht die Sperrmüllabfuhr?",
+      "a": "Oft schon. Die Stadtreinigung holt bis 8 m³ für 35 Euro ab (Stand 25.10.2026). Zur telefonischen Bestellung halten Sie Personalausweis oder Reisepass mit Meldebestätigung bereit. Kommen Kisten, volle Säcke oder viel Kleinkram dazu, nimmt sie das nicht mit. Dann lohnt sich eine Entrümpelung."
+    },
+    {
+      "q": "Warum fahren Sie nicht zum Recyclinghof Steilshoop?",
+      "a": "Der Hof nimmt keine Anlieferungen von Gewerbebetrieben an. Wir entsorgen deshalb über andere Wege. Für Sie ändert das nichts, die Entsorgung steckt im Festpreis."
+    }
+  ],
+  "sources": [
+    {
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung Hamburg (12 Höfe mit Adressen und Öffnungszeiten; Steilshoop keine Gewerbeanlieferung; Sasel 01.09.–05.12. nur von Westen; Gewerbe nur kleinere Mengen; Elektroschrott kostenfrei; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe, gültig ab 01.07.2026 (Adressen mit PLZ; Sperrmüll max. 2 m lang; Kühlgeräte höchstens 2 Stück; Nachtspeichergeräte nur nach telefonischer Voranmeldung)",
+      "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "hamburg.de: Sperrmüll entsorgen – Standard 35 € bis 8 m³, 5 € je weiterem m³, Zerlegeservice 7,50 € je Mitarbeiter und Viertelstunde, SPRINT +78 € (max. 10 m³), Tel. 040 2576-2576, Ausweis nötig, schonende Abfuhr; kein Sperrmüll: Gewerbeabfälle, gefüllte Säcke/Kisten/Kartons, Gartenabfälle, Gartenlauben, Außenhölzer, Bauschutt (Stand 25.10.2026)",
+      "url": "https://www.hamburg.de/service/info/11279820/"
+    },
+    {
+      "title": "BAuA, BBSR, UBA: Leitlinie für die Asbesterkundung (2020), u. a. Nachtspeicheröfen",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/421/publikationen/leitlinie_asbesterkundung_der_bob_2020-web.pdf"
+    },
+    {
+      "title": "hamburg.de: Stadtteile im Bezirk Wandsbek (Eilbek Nachkriegs-Siedlungsbau; Sasel viele Einfamilienhäuser; Marienthal Einfamilienhäuser und Villen; Bergstedt, Volksdorf Reetdachhäuser; Duvenstedt, Lemsahl-Mellingstedt Walddörfer; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-wandsbek"
+    },
+    {
+      "title": "hamburg.de: Steilshoop (Plattenbau-Siedlung der 1970er nördlich der Steilshooper Allee, Blöcke ringförmig um begrünte Innenhöfe; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-wandsbek/steilshoop-376922"
+    },
+    {
+      "title": "Hamburg Tourismus: Stilbruch Wandsbek, Helbingstraße 63 (Gebrauchtkaufhaus, Partner der Stadtreinigung, Möbel aus dem Sperrmüll)",
+      "url": "https://www.hamburg-tourism.de/shoppen-geniessen/shoppen-in-hamburg/stilbruch-wandsbek"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026 (Agent). Besichtigungszeiten, Rückmeldung in einem Werktag, Festpreis inkl. Abtransport/Entsorgung und Partner HafenRäumer wie in LEISTUNG_ORT_ANLEITUNG.md.",
+    "Sasel: Zufahrt nur von Westen gilt laut hamburg.de vom 01.09. bis 05.12. – nach dem 05.12.2026 den Listenpunkt prüfen und ggf. entfernen.",
+    "Stilbruch: nur der Standort Wandsbek ist belegt (hamburg-tourism.de); stilbruch.de war nicht abrufbar. Öffnungszeiten bewusst weggelassen.",
+    "FAQ Steilshoop: „über andere Wege“ entsorgen – bitte konkret bestätigen, wie T&A entsorgt (Container, Entsorgungsfachbetrieb)."
+  ]
+}
