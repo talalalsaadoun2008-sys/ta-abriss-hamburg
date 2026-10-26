@@ -263,8 +263,17 @@
     {"slug": "abriss-bordesholm", "name": "Bordesholm", "kreis": "Kreis Rendsburg-Eckernförde", "land": "Schleswig-Holstein"},
     {"slug": "abriss-luedersdorf", "name": "Lüdersdorf", "kreis": "Landkreis Nordwestmecklenburg", "land": "Mecklenburg-Vorpommern"},
     {"slug": "abriss-schoenberg-mecklenburg", "name": "Schönberg (Mecklenburg)", "kreis": "Landkreis Nordwestmecklenburg", "land": "Mecklenburg-Vorpommern"},
+    {"slug": "abriss-tarmstedt", "name": "Tarmstedt", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
     {"slug": "abriss-wattenbek", "name": "Wattenbek", "kreis": "Kreis Rendsburg-Eckernförde", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-vellahn", "name": "Vellahn", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"}
+    {"slug": "abriss-selmsdorf", "name": "Selmsdorf", "kreis": "Landkreis Nordwestmecklenburg", "land": "Mecklenburg-Vorpommern"},
+    {"slug": "abriss-nortorf", "name": "Nortorf", "kreis": "Kreis Rendsburg-Eckernförde", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-burg-dithmarschen", "name": "Burg (Dithmarschen)", "kreis": "Kreis Dithmarschen", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-vellahn", "name": "Vellahn", "kreis": "Landkreis Ludwigslust-Parchim", "land": "Mecklenburg-Vorpommern"},
+    {"slug": "abriss-sottrum", "name": "Sottrum", "kreis": "Landkreis Rotenburg (Wümme)", "land": "Niedersachsen"},
+    {"slug": "abriss-wietzendorf", "name": "Wietzendorf", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
+    {"slug": "abriss-bosau", "name": "Bosau", "kreis": "Kreis Ostholstein", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ascheberg-holstein", "name": "Ascheberg (Holstein)", "kreis": "Kreis Plön", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-ottersberg", "name": "Ottersberg", "kreis": "Landkreis Verden", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
