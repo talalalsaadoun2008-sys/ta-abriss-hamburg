@@ -517,10 +517,14 @@ def render_footer(ctx, current, on_home, fab_href):
     <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a> · <a href="https://hinnerk-entruempelung.de/">Hinnerk – Entrümpelung Hamburg</a></p>
   </div>
 ''' + "\n".join(cols) + '\n</div></footer>']
-    if fab_href:  # Handy: feste Leiste „Anrufen“ + „Anfrage“; PC: nur der schwebende Anfrage-Knopf
-        out.append(f'\n<div class="fab-bar"><div class="fab">'
-                   f'<a class="btn alt fab-tel" href="tel:{esc(f["telefon_link"])}" aria-label="Anrufen: {esc(f["telefon"])}">'
-                   f'{PHONE_SVG}Anrufen</a><a class="btn alt fab-wa" href="{esc(wa_link(f))}" target="_blank" rel="noopener" aria-label="WhatsApp: {esc(f["telefon"])}">{CHAT_SVG}WhatsApp</a><a class="btn fab-req" href="{esc(fab_href)}">Anfrage {ARR}</a></div></div>')
+    # Kontaktleiste auf jeder Seite und jeder Bildschirmgröße, immer sichtbar: Anrufen, WhatsApp, Anfrage.
+    # Seiten ohne eigenes Formular verlinken „Anfrage“ auf das Formular der Startseite.
+    req = fab_href or ctx.home_link("anfrage", on_home)
+    out.append(f'\n<div class="fab-bar"><div class="fab">'
+               f'<a class="btn alt fab-tel" href="tel:{esc(f["telefon_link"])}" aria-label="Anrufen: {esc(f["telefon"])}">'
+               f'{PHONE_SVG}Anrufen<span class="fab-num">&nbsp;{esc(f["telefon"])}</span></a>'
+               f'<a class="btn alt fab-wa" href="{esc(wa_link(f))}" target="_blank" rel="noopener" aria-label="WhatsApp: {esc(f["telefon"])}">{CHAT_SVG}WhatsApp</a>'
+               f'<a class="btn fab-req" href="{esc(req)}">Anfrage {ARR}</a></div></div>')
     return "".join(out)
 
 
@@ -1202,7 +1206,7 @@ def render_legal(ctx, entry, fragment):
     body = "\n\n".join([
         render_header(ctx, entry["slug"], False, ctx.home_link("anfrage", False)),
         f'<main id="start" class="wrap legal"><div>\n{ctx.fix_home_links(fragment.strip())}\n</div></main>',
-        render_footer(ctx, entry["slug"], False, None),
+        render_footer(ctx, entry["slug"], False, ctx.home_link("anfrage", False)),
     ])
     return doc(head, body, f"src/legal/{entry['slug']}.html")
 
@@ -1224,7 +1228,7 @@ def render_404(ctx):
       <li><a href="{ctx.home_link("anfrage", False)}">Kostenlose Besichtigung anfragen</a></li>
 </ul>
 </div></main>''',
-        render_footer(ctx, "404", False, None),
+        render_footer(ctx, "404", False, ctx.home_link("anfrage", False)),
     ])
     out = doc(head, body, "src/build.py (render_404)")
     if not ctx.preview:  # GitHub zeigt die Seite unter jeder falschen Adresse, auch /a/b/c – daher Pfade ab Wurzel

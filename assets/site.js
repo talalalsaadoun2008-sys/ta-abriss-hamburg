@@ -79,20 +79,7 @@
     });
   })();
 
-  /* Schnellkontakt (.fab: Handy = Leiste „Anrufen“ + „Anfrage“, PC = Anfrage-Knopf):
-     sichtbar nach dem Hero, aus am Kontaktbereich */
-  (function(){
-    var fab = $('.fab'), hero = $('.hero, .subhero'), contact = document.getElementById('anfrage'), tick = false;
-    if (!fab || !hero) return;
-    function sync(){
-      var past = hero.getBoundingClientRect().bottom < 0;
-      var atForm = contact ? contact.getBoundingClientRect().top < innerHeight * 0.6 : false;
-      fab.classList.toggle('on', past && !atForm);
-    }
-    addEventListener('scroll', function(){ if (!tick){ tick = true; requestAnimationFrame(function(){ sync(); tick = false; }); } }, {passive: true});
-    addEventListener('resize', sync);
-    sync();
-  })();
+  /* Schnellkontakt (.fab): Leiste „Anrufen“ / „WhatsApp“ / „Anfrage“ ist per CSS immer sichtbar – kein Skript nötig */
 
   /* Menü mit drei Strichen */
   (function(){
