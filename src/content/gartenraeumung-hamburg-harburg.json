@@ -1,0 +1,95 @@
+{
+  "slug": "gartenraeumung-hamburg-harburg",
+  "type": "leistung_ort",
+  "leistung": "gartenraeumung-hamburg",
+  "bezirk": "abriss-hamburg-harburg",
+  "menu": "Gartenräumung Harburg",
+  "title": "Gartenräumung Harburg: Kleingarten räumen | T&A Abriss",
+  "description": "Kleingarten oder Hausgarten in Harburg räumen, vor der Wertermittlung. Festpreis inkl. Entsorgung.",
+  "label": "Gartenräumung · Bezirk Harburg",
+  "h1": "Gartenräumung in Harburg: Kleingarten vor der Wertermittlung",
+  "lead": "Südlich der Elbe gibt es Kleingartenvereine mit langer Geschichte, etwa in Wilstorf und Neuland, dazu Hausgärten von Eißendorf bis Neugraben-Fischbek. Wir räumen Parzellen und Gärten im ganzen Bezirk. Zwischen unserem Betrieb in der Dosestraße in Altona und Harburg liegen die Elbe und rund 12 km.",
+  "facts": [
+    "Rund 12 km von der Dosestraße",
+    "Räumen vor der Wertermittlung",
+    "Tragen bis zum Fahrzeug"
+  ],
+  "image": "garten",
+  "form_leistung": "Gartenräumung",
+  "form_ort": "Harburg",
+  "sections": [
+    {
+      "h2": "Kleingartenvereine im Hamburger Süden",
+      "html": "<p>Der Landesbund der Gartenfreunde führt eine eigene Bezirksgruppe Harburg. Im Branchenbuch von hamburg.de stehen für den Bezirk zum Beispiel der Gartenbauverein Wilstorf von 1924 am Freudenthalweg, der Gartenbauverein der Eisenbahner Harburg an der Elbe am Wohlersweg in Neuland und der Kleingartenverein Am Bremer Tor an der Bremer Straße. Dazu kommen Vereine wie Reiherhoop 1 von 1917, Elf Buchen und Am Stadtpark von 1928.</p><p>Viele dieser Vereine gibt es seit Jahrzehnten. Entsprechend alt sind manche Lauben, Zäune und Wege. Bei einem Pächterwechsel fällt deshalb oft mehr Rückbau an als in jüngeren Anlagen.</p>"
+    },
+    {
+      "h2": "Erst Auflagen erfüllen, dann wird bewertet",
+      "html": "<p>Die Reihenfolge ist wichtig. Kündigen Sie bis zum 30. Juni schriftlich beim Vorstand. Danach folgt die Inspektion: Findet die Kommission Mängel, schreibt sie diese ins Protokoll und setzt eine Frist. Erst wenn alles erledigt ist, ermitteln drei Wertermittler den Wert von Laube und Anpflanzungen. Diesen Betrag zahlt der Nachfolger.</p><p>Wer mit dem Ergebnis nicht einverstanden ist, kann über den Vorstand eine gebührenpflichtige Nachbewertung beantragen. So beschreibt es der Verein Püttkuhl auf seiner Website. Die Aufwandsentschädigung der Kommission zahlt der abgebende Pächter. Werden die Mängel nicht beseitigt, droht die komplette Räumung auf seine Kosten. Für Sie heißt das: Je früher die Auflagen erledigt sind, desto eher kann bewertet und übergeben werden.</p>"
+    },
+    {
+      "h2": "Was wir in Harburger Gärten räumen",
+      "html": "<ul><li><strong>Bauten über dem Maß:</strong> Anbauten, die die Laube über 24 m² inklusive Freisitz bringen, oder ein zweites Gartenhaus.</li><li><strong>Wege und Fundamente:</strong> Betonwege und Betonplatten, die im Kleingarten nicht erlaubt sind, dazu alte Gehwegplatten.</li><li><strong>Gehölze:</strong> zu hohe Hecken, wild gewachsene Sträucher und Wurzeln, im Kleingarten nur zwischen 1. Oktober und 1. März.</li><li><strong>Kram:</strong> Möbel, Kanister, Gartengeräte und Kisten, die der Nachfolger nicht haben will.</li></ul><p>Im Hausgarten, etwa in Marmstorf, Sinstorf oder Hausbruch, nehmen wir auf Wunsch Schuppen, Carport oder Terrasse mit. Mehr dazu unter <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>. Graue Wellplatten auf dem Dach? Dann besteht Verdacht auf Asbest. Die baut ein zugelassener Fachbetrieb aus, nicht wir.</p>"
+    },
+    {
+      "h2": "Entsorgen in Harburg: zwei Recyclinghöfe",
+      "html": "<p>Die Stadtreinigung hat im Bezirk zwei Höfe: Neuländer Kamp 6 in Harburg und Am Aschenland 11 in Neugraben-Fischbek. Behandeltes Laubenholz, also Altholz der Kategorie A IV, nimmt nur der Hof am Neuländer Kamp an. Grünschnitt geben Privathaushalte in haushaltsüblicher Menge kostenlos ab, laut Preisliste 2026. Asbestzement nimmt die Stadtreinigung nur nach Beratung und Voranmeldung an.</p><p>Über die Sperrmüll-Abfuhr geht weder die Laube noch der Grünschnitt. Beides ist in Hamburg ausdrücklich kein Sperrmüll. Wenn wir räumen, ist die Entsorgung im Festpreis schon enthalten.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Sollen wir vor oder nach der Wertermittlung räumen lassen?",
+      "a": "Vorher. Die Kommission bewertet erst, wenn die Auflagen aus der Inspektion erledigt sind. Räumen Sie dabei nur, was im Protokoll steht. Was bewertet werden soll, bleibt stehen."
+    },
+    {
+      "q": "Wie lange dauert es, bis Sie in Harburg einen Preis nennen?",
+      "a": "Ihre Anfrage beantworten wir am selben oder am nächsten Werktag. Nach der kostenlosen Besichtigung vor Ort oder per Video bekommen Sie einen Festpreis inklusive Abtransport und Entsorgung."
+    },
+    {
+      "q": "Welcher Hof in Harburg nimmt altes Laubenholz an?",
+      "a": "Altholz der Kategorie A IV nimmt im Bezirk nur der Recyclinghof Neuländer Kamp 6 an. Am Aschenland in Neugraben-Fischbek geht das laut Preisliste 2026 nicht."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Landesbund der Gartenfreunde in Hamburg: Bezirksgruppen (u. a. Harburg)",
+      "url": "https://www.gartenfreunde-hh.de/ueberuns/struktur/bezirksgruppen/"
+    },
+    {
+      "title": "hamburg.de Branchenbuch: Kleingarten, Seite 1 (Gartenbauverein Wilstorf von 1924, Freudenthalweg; Eisenbahner Harburg an der Elbe, Wohlersweg, Neuland; Reiherhoop 1 v. 1917; Elf Buchen)",
+      "url": "https://www.hamburg.de/branchenbuch/hamburg/10342335/n0/"
+    },
+    {
+      "title": "hamburg.de Branchenbuch: Kleingarten, Seite 2 (Am Bremer Tor, Bremer Straße 148, Harburg; Am Stadtpark v. 1928)",
+      "url": "https://www.hamburg.de/branchenbuch/hamburg/10342335/n20/"
+    },
+    {
+      "title": "Landesbund der Gartenfreunde: Richtlinie Inspektion und Wertermittlung 2024 (Kündigung bis 30.06., Inspektion vor Wertermittlung, drei Wertermittler, Aufwandsentschädigung zahlt abgebender Pächter, vollständige Räumung bei Nichterfüllung)",
+      "url": "https://gartenfreunde-hh.de/downloads/1928/2024-Richtlinie-Inspektion-Wertermittlung-.pdf"
+    },
+    {
+      "title": "Gartenfreunde Püttkuhl e.V.: Kündigung und Pächterwechsel (gebührenpflichtige Nachbewertung über den Vorstand)",
+      "url": "https://puettkuhl.gartenfreunde-hh.de/Info/Kuendigung-Paechterwechsel/"
+    },
+    {
+      "title": "Merkblatt zur Nutzung von Kleingärten in Hamburg 01/2021 (Laube max. 24 m², ein Gebäude, kein Beton für Wege, Rodung 01.10.–01.03.)",
+      "url": "https://www.gartenfreunde-hh.de/downloads/1326/Merkblatt-zur-Nutzung-von-Kleingaerten-in-Hamburg-012021.pdf"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe ab 01.07.2026 (Harburg Neuländer Kamp 6 mit Altholz A IV; Neugraben-Fischbek Am Aschenland 11; Grünabfall privat haushaltsübliche Menge; Asbestzement nach Beratung und Voranmeldung)",
+      "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "hamburg.de: Sperrmüll entsorgen (Gartenlauben und Grünabfälle kein Sperrmüll)",
+      "url": "https://www.hamburg.de/service/info/11279820/"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung Hamburg",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Vereinsnamen aus dem hamburg.de-Branchenbuch (Kategorie Kleingarten). Reiherhoop, Elf Buchen und Am Stadtpark haben dort PLZ 21073/21075/21077 (Harburg), aber keinen Stadtteil.",
+    "Nicht verwendet: „Bezirksgruppe Harburg 3.100 Parzellen an 27 Standorten“ (nur auf unser-kgv-online.de gefunden, keine Primärquelle).",
+    "Püttkuhl ist ein Verein, dessen Stadtteil nicht angegeben ist; er wird nur als Beleg für das allgemeine Verfahren genannt, nicht als Harburger Verein."
+  ]
+}
