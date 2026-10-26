@@ -1,0 +1,99 @@
+{
+  "slug": "pflaster-entfernen-hamburg-bergedorf",
+  "type": "leistung_ort",
+  "leistung": "pflaster-entfernen-hamburg",
+  "bezirk": "abriss-hamburg-bergedorf",
+  "menu": "Pflaster entfernen Bergedorf",
+  "title": "Pflaster entfernen Hamburg-Bergedorf & Vierlande | T&A Abriss",
+  "description": "Hofpflaster, Terrassen und Plattenwege in Bergedorf und den Vier- und Marschlanden entfernen lassen.",
+  "label": "Pflaster entfernen · Bezirk Bergedorf",
+  "h1": "Pflaster entfernen in Bergedorf und den Vier- und Marschlanden",
+  "lead": "Hofpflaster in Kirchwerder, Terrasse in Lohbrügge, Plattenweg in Neuallermöhe: Wir nehmen Pflaster und Platten im ganzen Bezirk Bergedorf auf und entsorgen sie. Von unserem Sitz in Altona sind es rund 22 km, deshalb planen wir die Termine hier gezielt.",
+  "facts": [
+    "Rund 22 km von Altona",
+    "Termine nach Absprache",
+    "Festpreis inkl. Entsorgung"
+  ],
+  "image": "pflaster",
+  "form_leistung": "Pflaster entfernen",
+  "form_ort": "Bergedorf",
+  "sections": [
+    {
+      "h2": "Stadt an der Bille, Dörfer in der Marsch",
+      "html": "<p>Bergedorf hat 14 Stadtteile. Neben Bergedorf selbst, Lohbrügge und Neuallermöhe gehören dazu die Vier- und Marschlande mit Dörfern wie Kirchwerder, Curslack, Altengamme, Ochsenwerder und Reitbrook. Dort bestimmen Höfe, Felder und Gartenbau die Landschaft.</p><p>Die Anfahrt ist länger als in die inneren Bezirke. Besichtigungen in Bergedorf legen wir darum auf feste Termine, unter der Woche ab 16:30 Uhr oder am Samstag ab 9 Uhr. Für eine erste Einschätzung geht auch ein Videoanruf. Zurück melden wir uns spätestens am folgenden Werktag.</p>"
+    },
+    {
+      "h2": "Wasserschutzgebiet Curslack/Altengamme: Folgen für die Förderung",
+      "html": "<p>Im Südosten des Bezirks liegt das Wasserschutzgebiet Curslack/Altengamme. Es wurde 1997 festgesetzt und ist rund 24 km² groß. Es umfasst Curslack fast vollständig, große Teile von Altengamme und den südöstlichen Teil des Stadtteils Bergedorf.</p><p>Das spielt eine Rolle, wenn Sie einen Zuschuss aus dem RISA-Förderprogramm der Stadt möchten. Teilentsiegelungen sind in Wasserschutzgebieten laut Förderrichtlinie nicht förderfähig. Wer dort nur auf einen durchlässigeren Belag umstellt, geht also leer aus. Eine vollständige Entsiegelung ab 10 m² mit neuem Bodenaufbau und Begrünung kann dagegen gefördert werden, für Privatpersonen mit der Hälfte der förderfähigen Kosten und bis 25.000 Euro je Grundstück.</p><p>Der Antrag geht an die IFB Hamburg, und zwar bevor Sie einen Auftrag vergeben. Schon ein unterschriebener Vertrag zählt nach der Richtlinie als Beginn der Maßnahme.</p>"
+    },
+    {
+      "h2": "Hofflächen auf dem Land, Terrassen in der Stadt",
+      "html": "<p>Auf einem Hof in den Vier- und Marschlanden ist oft Platz für einen Container direkt auf dem Grundstück. Eine Erlaubnis für die Straße entfällt dann. Ob sich ein Container lohnt oder unser Fahrzeug reicht, hängt von der Menge ab. Das klären wir bei der Besichtigung.</p><p>Im Zentrum von Bergedorf oder in Lohbrügge sieht das anders aus. Muss der Container auf Gehweg oder Fahrbahn, erteilt das Bezirksamt Bergedorf die Sondernutzungserlaubnis, nach dem städtischen Merkblatt ab 35 Euro. Für ein Halteverbot rechnen Sie in Hamburg mit mindestens 14 Tagen Vorlauf.</p><p>Liegt die Fläche hinter dem Haus und kommt kein Fahrzeug heran, tragen wir Platten und Steine von Hand nach vorn. Bereits aufgenommene und gestapelte Platten laden wir auch einfach auf.</p>"
+    },
+    {
+      "h2": "Kleine Mengen: Recyclinghof am Kampweg",
+      "html": "<p>Der einzige Recyclinghof der Stadtreinigung im Bezirk liegt am Kampweg 9 in Bergedorf. Er nimmt mineralischen Bauschutt bis 500 Liter je Anlieferung an, laut Preisliste 2026 gegen Gebühr. Aus Kirchwerder oder Altengamme können daraus mit schweren Platten im Kofferraum schnell mehrere Fahrten werden. Zur Orientierung: Eine Betonplatte im Maß 50 × 50 × 5 cm wiegt etwa 26 bis 29 Kilo.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Lohnt sich die Anfahrt nach Kirchwerder für ein paar Platten?",
+      "a": "Schicken Sie uns ein Foto und die ungefähre Zahl der Platten. Dann bekommen Sie einen Festpreis, in dem Abtransport und Entsorgung enthalten sind. Bei sehr kleinen Mengen kann der Recyclinghof am Kampweg die günstigere Lösung sein."
+    },
+    {
+      "q": "Unser Haus liegt in Curslack. Gibt es Förderung, wenn wir Rasengitter verlegen?",
+      "a": "Wahrscheinlich nicht. Curslack liegt fast vollständig im Wasserschutzgebiet, und dort fördert die Stadt keine Teilentsiegelungen. Wird die Fläche dagegen ganz aufgebrochen und anschließend begrünt, ist ein Zuschuss möglich. Fragen Sie im Zweifel bei der IFB Hamburg nach."
+    },
+    {
+      "q": "Wird die längere Anfahrt nach Bergedorf extra berechnet?",
+      "a": "Nein, nicht nachträglich. Alle Kosten stehen vorher im schriftlichen Festpreis, auch Abtransport und Entsorgung. Solange der Umfang gleich bleibt, kommt nichts dazu."
+    }
+  ],
+  "sources": [
+    {
+      "title": "hamburg.de: Stadtteile im Bezirk Bergedorf (14 Stadtteile, Vier- und Marschlande)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-bergedorf"
+    },
+    {
+      "title": "hamburg.de (BUKEA): Wasserschutzgebiet Curslack/Altengamme (1997, ca. 24 km², Curslack fast vollständig, große Teile Altengamme, südöstlicher Teil Bergedorf)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/wasser/grundwasser/curslack-start-1102032"
+    },
+    {
+      "title": "IFB Hamburg: Förderrichtlinie zur Entsiegelung von privaten Wohn- und Gewerbegrundstücken, gültig ab 09.09.2024 (keine Teilentsiegelungen in Wasserschutzgebieten, 50 % Privatpersonen, max. 25.000 €, ab 10 m², Auftragsvergabe gilt als Beginn)",
+      "url": "https://ifbhh.de/api/services/document/6027"
+    },
+    {
+      "title": "hamburg.de (BUKEA): RISA-Förderprogramm „Entsiegelung“",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/boden-und-geologie/bodenschutz/foerderprogramm-zur-entsiegelung-von-flaechen-973964"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe (Bergedorf Kampweg 9; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe 2026 (Bauschutt max. 500 Liter je Anlieferung)",
+      "url": "https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf"
+    },
+    {
+      "title": "Hamburg: Merkblatt Sondernutzung (Container, Mindestgebühr 35,00 €)",
+      "url": "https://www.hamburg.de/resource/blob/76694/27be0a4bf862276b10f49b9ebf5155e5/merkblatt-sondernutzung-data.pdf"
+    },
+    {
+      "title": "Halteverbotszone beantragen – Landesredaktion Hamburg (FIM-Portal, mindestens 14 Tage vorher)",
+      "url": "https://www.fimportal.de/api/v0/leistung-stammtexte/S100002/S1000020010000001683/landesredaktion/de/pdf"
+    },
+    {
+      "title": "toom: Betonplatte grau 50 × 50 × 5 cm, 25,8 kg",
+      "url": "https://toom.de/p/betonplatte-grau-50-x-50-x-5-cm/4340355"
+    },
+    {
+      "title": "Bauhaus: EHL Gehwegplatte 50 × 50 × 5 cm, 28,8 kg",
+      "url": "https://www.bauhaus.info/betonplatten/ehl-gehwegplatte/p/13982156"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Abpflastern-Zahl für Bergedorf (125 m²) bewusst nicht verwendet (laufender Zwischenstand).",
+    "FAQ zur Anfahrt folgt der Aussage auf abriss-hamburg-bergedorf.json (keine nachträgliche Berechnung, Festpreis).",
+    "Rasengitter als Beispiel für Teilentsiegelung ist unsere Auslegung der Richtlinie („Belagsänderung“)."
+  ]
+}
