@@ -7,7 +7,9 @@ Eine Seite, die durchfällt, darf NICHT veröffentlicht werden.
 Geprüft wird je Seite:
 - Pflichtfelder, 3–5 Abschnitte, 3–4 FAQ, Text 380–950 Wörter (inkl. FAQ)
 - mindestens 4 Quellen von mindestens 3 verschiedenen Websites
-- Bauaufsicht und die richtige Landesbauordnung werden genannt
+- Bauaufsicht und die richtige Landesbauordnung werden genannt (nicht bei type "leistung_ort")
+- Seiten „Leistung in einem Bezirk“ (type "leistung_ort") werden zusätzlich mit ihrer Leistungsseite
+  (Feld "leistung") und mit allen anderen leistung_ort-Seiten verglichen
 - kein Satz (ab 8 Wörtern) steht fast gleich auf einer anderen Seite (Ortsnamen werden dafür neutralisiert)
 - höchstens 8 % der 8-Wort-Folgen kommen auf irgendeiner anderen einzelnen Seite vor
 - kein Satz klingt wie Vorlage: sehr ähnlich (≥ 80 %) auf einer anderen Seite oder ähnlich (≥ 55 %) auf zwei anderen
@@ -68,7 +70,12 @@ def grams(sentence, k=3):
     return {" ".join(w[i:i + k]) for i in range(len(w) - k + 1)}
 
 
-def near_dupes(slug, t, index, sent_grams):
+def relevant(c, other, kinds):
+    """Leistungsseiten zählen nur als Vergleich für ihre eigenen Bezirks-Varianten."""
+    return kinds.get(other) != "leistung" or (c.get("type") == "leistung_ort" and c.get("leistung") == other)
+
+
+def near_dupes(slug, t, index, sent_grams, ok=lambda other: True):
     """Fast gleiche Sätze (Jaccard der 3-Wort-Folgen): >= 0,8 mit einer anderen Seite
     oder >= 0,55 mit zwei oder mehr anderen Seiten = klingt nach Vorlage."""
     out = []
@@ -83,7 +90,7 @@ def near_dupes(slug, t, index, sent_grams):
         pages_hi, pages_mid = set(), set()
         for sid, n in hits.items():
             other, og = sent_grams[sid]
-            if other == slug:
+            if other == slug or not ok(other):
                 continue
             j = n / len(g | og)
             if j >= 0.8:
@@ -96,7 +103,7 @@ def near_dupes(slug, t, index, sent_grams):
     return out
 
 
-def check(slug, corpus, index=None, sent_grams=None):
+def check(slug, corpus, index=None, sent_grams=None, kinds=None):
     errs = []
     p = CONTENT / f"{slug}.json"
     if not p.exists():
@@ -124,12 +131,14 @@ def check(slug, corpus, index=None, sent_grams=None):
         kurz, lang = BAUORDNUNG[entry["land"]]
         if kurz not in t and lang not in t:
             errs.append(f"Bauordnung ({kurz}) nicht genannt")
-    if "Bauaufsicht" not in t and "Bauamt" not in t:
+    if c.get("type") != "leistung_ort" and "Bauaufsicht" not in t and "Bauamt" not in t:
         errs.append("zuständige Bauaufsicht nicht genannt")
     own = shingles(t)
     own_sent = {norm(s).strip() for s in sentences(t)}
+    kinds = kinds or {}
+    ok = lambda other: relevant(c, other, kinds)
     for other, (osh, osent) in corpus.items():
-        if other == slug:
+        if other == slug or not ok(other):
             continue
         same = own_sent & osent
         if same:
@@ -137,15 +146,16 @@ def check(slug, corpus, index=None, sent_grams=None):
         if own and len(own & osh) / len(own) > 0.08:
             errs.append(f"{len(own & osh) / len(own):.0%} gleiche Wortfolgen mit {other} (max. 8 %)")
     if index is not None:
-        errs += near_dupes(slug, t, index, sent_grams)
+        errs += near_dupes(slug, t, index, sent_grams, ok)
     return errs
 
 
 def main(slugs):
-    corpus, index, sent_grams = {}, {}, []
+    corpus, index, sent_grams, kinds = {}, {}, [], {}
     for p in CONTENT.glob("*.json"):
         c = json.loads(p.read_text(encoding="utf-8"))
-        if c.get("type") in ("umland", "stadtteil", "bezirk"):
+        kinds[p.stem] = c.get("type")
+        if c.get("type") in ("umland", "stadtteil", "bezirk", "leistung_ort", "leistung"):
             t = text_of(c)
             corpus[p.stem] = (shingles(t), {norm(s).strip() for s in sentences(t)})
             for sen in sentences(t):
@@ -157,7 +167,7 @@ def main(slugs):
                         index.setdefault(x, []).append(sid)
     bad = 0
     for s in slugs:
-        e = check(s, corpus, index, sent_grams)
+        e = check(s, corpus, index, sent_grams, kinds)
         print(("FEHLER " if e else "ok     ") + s + ("" if not e else "\n  - " + "\n  - ".join(e)))
         bad += bool(e)
     print(f"{len(slugs) - bad} bestanden, {bad} durchgefallen")

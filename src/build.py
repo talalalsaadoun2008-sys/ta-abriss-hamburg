@@ -19,6 +19,16 @@ verlinkt (Menü, Footer, Chips, Übersicht, Sitemap; Links im Inhalt werden zu r
 
 Richtpreise stehen in src/preise.json (optional). Nur Leistungsseiten mit eingetragenen Zahlen
 bekommen vor dem Kontaktformular einen Abschnitt „Richtpreise“ (Tabelle, mit JavaScript Rechner).
+
+Leistung in einem Bezirk (type "leistung_ort", z. B. entruempelung-hamburg-altona.html):
+  Diese Seiten stehen NICHT in src/site.json. Der Build findet sie über die Inhaltsdatei:
+  src/content/<slug>.json mit "type": "leistung_ort", "leistung": <Slug einer Leistung aus site.json>,
+  "bezirk": <Slug eines Bezirks aus site.json> und den üblichen Pflichtfeldern (REQUIRED) plus "sources".
+  Slug-Regel: <leistung ohne "-hamburg">-<bezirk ohne "abriss-">,
+  z. B. entruempelung-hamburg + abriss-hamburg-altona -> entruempelung-hamburg-altona.
+  Automatisch verlinkt (nur vorhandene Seiten): Leistungsseite („<Leistung> in Ihrem Bezirk“),
+  Bezirksseite („Weitere Leistungen in <Bezirk>“), die Seite selbst (Leistung, Bezirk, andere Bezirke),
+  sitemap.xml und llms.txt – nicht in Menü und Footer. Anleitung: src/content/LEISTUNG_ORT_ANLEITUNG.md
 """
 import argparse
 import datetime
@@ -35,7 +45,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 
-TYPES = ("leistung", "bezirk", "stadtteil", "umland", "ratgeber")
+LEISTUNG_ORT = "leistung_ort"  # Leistung in einem Bezirk, ohne Eintrag in site.json (siehe Kopf)
+TYPES = ("leistung", "bezirk", "stadtteil", "umland", "ratgeber", LEISTUNG_ORT)
 ORTSTYPEN = ("bezirk", "stadtteil", "umland")
 UEBERSICHT = "einsatzgebiet"  # erzeugte Übersichtsseite einsatzgebiet.html
 ABOUT = "ueber-uns"  # Über-uns-Seite: läuft als ratgeber, aber mit AboutPage-Daten und ohne Quellen-Pflicht
@@ -44,7 +55,7 @@ INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
 REQUIRED = ("slug", "type", "menu", "title", "description", "label", "h1", "lead", "facts",
             "image", "form_leistung", "form_ort", "sections", "faq")
-KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review", "note_stellen"}
+KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review", "note_stellen", "leistung", "bezirk"}
 MAX_WEITERE_ORTE = 8
 
 CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>'
@@ -143,6 +154,46 @@ class Site:
         for it in self.leistungen:
             if it.get("bild") not in self.bilder:
                 raise BuildError(f"site.json: Leistung {it['slug']}: 'bild' muss eines von {', '.join(self.bilder)} sein")
+        # Leistung in einem Bezirk: alle möglichen Slugs; Seiten kommen erst mit ihrer Inhaltsdatei dazu (register_lo)
+        self.rang = {it["slug"]: i for i, it in enumerate(self.leistungen + self.bezirke)}
+        self.lo_moeglich = {}
+        for le in self.leistungen:
+            for bz in self.bezirke:
+                lo = lo_slug(le["slug"], bz["slug"])
+                if lo in self.kind:
+                    raise BuildError(f"site.json: Slug {lo} ist für die Seite {le['name']} in {bz['name']} reserviert")
+                self.lo_moeglich[lo] = (le["slug"], bz["slug"])
+        self.leistung_orte = []  # Einträge {slug, name (= Bezirk), leistung, bezirk} der gefundenen Seiten
+
+    def register_lo(self, c, path, errors):
+        """Inhaltsdatei vom Typ leistung_ort als Seite anmelden (statt Eintrag in site.json). False bei Fehlern."""
+        where = path.name
+        e = lambda msg: errors.append(f"{where}: {msg}")
+        le, bz, slug = c.get("leistung"), c.get("bezirk"), c.get("slug")
+        ok = True
+        if self.kind.get(le) != "leistung":
+            e(f"'leistung' muss der Slug einer Leistung aus src/site.json sein (z. B. entruempelung-hamburg), ist {le!r}")
+            ok = False
+        if self.kind.get(bz) != "bezirk":
+            e(f"'bezirk' muss der Slug eines Bezirks aus src/site.json sein "
+              f"({', '.join(b['slug'] for b in self.bezirke)}), ist {bz!r}")
+            ok = False
+        if not ok:
+            return False
+        soll = lo_slug(le, bz)
+        if slug != soll or path.stem != soll:
+            e(f"slug und Dateiname müssen '{soll}' heißen (Leistung {le} + Bezirk {bz}; Regel: "
+              f"<leistung ohne '-hamburg'>-<bezirk ohne 'abriss-'>), sind slug {slug!r}, Datei {path.stem!r}")
+            return False
+        if slug in self.kind:
+            e(f"Seite {slug} gibt es schon")
+            return False
+        entry = {"slug": slug, "name": self.entry[bz]["name"], "leistung": le, "bezirk": bz}
+        self.kind[slug] = LEISTUNG_ORT
+        self.entry[slug] = entry
+        self.leistung_orte.append(entry)
+        self.leistung_orte.sort(key=lambda x: (self.rang[x["leistung"]], self.rang[x["bezirk"]]))
+        return True
 
     def bild_src(self, key):
         """Relativer Pfad eines Bildes aus 'bilder' (Schlüssel bleibt gleich, Dateiname steht in 'datei')."""
@@ -152,13 +203,19 @@ class Site:
         return self.base + self.bild_src(key)
 
     def content_slugs(self):
-        return [it["slug"] for it in self.leistungen + self.bezirke + self.ratgeber + self.stadtteile + self.umland]
+        return [it["slug"] for it in self.leistungen + self.leistung_orte + self.bezirke + self.ratgeber + self.stadtteile
+                + self.umland]
 
     def url(self, slug):
         return self.base + slug + ".html"
 
     def bezirk_of(self, stadtteil):
         return self.entry[stadtteil["bezirk"]]
+
+
+def lo_slug(leistung, bezirk):
+    """Slug der Seite „Leistung in einem Bezirk“: entruempelung-hamburg + abriss-hamburg-altona -> entruempelung-hamburg-altona."""
+    return leistung.removesuffix("-hamburg") + "-" + bezirk.removeprefix("abriss-")
 
 
 def internal_slug(site, href):
@@ -272,7 +329,7 @@ class Linker:
         slug = m.group(1)
         if slug in self.generated or slug == UEBERSICHT or self.site.kind.get(slug) == "recht":
             return None
-        if slug in self.site.kind:
+        if slug in self.site.kind or slug in self.site.lo_moeglich:
             self.pending.setdefault(slug, []).append(where.split(" ")[0])
             return None
         return f"Link {href}: Seite {slug}.html gibt es nicht (nicht in src/site.json)"
@@ -326,6 +383,25 @@ def validate(c, path, site, errors, warn):
             if not (isinstance(f, dict) and is_str(f.get("q")) and is_str(f.get("a"))):
                 e(f"faq[{i}] braucht 'q' und 'a'")
     st = c.get("stadtteile")
+    if c["type"] != LEISTUNG_ORT:
+        for k in ("leistung", "bezirk"):
+            if k in c:
+                warn(f"{where}: Feld '{k}' gibt es nur bei type '{LEISTUNG_ORT}' – wird ignoriert")
+    else:
+        if st:
+            warn(f"{where}: 'stadtteile' wird bei {LEISTUNG_ORT}-Seiten nicht angezeigt")
+        src = c.get("sources")
+        if not (isinstance(src, list) and src):
+            e(f"{LEISTUNG_ORT} braucht 'sources' (interne Belege für die lokalen Angaben, werden nicht angezeigt)")
+        else:
+            for i, s in enumerate(src, 1):
+                if not (isinstance(s, dict) and is_str(s.get("title")) and re.match(r"https?://", str(s.get("url", "")))):
+                    e(f"sources[{i}] braucht 'title' und eine http(s)-'url'")
+        le = site.entry.get(c.get("leistung"))
+        if le:
+            soll = le["name"].replace(" & ", " und ")
+            if soll in site.form_options and c["form_leistung"] != soll:
+                warn(f"{where}: form_leistung ist '{c['form_leistung']}', passend zur Leistung wäre '{soll}'")
     if c["type"] == "bezirk":
         if not (isinstance(st, list) and st and all(is_str(x) for x in st)):
             e("bezirk braucht 'stadtteile' (Liste mit Texten)")
@@ -387,6 +463,11 @@ class Ctx:
     def pages(self, items):
         return [x for x in items if self.has(x["slug"])]
 
+    def lo_pages(self, leistung=None, bezirk=None):
+        """Vorhandene Seiten „Leistung in einem Bezirk“, Reihenfolge wie Leistungen/Bezirke in site.json."""
+        return [x for x in self.site.leistung_orte if self.has(x["slug"])
+                and leistung in (None, x["leistung"]) and bezirk in (None, x["bezirk"])]
+
     def home_link(self, anchor, on_home):
         if on_home:
             return "#" + anchor
@@ -404,7 +485,7 @@ class Ctx:
         """Links auf Seiten aus site.json, für die es (noch) keinen Inhalt gibt, werden zu reinem Text."""
         def rep(m):
             slug = internal_slug(self.site, html.unescape(m.group(2)))
-            if slug and slug in self.site.kind and not self.has(slug):
+            if slug and (slug in self.site.kind or slug in self.site.lo_moeglich) and not self.has(slug):
                 return m.group(3)
             return m.group(0)
         return A_RE.sub(rep, text)
@@ -967,11 +1048,17 @@ def render_content_page(ctx, c):
     if kind in ORTSTYPEN and "abriss" not in data_page.lower():
         data_page = "Abriss " + data_page
     bezirk = s.bezirk_of(entry) if kind == "stadtteil" else None
+    lo_le = s.entry[entry["leistung"]] if kind == LEISTUNG_ORT else None  # Leistung und Bezirk der Seite
+    lo_bz = s.entry[entry["bezirk"]] if kind == LEISTUNG_ORT else None
 
     # Brotkrumen: (Name, Link auf der Seite, URL im JSON-LD)
     trail = [("Startseite", ctx.home, s.base)]
     if kind == "leistung":
         trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
+    elif kind == LEISTUNG_ORT:  # Startseite › Leistungen › Entrümpelung › Altona
+        trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
+        ok = ctx.has(lo_le["slug"])
+        trail.append((lo_le["name"], lo_le["slug"] + ".html" if ok else None, s.url(lo_le["slug"]) if ok else None))
     elif kind == "ratgeber" and slug != ABOUT:
         trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
     elif slug == ABOUT:
@@ -991,6 +1078,9 @@ def render_content_page(ctx, c):
                        areaServed={"@type": "City", "name": "Hamburg"}, url=url))
     elif kind == "bezirk":
         ld.append(dict(service, areaServed={"@type": "AdministrativeArea", "name": entry["gebiet"]}, url=url))
+    elif kind == LEISTUNG_ORT:
+        ld.append(dict(service, serviceType=lo_le["name"],
+                       areaServed={"@type": "AdministrativeArea", "name": lo_bz["gebiet"]}, url=url))
     elif kind == "stadtteil":
         ld.append(dict(service, areaServed={"@type": "Place", "name": "Hamburg-" + entry["name"],
                                             "containedInPlace": {"@type": "AdministrativeArea", "name": bezirk["gebiet"]}},
@@ -1028,10 +1118,17 @@ def render_content_page(ctx, c):
             st = stadtteil_page(ctx, slug, x)
             chips.append(f'<a class="chip-page" href="{esc(st["slug"])}.html">{esc(x)}</a>' if st else f"<span>{esc(x)}</span>")
         secs.append(f'<section>\n      <h2>Stadtteile im Bezirk {esc(entry["name"])}</h2>\n      <div class="chips">{"".join(chips)}</div>\n    </section>')
+    if kind == "bezirk" and ctx.lo_pages(bezirk=slug):
+        chips = "".join(f'<a class="chip-page" href="{esc(x["slug"])}.html">{esc(s.entry[x["leistung"]]["name"])}</a>'
+                        for x in ctx.lo_pages(bezirk=slug))
+        secs.append(f'<section>\n      <h2>Weitere Leistungen in {esc(entry["name"])}</h2>\n      <div class="chips">{chips}</div>\n    </section>')
     if kind == "umland" and c.get("stadtteile"):
         chips = "".join(f"<span>{esc(x)}</span>" for x in c["stadtteile"])
         secs.append(f'<section>\n      <h2>Ortsteile von {esc(entry["name"])}</h2>\n      <div class="chips">{chips}</div>\n    </section>')
-    if kind == "leistung" and ctx.pages(s.bezirke):
+    if kind == "leistung" and ctx.lo_pages(leistung=slug):  # eigene Seiten je Bezirk statt der Abriss-Bezirksseiten
+        chips = "".join(f'<a href="{esc(x["slug"])}.html">{esc(x["name"])}</a>' for x in ctx.lo_pages(leistung=slug))
+        secs.append(f'<section>\n      <h2>{esc(entry["name"])} in Ihrem Bezirk</h2>\n      <div class="chips">{chips}</div>\n    </section>')
+    elif kind == "leistung" and ctx.pages(s.bezirke):
         secs.append(f'<section>\n      <h2>In diesen Bezirken sind wir im Einsatz</h2>\n      <div class="chips">{chip_links(ctx.pages(s.bezirke))}</div>\n    </section>')
     if kind == "ratgeber" and c.get("sources"):
         items = []
@@ -1119,6 +1216,29 @@ def render_content_page(ctx, c):
             chips += f'<a class="chip-all" href="{esc(bezirk["slug"])}.html">Ganzer Bezirk {esc(bezirk["name"])}</a>'
         if chips:
             after.append(nav_section("Einsatzgebiet", f"Weitere Stadtteile im Bezirk {bezirk['name']}", chips))
+    if kind == LEISTUNG_ORT:
+        # Andere Bezirke derselben Leistung und weitere Leistungen im Bezirk; gibt es dazu (noch) keine Seiten,
+        # stehen die Links auf Leistung und Bezirk zusammen in einem Abschnitt „Mehr zu …“.
+        rest = []
+        le_all = (f'<a class="chip-all" href="{esc(lo_le["slug"])}.html">{esc(lo_le["name"])} in ganz Hamburg</a>'
+                  if ctx.has(lo_le["slug"]) else "")
+        bz_all = (f'<a class="chip-all" href="{esc(lo_bz["slug"])}.html">Abriss in {esc(lo_bz["gebiet"])}</a>'
+                  if ctx.has(lo_bz["slug"]) else "")
+        others = [x for x in ctx.lo_pages(leistung=lo_le["slug"]) if x["slug"] != slug]
+        if others:
+            after.append(nav_section("Einsatzgebiet", f"{lo_le['name']} in weiteren Bezirken", chip_links(others) + le_all))
+        elif le_all:
+            rest.append(le_all)
+        others = [x for x in ctx.lo_pages(bezirk=lo_bz["slug"]) if x["slug"] != slug]
+        if others:
+            chips = "".join(f'<a href="{esc(x["slug"])}.html">{esc(s.entry[x["leistung"]]["name"])}</a>' for x in others)
+            after.append(nav_section(f"Bezirk {lo_bz['name']}", f"Weitere Leistungen in {lo_bz['name']}", chips + bz_all))
+        elif bz_all:
+            rest.append(bz_all)
+        if rest:
+            h2 = (f"Mehr zu {lo_le['name']} und {lo_bz['name']}" if len(rest) == 2
+                  else f"Mehr zu {lo_le['name']}" if rest[0] == le_all else f"Mehr zum Bezirk {lo_bz['name']}")
+            after.append(nav_section("Weiterlesen", h2, "".join(rest)))
     if kind == "umland":
         alle = (f'\n  <p class="go-wrap"><a class="go-all" href="{UEBERSICHT}.html">Alle Orte im Einsatzgebiet '
                 f'<span aria-hidden="true">→</span></a></p>')
@@ -1245,6 +1365,9 @@ def render_llms(ctx):
          "## Leistungen", ""]
     for x in ctx.pages(s.leistungen):
         L.append(f"- [{x['name']}]({s.url(x['slug'])}): {x['kurz']}")
+        lo = ctx.lo_pages(leistung=x["slug"])
+        if lo:
+            L.append(f"  - {x['name']} auch in: " + ", ".join(f"[{y['name']}]({s.url(y['slug'])})" for y in lo))
     p = ctx.preise
     if p and p["seiten"] and all(p[k] for k in PREIS_TEXTE):
         L += ["", "## Ab-Preise (Privatkunden, inkl. Umsatzsteuer)", ""]
@@ -1715,14 +1838,28 @@ def vorlage_check_orte(site, contents, warn):
     seiten_orte = {it["name"] for it in site.bezirke + site.umland}
     for slug, c in contents.items():
         kind, where = c["type"], slug + ".json"
-        if kind not in ORTSTYPEN:
+        if kind not in ORTSTYPEN and kind != LEISTUNG_ORT:
             continue
         e = site.entry[slug]
-        own = e if kind == "bezirk" else site.bezirk_of(e) if kind == "stadtteil" else None
-        ns = _vp_slug(e["name"])
-        if not any((i == 0 or slug[i - 1] == "-") and (ns == slug[i:] or ns.startswith(slug[i:] + "-"))
-                   for i in range(len(slug))):
-            warn(f"{where}: Slug passt nicht zum Ortsnamen '{e['name']}'")
+        if kind == LEISTUNG_ORT:  # Ort ist der Bezirk; Slug prüft schon register_lo
+            le, e = site.entry[e["leistung"]], site.entry[e["bezirk"]]
+            own = e
+            wort = re.split(r"[ &]", le["name"])[0].lower()  # z. B. „entrümpelung“, „pflaster“, „hecke“
+            for k in ("h1", "title"):
+                if wort not in c[k].lower():
+                    warn(f"{where}: {k} nennt die Leistung '{le['name']}' nicht: {c[k]}")
+            fremd = [b for b in site.bezirke if b is not e]
+            for k in ("h1", "title", "menu", "label", "form_ort"):  # nicht lead/description: „Sitz in Altona“ ist erlaubt
+                for b in fremd:
+                    for n in {b["name"], b["gebiet"]}:
+                        if re.search(r"(?<![\wäöüß-])" + re.escape(n) + r"(?![\wäöüß-])", c[k]):
+                            warn(f"{where}: {k} nennt den Bezirk {n}, die Seite ist aber für {e['name']}: {c[k]}")
+        else:
+            own = e if kind == "bezirk" else site.bezirk_of(e) if kind == "stadtteil" else None
+            ns = _vp_slug(e["name"])
+            if not any((i == 0 or slug[i - 1] == "-") and (ns == slug[i:] or ns.startswith(slug[i:] + "-"))
+                       for i in range(len(slug))):
+                warn(f"{where}: Slug passt nicht zum Ortsnamen '{e['name']}'")
         short = re.split(r"[ (]", e["name"])[0]
         for k in ("h1", "title", "description", "menu", "form_ort"):
             if (k != "form_ort" or c[k].strip()) and short not in c[k]:
@@ -1759,6 +1896,43 @@ def vorlage_check_orte(site, contents, warn):
         for i, s in enumerate(c["sections"], 1):
             if re.search(r"</h3>\s*(?:<h3>|$)", s["html"].strip()):
                 warn(f"{where} sections[{i}]: Zwischenüberschrift <h3> ohne Text darunter")
+
+
+def _lo_saetze(site, contents, c):
+    """Sätze ab 10 Wörtern, Orts- und Bezirksnamen und Zahlen neutralisiert (für den Kopien-Vergleich)."""
+    namen = {"Hamburg"} | {it["name"] for it in site.bezirke + site.stadtteile} | {b["gebiet"] for b in site.bezirke}
+    for x in contents.values():
+        if x["type"] == "bezirk":
+            namen |= set(x.get("stadtteile") or [])
+    alt = "|".join(sorted((re.escape(n) for n in namen if n), key=len, reverse=True))
+    teile = [c["lead"]] + [x["h2"] + ". " + x["html"] for x in c["sections"]] + [x["q"] + " " + x["a"] for x in c["faq"]]
+    t = html.unescape(re.sub(r"<[^>]+>", " ", " ".join(teile)))
+    out = {}
+    for satz in re.split(r"(?<=[.!?:])\s+", re.sub(r"\s+", " ", t)):
+        n = re.sub(r"(?<![\wäöüß-])(?:" + alt + r")(?![\wäöüß])", "ORT", satz)
+        n = re.sub(r"\d+(?:[.,]\d+)?", "N", n).lower()
+        n = " ".join(re.sub(r"[^\wäöüß]+", " ", n).split())
+        if len(n.split()) >= 10:
+            out.setdefault(n, satz.strip())
+    return out
+
+
+def check_lo_kopien(site, contents, warn):
+    """Seiten „Leistung in einem Bezirk“ dürfen keine Sätze von anderen dieser Seiten oder von ihrer
+    Leistungsseite übernehmen – auch nicht mit ausgetauschtem Ortsnamen."""
+    lo = [x for x in contents.values() if x["type"] == LEISTUNG_ORT]
+    saetze = {x["slug"]: _lo_saetze(site, contents, x) for x in lo}
+    for x in lo:
+        par = x["leistung"]
+        if par in contents and par not in saetze:
+            saetze[par] = _lo_saetze(site, contents, contents[par])
+    for i, a in enumerate(lo):
+        andere = [b["slug"] for b in lo[i + 1:]] + ([a["leistung"]] if a["leistung"] in saetze else [])
+        for b in andere:
+            gleich = [saetze[a["slug"]][k] for k in saetze[a["slug"]] if k in saetze[b]]
+            if gleich:
+                warn(f"{a['slug']}.json: {len(gleich)} Satz/Sätze wie auf {b}.json (Ortsnamen ausgeblendet), z. B. "
+                     f"„{gleich[0][:90]}…“ – für den Bezirk eigenständig schreiben")
 
 
 def vorlage_check_pages(site, contents, files, warn):
@@ -1814,6 +1988,7 @@ def vorlage_check_pages(site, contents, files, warn):
         elif frag and frag not in ids[target]:
             warn(f"{name}: Link {href}: Anker #{frag} gibt es dort nicht")
     vorlage_check_orte(site, contents, warn)
+    check_lo_kopien(site, contents, warn)
 
 
 # ---------------------------------------------------------------------------
@@ -1847,7 +2022,14 @@ def main(argv=None):
             except json.JSONDecodeError as ex:
                 errors.append(f"{p.name}: kein gültiges JSON ({ex})")
                 continue
-            if isinstance(c, dict) and str(c.get("slug")) not in site.kind and p.stem not in site.kind:
+            if isinstance(c, dict) and c.get("type") == LEISTUNG_ORT:
+                if not site.register_lo(c, p, errors):
+                    continue
+            elif isinstance(c, dict) and p.stem in site.lo_moeglich:
+                errors.append(f"{p.name}: Seite „Leistung in einem Bezirk“ braucht \"type\": \"{LEISTUNG_ORT}\" "
+                              "sowie 'leistung' und 'bezirk'")
+                continue
+            elif isinstance(c, dict) and str(c.get("slug")) not in site.kind and p.stem not in site.kind:
                 warn(f"{p.name}: Slug steht nicht in src/site.json – übersprungen")
                 continue
             if validate(c, p, site, errors, warn):
@@ -1903,7 +2085,8 @@ def main(argv=None):
     files["llms.txt"] = render_llms(ctx)
     if not args.preview:
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
-        slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
+        slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages()] + has(site.bezirke + site.ratgeber)
+                 + [UEBERSICHT] + has(site.stadtteile + site.umland))
         files["sitemap.xml"] = sitemap(site, slugs, today)
     vorlage_check_pages(site, contents, files, warn)
     check_images(files, warn)
