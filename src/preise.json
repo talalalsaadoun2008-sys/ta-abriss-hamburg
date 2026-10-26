@@ -4,20 +4,154 @@
   "zuzueglich": "Asbestsanierung, Fundament oder Bodenplatte, Elektro- und Sanitärarbeiten",
   "leistungen": {
     "kleinabriss-hamburg": [
-      {"name": "Gartenhaus aus Holz", "einheit": "pauschal", "ab": 950, "bis": null},
-      {"name": "Blech- oder Fertiggarage", "einheit": "pauschal", "ab": 1400, "bis": null},
-      {"name": "Gemauerte Garage", "einheit": "pauschal", "ab": 3500, "bis": null},
-      {"name": "Carport", "einheit": "pauschal", "ab": null, "bis": null}
+      {
+        "name": "Gartenhaus aus Holz",
+        "einheit": "pauschal",
+        "ab": 950,
+        "bis": null
+      },
+      {
+        "name": "Blech- oder Fertiggarage",
+        "einheit": "pauschal",
+        "ab": 1400,
+        "bis": null
+      },
+      {
+        "name": "Gemauerte Garage",
+        "einheit": "pauschal",
+        "ab": 3500,
+        "bis": null
+      },
+      {
+        "name": "Carport",
+        "einheit": "pauschal",
+        "ab": null,
+        "bis": null
+      }
     ],
     "entkernung-hamburg": [
-      {"name": "Entkernung", "einheit": "m2", "flaeche": "Wohnfläche", "ab": 50, "bis": null, "mindestens": null}
+      {
+        "name": "Entkernung",
+        "einheit": "m2",
+        "flaeche": "Wohnfläche",
+        "ab": 50,
+        "bis": null,
+        "mindestens": null
+      }
     ],
     "innenabbruch-hamburg": [
-      {"name": "Bad rausreißen (6–10 m²)", "einheit": "pauschal", "ab": 1100, "bis": null},
-      {"name": "Nichttragende Wand entfernen", "einheit": "pauschal", "ab": 600, "bis": null}
+      {
+        "name": "Bad rausreißen (6–10 m²)",
+        "einheit": "pauschal",
+        "ab": 1100,
+        "bis": null
+      },
+      {
+        "name": "Nichttragende Wand entfernen",
+        "einheit": "pauschal",
+        "ab": 600,
+        "bis": null
+      }
     ],
     "trockenbau-hamburg": [
-      {"name": "Trockenbau", "einheit": "m2", "flaeche": "Wand- oder Deckenfläche", "ab": 70, "bis": null, "mindestens": null}
+      {
+        "name": "Trockenbau",
+        "einheit": "m2",
+        "flaeche": "Wand- oder Deckenfläche",
+        "ab": 70,
+        "bis": null,
+        "mindestens": null
+      }
+    ],
+    "entruempelung-hamburg": [
+      {
+        "name": "Keller bis 8 m²",
+        "einheit": "pauschal",
+        "ab": 150,
+        "bis": 300
+      },
+      {
+        "name": "Keller 8–20 m²",
+        "einheit": "pauschal",
+        "ab": 280,
+        "bis": 650
+      },
+      {
+        "name": "Großer Keller oder Garage (20–40 m²)",
+        "einheit": "pauschal",
+        "ab": 550,
+        "bis": 1200
+      },
+      {
+        "name": "Wohnung mit 2 Zimmern",
+        "einheit": "pauschal",
+        "ab": 800,
+        "bis": 1800
+      },
+      {
+        "name": "Wohnung mit 3 Zimmern",
+        "einheit": "pauschal",
+        "ab": 1200,
+        "bis": 3000
+      },
+      {
+        "name": "Haus mit Keller und Dachboden",
+        "einheit": "pauschal",
+        "ab": 2500,
+        "bis": 6000
+      }
+    ],
+    "baumfaellung-hamburg": [
+      {
+        "name": "Baum bis 10 m Höhe",
+        "einheit": "pauschal",
+        "ab": 300,
+        "bis": 800
+      },
+      {
+        "name": "Baum 10–20 m Höhe",
+        "einheit": "pauschal",
+        "ab": 800,
+        "bis": 2500
+      },
+      {
+        "name": "Baumstumpf fräsen",
+        "einheit": "pauschal",
+        "ab": 100,
+        "bis": 400
+      }
+    ],
+    "gruenschnitt-hecke-hamburg": [
+      {
+        "name": "Hecke 20 m, leichter Rückschnitt",
+        "einheit": "pauschal",
+        "ab": 135,
+        "bis": 220
+      },
+      {
+        "name": "Hecke 20 m, starker Rückschnitt",
+        "einheit": "pauschal",
+        "ab": 410,
+        "bis": 820
+      }
+    ],
+    "pflaster-entfernen-hamburg": [
+      {
+        "name": "Pflaster oder Platten aufnehmen und entsorgen",
+        "einheit": "m2",
+        "flaeche": "Pflasterfläche",
+        "ab": 15,
+        "bis": 35,
+        "mindestens": null
+      }
+    ],
+    "gartenraeumung-hamburg": [
+      {
+        "name": "Garten oder Parzelle räumen",
+        "einheit": "pauschal",
+        "ab": 500,
+        "bis": 5000
+      }
     ]
   }
 }
