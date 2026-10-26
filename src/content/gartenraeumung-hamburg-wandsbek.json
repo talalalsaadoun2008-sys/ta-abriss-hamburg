@@ -8,7 +8,7 @@
   "description": "Garten oder Parzelle in Wandsbek räumen: zu große Laube, Gewächshaus, Schuppen, Grün. Festpreis vorab.",
   "label": "Gartenräumung · Bezirk Wandsbek",
   "h1": "Gartenräumung in Wandsbek: vom Hausgarten bis zur Parzelle",
-  "lead": "Wandsbek ist ein Bezirk mit viel Garten: Einfamilienhäuser in Sasel und Marienthal, die Gartenstadt Berne, Villen in den Walddörfern und zahlreiche Kleingärten. Wir räumen Grundstücke und Parzellen in allen 18 Stadtteilen. Unser Sitz in der Dosestraße in Altona liegt rund 12 km entfernt.",
+  "lead": "Wandsbek ist ein Bezirk mit viel Garten: Einfamilienhäuser in Sasel und Marienthal, die Gartenstadt Berne, Villen in den Walddörfern und zahlreiche Kleingärten. Wir räumen Grundstücke und Parzellen in allen 18 Stadtteilen. Zu Gärten in Wandsbek sind es von unserem Sitz aus etwa 12 km.",
   "facts": [
     "Rund 12 km von der Dosestraße",
     "Rückbau auf erlaubte Laubengröße",
@@ -20,7 +20,7 @@
   "sections": [
     {
       "h2": "Große Grundstücke, alte Gärten",
-      "html": "<p>Die Stadt beschreibt Sasel mit vielen Einfamilienhäusern, Marienthal mit Einfamilienhäusern und Villen, Wohldorf mit Villenalleen. In der Gartenstadt Berne in Farmsen-Berne wurden die Grundstücke in den 1920er-Jahren bewusst so groß angelegt, dass die Bewohner Obst und Gemüse selbst anbauen konnten. Weite Teile der Gartenstadt sind heute ein Denkmal.</p><p>In solchen Gärten sammelt sich über Jahrzehnte einiges an: ein morscher Schuppen, Komposthaufen, alte Beeteinfassungen, Gehwegplatten. Bei einem Hausverkauf oder Erbfall soll das oft schnell weg. Wir räumen den Garten, nehmen Nebengebäude mit und fahren alles ab. In der Gartenstadt sollten Sie vorher klären, ob ein Schuppen zum geschützten Bestand gehört.</p>"
+      "html": "<p>Sasel ist nach den Stadtteilporträts der Stadt ein Viertel der Einfamilienhäuser; Marienthal hat dazu Villen, Wohldorf Villenalleen. In der Gartenstadt Berne in Farmsen-Berne wurden die Grundstücke in den 1920er-Jahren bewusst so groß angelegt, dass die Bewohner Obst und Gemüse selbst anbauen konnten. Weite Teile der Gartenstadt sind heute ein Denkmal.</p><p>In solchen Gärten sammelt sich über Jahrzehnte einiges an: ein morscher Schuppen, Komposthaufen, alte Beeteinfassungen, Gehwegplatten. Bei einem Hausverkauf oder Erbfall soll das oft schnell weg. Wir räumen den Garten, nehmen Nebengebäude mit und fahren alles ab. In der Gartenstadt sollten Sie vorher klären, ob ein Schuppen zum geschützten Bestand gehört.</p>"
     },
     {
       "h2": "Zwei Bezirksgruppen, viele Anlagen",
@@ -32,7 +32,7 @@
     },
     {
       "h2": "Vier Recyclinghöfe im Bezirk",
-      "html": "<p>Wandsbek hat vier Recyclinghöfe der Stadtreinigung: Lademannbogen 32 in Hummelsbüttel, Schwarzer Weg 10 in Steilshoop, Volksdorfer Weg 196 in Sasel und Wilma-Witte-Stieg 6 in Wandsbek. Behandeltes Altholz der Kategorie A IV nehmen Sasel und Wandsbek an. Steilshoop nimmt kein Gewerbe an. Den Hof in Sasel erreichen Sie vom 1. September bis 5. Dezember nur von Westen. Privat ist Grünschnitt in haushaltsüblicher Menge kostenlos (Preisliste 2026).</p><p>Gartenlauben und Grünabfälle sind kein Sperrmüll. Asbestzement, oft als graue Wellplatte auf alten Schuppen, nimmt die Stadtreinigung nur nach Beratung und Voranmeldung an. Ausbauen lassen Sie ihn von einem zugelassenen Fachbetrieb. Den übrigen Garten räumen wir.</p>"
+      "html": "<p>Mit Grünschnitt aus dem Garten können Sie zu vier Höfen der Stadtreinigung im Bezirk fahren: Lademannbogen 32, Schwarzer Weg 10, Volksdorfer Weg 196 und Wilma-Witte-Stieg 6. Behandeltes Altholz der Kategorie A IV nehmen Sasel und Wandsbek an. Steilshoop nimmt kein Gewerbe an. Privat ist Grünschnitt in haushaltsüblicher Menge kostenlos (Preisliste 2026).</p><p>Gartenlauben und Grünabfälle sind kein Sperrmüll. Asbestzement, oft als graue Wellplatte auf alten Schuppen, nimmt die Stadtreinigung nur nach Beratung und Voranmeldung an. Ausbauen lassen Sie ihn von einem zugelassenen Fachbetrieb. Den übrigen Garten räumen wir.</p>"
     }
   ],
   "faq": [
