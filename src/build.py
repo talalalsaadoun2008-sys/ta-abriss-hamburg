@@ -1223,10 +1223,12 @@ def render_llms(ctx):
     s, f = ctx.site, ctx.site.firma
     q = [f"„{n}“" for n in [f["name"]] + f.get("auch_genannt", [])]  # Name und Kurznamen aus site.json
     namen = q[0] if len(q) == 1 else ", ".join(q[:-1]) + " oder " + q[-1]
+    ln = [x["name"] for x in ctx.pages(s.leistungen)]  # Leistungen aus site.json (nur Seiten mit Inhalt)
+    leist = ln[0] if len(ln) == 1 else ", ".join(ln[:-1]) + " sowie " + ln[-1] if ln else "Abriss und Rückbau"
     L = [f"# {f['name']}", "",
          f"> {f['name']} ist ein Abrissbetrieb aus Hamburg-Altona ({f['strasse']}, {f['plz']} {f['ort']}), "
-         f"Inhaber {f['inhaber']}. Wir machen Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau "
-         "und Schuttabholung für Privatkunden, Vermieter und Hausverwaltungen in ganz Hamburg und im Umland.", "",
+         f"Inhaber {f['inhaber']}. Unsere Leistungen für Privatkunden, Vermieter und Hausverwaltungen in ganz Hamburg "
+         f"und im Umland: {leist}.", "",
          "Wichtig zur Einordnung: Gemeint ist dieses Unternehmen, wenn jemand nach " + namen + " sucht.", "",
          "## Kontakt", "",
          f"- Telefon und WhatsApp: {f['telefon']} ({f['telefon_schema']})",

@@ -3,7 +3,7 @@
   "type": "ratgeber",
   "menu": "Über uns",
   "title": "Über uns: T&A Abriss & Rückbau aus Hamburg-Altona",
-  "description": "T&A Abriss & Rückbau aus Hamburg-Altona, Inhaber Talal Al Saadoun: Kleinabriss, Entkernung, Innenabbruch, Trockenbau und Schuttabholung in Hamburg.",
+  "description": "T&A Abriss & Rückbau aus Hamburg-Altona, Inhaber Talal Al Saadoun: Abriss, Entkernung, Trockenbau, Entrümpelung und Gartenräumung in Hamburg und Umland.",
   "label": "Über uns",
   "h1": "Über T&A Abriss & Rückbau",
   "lead": "T&A Abriss & Rückbau ist ein Abrissbetrieb aus Hamburg-Altona. Inhaber ist Talal Al Saadoun. Wir reißen ab, entkernen und bauen mit Trockenbau neu auf, in ganz Hamburg und im Umland.",
@@ -23,7 +23,7 @@
     },
     {
       "h2": "Was wir machen",
-      "html": "<p>Wir bieten sechs Leistungen an. Mehr dazu lesen Sie auf der jeweiligen Seite.</p><ul><li><strong><a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>:</strong> Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage.</li><li><strong><a href=\"entkernung-hamburg.html\">Entkernung</a>:</strong> Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung.</li><li><strong><a href=\"innenabbruch-hamburg.html\">Innenabbruch</a>:</strong> Gezielter Rückbau einzelner Bauteile in bewohnten Häusern.</li><li><strong><a href=\"wanddurchbruch-hamburg.html\">Wanddurchbruch</a>:</strong> Öffnung für eine neue Tür oder Durchreiche, bei tragenden Wänden nur mit Statiker.</li><li><strong><a href=\"trockenbau-hamburg.html\">Trockenbau</a>:</strong> Nach dem Abriss direkt neu aufbauen, ohne zweite Firma.</li><li><strong><a href=\"schuttabholung-hamburg.html\">Schuttabholung</a>:</strong> Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss.</li></ul><p>Asbest bauen wir nie selbst aus. Das übernimmt immer ein dafür zugelassener Fachbetrieb. Auf Wunsch vermitteln wir Ihnen einen. Den übrigen Abriss machen danach wir.</p>"
+      "html": "<p>Diese Leistungen bieten wir an. Mehr dazu lesen Sie auf der jeweiligen Seite.</p><ul><li><strong><a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>:</strong> Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage.</li><li><strong><a href=\"entkernung-hamburg.html\">Entkernung</a>:</strong> Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung.</li><li><strong><a href=\"innenabbruch-hamburg.html\">Innenabbruch</a>:</strong> Gezielter Rückbau einzelner Bauteile in bewohnten Häusern.</li><li><strong><a href=\"wanddurchbruch-hamburg.html\">Wanddurchbruch</a>:</strong> Öffnung für eine neue Tür oder Durchreiche, bei tragenden Wänden nur mit Statiker.</li><li><strong><a href=\"trockenbau-hamburg.html\">Trockenbau</a>:</strong> Nach dem Abriss direkt neu aufbauen, ohne zweite Firma.</li><li><strong><a href=\"schuttabholung-hamburg.html\">Schuttabholung</a>:</strong> Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss.</li><li><strong><a href=\"entruempelung-hamburg.html\">Entrümpelung</a>:</strong> Wohnung, Keller, Dachboden oder Garage leer räumen, auch ganze Haushalte.</li><li><strong><a href=\"gartenraeumung-hamburg.html\">Gartenräumung</a>:</strong> Garten oder Kleingarten komplett räumen: Laube, Platten, Grün, Gerümpel.</li><li><strong><a href=\"pflaster-entfernen-hamburg.html\">Pflaster entfernen</a>:</strong> Pflaster, Gehweg- und Terrassenplatten aufnehmen und entsorgen.</li><li><strong><a href=\"gruenschnitt-hecke-hamburg.html\">Hecke und Grünschnitt</a>:</strong> Hecke schneiden, Sträucher entfernen, Grünschnitt abfahren.</li><li><strong><a href=\"baumfaellung-hamburg.html\">Baumfällung</a>:</strong> Bäume fällen und abfahren, vorher klären wir, ob eine Genehmigung nötig ist.</li></ul><p>Asbest bauen wir nie selbst aus. Das übernimmt immer ein dafür zugelassener Fachbetrieb. Auf Wunsch vermitteln wir Ihnen einen. Den übrigen Abriss machen danach wir.</p>"
     },
     {
       "h2": "So arbeiten wir",
@@ -42,8 +42,8 @@
       "html": "<ul><li><strong>Telefon und WhatsApp:</strong> <a href=\"tel:+4917632896617\">0176 32896617</a></li><li><strong>E-Mail:</strong> <a href=\"mailto:info@ta-abriss-hamburg.de\">info@ta-abriss-hamburg.de</a></li><li><strong>Adresse:</strong> Dosestraße 11, 22767 Hamburg (Altona)</li><li><strong>Erreichbar:</strong> Montag bis Samstag, 8 bis 20 Uhr</li></ul><p>Oder schreiben Sie uns über das <a href=\"#anfrage\">Anfrageformular</a> weiter unten. Ein paar Fotos helfen bei der ersten Einschätzung.</p>"
     },
     {
-      "h2": "Partner für Entrümpelung",
-      "html": "<p>Muss vor dem Abriss erst ausgeräumt werden? Für Entrümpelungen arbeiten wir mit <a href=\"https://hafenraeumer.de\" rel=\"nofollow\">HafenRäumer</a> und <a href=\"https://hinnerk-entruempelung.de/\">Hinnerk – Entrümpelung Hamburg</a> zusammen. Danach übernehmen wir Abriss, Entkernung oder Innenabbruch.</p>"
+      "h2": "Entrümpelung und Partner",
+      "html": "<p>Muss vor dem Abriss erst ausgeräumt werden? Das machen wir selbst: Wir entrümpeln Wohnung, Keller, Dachboden oder Garage und übernehmen danach Abriss, Entkernung oder Innenabbruch. Mehr unter <a href=\"entruempelung-hamburg.html\">Entrümpelung</a>. Bei größeren Haushaltsauflösungen arbeiten wir zusätzlich mit unseren Partnern <a href=\"https://hafenraeumer.de\" rel=\"nofollow\">HafenRäumer</a> und <a href=\"https://hinnerk-entruempelung.de/\">Hinnerk – Entrümpelung Hamburg</a> zusammen.</p>"
     }
   ],
   "faq": [
@@ -57,7 +57,7 @@
     },
     {
       "q": "Was macht T&A Abriss & Rückbau?",
-      "a": "Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau und Schuttabholung. Die Besichtigung ist kostenlos, vor Ort oder per Video. Danach bekommen Sie einen Festpreis inklusive Abtransport und Entsorgung."
+      "a": "Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau und Schuttabholung, dazu Entrümpelung und Arbeiten im Garten: Gartenräumung, Pflaster entfernen, Hecke und Grünschnitt sowie Baumfällung. Die Besichtigung ist kostenlos, vor Ort oder per Video. Danach bekommen Sie einen Festpreis inklusive Abtransport und Entsorgung."
     },
     {
       "q": "Wie erreiche ich T&A Abriss & Rückbau?",
@@ -67,6 +67,6 @@
   "notes_for_review": [
     "Nur belegte Fakten (Inhaber, Sitz, Kontakt, Erreichbarkeit Mo–Sa 8–20, Leistungen, Arbeitsweise). Kein Gründungsjahr, keine Mitarbeiterzahl, keine Bewertungen.",
     "Preise 1:1 aus src/preise.json (Stand 25.10.2026). Bei Preisänderung diese Seite und abriss-kosten-hamburg.json mit anpassen.",
-    "Entrümpelungspartner wie im Fuß der Seite: HafenRäumer (nofollow) und Hinnerk."
+    "Seit 26.10.2026: Entrümpelung macht T&A selbst. HafenRäumer (nofollow) und Hinnerk bleiben Partner für größere Haushaltsauflösungen, wie im Fuß der Seite. Bitte bestätigen, dass das für beide Partner so stimmt."
   ]
 }

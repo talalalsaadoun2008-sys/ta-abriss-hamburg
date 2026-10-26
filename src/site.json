@@ -11,7 +11,7 @@
     "telefon_schema": "+49 176 32896617",
     "whatsapp": "4917632896617",
     "email": "info@ta-abriss-hamburg.de",
-    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau und Schuttabholung in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
+    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Schuttabholung, Entrümpelung, Gartenräumung, Pflaster entfernen, Heckenschnitt und Baumfällung in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
     "auch_genannt": ["T&A Abriss", "T&A Abriss Hamburg", "T&A Abriss und Rückbau", "TA Abriss Hamburg"]
   },
   "startseite_anker": [
@@ -34,7 +34,17 @@
     {"slug": "trockenbau-hamburg", "name": "Trockenbau", "bild": "trockenbau",
      "kurz": "Nach dem Abriss direkt neu aufbauen, ohne zweite Firma."},
     {"slug": "schuttabholung-hamburg", "name": "Schuttabholung", "bild": "entkernung",
-     "kurz": "Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss."}
+     "kurz": "Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss."},
+    {"slug": "entruempelung-hamburg", "name": "Entrümpelung", "bild": "entkernung",
+     "kurz": "Wohnung, Keller, Dachboden oder Garage leer räumen, auch ganze Haushalte."},
+    {"slug": "gartenraeumung-hamburg", "name": "Gartenräumung", "bild": "abriss",
+     "kurz": "Garten oder Kleingarten komplett räumen: Laube, Platten, Grün, Gerümpel."},
+    {"slug": "pflaster-entfernen-hamburg", "name": "Pflaster entfernen", "bild": "abriss",
+     "kurz": "Pflaster, Gehweg- und Terrassenplatten aufnehmen und entsorgen."},
+    {"slug": "gruenschnitt-hecke-hamburg", "name": "Hecke & Grünschnitt", "bild": "abriss",
+     "kurz": "Hecke schneiden, Sträucher entfernen, Grünschnitt abfahren."},
+    {"slug": "baumfaellung-hamburg", "name": "Baumfällung", "bild": "abriss",
+     "kurz": "Bäume fällen und abfahren, Genehmigung vorher geklärt."}
   ],
   "bezirke": [
     {"slug": "abriss-hamburg-altona", "name": "Altona", "gebiet": "Hamburg-Altona", "entfernung": "Sitz"},
@@ -310,5 +320,5 @@
     "trockenbau": {"datei": "trockenbau-abgehaengte-decke-gipskarton.jpg", "w": 900, "h": 806,
                    "alt": "Trockenbau: Arbeiter auf einem Rollgerüst schraubt Gipskartonplatten an eine abgehängte Decke"}
   },
-  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Weiß ich noch nicht"]
+  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Entrümpelung", "Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Weiß ich noch nicht"]
 }
