@@ -45,17 +45,17 @@
      "kurz": "Hecke schneiden, Sträucher entfernen, Grünschnitt abfahren."},
     {"slug": "baumfaellung-hamburg", "name": "Baumfällung", "bild": "baum",
      "kurz": "Bäume fällen und abfahren, Genehmigung vorher geklärt."},
-    {"slug": "gartenpflege-hamburg", "name": "Gartenpflege", "bild": "hecke",
+    {"slug": "gartenpflege-hamburg", "name": "Gartenpflege", "bild": "gartenpflege",
      "kurz": "Rasen mähen, Unkraut jäten, Beete pflegen, einmalig oder regelmäßig."},
-    {"slug": "laub-entfernen-hamburg", "name": "Laub entfernen", "bild": "garten",
+    {"slug": "laub-entfernen-hamburg", "name": "Laub entfernen", "bild": "laub",
      "kurz": "Laub entfernen und abfahren, den Garten winterfest machen."},
-    {"slug": "garten-anlegen-hamburg", "name": "Garten anlegen", "bild": "garten",
+    {"slug": "garten-anlegen-hamburg", "name": "Garten anlegen", "bild": "gartenanlegen",
      "kurz": "Rasen säen oder Rollrasen verlegen, Beete vorbereiten, einfache Wege."},
-    {"slug": "scheune-abreissen-hamburg", "name": "Scheune abreißen", "bild": "abriss",
+    {"slug": "scheune-abreissen-hamburg", "name": "Scheune abreißen", "bild": "scheune",
      "kurz": "Scheunen, Ställe, Schuppen und andere Nebengebäude auf dem Hof abreißen."},
-    {"slug": "hof-raeumen-hamburg", "name": "Hof räumen", "bild": "entruempelung",
+    {"slug": "hof-raeumen-hamburg", "name": "Hof räumen", "bild": "hof",
      "kurz": "Scheune, Lager und Stall räumen: Altgeräte, Holz, Metall, Reifen."},
-    {"slug": "arbeiten-fuer-landwirte-hamburg", "name": "Arbeiten für Landwirte", "bild": "baum",
+    {"slug": "arbeiten-fuer-landwirte-hamburg", "name": "Arbeiten für Landwirte", "bild": "landwirte",
      "kurz": "Zäune ab- und aufbauen, Feldränder und Knicks, Aufräumen nach Sturm."}
   ],
   "bezirke": [
@@ -360,6 +360,42 @@
       "w": 960,
       "h": 640,
       "alt": "Hecke schneiden: Mann schneidet eine Hecke mit der elektrischen Heckenschere"
+    },
+    "gartenpflege": {
+      "datei": "gartenpflege-rasenmaeher.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Gartenpflege: Rasenmäher auf einer frisch gemähten Rasenfläche im Garten"
+    },
+    "laub": {
+      "datei": "laub-entfernen-rechen.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Laub entfernen: Arbeiter recht Herbstlaub von einer Wiese"
+    },
+    "gartenanlegen": {
+      "datei": "garten-anlegen-rollrasen.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Garten anlegen: Rollrasen wird auf vorbereitetem Boden ausgerollt"
+    },
+    "scheune": {
+      "datei": "scheune-abriss-truemmer.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Scheune abreißen: teilweise abgerissenes Gebäude mit freiliegenden Balken und Trümmern"
+    },
+    "hof": {
+      "datei": "hof-raeumen-schuppen-gerumpel.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Hof räumen: alter Holzschuppen voller verrosteter Geräte und Gerümpel"
+    },
+    "landwirte": {
+      "datei": "landwirte-holzzaun-weide.jpg",
+      "w": 960,
+      "h": 640,
+      "alt": "Arbeiten für Landwirte: Feldweg zwischen Holzzäunen auf einer Weide"
     }
   },
   "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Entrümpelung", "Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen", "Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte", "Weiß ich noch nicht"]

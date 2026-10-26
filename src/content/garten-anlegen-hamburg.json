@@ -12,7 +12,7 @@
     "Boden vorbereitet, Altes abgefahren",
     "Festpreis nach Besichtigung"
   ],
-  "image": "garten",
+  "image": "gartenanlegen",
   "form_leistung": "Garten anlegen",
   "form_ort": "",
   "sections": [
@@ -26,7 +26,7 @@
     },
     {
       "h2": "So läuft es ab",
-      "html": "<ol><li><strong>Fotos und Maße:</strong> Schicken Sie Bilder der Fläche und ungefähre Maße. Schreiben Sie dazu, ob Rasen, Beete oder Wege entstehen sollen.</li><li><strong>Kostenlose Besichtigung:</strong> Wir sehen uns Boden, Gefälle, Bäume und den Zugang an, vor Ort oder per Video.</li><li><strong>Festpreis:</strong> Sie bekommen einen Festpreis. Das Abfahren von altem Rasen, Steinen und Resten ist darin enthalten.</li><li><strong>Vorbereiten:</strong> Wir räumen die Fläche frei und bereiten den Boden vor.</li><li><strong>Anlegen:</strong> Rasen säen oder verlegen, Beete anlegen, Wege bauen.</li><li><strong>Übergabe:</strong> Wir sagen Ihnen, worauf Sie in den ersten Wochen beim Wässern achten sollten.</li></ol><p>Eine Antwort auf Ihre Anfrage bekommen Sie innerhalb eines Werktags, gearbeitet wird bei Bedarf auch abends und am Samstag.</p>"
+      "html": "<ol><li><strong>Fotos und Maße:</strong> Schicken Sie Bilder der Fläche und ungefähre Maße. Schreiben Sie dazu, ob Rasen, Beete oder Wege entstehen sollen.</li><li><strong>Kostenlose Besichtigung:</strong> Wir sehen uns Boden, Gefälle, Bäume und den Zugang an, vor Ort oder per Video.</li><li><strong>Festpreis:</strong> Sie bekommen einen Festpreis. Material wie Saatgut, Rollrasen, Mutterboden oder Kies ist darin nicht enthalten, das berechnen wir extra. Das Abfahren von altem Rasen, Steinen und Resten ist darin enthalten.</li><li><strong>Vorbereiten:</strong> Wir räumen die Fläche frei und bereiten den Boden vor.</li><li><strong>Anlegen:</strong> Rasen säen oder verlegen, Beete anlegen, Wege bauen.</li><li><strong>Übergabe:</strong> Wir sagen Ihnen, worauf Sie in den ersten Wochen beim Wässern achten sollten.</li></ol><p>Eine Antwort auf Ihre Anfrage bekommen Sie innerhalb eines Werktags, gearbeitet wird bei Bedarf auch abends und am Samstag.</p>"
     },
     {
       "h2": "Was die Kosten für einen neuen Garten bestimmt",
@@ -85,7 +85,7 @@
   "notes_for_review": [
     "Entwurf 26.10.2026. Leistung laut Auftrag: Garten neu anlegen (Rasen säen/Rollrasen, Beete, einfache Gartenwege). Bewusst keine Aussagen zu Pflanzplanung, Gartenplanung oder Landschaftsarchitektur.",
     "Bitte klären: Liefert T&A Rollrasen, Saatgut, Kies und Mulch mit (Festpreis inkl. Material)? Bis zu welcher Fläche? Werden Trittplatten oder Kantensteine gesetzt?",
-    "Richtpreise: Die Marktpreise (Clean Invoice, März 2026) enthalten Material (Rollrasen, Kies). Die Preis-Box sagt global „Im Richtpreis enthalten: Arbeit, Abtransport und Entsorgung, beim Trockenbau Material und Montage“ – deshalb steht das Material im Zeilennamen. sanier.de nennt höhere Bausteine (Bodenvorbereitung 10–20 €/m²).",
-    "Bild: nutzt vorerst „garten“ (Schubkarre mit Grünschnitt). Passt nicht – ein Foto von frisch verlegtem Rollrasen wäre besser."
+    "Bild: nutzt vorerst „garten“ (Schubkarre mit Grünschnitt). Passt nicht – ein Foto von frisch verlegtem Rollrasen wäre besser.",
+    "Talal 26.10.: Material ist nicht im Preis. Marktpreise (inkl. Material) deshalb nicht angezeigt."
   ]
 }
