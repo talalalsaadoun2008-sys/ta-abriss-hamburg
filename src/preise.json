@@ -152,6 +152,82 @@
         "ab": 500,
         "bis": 5000
       }
+    ],
+    "gartenpflege-hamburg": [
+      {
+        "name": "Gartenpflege, je Arbeitsstunde",
+        "einheit": "pauschal",
+        "ab": 30,
+        "bis": 60
+      },
+      {
+        "name": "Rasen mähen, je Termin",
+        "einheit": "m2",
+        "flaeche": "Rasenfläche",
+        "ab": 0.1,
+        "bis": 0.25,
+        "mindestens": null
+      },
+      {
+        "name": "Regelmäßige Gartenpflege, je Monat",
+        "einheit": "m2",
+        "flaeche": "Gartenfläche",
+        "ab": 0.18,
+        "bis": 0.3,
+        "mindestens": null
+      }
+    ],
+    "laub-entfernen-hamburg": [
+      {
+        "name": "Laub entfernen",
+        "einheit": "m2",
+        "flaeche": "Gartenfläche",
+        "ab": 0.15,
+        "bis": 0.4,
+        "mindestens": null
+      },
+      {
+        "name": "Herbstarbeiten im Garten, je Arbeitsstunde",
+        "einheit": "pauschal",
+        "ab": 30,
+        "bis": 55
+      }
+    ],
+    "garten-anlegen-hamburg": [
+      {
+        "name": "Rasen säen, inkl. Saatgut",
+        "einheit": "m2",
+        "flaeche": "Rasenfläche",
+        "ab": 5,
+        "bis": 12,
+        "mindestens": null
+      },
+      {
+        "name": "Rollrasen, inkl. Rasen und Verlegen",
+        "einheit": "m2",
+        "flaeche": "Rasenfläche",
+        "ab": 15,
+        "bis": 25,
+        "mindestens": null
+      },
+      {
+        "name": "Kiesweg, inkl. Kies und Vlies",
+        "einheit": "m2",
+        "flaeche": "Wegfläche",
+        "ab": 20,
+        "bis": 45,
+        "mindestens": null
+      }
+    ],
+    "hof-raeumen-hamburg": [
+      {
+        "name": "Scheune, Lager oder Stall räumen",
+        "einheit": "m2",
+        "flaeche": "Grundfläche",
+        "ab": 20,
+        "bis": 50,
+        "mindestens": null
+      }
     ]
   }
 }

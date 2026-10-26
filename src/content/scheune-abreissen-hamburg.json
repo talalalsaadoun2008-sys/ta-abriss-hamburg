@@ -1,0 +1,136 @@
+{
+  "slug": "scheune-abreissen-hamburg",
+  "type": "leistung",
+  "menu": "Scheune abreißen",
+  "title": "Scheune abreißen in Hamburg: Stall, Schuppen | T&A Abriss",
+  "description": "Scheune, Stall oder Schuppen in Hamburg abreißen: Genehmigung und Asbestdach vorher geklärt.",
+  "label": "Leistung · Scheune abreißen",
+  "h1": "Scheune, Stall und Schuppen abreißen in Hamburg",
+  "lead": "Die alte Scheune ist baufällig, der Stall wird nicht mehr gebraucht oder ein Schuppen steht einem Neubau im Weg? T&A Abriss & Rückbau reißt Scheunen, Ställe, Schuppen und andere landwirtschaftliche Nebengebäude in Hamburg und im Umland ab und entsorgt das Material getrennt. Vorher klären wir mit Ihnen Genehmigung, Dach und Schadstoffe.",
+  "facts": [
+    "Genehmigungsfrage vorher geklärt",
+    "Asbest nur durch Fachbetrieb",
+    "Festpreis inkl. Entsorgung"
+  ],
+  "image": "abriss",
+  "form_leistung": "Scheune abreißen",
+  "form_ort": "",
+  "sections": [
+    {
+      "h2": "Welche Gebäude wir abreißen",
+      "html": "<ul><li><strong>Scheunen</strong> aus Holz, Fachwerk oder Mauerwerk.</li><li><strong>Ställe</strong> für Pferde, Rinder oder Kleintiere, mit Boxen, Trennwänden und Einbauten.</li><li><strong>Schuppen und Unterstände</strong> für Geräte, Holz oder Heu.</li><li><strong>Andere Nebengebäude</strong> auf dem Hof, etwa eine alte Werkstatt oder eine Garage.</li></ul><p>Ist die Scheune noch voll, räumen wir sie vorher leer, mehr unter <a href=\"hof-raeumen-hamburg.html\">Hof räumen</a>. Für kleinere Bauten im Garten wie Gartenhaus, Carport oder Garage gibt es die Seite <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>.</p>"
+    },
+    {
+      "h2": "Genehmigung: was die Hamburgische Bauordnung sagt",
+      "html": "<p>Die Hamburgische Bauordnung (HBauO) geht davon aus, dass auch ein Abbruch genehmigt werden muss. Ausnahmen regelt sie selbst (§ 59 Abs. 1). Die Liste der verfahrensfreien Vorhaben steht in der Anlage zu § 61 HBauO, die seit dem 1. Januar 2026 neu gefasst ist.</p><p>Für den Hof nennt die Anlage eine eigene Gruppe: Gebäude ohne Feuerungsanlagen, die einem land- oder forstwirtschaftlichen Betrieb dienen und nur zum Unterstellen von Sachen oder zum vorübergehenden Schutz von Tieren bestimmt sind. Sie dürfen höchstens 100 m² Brutto-Grundfläche und eine traufseitige Wandhöhe bis 5 m haben. Solche Gebäude dürfen ohne Baugenehmigung errichtet werden, und auch ihr Abbruch ist häufig ohne Antrag möglich. Verbindlich beantwortet das die Bauprüfung Ihres Bezirksamts.</p><p>Ist das Gebäude größer, ist in der Regel eine Abbruchgenehmigung nötig. Laut hamburg.de braucht es dafür eine bauvorlageberechtigte Person, zum Beispiel eine Architektin oder einen Bauingenieur. Die Gebühr beträgt mindestens 150 Euro. Die Bearbeitung dauert nach Eingang aller Unterlagen ein bis drei Monate, und die Genehmigung muss vor Beginn der Arbeiten vorliegen (Stand Oktober 2026, die Stadt überarbeitet die Angaben wegen der neuen Bauordnung).</p><p>Steht ein Hofgebäude unter Denkmalschutz, braucht schon ein Teilabriss die Zustimmung des Denkmalschutzamts, egal was die Bauordnung sagt (§ 9 Denkmalschutzgesetz). Ob das für Ihr Gebäude gilt, zeigt die Denkmalliste. Mehr dazu im Ratgeber <a href=\"abriss-genehmigung-hamburg.html\">Abriss-Genehmigung in Hamburg</a>.</p>"
+    },
+    {
+      "h2": "Asbestzement auf dem Scheunendach",
+      "html": "<p>Graue Wellplatten auf alten Scheunen, Ställen und Schuppen können Asbestzement sein. Hergestellt und verbaut werden durfte er bis zum Verbot am 31. Oktober 1993. Werden die Platten zerbrochen, gesägt oder vom Dach geworfen, werden Fasern frei.</p><p>Nach der Technischen Regel für Gefahrstoffe TRGS 519 gilt der Abbruch von Dach- und Fassadenplatten aus Asbestzement als Tätigkeit mit mittlerem Risiko. Ausführen darf ihn nur ein Betrieb mit Sachkunde nach TRGS 519, und die Behörde für Arbeitsschutz erfährt davon mindestens sieben Tage vor dem Start (Anzeigepflicht nach § 11a Gefahrstoffverordnung). Die Platten werden befeuchtet, im Ganzen abgenommen und staubdicht verpackt entsorgt.</p><p><strong>Unser Vorgehen:</strong> An Asbest arbeiten wir selbst nicht. Besteht ein Verdacht, lassen Sie die Platten zuerst untersuchen. Ist Asbest darin, deckt ein dafür zugelassener Fachbetrieb das Dach ab, und erst danach beginnt unser Abriss. Als Auftraggeber teilen Sie der ausführenden Firma vorher mit, was Sie über Baujahr und mögliche Schadstoffe wissen (§ 5a Gefahrstoffverordnung). Mehr im Ratgeber <a href=\"asbest-erkennen-vor-abriss.html\">Asbest vor Abriss und Umbau</a>.</p>"
+    },
+    {
+      "h2": "Schwalben, Eulen, Fledermäuse",
+      "html": "<p>In Scheunen und Ställen können Schwalben und Eulen brüten, auch Fledermäuse nutzen solche Gebäude. Ihre Fortpflanzungs- und Ruhestätten sind nach § 44 Bundesnaturschutzgesetz das ganze Jahr geschützt, nicht nur in der Brutzeit. Sehen Sie Nester oder Kotspuren, sagen Sie uns das bei der Besichtigung. Dann kann vor dem Abriss eine Klärung mit der Naturschutzbehörde nötig sein, und der Termin verschiebt sich unter Umständen.</p>"
+    },
+    {
+      "h2": "Höfe in Hamburg und im Umland",
+      "html": "<p>Auch in Hamburg selbst gibt es Höfe. Die Vier- und Marschlande im Bezirk Bergedorf sind rund 132 km² groß, Gemüse- und Blumenbau haben dort eine lange Tradition. Zum Obstanbaugebiet Altes Land gehört der Hamburger Teil mit den Obstdörfern Francop, Neuenfelde und Cranz sowie Moorburg und Finkenwerder.</p><p>Wir arbeiten in allen Bezirken, mehr zu den Bezirken mit den meisten Höfen unter <a href=\"abriss-hamburg-bergedorf.html\">Abriss in Bergedorf</a> und <a href=\"abriss-hamburg-harburg.html\">Abriss in Harburg</a>. Auch im Umland reißen wir ab, etwa in <a href=\"abriss-jork.html\">Jork</a> im niedersächsischen Teil des Alten Landes. Dort gilt statt der Hamburger die niedersächsische Bauordnung, die Genehmigungsfrage klären wir genauso vorher.</p>"
+    },
+    {
+      "h2": "So läuft ein Scheunenabriss ab",
+      "html": "<ol><li><strong>Fotos schicken:</strong> das Gebäude von außen, das Dach, innen und die Zufahrt. Wenn bekannt, nennen Sie das Baujahr.</li><li><strong>Kostenlose Besichtigung:</strong> Wir prüfen Bauweise, Dach, Fundament, mögliche Schadstoffe und Hinweise auf Tiere, vor Ort oder per Video.</li><li><strong>Genehmigung klären:</strong> Ist ein Antrag nötig, beginnen wir erst, wenn er genehmigt ist.</li><li><strong>Festpreis:</strong> Der Preis umfasst Abriss, Abfuhr und Entsorgung.</li><li><strong>Abriss und Trennung:</strong> Wir bauen zurück und trennen nach Holz, Metall, Bauschutt und Restabfall.</li><li><strong>Übergabe:</strong> Die Fläche ist geräumt, das Material entsorgt.</li></ol><p>Einen Werktag nach Ihrer Nachricht haben Sie unsere Antwort, und für den Abriss sind auch Abende und Samstage möglich.</p>"
+    },
+    {
+      "h2": "Was einen Scheunenabriss teurer oder günstiger macht",
+      "html": "<ul><li><strong>Größe:</strong> Grundfläche und Höhe, also der umbaute Raum.</li><li><strong>Bauweise:</strong> Holz, Fachwerk, Mauerwerk oder Stahl.</li><li><strong>Dach:</strong> Ziegel, Blech, Pappe oder Asbestzement. Die Asbestsanierung durch den Fachbetrieb kommt gesondert hinzu.</li><li><strong>Holz:</strong> Tragende Balken, Fachwerk und Dachsparren gelten als Altholz der Kategorie A IV und werden gesondert entsorgt.</li><li><strong>Fundament und Bodenplatte:</strong> ob sie mit raus sollen.</li><li><strong>Zufahrt:</strong> wie nah ein Fahrzeug an das Gebäude kommt.</li></ul><p>Den Festpreis nennen wir nach der Besichtigung. Er gilt, solange sich der Umfang nicht ändert.</p>"
+    }
+  ],
+  "stadtteile": [],
+  "faq": [
+    {
+      "q": "Brauche ich in Hamburg eine Genehmigung, um eine Scheune abzureißen?",
+      "a": "Das hängt von der Größe ab. Landwirtschaftliche Gebäude ohne Feuerungsanlage bis 100 m² Brutto-Grundfläche und 5 m traufseitiger Wandhöhe dürfen verfahrensfrei errichtet werden, ihr Abbruch ist häufig ohne Antrag möglich. Für größere Gebäude ist in der Regel eine Abbruchgenehmigung nötig. Verbindlich sagt es Ihnen die Bauprüfung im Bezirksamt."
+    },
+    {
+      "q": "Auf der Scheune liegen graue Wellplatten. Was nun?",
+      "a": "Betreten, zerbrechen oder abnehmen Sie die Platten nicht, sie können Asbestzement sein. Bei Verdacht wird das Material geprüft. Abnehmen darf es nur ein Betrieb mit Sachkunde nach TRGS 519, bei uns übernimmt das ein dafür zugelassener Fachbetrieb. Danach reißen wir die Scheune ab."
+    },
+    {
+      "q": "In der Scheune nisten Schwalben. Darf trotzdem abgerissen werden?",
+      "a": "Nicht ohne Weiteres. Brut- und Ruhestätten geschützter Tiere sind nach § 44 Bundesnaturschutzgesetz ganzjährig geschützt. Sagen Sie es uns bei der Besichtigung, dann wird vorher mit der Naturschutzbehörde geklärt, wann und wie abgerissen werden kann."
+    },
+    {
+      "q": "Räumen Sie die Scheune vor dem Abriss auch leer?",
+      "a": "Ja. Altgeräte, Holz, Metall, Reifen und Gerümpel räumen wir vorher aus, mehr unter <a href=\"hof-raeumen-hamburg.html\">Hof räumen</a>. Beides bekommen Sie in einem Festpreis."
+    }
+  ],
+  "sources": [
+    {
+      "title": "§ 59 HBauO – Grundsatz (Genehmigungsbedürftigkeit, auch der Beseitigung)",
+      "url": "https://gesetze.co/HH/HBauO/59"
+    },
+    {
+      "title": "Hamburgische Bauordnung (ab 01.01.2026) – Anlage zu § 61, Abschnitt I Nr. 1 c (Gebäude ohne Feuerungsanlagen mit traufseitiger Wandhöhe bis 5 m, die einem land- oder forstwirtschaftlichen Betrieb dienen, höchstens 100 m² Brutto-Grundfläche, nur zur Unterbringung von Sachen oder zum vorübergehenden Schutz von Tieren)",
+      "url": "https://www.haufe.de/id/norm/hamburgische-bauordnung-anlage-HI16758318.html"
+    },
+    {
+      "title": "hamburg.de Serviceportal: Abbruchgenehmigung beantragen (in der Regel Genehmigung nötig, bauvorlageberechtigte Person, Mindestgebühr 150 €, 1–3 Monate, §§ 59, 61, 62 HBauO; Stand 25.10.2026, wird wegen HBauO-Novelle überarbeitet)",
+      "url": "https://www.hamburg.de/service/info/11379882/n0/"
+    },
+    {
+      "title": "§ 9 Denkmalschutzgesetz Hamburg – Genehmigungsvorbehalt",
+      "url": "https://www.haufe.de/id/norm/denkmalschutzgesetz-hamburg-9-genehmigungsvorbehalt-fuer-veraenderungen-von-denkmaelern-HI15091365_p9.html"
+    },
+    {
+      "title": "Umweltbundesamt: Asbest (Verbot seit 31.10.1993, Asbestzement)",
+      "url": "https://umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/chemische-stoffe/asbest"
+    },
+    {
+      "title": "BG BAU: Infoblatt Überleitungshilfe TRGS 519 (Abbrucharbeiten an Asbestzementprodukten, z. B. Dach- und Fassadenplatten = mittleres Risiko, TRGS 519 Nr. 14.4; Sachkunde nach Anlage 3/4)",
+      "url": "https://www.bgbau.de/fileadmin/Medien-Objekte/Medien/Sonstige_Medien/Infoblatt_Ueberleitungshilfe_TRGS_519.pdf"
+    },
+    {
+      "title": "Staatliche Gewerbeaufsicht Niedersachsen: Hinweis Zulassung und Anzeige für die TRGS 519, Stand 11/2025 (Anzeige spätestens eine Woche vor Beginn; Abbrucharbeiten mit niedrigem oder mittlerem Risiko genehmigungspflichtig über die unternehmensbezogene Anzeige)",
+      "url": "https://www.gewerbeaufsicht.niedersachsen.de/download/223019/Hinweis_Zulassung_und_Anzeige_fuer_die_TRGS_519_Stand_11_2025.pdf"
+    },
+    {
+      "title": "§ 11a GefStoffV – Anforderungen an Tätigkeiten mit Asbest (Anzeige spätestens eine Woche vor Beginn)",
+      "url": "https://lxgesetze.de/gefstoffv/11a"
+    },
+    {
+      "title": "§ 5a GefStoffV – Mitwirkungs- und Informationspflichten für Veranlasser (seit 05.12.2024)",
+      "url": "https://lxgesetze.de/gefstoffv/5a"
+    },
+    {
+      "title": "Kreis Steinburg, Abfallberatung: Merkblatt Asbest 12/2024 (Platten nur im Ganzen ausbauen, nicht brechen, schneiden oder zerkleinern, vorher befeuchten; Fachbetrieb mit Sachkundenachweis nach TRGS 519; Big-Bags)",
+      "url": "https://steinburg.de/fileadmin/download/buerger-service/dienststellen-ansprechpartner/dezernat-1/amt-fuer-umweltschutz/abfallwirtschaft/Download/Merkblatt_Asbest_12_2024.pdf"
+    },
+    {
+      "title": "Hamburg: Antrag auf Zulassung von Fachbetrieben für Asbest (Amt für Verbraucherschutz, Staatliche Arbeitsschutzaufsicht, 02/2025)",
+      "url": "https://www.hamburg.de/resource/blob/87812/01acb1dbfe6579b376efea49b3ff60f4/antrag-asbestabbrucharbeiten-data.pdf"
+    },
+    {
+      "title": "§ 44 BNatSchG – Vorschriften für besonders geschützte Arten (Fortpflanzungs- und Ruhestätten)",
+      "url": "https://lxgesetze.de/bnatschg/44"
+    },
+    {
+      "title": "Abfallwirtschaftsbetrieb Landkreis Uelzen: Merkblatt Altholz, Stand 10/2025 (A IV nach Altholzverordnung u. a. Konstruktionshölzer für tragende Teile, Holzfachwerk und Dachsparren, Sortimente aus der Landwirtschaft wie Pfähle, imprägnierte Hölzer aus dem Außenbereich)",
+      "url": "https://awb.uelzen.de/wp-content/uploads/2025/10/Merkblatt-Altholz-2025-1.pdf"
+    },
+    {
+      "title": "hamburg.de: Vier- und Marschlande (Bezirk Bergedorf, zwölf von 14 Stadtteilen, rund 132 km², Gemüse- und Blumenbau)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/vier-und-marschlande-306216"
+    },
+    {
+      "title": "Senat Hamburg (BWVI): Hamburger Öko-Aktionsplan 2020 (Dritte Meile des Alten Landes mit Francop, Neuenfelde und Cranz sowie Moorburg und Finkenwerder als Teil des Obstanbaugebiets Altes Land; Gemüse- und Zierpflanzenbau überwiegend in den Vier- und Marschlanden)",
+      "url": "https://www.hamburg.de/resource/blob/225152/6e8594845c3759f1f62d1e3a622469c2/hamburger-oeko-aktionsplan-2020-data.pdf"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Leistung laut Auftrag: Abriss von Scheunen, Ställen, Schuppen und landwirtschaftlichen Nebengebäuden.",
+    "HBauO: Den Abschnitt der Anlage zu § 61 (Fassung ab 01.01.2026), der die verfahrensfreie BESEITIGUNG regelt, konnte ich wieder nicht im Wortlaut lesen (hamburg.de-Lesefassung bricht ab, Haufe/gesetze.co nur Auszüge). Belegt ist nur Abschnitt I Nr. 1 c (verfahrensfreie ERRICHTUNG). Der Text sagt deshalb wie der Ratgeber abriss-genehmigung-hamburg „häufig ohne Antrag“ und verweist auf die Bauprüfung. Wenn der Wortlaut vorliegt, präzisieren.",
+    "Bitte klären: Bis zu welcher Größe reißt T&A selbst ab (Scheunen mit Stahlträgern, Silos, Güllebehälter – bewusst nicht im Text)? Wird das Fundament angeboten? Keine Aussagen zu Maschinen gemacht.",
+    "Keine Richtpreise eingetragen: Die einzige gefundene Quelle mit Scheunen-Preisen ist ein Ratgeber der APS Group GmbH (Berliner Abrissfirma, Juni 2026, netto): kleine Hofscheune Holz ca. 50 m² 10.000–15.000 €, mittlere Mischbau ca. 150 m² 25.000–32.500 €, große Holzscheune mit Wellasbest ca. 300 m² 30.000–40.000 €. Kein unabhängiger Beleg, deshalb nicht übernommen.",
+    "Bild: nutzt vorerst „abriss“ (Ziegelwand mit Vorschlaghammer, innen). Passt nicht – ein Foto einer Scheune oder eines Stalls wäre dringend besser."
+  ]
+}

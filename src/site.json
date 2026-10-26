@@ -11,7 +11,7 @@
     "telefon_schema": "+49 176 32896617",
     "whatsapp": "4917632896617",
     "email": "info@ta-abriss-hamburg.de",
-    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Schuttabholung, Entrümpelung, Gartenräumung, Pflaster entfernen, Heckenschnitt und Baumfällung in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
+    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Schuttabholung, Entrümpelung, Gartenräumung, Pflaster entfernen, Heckenschnitt, Baumfällung, Gartenpflege, Laub entfernen, Garten anlegen, Scheunenabriss, Hofräumung und Arbeiten für Landwirte in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
     "auch_genannt": ["T&A Abriss", "T&A Abriss Hamburg", "T&A Abriss und Rückbau", "TA Abriss Hamburg"]
   },
   "startseite_anker": [
@@ -44,7 +44,19 @@
     {"slug": "gruenschnitt-hecke-hamburg", "name": "Hecke & Grünschnitt", "bild": "hecke",
      "kurz": "Hecke schneiden, Sträucher entfernen, Grünschnitt abfahren."},
     {"slug": "baumfaellung-hamburg", "name": "Baumfällung", "bild": "baum",
-     "kurz": "Bäume fällen und abfahren, Genehmigung vorher geklärt."}
+     "kurz": "Bäume fällen und abfahren, Genehmigung vorher geklärt."},
+    {"slug": "gartenpflege-hamburg", "name": "Gartenpflege", "bild": "hecke",
+     "kurz": "Rasen mähen, Unkraut jäten, Beete pflegen, einmalig oder regelmäßig."},
+    {"slug": "laub-entfernen-hamburg", "name": "Laub entfernen", "bild": "garten",
+     "kurz": "Laub entfernen und abfahren, den Garten winterfest machen."},
+    {"slug": "garten-anlegen-hamburg", "name": "Garten anlegen", "bild": "garten",
+     "kurz": "Rasen säen oder Rollrasen verlegen, Beete vorbereiten, einfache Wege."},
+    {"slug": "scheune-abreissen-hamburg", "name": "Scheune abreißen", "bild": "abriss",
+     "kurz": "Scheunen, Ställe, Schuppen und andere Nebengebäude auf dem Hof abreißen."},
+    {"slug": "hof-raeumen-hamburg", "name": "Hof räumen", "bild": "entruempelung",
+     "kurz": "Scheune, Lager und Stall räumen: Altgeräte, Holz, Metall, Reifen."},
+    {"slug": "arbeiten-fuer-landwirte-hamburg", "name": "Arbeiten für Landwirte", "bild": "baum",
+     "kurz": "Zäune ab- und aufbauen, Feldränder und Knicks, Aufräumen nach Sturm."}
   ],
   "bezirke": [
     {"slug": "abriss-hamburg-altona", "name": "Altona", "gebiet": "Hamburg-Altona", "entfernung": "Sitz"},
@@ -350,5 +362,5 @@
       "alt": "Hecke schneiden: Mann schneidet eine Hecke mit der elektrischen Heckenschere"
     }
   },
-  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Entrümpelung", "Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Weiß ich noch nicht"]
+  "formular_leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Trockenbau", "Schuttabholung", "Entrümpelung", "Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen", "Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte", "Weiß ich noch nicht"]
 }
