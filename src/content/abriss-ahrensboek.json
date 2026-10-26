@@ -1,0 +1,102 @@
+{
+  "slug": "abriss-ahrensboek",
+  "type": "umland",
+  "menu": "Ahrensbök",
+  "title": "Abriss Ahrensbök ✓ Kleinabriss ✓ Festpreis | T&A",
+  "description": "Kleinabriss, Entkernung und Innenabbruch in Ahrensbök und seinen Dörfern von Barghorst bis Siblin.",
+  "label": "Kreis Ostholstein · Schleswig-Holstein",
+  "h1": "Abriss in Ahrensbök: Scheune, Garage, Siedlungshaus",
+  "lead": "Ein Nebengebäude in Gnissau, eine Garage in Dakendorf oder ein Haus aus den 1950er Jahren im Kernort: In Ahrensbök und den Dörfern ringsum übernehmen wir Kleinabriss, Entkernung, Innenabbruch und Trockenbau.",
+  "facts": [
+    "Kernort und alle Dörfer",
+    "Anfahrt im Festpreis enthalten",
+    "Asbest nur über Fachbetrieb"
+  ],
+  "image": "abriss",
+  "form_leistung": "Kleinabriss",
+  "form_ort": "Ahrensbök",
+  "sections": [
+    {
+      "h2": "Vom Wallfahrtsort zur Großgemeinde",
+      "html": "<p>Ahrensbök liegt im Süden des Kreises Ostholstein, nordwestlich von Lübeck. Bei Gießelrade entspringt die Trave. Den Anfang machte 1280 eine Wallfahrtskapelle, 1328 wird der Ort erstmals in einer Urkunde genannt. Aus diesem Jahr stammen auch die ältesten Teile der Marienkirche. 1397 kam ein Kartäuserkloster dazu. Zwischen 1593 und 1601 wurde ein Schloss gebaut, das man 1765 wieder abbrach. An seiner Stelle stand ab 1826 das Amtshaus, heute sitzt die Verwaltung im Rathaus in der Poststraße 1.</p><p>Von 1912 bis 1933 war Ahrensbök eine Stadt. Seitdem ist es eine Gemeinde mit vielen Dörfern, darunter Barghorst, Cashagen, Dunkelsdorf, Gnissau, Holstendorf und Siblin. Bei der Gebietsreform 1970 kam Ahrensbök zum Kreis Ostholstein.</p>"
+    },
+    {
+      "h2": "Was der Baubestand für den Rückbau bedeutet",
+      "html": "<p>Ein Großbrand zerstörte 1872 im Ort 22 Wohnhäuser und zehn Nebengebäude. Nach 1945 nahm Ahrensbök tausende Flüchtlinge und Vertriebene auf: 1939 lebten hier 5.063 Menschen, 1950 waren es 10.169. Später folgten Neubaugebiete, etwa „Am Piepenbrook“ (1994) und an der Neustädter Chaussee (2000).</p><p>Daraus ergeben sich typische Aufträge:</p><ul><li><strong><a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>:</strong> Schuppen, Garagen, Carports, Mauern und Zäune auf Grundstücken im Kernort und in den Dörfern.</li><li><strong>Entkernung:</strong> Häuser aus der Nachkriegszeit vor einer Sanierung bis auf den Rohbau leeren.</li><li><strong>Innenabbruch:</strong> Bad, Fliesen, Estrich oder nichttragende Wände entfernen.</li><li><strong>Trockenbau:</strong> neue Raumaufteilung mit Gipskartonwänden.</li></ul><p>Faserzementplatten auf alten Dächern oder an Fassaden können Asbest enthalten. Solche Platten bauen wir nicht selbst ab, sondern vermitteln einen dafür zugelassenen Fachbetrieb.</p>"
+    },
+    {
+      "h2": "Zuständige Bauaufsicht und LBO",
+      "html": "<p>Bauanträge und Fragen zum Abbruch landen in Ahrensbök beim Kreis Ostholstein. Dessen Fachdienst Bauordnung in Eutin, Lübecker Straße 41, hat die Gemeinde nach der Übersicht des Kreises (Stand 03/2023) dem Fachgebiet Süd zugeordnet. Im Rathaus kümmert sich das Team Planung und Bauservice um die gemeindlichen Bauangelegenheiten.</p><p>Rechtlich maßgeblich ist die Landesbauordnung (LBO). Ein Teil der kleineren Anlagen darf danach ohne Verfahren beseitigt werden, solange es kein Kulturdenkmal ist. Für alles Übrige ist eine Anzeige nötig, und zwar spätestens einen Monat vor Beginn der Arbeiten. Brauchen Sie daneben eine Genehmigung nach anderem Recht, etwa für den Denkmal- oder Naturschutz, muss sie zuerst da sein. Was davon auf Ihr Gebäude zutrifft, sagt Ihnen der Kreis in Eutin.</p>"
+    },
+    {
+      "h2": "Container an der Straße und Anfrage",
+      "html": "<p>Wer einen Container auf eine Gemeindestraße stellen will, nutzt öffentlichen Raum über das normale Maß hinaus. Ahrensbök hat dafür eine eigene Satzung über die Sondernutzung an öffentlichen Straßen von 2020 und eine Gebührensatzung. Den Antrag stellen Sie bei der Gemeinde. Oft passt der Container aber auf den Hof, gerade bei Grundstücken in den Dörfern.</p><p>Nach der kostenlosen Besichtigung erhalten Sie einen Festpreis. Darin sind Abtransport, Entsorgung und Anfahrt schon enthalten, das Grundstück übergeben wir besenrein. Schreiben Sie uns über das <a href=\"index.html#anfrage\">Anfrageformular</a>. Für die Nachbargemeinde Richtung Lübeck gibt es eine Seite zu <a href=\"abriss-stockelsdorf.html\">Stockelsdorf</a>.</p>"
+    }
+  ],
+  "stadtteile": [
+    "Barghorst",
+    "Böbs",
+    "Cashagen",
+    "Dakendorf",
+    "Dunkelsdorf",
+    "Gießelrade",
+    "Gnissau",
+    "Grebenhagen",
+    "Havekost",
+    "Holstendorf",
+    "Lebatz",
+    "Schwienkuhlen",
+    "Schwochel",
+    "Siblin",
+    "Tankenrade"
+  ],
+  "faq": [
+    {
+      "q": "Ist das Rathaus in Ahrensbök für die Genehmigung eines Abbruchs zuständig?",
+      "a": "Untere Bauaufsicht für Ahrensbök ist der Kreis Ostholstein mit seinem Fachdienst Bauordnung in Eutin. Die Gemeinde ist für Bauleitplanung und gemeindliche Fragen wie die Sondernutzung von Straßen da."
+    },
+    {
+      "q": "Wir haben eine alte Scheune mit Wellplatten auf dem Dach. Was passiert damit?",
+      "a": "Wellplatten aus Faserzement können Asbest enthalten. Dann nimmt sie zuerst ein berechtigter Fachbetrieb ab, den wir Ihnen vermitteln. Danach bauen wir den Rest ab. Ob eine Scheune ohne Verfahren beseitigt werden darf, hängt von ihrer Größe und Art ab, das klärt die Bauaufsicht."
+    },
+    {
+      "q": "Arbeiten Sie auch abends oder am Samstag?",
+      "a": "Ja, soweit die Lärmschutzregeln es zulassen. Auch die Besichtigung ist Montag bis Freitag ab 16:30 Uhr und samstags ab 9:00 Uhr möglich, vor Ort oder per Video."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ahrensbök – Wikipedia (Lage, Trave bei Gießelrade, Ortsteile, 1280, 1328, Marienkirche, Kartause 1397, Schloss 1593–1601/1765, Stadt 1912–1933, Kreisreform 1970)",
+      "url": "https://de.wikipedia.org/wiki/Ahrensb%C3%B6k"
+    },
+    {
+      "title": "Gemeinde Ahrensbök: Historie (Amtshaus 1826, Großbrand 1872, Einwohner 1939/1950, Neubaugebiete 1994/2000, Rathaus 1985)",
+      "url": "https://www.ahrensboek.de/Verwaltung-und-Politik/Die-Gemeinde.htm/Seiten/Historie.html"
+    },
+    {
+      "title": "Gemeinde Ahrensbök: Satzungen (Sondernutzung an öffentlichen Straßen 2020, Gebührensatzung)",
+      "url": "https://www.ahrensboek.de/Aktuelles-und-Service.htm/Seiten/SATZUNGEN.html"
+    },
+    {
+      "title": "Gemeinde Ahrensbök: Bauaufsicht (Team III Planung, Bauservice, Poststraße 1)",
+      "url": "https://www.ahrensboek.de/Dienstleistungen/Bauaufsicht.html"
+    },
+    {
+      "title": "Kreis Ostholstein: Planen, Bauen, Wohnen in Ostholstein (Fachdienst Bauordnung, Lübecker Straße 41, Eutin; Fachgebiete Nord/Süd, Stand 03/2023; eigene Bauaufsicht Bad Schwartau und Neustadt)",
+      "url": "https://www.stockelsdorf.de/dateien-und-downloads/anhaenge/planen-bauen-wohnen-in-ostholstein.pdf?cid=8d"
+    },
+    {
+      "title": "BauAufsÜV SH vom 3. Juni 2022, § 1 (eigene untere Bauaufsicht: u. a. Bad Schwartau, Neustadt in Holstein, Preetz) – lexaris",
+      "url": "https://lexaris.de/book/version/documentflat/head/1280747"
+    },
+    {
+      "title": "Schleswig-Holstein (FIM-Stammtext): Beseitigung von Anlagen nach LBO (verfahrensfrei außer Kulturdenkmale, sonst Anzeige mindestens einen Monat vorher; Genehmigungen nach anderem Recht vor Beginn)",
+      "url": "https://www.fimportal.de/api/v0/leistung-stammtexte/L100012/8960240/pvog/de/pdf"
+    }
+  ],
+  "notes_for_review": [
+    "Bauaufsicht: Kreis OH lt. Broschüre (Fachgebiet Süd, Stand 03/2023) und BauAufsÜV 2022 (Ahrensbök nicht gelistet). Die Gemeinde-Seite 'Bauaufsicht' ist ein generischer Zuständigkeitsfinder-Text mit Verweis auf die Verordnung – widerspricht dem nicht ausdrücklich, ist aber missverständlich.",
+    "Amtsfreiheit nicht ausdrücklich belegt, daher nicht genannt.",
+    "Ortsteile: Dörfer lt. Wikipedia (Häusergruppen weggelassen)."
+  ]
+}
