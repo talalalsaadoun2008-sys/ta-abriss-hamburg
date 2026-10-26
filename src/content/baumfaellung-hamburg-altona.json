@@ -1,0 +1,96 @@
+{
+  "slug": "baumfaellung-hamburg-altona",
+  "type": "leistung_ort",
+  "leistung": "baumfaellung-hamburg",
+  "bezirk": "abriss-hamburg-altona",
+  "menu": "Baumfällung Altona",
+  "title": "Baumfällung Hamburg-Altona: Genehmigung & Abtransport | T&A",
+  "description": "Baumfällung in Altona, direkt von der Dosestraße: Genehmigungsfrage klären, fällen, Holz abfahren.",
+  "label": "Baumfällung · Bezirk Altona",
+  "h1": "Baumfällung in Hamburg-Altona",
+  "lead": "Ein Baum in Ihrem Garten in Altona muss weg? Wir haben unseren Sitz in der Dosestraße 11 und sind schnell bei Ihnen, ob in Lurup, Othmarschen oder Rissen. Bevor die Säge angesetzt wird, prüfen wir gemeinsam mit Ihnen, ob das Bezirksamt Altona zustimmen muss.",
+  "facts": [
+    "Sitz in der Dosestraße, Altona",
+    "Genehmigungsfrage vor der Fällung",
+    "Holz, Äste und Laub werden abgefahren"
+  ],
+  "image": "baum",
+  "form_leistung": "Baumfällung",
+  "form_ort": "Altona",
+  "sections": [
+    {
+      "h2": "Kurze Wege im eigenen Bezirk",
+      "html": "<p>Altona ist unser Heimatbezirk. Von der Dosestraße erreichen wir alle 14 Stadtteile ohne lange Anfahrt, von Altona-Altstadt und Sternschanze bis Sülldorf. Das hilft vor allem bei der Besichtigung: Wir kommen werktags ab 16:30 Uhr oder samstags ab 9 Uhr kostenlos vorbei. Wer es eilig hat, zeigt uns den Baum per Videoanruf.</p><p>Wie unterschiedlich die Grundstücke sind, sieht man schon auf dem Stadtplan. Rissen ist überwiegend mit Einzelhäusern auf teils großen Grundstücken bebaut. Blankenese ist ein Villenviertel am Elbhang. In Lurup stehen Einzel-, Reihen- und Doppelhäuser. In Altbauvierteln wie Ottensen kann der Baum auch im Hinterhof stehen, dann führt der Weg für das Holz durch Tordurchfahrt oder Hausflur. Jeder dieser Standorte stellt andere Anforderungen an Fällung und Abtransport. Allgemeine Informationen finden Sie auf der Seite <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+    },
+    {
+      "h2": "Fällgenehmigung: Naturschutz im Bezirksamt Altona",
+      "html": "<p>Ob ein Baum geschützt ist, regelt die Hamburgische Baumschutzverordnung vom 28. Februar 2023. Messen Sie den Stamm in 130 cm Höhe. Bei einem Umfang ab 80 cm ist der Baum in der Regel geschützt. Hecken fallen ab 80 cm Höhe unter die Verordnung. Obstbäume sind ausgenommen, Walnuss und Esskastanie aber nicht.</p><p>Für Grundstücke in Altona entscheidet das Bezirksamt Altona. Dort gehört der Bereich Naturschutz zum Zentrum für Wirtschaftsförderung, Bauen und Umwelt in der Jessenstraße 1, 22767 Hamburg. Fragen beantwortet die Abteilung per E-Mail an naturschutz@altona.hamburg.de. Den Antrag selbst reichen Sie am einfachsten online ein, über den Dienst „Baumfällgenehmigung“ im Serviceportal Hamburg.</p><ul><li><strong>Fotos:</strong> Legen Sie Bilder vom ganzen Baum bei. Reichen sie dem Amt nicht, setzt es einen Außentermin an, der Gebühren kostet.</li><li><strong>Gebühr:</strong> Laut hamburg.de liegt sie zwischen 25 und 2.000 Euro.</li><li><strong>Auflagen:</strong> Häufig verlangt das Amt eine Ersatzpflanzung oder eine Ausgleichsabgabe.</li></ul><p>Wir klären vor der Fällung mit Ihnen, ob eine Genehmigung nötig ist. Den Antrag stellen Sie als Eigentümer. Wir fällen erst, wenn der Bescheid vorliegt oder feststeht, dass keiner gebraucht wird.</p>"
+    },
+    {
+      "h2": "Flottbektal, Wittenbergen, Schnaakenmoor: Schutzgebiete im Westen",
+      "html": "<p>Im Westen Altonas liegen drei Naturschutzgebiete: das Flottbektal sowie Wittenbergen und das Schnaakenmoor in Rissen. In Natur- und Landschaftsschutzgebieten sind nach Angaben der Stadt in der Regel alle Gehölze geschützt. Dort hilft auch ein dünner Stamm nicht weiter, jede Fällung braucht eine Genehmigung. Ob Ihr Grundstück in oder an einem solchen Gebiet liegt, erfahren Sie beim Bezirksamt.</p><p>Am Elbhang in Blankenese kommt oft eine Hanglage dazu. Ob ein Fahrzeug nah an den Baum herankommt oder Holz und Äste ein Stück getragen werden müssen, sehen wir uns bei der Besichtigung an. Das fließt in den Festpreis ein, eine Überraschung auf der Rechnung gibt es nicht.</p>"
+    },
+    {
+      "h2": "Wann in Altona gefällt werden darf",
+      "html": "<p>Zwischen dem 1. März und dem 30. September schützt § 39 Bundesnaturschutzgesetz brütende Vögel und andere Tiere. In diesen Monaten dürfen Gehölze grundsätzlich nicht beseitigt werden, Ausnahmen sind möglich. Die Fällsaison läuft also von Oktober bis Ende Februar. Wer jetzt im Herbst den Antrag stellt, hat gute Chancen, noch vor dem 1. März fertig zu werden. Die Bearbeitung kann allerdings mehrere Wochen dauern.</p><p>Laub und kleine Äste aus dem eigenen Garten können Sie selbst zum Recyclinghof Osdorf am Brandstücken 36 oder nach Bahrenfeld an den Rondenbarg 52a bringen. Für Bahrenfeld gilt eine Grenze: Mit Anhänger oder Transporter über 7,5 Tonnen oder 3,40 Meter Höhe kommen Sie dort nicht auf das Gelände. Bei einer Fällung nehmen wir Stamm, Äste und Laub dagegen gleich mit, das steckt im Festpreis.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wen frage ich in Altona, ob mein Baum geschützt ist?",
+      "a": "Den Bereich Naturschutz im Bezirksamt Altona, Jessenstraße 1, per E-Mail an naturschutz@altona.hamburg.de. Den Antrag stellen Sie online im Serviceportal Hamburg. Bei unserer Besichtigung messen wir den Stamm und sagen Ihnen, wie wir die Lage einschätzen."
+    },
+    {
+      "q": "Mein Grundstück in Rissen grenzt an ein Naturschutzgebiet. Gilt dort etwas anderes?",
+      "a": "In Natur- und Landschaftsschutzgebieten sind in der Regel alle Gehölze geschützt, unabhängig vom Stammumfang. Ob Ihr Garten dazugehört, sagt Ihnen das Bezirksamt Altona. Wir fällen dort nur mit Genehmigung."
+    },
+    {
+      "q": "Wie schnell können Sie in Altona vorbeikommen?",
+      "a": "Spätestens am nächsten Werktag melden wir uns mit einem Terminvorschlag. Besichtigungen bieten wir werktags ab 16:30 Uhr und samstags ab 9 Uhr an, alternativ per Video. Von unserem Sitz in der Dosestraße sind die Wege in Altona kurz."
+    },
+    {
+      "q": "Darf ich meinen Apfelbaum ohne Antrag fällen?",
+      "a": "Obstbäume nimmt die Baumschutzverordnung aus, Walnuss und Esskastanie zählen aber nicht dazu. Die Schonzeit vom 1. März bis 30. September und der Schutz von Nestern gelten trotzdem. Im Zweifel klären wir das vor dem Termin mit Ihnen."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bezirksamt Altona: Zentrum für Wirtschaftsförderung, Bauen und Umwelt – Bereiche WBZ 1–4, Naturschutz (WBZ 4), Jessenstraße 1, 22767 Hamburg, naturschutz@altona.hamburg.de (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/wirtschaft-verbraucherschutz/zentrum-fuer-wirtschaftsfoerderung-bauen-und-umwelt-50996"
+    },
+    {
+      "title": "BUKEA: Baumschutz – Bezirksämter vollziehen die Baumschutzverordnung, in Altona das WBZ; Antrag online über das Serviceportal oder beim Bezirksamt (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/baumschutz-171588"
+    },
+    {
+      "title": "hamburg.de Serviceportal: Bäume fällen oder zurückschneiden – Online-Dienst Baumfällgenehmigung, Fotos, gebührenpflichtiger Außentermin, Gebühr 25–2.000 €, Ersatzpflanzung/Ausgleichsabgabe, Schutzgebiete, Bearbeitung mehrere Wochen (Stand 25.10.2026)",
+      "url": "https://www.hamburg.de/service/info/11254164/n0/"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28. Februar 2023, § 1 (80 cm Stammumfang in 130 cm Höhe, Hecken ab 80 cm, Obstbäume außer Walnuss und Esskastanie ausgenommen)",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "§ 39 Abs. 5 BNatSchG – Schonzeit 1. März bis 30. September (lexetius)",
+      "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "BUKEA: Naturschutzgebiete in Hamburg – Bezirk Altona: Flottbektal, Schnaakenmoor (Rissen), Wittenbergen (Rissen) (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/naturschutzgebiete"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung (Osdorf, Brandstücken 36; Bahrenfeld, Rondenbarg 52a, nur Kfz bis 7,5 t und 3,40 m Höhe)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "Wikipedia: Hamburg-Rissen (überwiegend Einzelhäuser auf teils großen Grundstücken; übernommen aus abriss-hamburg-altona.json)",
+      "url": "https://de.wikipedia.org/wiki/Hamburg-Rissen"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Kontakt Naturschutz Altona (Jessenstraße 1, naturschutz@altona.hamburg.de) laut WBZ-Seite des Bezirksamts; Telefonnummern bewusst weggelassen.",
+    "Keine Aussagen zu Technik (Seilklettern, Hubsteiger), Baumgrößen, Stubbenfräse, Versicherung. Hanglage Blankenese nur als Frage von Zufahrt und Tragen formuliert.",
+    "Recyclinghof-Hinweis nur für Laub und kleine Äste, die Kunden selbst bringen; Gratis-Menge bewusst nicht genannt (amtliche Angaben widersprüchlich).",
+    "Bitte klären: Hilft T&A beim Antrag (z. B. Fotos, Stammmessung)? Bisher steht nur, dass der Eigentümer den Antrag stellt."
+  ]
+}

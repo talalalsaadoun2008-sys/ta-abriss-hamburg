@@ -1,0 +1,99 @@
+{
+  "slug": "baumfaellung-hamburg-mitte",
+  "type": "leistung_ort",
+  "leistung": "baumfaellung-hamburg",
+  "bezirk": "abriss-hamburg-mitte",
+  "menu": "Baumfällung Hamburg-Mitte",
+  "title": "Baumfällung Hamburg-Mitte: Innenhof, Garten, Elbinsel | T&A",
+  "description": "Baumfällung in Hamburg-Mitte: Genehmigung beim Bezirksamt vorab klären, fällen, Holz abfahren.",
+  "label": "Baumfällung · Bezirk Hamburg-Mitte",
+  "h1": "Baumfällung in Hamburg-Mitte",
+  "lead": "Hamburg-Mitte ist mehr als die Innenstadt. Zwischen St. Georg, Horn, Billstedt, Wilhelmsburg und Finkenwerder gibt es Innenhöfe, Reihenhausgärten und Grundstücke an der Elbe. Wir fällen dort Bäume auf privatem Grund und klären vorher mit Ihnen, ob das Bezirksamt Hamburg-Mitte zustimmen muss.",
+  "facts": [
+    "Etwa 4 km ab Dosestraße",
+    "Genehmigung vor Fällung geklärt",
+    "Festpreis mit Abtransport"
+  ],
+  "image": "baum",
+  "form_leistung": "Baumfällung",
+  "form_ort": "Hamburg-Mitte",
+  "sections": [
+    {
+      "h2": "Wer in Hamburg-Mitte über die Fällung entscheidet",
+      "html": "<p>In den meisten Bezirken kümmert sich das Zentrum für Wirtschaftsförderung, Bauen und Umwelt um den Baumschutz. Hamburg-Mitte ist eine von zwei Ausnahmen: Laut Umweltbehörde erteilt hier das Fachamt Management des öffentlichen Raumes die Genehmigungen nach der Baumschutzverordnung. Welche Stelle für Ihre Adresse genau zuständig ist, zeigt das Serviceportal Hamburg. Dort geben Sie Straße und Hausnummer des Grundstücks ein, die Zuordnung läuft über eine Karte.</p><p>Im selben Online-Dienst „Baumfällgenehmigung“ steckt eine kurze Fallprüfung. Sie sagt Ihnen, ob überhaupt ein Antrag nötig ist und welche Unterlagen das Amt sehen möchte. Die Entscheidung kommt als schriftlicher Bescheid, die Gebühr von 25 bis 2.000 Euro folgt mit einem eigenen Gebührenbescheid. Häufige Auflage ist eine Ersatzpflanzung oder eine Ausgleichsabgabe.</p>"
+    },
+    {
+      "h2": "Ist Ihr Baum geschützt?",
+      "html": "<ul><li><strong>Einzelbaum:</strong> geschützt ab 80 cm Stammumfang, gemessen 130 cm über dem Boden.</li><li><strong>Hecke:</strong> geschützt, sobald sie 80 cm hoch ist.</li><li><strong>Obstbaum:</strong> nicht erfasst, außer Walnuss und Esskastanie.</li><li><strong>Schutzgebiet:</strong> In Natur- und Landschaftsschutzgebieten gilt der Schutz in der Regel für alle Gehölze.</li></ul><p>Im Bezirk liegen mehrere Naturschutzgebiete an der Elbe. In Wilhelmsburg sind es das Heuckenlock und die Rhee, in Rothenburgsort der Holzhafen. Dazu kommt die Auenlandschaft Obere Tideelbe, die von Wilhelmsburg bis Rothenburgsort reicht. Wer auf der Elbinsel nahe an einem dieser Gebiete wohnt, fragt am besten vorab beim Bezirksamt, ob der eigene Garten betroffen ist.</p><p>Bevor wir einen Termin festlegen, gehen wir mit Ihnen die Genehmigungsfrage durch. Den Stamm messen wir bei der Besichtigung selbst nach.</p>"
+    },
+    {
+      "h2": "Innenhof in St. Georg, Garten in Horn: Platz und Zufahrt",
+      "html": "<p>In der Innenstadt und in Vierteln wie St. Georg oder Borgfelde liegt ein Baum oft im Hof hinter einem Wohn- oder Geschäftshaus. Ein Fahrzeug kommt dann nicht heran. Holz und Äste müssen durch Durchfahrt oder Hausflur zur Straße. Damit der Transporter dort halten darf, kann eine Halteverbotszone nötig sein. In Hamburg beantragen Sie sie mindestens 14 Tage vor dem Termin. Soll ein Container auf Gehweg oder Fahrbahn stehen, braucht es eine Sondernutzungserlaubnis des Bezirksamts.</p><p>In Hamm, Horn, Billstedt oder Finkenwerder ist es häufig einfacher, weil zum Haus ein eigener Garten gehört. Wie nah wir mit dem Fahrzeug kommen und wie viel getragen werden muss, sehen wir uns bei der kostenlosen Besichtigung an. Das steht dann schon im Festpreis.</p>"
+    },
+    {
+      "h2": "Saison, Termin und Abtransport",
+      "html": "<p>Die beste Zeit für eine Fällung ist der Winter. Vom 1. März bis 30. September verbietet § 39 Bundesnaturschutzgesetz das Beseitigen von Gehölzen, Ausnahmen sind möglich. Nester und Höhlen geschützter Arten sind außerdem das ganze Jahr tabu.</p><p>Unser Sitz liegt in der Dosestraße in Altona, nach Hamburg-Mitte sind es rund 4 km. Wir besichtigen werktags ab 16:30 Uhr und samstags ab 9 Uhr, auch per Videoanruf. Nach der Fällung bleibt kein Holzstapel liegen: Stamm, Äste und Laub fahren wir ab. Kleinere Mengen Laub aus Ihrem Garten nehmen auch die Recyclinghöfe in St. Pauli, Feldstraße 69, und in Billbrook, Liebigstraße 66, an. Mehr zur Leistung lesen Sie auf der Seite <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Welche Stelle ist in Hamburg-Mitte für Fällgenehmigungen zuständig?",
+      "a": "Nach Angaben der Umweltbehörde das Fachamt Management des öffentlichen Raumes im Bezirksamt Hamburg-Mitte. Eingereicht wird der Antrag über das Serviceportal, das ihn anhand der Objektadresse an die richtige Stelle weiterleitet."
+    },
+    {
+      "q": "Der Baum steht in einem Hinterhof ohne Zufahrt. Geht das trotzdem?",
+      "a": "Das hängt von Größe und Standort ab. Wir sehen uns Hof und Durchgang bei der Besichtigung an und sagen Ihnen dann, ob und wie wir fällen können. Das Tragen bis zum Fahrzeug steht vorher im Festpreis."
+    },
+    {
+      "q": "Ich wohne in Wilhelmsburg nahe einem Naturschutzgebiet. Was muss ich beachten?",
+      "a": "In Natur- und Landschaftsschutzgebieten sind in der Regel alle Gehölze geschützt. Liegt Ihr Grundstück darin, braucht jede Fällung eine Genehmigung. Ob das zutrifft, beantwortet Ihnen das Bezirksamt Hamburg-Mitte."
+    },
+    {
+      "q": "Was kostet die Genehmigung?",
+      "a": "Laut hamburg.de zwischen 25 und 2.000 Euro. Die Gebühr stellt das Bezirksamt gesondert in Rechnung, sie ist nicht Teil unseres Festpreises. Gleiches gilt für eine Ersatzpflanzung oder Ausgleichsabgabe."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BUKEA: Baumschutz – Genehmigungen in Hamburg-Mitte und Hamburg-Nord durch das Fachamt Management des öffentlichen Raumes (MR), in den übrigen Bezirken durch das WBZ; Antrag über Serviceportal (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/baumschutz-171588"
+    },
+    {
+      "title": "hamburg.de Serviceportal: Bäume fällen oder zurückschneiden – Zuständigkeit über Objektadresse und Kartenabgleich, Fallprüfung, schriftlicher Bescheid und Gebührenbescheid, 25–2.000 €, Schutzgebiete (Stand 25.10.2026)",
+      "url": "https://www.hamburg.de/service/info/11254164/n0/"
+    },
+    {
+      "title": "BUKEA: Hamburgs Naturschutzgebiete (Broschüre) – Heuckenlock und Rhee (Wilhelmsburg), Holzhafen (Rothenburgsort), Auenlandschaft Obere Tideelbe",
+      "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2025/181366/pdf/nsg_broschuere_hamburgs_naturschutzgebiete_data.pdf"
+    },
+    {
+      "title": "BUKEA: Naturschutzgebiete in Hamburg – Bezirk Hamburg-Mitte (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/naturschutzgebiete"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28. Februar 2023, § 1",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "§ 39 Abs. 5 und § 44 BNatSchG (lexetius)",
+      "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "Halteverbotszone beantragen – Hamburg, Antrag mindestens 14 Tage vorher (FIM-Portal)",
+      "url": "https://www.fimportal.de/api/v0/leistung-stammtexte/S100002/S1000020010000001683/landesredaktion/de/pdf"
+    },
+    {
+      "title": "Sondernutzung von Straßen bei Baumaßnahmen – Erlaubnis des Bezirksamts (FIM-Portal)",
+      "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012878/de/pdf"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung (St. Pauli, Feldstraße 69; Billbrook, Liebigstraße 66)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Zuständigkeit „Fachamt Management des öffentlichen Raumes“ laut BUKEA-Seite (Kürzel MR); eine eigene Baumschutz-Seite des Bezirksamts Mitte mit Kontakt wurde nicht gefunden, daher keine Adresse/E-Mail.",
+    "Naturschutzgebiet Finkenwerder Süderelbe bewusst nicht genannt: hamburg.de führt es unter Harburg, Finkenwerder gehört aber zu Mitte – unklar.",
+    "Innenhof/Durchfahrt nur als Möglichkeit formuliert, keine Statistik."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "baumfaellung-hamburg-nord",
+  "type": "leistung_ort",
+  "leistung": "baumfaellung-hamburg",
+  "bezirk": "abriss-hamburg-nord",
+  "menu": "Baumfällung Hamburg-Nord",
+  "title": "Baumfällung Hamburg-Nord: Garten, Reihenhaus, Parzelle | T&A",
+  "description": "Baumfällung in Hamburg-Nord, von Eppendorf bis Langenhorn: Genehmigung klären, fällen, abfahren.",
+  "label": "Baumfällung · Bezirk Hamburg-Nord",
+  "h1": "Baumfällung in Hamburg-Nord: Garten, Reihenhaus, Kleingarten",
+  "lead": "Ob hinter dem Reihenhaus in Langenhorn, im Garten in Alsterdorf oder auf der Parzelle im Kleingartenverein: Wir fällen Bäume in Hamburg-Nord und nehmen Holz, Äste und Laub mit. Ob das Bezirksamt Hamburg-Nord vorher zustimmen muss, besprechen wir mit Ihnen vor dem ersten Schnitt.",
+  "facts": [
+    "Rund 8 km von unserem Sitz",
+    "Holz und Laub nehmen wir mit",
+    "Festpreis nach Besichtigung"
+  ],
+  "image": "baum",
+  "form_leistung": "Baumfällung",
+  "form_ort": "Hamburg-Nord",
+  "sections": [
+    {
+      "h2": "Baumschutz in Hamburg-Nord: wer zuständig ist",
+      "html": "<p>Wie in Hamburg-Mitte liegt der Baumschutz in Hamburg-Nord nicht beim Zentrum für Wirtschaftsförderung, Bauen und Umwelt. Nach Angaben der Umweltbehörde erteilt hier das Fachamt Management des öffentlichen Raumes die Ausnahmegenehmigungen. Ihre Anfrage müssen Sie aber nicht selbst dorthin schicken. Im Serviceportal Hamburg geben Sie die Adresse des Grundstücks ein, der Online-Dienst ordnet den Antrag zu.</p><p>Wann der Antrag Pflicht ist, steht in der Hamburgischen Baumschutzverordnung von 2023:</p><ul><li>Laubbaum oder Nadelbaum mit mindestens 80 cm Umfang, gemessen in 1,30 m Höhe,</li><li>Hecken ab einer Höhe von 80 cm,</li><li>nicht aber Obstbäume, solange es keine Walnuss oder Esskastanie ist.</li></ul><p>Rechnen Sie mit einer Gebühr zwischen 25 und 2.000 Euro und mit einigen Wochen Bearbeitungszeit. Ohne Bescheid darf ein geschützter Baum nicht fallen. Deshalb fragen wir bei jeder Anfrage zuerst nach Stammumfang und Baumart.</p>"
+    },
+    {
+      "h2": "Eppendorfer Moor und Rothsteinsmoor",
+      "html": "<p>Zwei Naturschutzgebiete liegen im Bezirk: das Eppendorfer Moor in Groß Borstel und das Rothsteinsmoor in Langenhorn. In Natur- und Landschaftsschutzgebieten sind laut Stadt in der Regel alle Gehölze geschützt. Wer dort ein Grundstück hat, braucht also auch für einen Baum unter 80 cm Stammumfang eine Genehmigung. Fragen Sie im Zweifel beim Bezirksamt nach, bevor Sie uns beauftragen.</p><p>Ansonsten prägen Reihen- und Siedlungshäuser große Teile von Langenhorn, Alsterdorf und Fuhlsbüttel. Die Gärten sind dort oft schmal, der Baum steht nah am Nachbarzaun. Ob ein Fahrzeug durchkommt oder alles durchs Haus oder über den Gartenweg getragen wird, klären wir bei der kostenlosen Besichtigung.</p>"
+    },
+    {
+      "h2": "Baum auf der Parzelle im Kleingarten",
+      "html": "<p>Im Kleingarten gelten zusätzliche Regeln des Landesbunds der Gartenfreunde in Hamburg. Das Merkblatt von Landesbund und Umweltbehörde, gültig seit 2021, verbietet grundsätzlich Nadelgehölze und Gehölze, die höher als 5 m werden. Gerodet und geschnitten wird nach dem Merkblatt nur zwischen dem 1. Oktober und dem 1. März.</p><p>Antragsberechtigt nach der Baumschutzverordnung ist auch der Kleingartenverein. Sprechen Sie deshalb erst mit dem Vorstand, bevor auf der Parzelle gefällt wird. Kommt kein Fahrzeug an den Garten heran, tragen wir Holz und Äste bis zum Weg. Wird gleich die ganze Parzelle geräumt, hilft die Seite <a href=\"gartenraeumung-hamburg.html\">Gartenräumung</a> weiter.</p>"
+    },
+    {
+      "h2": "Wohin mit Holz und Laub?",
+      "html": "<p>Hamburg-Nord hat keinen eigenen Recyclinghof der Stadtreinigung. Die nächsten Höfe liegen in den Nachbarbezirken: Hummelsbüttel am Lademannbogen 32, Steilshoop am Schwarzen Weg 10 und Niendorf am Krähenweg 22. Für Sie spielt das bei einer Fällung keine Rolle, denn wir laden Stamm, Äste und Laub direkt auf und fahren alles ab. Das ist im Festpreis enthalten.</p><p>Von unserem Sitz in der Dosestraße in Altona sind es bis Hamburg-Nord rund 8 km. Besichtigungen machen wir werktags ab 16:30 Uhr und samstags ab 9 Uhr, auf Wunsch per Video. Mehr zur Leistung finden Sie unter <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wo beantrage ich in Hamburg-Nord eine Fällgenehmigung?",
+      "a": "Über den Online-Dienst „Baumfällgenehmigung“ im Serviceportal Hamburg. Zuständig ist laut Umweltbehörde das Fachamt Management des öffentlichen Raumes des Bezirksamts Hamburg-Nord. Antragsberechtigt sind die Eigentümer, im Kleingarten auch der Verein."
+    },
+    {
+      "q": "Darf in meinem Kleingarten im Sommer gefällt werden?",
+      "a": "Nach dem Merkblatt für Hamburger Kleingärten nur vom 1. Oktober bis 1. März. Auch das Bundesnaturschutzgesetz schützt Gehölze von März bis Ende September. Planen Sie die Fällung deshalb für Herbst oder Winter."
+    },
+    {
+      "q": "Mein Haus liegt am Eppendorfer Moor. Gelten dort strengere Regeln?",
+      "a": "Liegt das Grundstück im Naturschutzgebiet, sind in der Regel alle Gehölze geschützt, auch dünne Bäume. Klären Sie das mit dem Bezirksamt, bevor wir einen Termin vereinbaren."
+    },
+    {
+      "q": "Was passiert mit dem Holz nach der Fällung?",
+      "a": "Wir fahren Stamm, Äste und Laub ab. Den Abtransport rechnen wir nicht extra ab, er steht schon im Festpreis. Ob der Baumstumpf bleibt, besprechen wir vor dem Termin."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BUKEA: Baumschutz – Hamburg-Nord und Hamburg-Mitte: Genehmigung durch Fachamt Management des öffentlichen Raumes (MR); Antrag über Serviceportal (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/baumschutz-171588"
+    },
+    {
+      "title": "hamburg.de Serviceportal: Bäume fällen oder zurückschneiden – Gebühr 25–2.000 €, Dauer mehrere Wochen, Schutzgebiete, Zuständigkeit über Objektadresse (Stand 25.10.2026)",
+      "url": "https://www.hamburg.de/service/info/11254164/n0/"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28. Februar 2023, § 1 und § 6 Abs. 3 (Antragsberechtigung auch Kleingartenverein)",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "BUKEA: Naturschutzgebiete – Bezirk Hamburg-Nord: Eppendorfer Moor (Groß Borstel), Rothsteinsmoor (Langenhorn) (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/naturschutzgebiete"
+    },
+    {
+      "title": "LGH/BUKEA: Merkblatt zur Nutzung von Kleingärten in Hamburg, gültig ab 01.01.2021 (Nadelgehölze und Gehölze über 5 m Endhöhe verboten, Rodung und Schnitt 01.10.–01.03.)",
+      "url": "https://www.gartenfreunde-hh.de/downloads/1326/Merkblatt-zur-Nutzung-von-Kleingaerten-in-Hamburg-012021.pdf"
+    },
+    {
+      "title": "SRH-Preisliste Recyclinghöfe ab 01.07.2026 (Hummelsbüttel, Lademannbogen 32; Steilshoop, Schwarzer Weg 10; Niendorf, Krähenweg 22); Zuordnung laut Recherche: kein Hof in Hamburg-Nord",
+      "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "hamburg.com: Hamburg-Nord – Reihenhäuser in Langenhorn (übernommen aus abriss-hamburg-nord.json)",
+      "url": "https://www.hamburg.com/residents/neighbourhoods/hamburg-nord-19348"
+    },
+    {
+      "title": "§ 39 Abs. 5 BNatSchG (lexetius)",
+      "url": "https://lexetius.com/BNatSchG/39"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Keine Kontaktadresse für den Baumschutz in Hamburg-Nord gefunden (nur Dezernat 4, Kümmellstraße 6 – Zuständigkeit dort nicht eindeutig), daher nur der Weg über das Serviceportal.",
+    "„Gärten oft schmal, Baum nah am Nachbarzaun“ ist eine allgemeine Beschreibung für Reihenhausgärten, keine Statistik – bitte prüfen, ob das so stehen bleiben soll.",
+    "Kleingarten-Regeln aus dem LGH-Merkblatt gelten hamburgweit, nicht nur für Hamburg-Nord."
+  ]
+}
