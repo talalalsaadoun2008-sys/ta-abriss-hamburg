@@ -38,6 +38,7 @@ SRC = ROOT / "src"
 TYPES = ("leistung", "bezirk", "stadtteil", "umland", "ratgeber")
 ORTSTYPEN = ("bezirk", "stadtteil", "umland")
 UEBERSICHT = "einsatzgebiet"  # erzeugte Übersichtsseite einsatzgebiet.html
+ABOUT = "ueber-uns"  # Über-uns-Seite: läuft als ratgeber, aber mit AboutPage-Daten und ohne Quellen-Pflicht
 SECTION_TAGS = {"p", "ul", "ol", "li", "strong", "em", "h3", "a"}
 INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
@@ -333,7 +334,7 @@ def validate(c, path, site, errors, warn):
             e("'stadtteile' muss eine Liste mit Texten sein (darf leer sein)")
         elif st and c["type"] == "stadtteil":
             warn(f"{where}: 'stadtteile' wird bei Stadtteil-Seiten nicht angezeigt")
-    if c["type"] == "ratgeber":
+    if c["type"] == "ratgeber" and (c["slug"] != ABOUT or c.get("sources")):
         src = c.get("sources")
         if not (isinstance(src, list) and src):
             e("ratgeber braucht 'sources'")
@@ -967,7 +968,7 @@ def render_content_page(ctx, c):
     trail = [("Startseite", ctx.home, s.base)]
     if kind == "leistung":
         trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
-    elif kind == "ratgeber":
+    elif kind == "ratgeber" and slug != ABOUT:
         trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
     else:
         trail.append(("Einsatzgebiet", UEBERSICHT + ".html", s.url(UEBERSICHT)))
@@ -992,6 +993,9 @@ def render_content_page(ctx, c):
         ld.append(dict(service, areaServed={"@type": "City", "name": entry["name"],
                                             "containedInPlace": {"@type": "AdministrativeArea", "name": entry["kreis"]}},
                        url=url))
+    elif slug == ABOUT:
+        ld.append({"@context": "https://schema.org", "@type": "AboutPage", "name": c["h1"], "url": url,
+                   "description": c["description"], "about": firma_ref, "mainEntity": firma_ref, "inLanguage": "de-DE"})
     else:
         erst, zuletzt = git_daten(ROOT / ctx.content_rel / f"{slug}.json")
         ld.append({"@context": "https://schema.org", "@type": "Article", "headline": c["h1"],
@@ -1023,7 +1027,7 @@ def render_content_page(ctx, c):
         secs.append(f'<section>\n      <h2>Ortsteile von {esc(entry["name"])}</h2>\n      <div class="chips">{chips}</div>\n    </section>')
     if kind == "leistung" and ctx.pages(s.bezirke):
         secs.append(f'<section>\n      <h2>In diesen Bezirken sind wir im Einsatz</h2>\n      <div class="chips">{chip_links(ctx.pages(s.bezirke))}</div>\n    </section>')
-    if kind == "ratgeber":
+    if kind == "ratgeber" and c.get("sources"):
         items = []
         for src in c["sources"]:
             host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*$", r"\1", src["url"]))
@@ -1207,6 +1211,53 @@ def render_legal(ctx, entry, fragment):
     return doc(head, body, f"src/legal/{entry['slug']}.html")
 
 
+def render_llms(ctx):
+    """llms.txt: kurzer Steckbrief der Firma für KI-Suchen (ChatGPT, Perplexity, Google-KI …).
+    Alles aus site.json und preise.json, damit nichts von der Website abweicht."""
+    s, f = ctx.site, ctx.site.firma
+    L = [f"# {f['name']}", "",
+         f"> {f['name']} ist ein Abrissbetrieb aus Hamburg-Altona ({f['strasse']}, {f['plz']} {f['ort']}), "
+         f"Inhaber {f['inhaber']}. Wir machen Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau "
+         "und Schuttabholung für Privatkunden, Vermieter und Hausverwaltungen in ganz Hamburg und im Umland.", "",
+         "Wichtig zur Einordnung: Gemeint ist dieses Unternehmen, wenn jemand nach „T&A Abriss“, „T&A Abriss Hamburg“ "
+         "oder „T&A Abriss & Rückbau“ sucht.", "",
+         "## Kontakt", "",
+         f"- Telefon und WhatsApp: {f['telefon']} ({f['telefon_schema']})",
+         f"- E-Mail: {f['email']}",
+         f"- Adresse: {f['strasse']}, {f['plz']} {f['ort']} (Altona)",
+         "- Erreichbar: Montag bis Samstag, 8 bis 20 Uhr",
+         f"- Website: {s.base}", "",
+         "## So arbeiten wir", "",
+         "- Kostenlose und unverbindliche Besichtigung, vor Ort oder per Video",
+         "- Rückmeldung innerhalb eines Werktags",
+         "- Festpreis nach der Besichtigung, Abtransport und Entsorgung inklusive",
+         "- Termine auch abends und samstags",
+         "- Asbest entfernt immer ein dafür zugelassener Fachbetrieb, tragende Wände nur mit Statiker", "",
+         "## Leistungen", ""]
+    for x in ctx.pages(s.leistungen):
+        L.append(f"- [{x['name']}]({s.url(x['slug'])}): {x['kurz']}")
+    p = ctx.preise
+    if p and p["seiten"] and all(p[k] for k in PREIS_TEXTE):
+        L += ["", "## Ab-Preise (Privatkunden, inkl. Umsatzsteuer)", ""]
+        for slug, rows in p["seiten"].items():
+            for r in rows:
+                main, sub = preis_text(r)
+                L.append(f"- {r['name']}: {main}" + (f" ({sub})" if sub else ""))
+        L += ["", f"Enthalten: {p['inklusive']}. Nicht enthalten: {p['zuzueglich']}. "
+              "Den verbindlichen Festpreis gibt es nach der kostenlosen Besichtigung."]
+    L += ["", "## Einsatzgebiet", "",
+          "Alle sieben Hamburger Bezirke: " + ", ".join(b["name"] for b in s.bezirke) + ". "
+          f"Dazu über {len(ctx.pages(s.umland))} Orte im Umland, etwa " + ", ".join(u["name"] for u in ctx.pages(s.umland)[:8]) + ".",
+          f"- [Alle Orte im Einsatzgebiet]({s.url(UEBERSICHT)})", "", "## Mehr lesen", ""]
+    if ctx.has(ABOUT):
+        L.append(f"- [Über uns]({s.url(ABOUT)})")
+    for x in ctx.pages(s.ratgeber):
+        if x["slug"] != ABOUT:
+            L.append(f"- [{x['name']}]({s.url(x['slug'])})")
+    L += [f"- [Impressum]({s.url('impressum')})", ""]
+    return "\n".join(L)
+
+
 def render_404(ctx):
     """Fehlerseite für GitHub Pages."""
     s = ctx.site
@@ -1294,16 +1345,22 @@ def render_index(ctx):
     # Öffnungszeiten Mo–Sa 8–20 (von Talal am 22.10.2026 für das Google-Profil bestätigt); keine Preisspanne.
     business = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": s.base + "#firma",
-        "name": f["name"], "description": f["beschreibung"], "url": s.base, "image": s.bild_url("abriss"),
+        "name": f["name"], "alternateName": f.get("auch_genannt", []), "description": f["beschreibung"], "url": s.base, "image": s.bild_url("abriss"),
         "logo": s.base + "logo.png",
         "telephone": f["telefon_schema"], "email": f["email"],
         "address": ld_adresse(f),
+        "founder": {"@type": "Person", "name": f["inhaber"]},
+        "knowsAbout": [x["name"] for x in s.leistungen] + ["Rückbau", "Abriss in Hamburg"],
         "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
                                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                                        "opens": "08:00", "closes": "20:00"}],
         "areaServed": [{"@type": "AdministrativeArea", "name": b["gebiet"]} for b in s.bezirke]
                       + [{"@type": "City", "name": u["name"]} for u in ctx.pages(s.umland)],
     }
+    if f.get("profile"):  # belegte Einträge (Google, Branchenbücher), sobald sie online sind
+        business["sameAs"] = f["profile"]
+    if ctx.has(ABOUT):
+        business["subjectOf"] = {"@type": "AboutPage", "url": s.url(ABOUT)}
     geo = f.get("geo")  # nur mit belegten Koordinaten in site.json, z. B. "geo": {"breite": 53.12345, "laenge": 9.12345}
     if geo:
         if not all(isinstance(geo.get(k), (int, float)) for k in ("breite", "laenge")):
@@ -1834,6 +1891,7 @@ def main(argv=None):
         files[f"{slug}.html"] = render_content_page(ctx, contents[slug])
     files[f"{UEBERSICHT}.html"] = render_einsatzgebiet(ctx)
     files["404.html"] = render_404(ctx)
+    files["llms.txt"] = render_llms(ctx)
     if not args.preview:
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
         slugs = has(site.leistungen + site.bezirke + site.ratgeber) + [UEBERSICHT] + has(site.stadtteile + site.umland)
