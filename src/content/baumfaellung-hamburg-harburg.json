@@ -1,0 +1,99 @@
+{
+  "slug": "baumfaellung-hamburg-harburg",
+  "type": "leistung_ort",
+  "leistung": "baumfaellung-hamburg",
+  "bezirk": "abriss-hamburg-harburg",
+  "menu": "Baumfällung Harburg",
+  "title": "Baumfällung Harburg: Heide, Altes Land, Neubaugebiet | T&A",
+  "description": "Baumfällung in Harburg, vom Phoenix-Viertel bis Neuenfelde: Genehmigung klären, fällen, abfahren.",
+  "label": "Baumfällung · Bezirk Harburg",
+  "h1": "Baumfällung in Harburg",
+  "lead": "Südlich der Elbe reicht der Bezirk Harburg von Wohnstraßen in Eißendorf und Heimfeld über die Fischbeker Heide bis zu den Obsthöfen im Alten Land. Wir fällen Bäume auf Privatgrund, laden Holz und Äste auf und fahren sie ab. Den Termin legen wir erst, wenn klar ist, ob die Abteilung Naturschutz zustimmen muss.",
+  "facts": [
+    "Etwa 12 km von der Dosestraße",
+    "Naturschutz-Frage vorher geklärt",
+    "Stamm und Äste werden abgefahren"
+  ],
+  "image": "baum",
+  "form_leistung": "Baumfällung",
+  "form_ort": "Harburg",
+  "sections": [
+    {
+      "h2": "Die Abteilung Naturschutz im Bezirksamt Harburg",
+      "html": "<p>Das Bezirksamt Harburg hat eine eigene Abteilung Naturschutz. Sie berät zum Baumschutz, zum Landschafts- und Artenschutz und zu naturschutzrechtlichen Fragen bei Bauanträgen. Als Kontakt nennt das Bezirksamt den Harburger Rathausplatz 1, 21073 Hamburg, die E-Mail Bezirksamt@harburg.hamburg.de und die Behördennummer 115. Die Ausnahmegenehmigung selbst beantragen Sie online über das Serviceportal Hamburg.</p><p>Einen eigenen Hinweis gibt das Bezirksamt zur Sommerfällregelung: Vom 1. März bis 30. September dürfen Gehölze in jedem Jahr grundsätzlich nicht beseitigt werden. Grundlage ist das Bundesnaturschutzgesetz in der seit 1. März 2010 geltenden Fassung. Geplant werden sollte eine Fällung in Harburg also für die Monate Oktober bis Februar.</p>"
+    },
+    {
+      "h2": "Welche Bäume unter Schutz stehen",
+      "html": "<p>Die Hamburgische Baumschutzverordnung vom Februar 2023 schützt einzelne Bäume, deren Stamm in 130 cm Höhe 80 cm oder mehr misst. Das gilt auch für Hecken ab 80 cm Höhe. Wer fällen will, zahlt laut hamburg.de eine Gebühr von 25 bis 2.000 Euro und muss oft neu pflanzen oder eine Ausgleichsabgabe leisten.</p><h3>Obsthöfe in Neuenfelde, Cranz und Francop</h3><p>Diese drei Stadtteile gehören zum Alten Land, wo vor allem Äpfel und Kirschen wachsen. Obstbäume nimmt die Verordnung aus. Steht auf dem Hof aber eine Walnuss oder Esskastanie, gilt der normale Schutz.</p><h3>Neubaugebiete in Neugraben-Fischbek</h3><p>Im Vogelkamp Neugraben und im Fischbeker Heidbrook sind neue Wohngebiete entstanden. Muss dort ein Baum einem Anbau oder Neubau weichen, verlangt das Amt einen Gehölzbestandsplan. Darauf sind die betroffenen Gehölze und die geplanten Arbeiten eingezeichnet.</p>"
+    },
+    {
+      "h2": "Heide, Holz und Flottsand: Schutzgebiete in Harburg",
+      "html": "<p>Mehrere Naturschutzgebiete liegen im Bezirk: die Fischbeker Heide in Neugraben-Fischbek und Hausbruch, das Heimfelder Holz in Heimfeld und die Neuländer Moorwiesen in Neuland und Gut Moor. Dazu kommt das Landschaftsschutzgebiet Marmstorfer Flottsandplatte. Für solche Gebiete gilt nach Angaben der Stadt: Gehölze sind dort in der Regel ausnahmslos geschützt, ganz gleich wie dick der Stamm ist.</p><p>Häuser am Rand der Heide oder in Marmstorf sollten Sie deshalb vorab beim Bezirksamt prüfen lassen. Wir fällen in solchen Lagen nur mit schriftlicher Genehmigung.</p>"
+    },
+    {
+      "h2": "So läuft es ab, wenn wir in Harburg fällen",
+      "html": "<ol><li><strong>Anfrage:</strong> Senden Sie uns Fotos vom Baum und vom Zugang. Wir antworten binnen eines Werktags.</li><li><strong>Besichtigung:</strong> kostenlos vor Ort oder per Video. Wir fahren dafür von unserem Sitz in Altona etwa 12 km über die Elbe.</li><li><strong>Angebot:</strong> ein Festpreis, in dem Fällen, Aufladen und Abfahren enthalten sind.</li><li><strong>Fällung:</strong> sobald die Genehmigung vorliegt oder feststeht, dass keine nötig ist.</li></ol><p>Laub aus dem eigenen Garten nehmen die Recyclinghöfe Harburg am Neuländer Kamp 6 und Neugraben-Fischbek Am Aschenland 11 an. Den Rest einer Fällung bringen wir selbst weg. Mehr zur Leistung unter <a href=\"baumfaellung-hamburg.html\">Baumfällung in Hamburg</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wo beantrage ich in Harburg eine Fällgenehmigung?",
+      "a": "Online über das Serviceportal Hamburg. Zuständig ist die Abteilung Naturschutz des Bezirksamts Harburg, die auch berät. Erreichbar ist das Bezirksamt über Bezirksamt@harburg.hamburg.de oder die Behördennummer 115."
+    },
+    {
+      "q": "Wir haben einen Hof im Alten Land. Sind unsere Obstbäume geschützt?",
+      "a": "Obstbäume fallen nicht unter die Hamburgische Baumschutzverordnung. Walnuss und Esskastanie sind davon ausgenommen und können geschützt sein. Die Schonzeit von März bis September gilt für alle Gehölze."
+    },
+    {
+      "q": "Für unseren Anbau in Neugraben muss ein Baum weg. Was braucht das Amt?",
+      "a": "Bei Bauvorhaben verlangt das Amt einen Gehölzbestandsplan, aus dem hervorgeht, welche Gehölze betroffen sind und was geplant ist. Fotos des Baums gehören ebenfalls zum Antrag."
+    },
+    {
+      "q": "Wann ist in Harburg Fällsaison?",
+      "a": "Von Oktober bis Ende Februar. Das Bezirksamt weist ausdrücklich auf die Sommerfällregelung vom 1. März bis 30. September hin. Nester und Baumhöhlen geschützter Tiere dürfen das ganze Jahr nicht zerstört werden."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bezirksamt Harburg: Naturschutz – Abteilung Naturschutz (Baum-, Landschafts-, Artenschutz, naturschutzrechtliche Fragen bei Bauanträgen), Sommerfällregelung 1.3.–30.9., LSG Marmstorfer Flottsandplatte, Kontakt Harburger Rathausplatz 1, 21073 Hamburg, Bezirksamt@harburg.hamburg.de, Tel. 115 (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/harburg/themen/klima-umwelt/naturschutz"
+    },
+    {
+      "title": "BUKEA: Baumschutz – in Harburg vollzieht das WBZ die Baumschutzverordnung; Antrag über Serviceportal (abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/baumschutz-171588"
+    },
+    {
+      "title": "hamburg.de Serviceportal: Bäume fällen oder zurückschneiden – Gehölzbestandsplan bei Bauvorhaben, Fotos, Gebühr 25–2.000 €, Schutzgebiete (Stand 25.10.2026)",
+      "url": "https://www.hamburg.de/service/info/11254164/n0/"
+    },
+    {
+      "title": "BUKEA: Hamburgs Naturschutzgebiete (Broschüre) – Fischbeker Heide (Neugraben-Fischbek, Hausbruch), Heimfelder Holz (Heimfeld), Neuländer Moorwiesen (Neuland, Gut Moor)",
+      "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2025/181366/pdf/nsg_broschuere_hamburgs_naturschutzgebiete_data.pdf"
+    },
+    {
+      "title": "Wikipedia: Altes Land – Neuenfelde, Cranz, Francop, Obstbau mit Äpfeln und Kirschen (übernommen aus abriss-hamburg-harburg.json)",
+      "url": "https://en.wikipedia.org/wiki/Altes_Land"
+    },
+    {
+      "title": "Bezirksamt Harburg: Stadtentwicklung im Bezirk Harburg (Vogelkamp Neugraben, Fischbeker Heidbrook; übernommen aus abriss-hamburg-harburg.json)",
+      "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2018/76689/pdf/Stadtentwicklung_Harburg.pdf"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28. Februar 2023, § 1",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe (Harburg, Neuländer Kamp 6; Neugraben-Fischbek, Am Aschenland 11)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "§ 44 BNatSchG – Fortpflanzungs- und Ruhestätten besonders geschützter Arten",
+      "url": "https://lxgesetze.de/bnatschg/44"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026. Kontakt Harburg (Rathausplatz 1, Bezirksamt@harburg.hamburg.de, 115) laut Naturschutz-Seite des Bezirksamts; die eigene Baumschutz-Unterseite (baumschutz-64326) war beim Abruf nicht erreichbar.",
+    "Bezirksseite nennt für die Bauprüfung „Harburger Rathausforum 2“, die Naturschutz-Seite „Harburger Rathausplatz 1“ als allgemeinen Kontakt – beides so belassen.",
+    "Ob Obstplantagen im Alten Land in einem Landschaftsschutzgebiet liegen, wurde nicht geprüft; Text spricht daher nur von der Ausnahme für Obstbäume."
+  ]
+}
