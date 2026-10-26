@@ -1,0 +1,95 @@
+{
+  "slug": "gruenschnitt-hecke-hamburg-mitte",
+  "type": "leistung_ort",
+  "leistung": "gruenschnitt-hecke-hamburg",
+  "bezirk": "abriss-hamburg-mitte",
+  "menu": "Hecke & Grünschnitt Hamburg-Mitte",
+  "title": "Hecke schneiden & Grünschnitt Hamburg-Mitte | T&A Abriss",
+  "description": "Hecke schneiden und Grünschnitt abfahren in Hamburg-Mitte: Vorgarten, Wohnanlage, Kleingarten.",
+  "label": "Hecke & Grünschnitt · Bezirk Hamburg-Mitte",
+  "h1": "Hecke schneiden und Grünschnitt abfahren in Hamburg-Mitte",
+  "lead": "Hamburg-Mitte ist mehr als Innenstadt und Hafen. In Billstedt stehen Einfamilienhäuser, in Horn liegen Schrebergärten, auf Finkenwerder wachsen Äpfel. Dort schneiden wir Hecken, holen Sträucher heraus und fahren den Grünschnitt ab. Von der Dosestraße in Altona sind es rund 4 km bis in den Bezirk.",
+  "facts": [
+    "Rund 4 km von Altona",
+    "Vorgarten bis Kleingarten",
+    "Festpreis nach Besichtigung"
+  ],
+  "image": "hecke",
+  "form_leistung": "Hecke und Grünschnitt",
+  "form_ort": "Hamburg-Mitte",
+  "sections": [
+    {
+      "h2": "Grün in einem Innenstadtbezirk",
+      "html": "<p>Von den 19 Stadtteilen des Bezirks sind einige erstaunlich grün. Die Stadt beschreibt Billstedt mit Einfamilienhäusern, gepflegten Wohnsiedlungen und dem Öjendorfer See. Horn gilt als grüner Stadtteil mit Schrebergärten, etwa im Kleingartenverein Horner Marsch. Finkenwerder pflegt seine dörfliche Tradition, dort liegt eine Obstplantage neben der Flugzeugmontage.</p><p>Entsprechend breit sind die Aufträge: eine Grenzhecke am Einfamilienhaus in Billstedt, Sträucher auf der Parzelle in Horn, eine verwilderte Hecke am Obstgarten auf der Elbinsel. Wie wir dabei vorgehen, lesen Sie unter <a href=\"gruenschnitt-hecke-hamburg.html\">Hecke und Grünschnitt</a>.</p>"
+    },
+    {
+      "h2": "Vorgärten und Wohnanlagen: Hecken an der Straße",
+      "html": "<p>In dicht bebauten Vierteln wie St. Georg oder Hamm grenzt das Grün einer Wohnanlage oft direkt an den Gehweg. Hier gilt, was die Umweltbehörde BUKEA in ihrem Faltblatt zur Wegereinigung (Stand Juli 2025) festhält: Anlieger schneiden ihre Hecken bis zur Grundstücksgrenze zurück. Über dem Weg brauchen Bäume eine lichte Durchgangshöhe von 2,5 Metern, und der Gehweg muss in voller Breite begehbar bleiben.</p><p>Für Hausverwaltungen und Eigentümergemeinschaften schneiden wir die Hecken zur Straße hin und kürzen Sträucher im Innenhof. Den Termin stimmen wir mit der Verwaltung ab, Besichtigungen gehen auch abends und samstags.</p>"
+    },
+    {
+      "h2": "Wann eine Genehmigung nötig ist",
+      "html": "<p>Ganz weg darf eine Hecke ab 80 cm Höhe in Hamburg nur mit Ausnahmegenehmigung, so regelt es die Baumschutzverordnung von 2023. Erteilt wird sie vom Bezirksamt Hamburg-Mitte, der Antrag geht online oder direkt dorthin. Den regelmäßigen Formschnitt nimmt die Verordnung aus.</p><p>Auf Finkenwerder lohnt ein genauer Blick: Obstbäume fallen nicht unter die Verordnung, mit Ausnahme von Walnuss und Esskastanie. Die Hecke am Rand des Obstgartens ist dagegen ab 80 cm geschützt wie jede andere.</p><p>Unabhängig davon gilt die Schonzeit aus § 39 Bundesnaturschutzgesetz. Von März bis Ende September sind Rodung und Auf-den-Stock-Setzen tabu, ein schonender Pflegeschnitt geht.</p>"
+    },
+    {
+      "h2": "Recyclinghöfe St. Pauli und Billbrook",
+      "html": "<p>Zwei Höfe der Stadtreinigung liegen im Bezirk: Feldstraße 69 in St. Pauli und Liebigstraße 66 in Billbrook. Privathaushalte geben dort laut Preisliste 2026 Grünabfälle und Laub in haushaltsüblicher Menge kostenlos ab. Wo diese Grenze liegt, beantwortet die Stadtreinigung auf Nachfrage.</p><p>Ohne Auto ist der Weg zum Hof in der Innenstadt mühsam. Wir laden den Schnitt direkt nach der Arbeit auf. Abtransport und Entsorgung stehen schon im Festpreis.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wir verwalten eine Wohnanlage in Hamm. Schneiden Sie auch die Hecken zum Gehweg?",
+      "a": "Ja. Wir schneiden die Straßenseite bis zur Grundstücksgrenze zurück, wie es die BUKEA von Anliegern verlangt, und räumen den Weg danach frei. Die Besichtigung ist kostenlos, auf Wunsch per Video."
+    },
+    {
+      "q": "Wir haben auf Finkenwerder einen Obstgarten mit Hecke. Was ist geschützt?",
+      "a": "Die Obstbäume nicht, außer Walnuss und Esskastanie. Die Hecke schon, wenn sie 80 cm oder höher ist. Soll sie ganz weg, braucht es vorher die Genehmigung des Bezirksamts Hamburg-Mitte."
+    },
+    {
+      "q": "Darf ich Grünschnitt aus dem Kleingarten in Horn an den Straßenrand legen?",
+      "a": "Nein. Laut Merkblatt für Hamburger Kleingärten gilt Grünschnitt im öffentlichen Raum als illegale Abfallentsorgung. Kompostieren Sie ihn oder lassen Sie ihn von uns abfahren."
+    },
+    {
+      "q": "Welche Recyclinghöfe gibt es in Hamburg-Mitte?",
+      "a": "Die Stadtreinigung hat zwei: Feldstraße 69 in St. Pauli und Liebigstraße 66 in Billbrook. Für größere Mengen fragen Sie dort vorher nach, was angenommen wird."
+    }
+  ],
+  "sources": [
+    {
+      "title": "hamburg.de: Stadtteile im Bezirk Hamburg-Mitte (Billstedt: Einfamilienhäuser, Wohnsiedlungen, Öjendorfer See; Horn: grüner Stadtteil, Schrebergärten, KGV Horner Marsch; Finkenwerder: Obstplantage neben Jetmontage; abgerufen 26.10.2026)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-hamburg-mitte"
+    },
+    {
+      "title": "Bezirk Hamburg-Mitte – hamburg.de (19 Stadtteile; Quelle der Bezirksseite)",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/mitte"
+    },
+    {
+      "title": "BUKEA: Faltblatt Wegereinigung, Stand Juli 2025 (Hecken bis zur Grundstücksgrenze zurückschneiden, Bäume lichte Durchgangshöhe 2,5 m, Gehweg in ganzer Breite begehbar)",
+      "url": "https://www.hamburg.de/resource/blob/159608/eb1a37a18f1960f58068dfe839606aa4/d-flyer-wegereinigung-data.pdf"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung 2023: § 1 (Hecken ab 80 cm; Obstbäume außer Walnuss und Esskastanie ausgenommen), § 5 freigestellte Maßnahmen (BUND-PDF)",
+      "url": "https://www.bund-hamburg.de/fileadmin/hamburg/Themen/Baumschutz/baumschutzverordnung-2023.pdf"
+    },
+    {
+      "title": "hamburg.de (BUKEA): Baumschutz in Hamburg – Bezirksämter erteilen Ausnahmegenehmigungen, Antrag online oder beim Bezirksamt",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/naturschutz/baumschutz-171588"
+    },
+    {
+      "title": "§ 39 Abs. 5 BNatSchG (1. März bis 30. September), lexetius",
+      "url": "https://lexetius.com/BNatSchG/39"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe ab 01.07.2026 (St. Pauli Feldstraße 69, Billbrook Liebigstraße 66; Grünabfälle privat in haushaltsüblicher Menge kostenlos)",
+      "url": "https://files.stadtreinigung.hamburg/SRH_26_06_17__Preisliste_Recyclinghoefe_06-26_v04.pdf"
+    },
+    {
+      "title": "LGH/BUKEA: Merkblatt zur Nutzung von Kleingärten in Hamburg, ab 01.01.2021 (Abschnitt 3.10: Grünschnitt im öffentlichen Raum ist illegale Abfallentsorgung)",
+      "url": "https://www.gartenfreunde-hh.de/downloads/1326/Merkblatt-zur-Nutzung-von-Kleingaerten-in-Hamburg-012021.pdf"
+    }
+  ],
+  "notes_for_review": [
+    "Entwurf 26.10.2026 (Branch lo-hecke). Stadtteil-Beschreibungen nur aus den Teasertexten auf hamburg.de; die Flugzeugmontage auf Finkenwerder steht dort als „Jetmontage“.",
+    "Welche Abteilung im Bezirksamt Hamburg-Mitte Heckenanträge bearbeitet (laut BUKEA-Seite „MR“), war nicht eindeutig belegbar; der Text nennt nur das Bezirksamt.",
+    "Bitte bestätigen: Fahren Sie auch nach Finkenwerder? Der Text nennt es als möglichen Auftrag."
+  ]
+}
