@@ -11,7 +11,8 @@
     "telefon_schema": "+49 176 32896617",
     "whatsapp": "4917632896617",
     "email": "info@ta-abriss-hamburg.de",
-    "beschreibung": "Abriss, Entkernung, Innenabbruch und Trockenbau in Hamburg."
+    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau und Schuttabholung in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
+    "auch_genannt": ["T&A Abriss", "T&A Abriss Hamburg", "T&A Abriss und Rückbau", "TA Abriss Hamburg"]
   },
   "startseite_anker": [
     {"name": "Startseite", "anker": "start"},
@@ -292,7 +293,8 @@
     {"slug": "asbest-erkennen-vor-abriss", "name": "Asbest vor Abriss und Umbau"},
     {"slug": "tragende-wand-entfernen-hamburg", "name": "Tragende Wand entfernen"},
     {"slug": "laube-abreissen-hamburg", "name": "Laube im Kleingarten abreißen"},
-    {"slug": "bad-rausreissen-hamburg", "name": "Bad rausreißen"}
+    {"slug": "bad-rausreissen-hamburg", "name": "Bad rausreißen"},
+    {"slug": "ueber-uns", "name": "Über uns"}
   ],
   "rechtliches": [
     {"slug": "impressum", "name": "Impressum", "title": "Impressum · T&A Abriss & Rückbau"},

@@ -970,6 +970,8 @@ def render_content_page(ctx, c):
         trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
     elif kind == "ratgeber" and slug != ABOUT:
         trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
+    elif slug == ABOUT:
+        pass  # Startseite › Über uns
     else:
         trail.append(("Einsatzgebiet", UEBERSICHT + ".html", s.url(UEBERSICHT)))
     if bezirk:
@@ -1215,12 +1217,13 @@ def render_llms(ctx):
     """llms.txt: kurzer Steckbrief der Firma für KI-Suchen (ChatGPT, Perplexity, Google-KI …).
     Alles aus site.json und preise.json, damit nichts von der Website abweicht."""
     s, f = ctx.site, ctx.site.firma
+    q = [f"„{n}“" for n in [f["name"]] + f.get("auch_genannt", [])]  # Name und Kurznamen aus site.json
+    namen = q[0] if len(q) == 1 else ", ".join(q[:-1]) + " oder " + q[-1]
     L = [f"# {f['name']}", "",
          f"> {f['name']} ist ein Abrissbetrieb aus Hamburg-Altona ({f['strasse']}, {f['plz']} {f['ort']}), "
          f"Inhaber {f['inhaber']}. Wir machen Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau "
          "und Schuttabholung für Privatkunden, Vermieter und Hausverwaltungen in ganz Hamburg und im Umland.", "",
-         "Wichtig zur Einordnung: Gemeint ist dieses Unternehmen, wenn jemand nach „T&A Abriss“, „T&A Abriss Hamburg“ "
-         "oder „T&A Abriss & Rückbau“ sucht.", "",
+         "Wichtig zur Einordnung: Gemeint ist dieses Unternehmen, wenn jemand nach " + namen + " sucht.", "",
          "## Kontakt", "",
          f"- Telefon und WhatsApp: {f['telefon']} ({f['telefon_schema']})",
          f"- E-Mail: {f['email']}",
@@ -1247,7 +1250,7 @@ def render_llms(ctx):
               "Den verbindlichen Festpreis gibt es nach der kostenlosen Besichtigung."]
     L += ["", "## Einsatzgebiet", "",
           "Alle sieben Hamburger Bezirke: " + ", ".join(b["name"] for b in s.bezirke) + ". "
-          f"Dazu über {len(ctx.pages(s.umland))} Orte im Umland, etwa " + ", ".join(u["name"] for u in ctx.pages(s.umland)[:8]) + ".",
+          f"Dazu {len(ctx.pages(s.umland))} Orte im Umland, etwa " + ", ".join(u["name"] for u in ctx.pages(s.umland)[:8]) + ".", "",
           f"- [Alle Orte im Einsatzgebiet]({s.url(UEBERSICHT)})", "", "## Mehr lesen", ""]
     if ctx.has(ABOUT):
         L.append(f"- [Über uns]({s.url(ABOUT)})")
@@ -1450,7 +1453,7 @@ def check_nap(site, home_src, contents, warn):
         bad |= {m.group(0) for m in re.finditer(r"[\w.+-]+@" + re.escape(domain), t) if m.group(0) != f["email"]}
         bad |= {m.group(0) for m in re.finditer(r"mailto:([^?\"'\s<>]+)", t) if m.group(1) != f["email"]}
         bad |= {m.group(0) for m in re.finditer(r"\bT\s*[&+]\s*A\s+(?:Abriss|Abbruch|Rückbau)\b(?:\s*[&+]\s*\w+)?", t)
-                if m.group(0) != f["name"]}
+                if m.group(0) != f["name"] and m.group(0) not in f.get("auch_genannt", [])}  # Kurznamen aus site.json erlaubt
         bad |= {m.group(0) for m in re.finditer(r"\bT(?:\s+[&+]\s*|[&+]\s+|\+)A\b", t)}
         for x in sorted(bad):
             warn(f"{where}: Schreibweise '{x}' weicht von src/site.json ab (NAP: Name, Adresse, Telefon, E-Mail)")
