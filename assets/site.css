@@ -168,22 +168,22 @@ footer{background:var(--surface);border-top:1px solid var(--line);font-size:.95r
 footer .wrap{padding-block:var(--s5);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
 footer h3{font-size:1.2rem;color:var(--ink);margin-bottom:var(--s2);text-transform:uppercase}
 
-/* Schnellkontakt: PC = schwebender Anfrage-Knopf, Handy (bis 700 px) = feste Leiste „Anrufen“ + „Anfrage“.
-   Eingeblendet per site.js (.on); ausgeblendet ist sie unsichtbar UND nicht per Tab erreichbar (visibility). */
-.fab{position:fixed;z-index:30;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;gap:.5rem;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(12px);transition:opacity .3s var(--ease-out),transform .3s var(--ease-out),visibility 0s linear .3s}
-.fab.on{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
-.fab .btn{justify-content:center}
-.fab-req{box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
-.fab-tel{display:none}
-.fab-wa{box-shadow:0 12px 30px -10px rgba(0,0,0,.35)}
+/* Schnellkontakt: feste Leiste unten auf jeder Seite und jeder Bildschirmgröße, immer sichtbar (ohne Skript).
+   PC/Tablet: drei Knöpfe mittig, „Anrufen“ mit Nummer. Handy (bis 700 px): drei gleich breite Knöpfe.
+   .fab-bar ist ein Platzhalter unter dem Footer in Leistenhöhe: am Seitenende verdeckt die Leiste nichts. */
+:root{--fab-h:65px}
+@media (min-width:701px){:root{--fab-h:69px}}
+html{scroll-padding-bottom:calc(var(--fab-h) + 12px + env(safe-area-inset-bottom,0px))}
+.fab-bar{height:calc(var(--fab-h) + env(safe-area-inset-bottom,0px));background:var(--surface)}
+.fab{position:fixed;z-index:30;left:0;right:0;bottom:0;height:calc(var(--fab-h) + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;align-items:center;gap:.75rem;padding:0 max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px));background:var(--header);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(20,28,34,.35)}
+.fab .btn{justify-content:center;min-height:48px;padding:.6rem 1.25rem;white-space:nowrap}
+.fab .btn:hover{transform:none}
+.fab .btn.alt{background:var(--surface)}
+.fab-num{font-variant-numeric:tabular-nums;letter-spacing:.01em}
 @media (max-width:700px){
-  /* Platzhalter unter dem Footer in Leistenhöhe: am Seitenende verdeckt die Leiste nichts */
-  .fab-bar{height:calc(65px + env(safe-area-inset-bottom,0px));background:var(--surface)}
-  .fab{left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem;padding:8px max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--header);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-top:1px solid var(--line);transform:translateY(100%)}
-  .fab .btn{min-height:48px;padding:.6rem .5rem;transform:none;font-size:.95rem;gap:.35rem}
-  .fab-wa{box-shadow:none}
-  .fab-req{box-shadow:none}
-  .fab-tel{display:inline-flex}
+  .fab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}
+  .fab .btn{padding:.6rem .4rem;font-size:.95rem;gap:.35rem}
+  .fab-num{display:none}
 }
 @media print{.fab-bar{display:none}}
 
