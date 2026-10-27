@@ -1,6 +1,6 @@
 # T&A Abriss & Rückbau – Webseite
 
-Webseite von T&A Abriss & Rückbau, Inh. Talal Al Saadoun, Hamburg.
+Webseite von T&A Abriss & Rückbau, Inh. Talal Alsaadoun, Hamburg.
 Live unter https://ta-abriss-hamburg.de (GitHub Pages).
 
 ## Aufbau
