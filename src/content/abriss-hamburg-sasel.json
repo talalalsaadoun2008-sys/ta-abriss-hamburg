@@ -6,7 +6,7 @@
   "description": "Schuppen, Garage oder Mauer abreißen in Hamburg-Sasel, etwa vor einer Grundstücksteilung.",
   "label": "Stadtteil Sasel · Bezirk Wandsbek",
   "h1": "Abriss in Hamburg-Sasel: Schuppen, Garage und Mauer",
-  "lead": "Sasel ist von Einfamilienhäusern auf großen, oft schon geteilten Grundstücken geprägt. Wir reißen dort Schuppen, Garagen, Carports, Terrassen und Mauern ab und entsorgen alles getrennt.",
+  "lead": "Sasel ist von freistehenden Einfamilienhäusern auf großen, oft schon geteilten Grundstücken geprägt. Wir reißen dort Schuppen, Garagen, Carports, Terrassen und Mauern ab und entsorgen alles nach Sorten getrennt.",
   "facts": [
     "Schuppen, Garage, Mauer",
     "Schutt, Holz, Metall getrennt",
@@ -17,20 +17,20 @@
   "form_ort": "Sasel",
   "sections": [
     {
-      "h2": "Sasel: vom Bauerndorf zum Stadtteil der Einfamilienhäuser",
-      "html": "<p>Sasel wurde 1293 erstmals erwähnt. Anders als etwa Wellingsbüttel stand es nie unter einer Gutsherrschaft und blieb lange ein Bauerndorf. 1937 kam es mit anderen Stormarner Dörfern zu Hamburg. Ab etwa 1920 wurde die Feldmark planmäßig erschlossen, zuerst mit Siedlergrundstücken zur Selbstversorgung. Aus dieser Zeit stammen etwa die Siedlungshäuser von Fritz Höger am Op de Elg (1921/22) und das Klinker-Rathaus am Saseler Markt von 1927. In den 1950er-Jahren entstanden viele Einzelhäuser auf großen Grundstücken. Die Stadt Hamburg nennt die vielen Einfamilienhäuser als einen Grund, warum Sasel für junge Familien attraktiv ist.</p>"
+      "h2": "Sasel: Siedlerstellen, Nachkriegshäuser, geteilte Grundstücke",
+      "html": "<p>Sasel wurde 1293 erstmals erwähnt. Anders als etwa Wellingsbüttel stand es nie unter einer Gutsherrschaft und blieb lange ein Bauerndorf, 1937 kam es mit anderen Stormarner Dörfern zu Hamburg. Ab etwa 1920 wurde die Feldmark planmäßig erschlossen, zuerst mit Siedlergrundstücken zur Selbstversorgung. Aus dieser Zeit stammen die Siedlungshäuser von Fritz Höger am Op de Elg (1921/22) und das Klinker-Rathaus am Saseler Markt von 1927. In den 1950er-Jahren entstanden viele Einzelhäuser auf großen Grundstücken. Im Wohnungsbauprogramm 2015 beschreibt das Bezirksamt Wandsbek den Stadtteil als überwiegend von freistehenden Einfamilienhäusern geprägt und empfiehlt, Nachverdichtungspotenziale zu nutzen. Auch die Stadt nennt die vielen Einfamilienhäuser als Grund, warum junge Familien hierherziehen. Rund 24.300 Menschen waren Ende 2024 in Sasel gemeldet, so das Statistikamt Nord.</p><p>Genau das passiert seit Jahren: Große Grundstücke werden geteilt, ältere Häuser weichen teils neuen Doppelhäusern. Bevor auf der neuen Teilfläche gebaut wird, müssen meist Nebengebäude weg, etwa ein alter Holzschuppen, die Garage, ein Carport oder eine Mauer, die künftig mitten auf der Grenze stünde. Das übernehmen wir als <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>. Ob Fundamente und Bodenplatten mit herauskommen, steht vorher im Angebot, sie werden gesondert berechnet. Ein ganzes mehrgeschossiges Wohnhaus abzureißen gehört nicht zu unseren Leistungen.</p>"
     },
     {
-      "h2": "Vor dem Neubau: Abriss in Sasel auf geteilten Grundstücken",
-      "html": "<p>Viele der großen Grundstücke sind inzwischen in kleine Baugrundstücke geteilt, ältere Häuser weichen teils neuen Doppelhäusern. Bevor auf einem Teil gebaut wird, müssen oft Nebengebäude weg: ein alter Holzschuppen, eine Garage, ein Carport, die Terrasse oder eine Mauer, die künftig mitten auf der neuen Grenze stünde. Das übernehmen wir als <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a>. Ob Fundamente und Bodenplatten mit herauskommen, steht vorher im Angebot. Ein ganzes mehrgeschossiges Wohnhaus abzureißen gehört nicht zu unseren Leistungen.</p><p>Alte Schuppen sind häufig mit Dachpappe oder Wellplatten gedeckt. Teerhaltige Dachpappe ist gefährlicher Abfall, imprägniertes Holz aus dem Garten in der Regel ebenfalls. Wellplatten, die vor Oktober 1993 verbaut wurden, können Asbest enthalten. Deshalb werden Pappe und Platten vor dem Abriss untersucht. Für Teer und Asbest gelten beim Ausbau besondere Schutzregeln, asbesthaltige Platten nimmt in jedem Fall ein dafür berechtigter Fachbetrieb ab. Den übrigen Schuppen bauen wir danach zurück und entsorgen ihn nach Sorten getrennt.</p>"
+      "h2": "Dachpappe, Wellplatten, altes Holz: was in Saseler Schuppen steckt",
+      "html": "<p>Ältere Schuppen und Garagen sind häufig mit Dachpappe oder Wellplatten gedeckt. Teerhaltige Dachpappe ist gefährlicher Abfall, imprägniertes Holz aus dem Garten in der Regel ebenfalls. Wellplatten, die vor Oktober 1993 verbaut wurden, können Asbest enthalten. Deshalb werden Pappe und Platten vor dem Abriss untersucht. Asbesthaltige Platten nimmt in jedem Fall ein dafür berechtigter Fachbetrieb ab, für Teer gelten beim Ausbau eigene Schutzregeln. Den übrigen Schuppen bauen wir danach zurück und entsorgen ihn nach Sorten getrennt.</p><p>Oft steht in Garage oder Schuppen noch jahrzehntealter Hausrat. Den räumen wir vor dem Abriss aus, wie bei einer <a href=\"entruempelung-hamburg-wandsbek.html\">Entrümpelung in Wandsbek</a>.</p>"
     },
     {
-      "h2": "Wenn im Schuppen Vögel brüten",
-      "html": "<p>In alten Schuppen, Garagen und unter Carportdächern nisten manchmal Vögel. Ihre Brutstätten sind nach § 44 Bundesnaturschutzgesetz geschützt, und das gilt für alle europäischen Vogelarten, also auch für Amsel oder Hausrotschwanz. Sie dürfen nicht beschädigt oder zerstört werden, und ob das auch für ein gerade leeres Nest gilt, sollten Sie nicht selbst entscheiden. Sehen Sie im Frühjahr Vögel ein- und ausfliegen, sagen Sie es uns bei der Besichtigung. Dann kann es nötig sein, den Abriss zu verschieben. Im Zweifel gibt die Naturschutzbehörde Auskunft.</p>"
+      "h2": "Hecken, Bäume und Vogelnester an der künftigen Grenze",
+      "html": "<p>Wer teilt, will meist auch die alte Hecke an der neuen Grundstücksgrenze loswerden. Die Hamburgische Baumschutzverordnung schützt aber nicht nur Bäume ab 80 cm Stammumfang, sondern auch Hecken ab 80 cm Höhe, samt einem Wurzelbereich bis einen halben Meter über die Krone hinaus. Vom 1. März bis 30. September ist es zudem verboten, Gehölze zu beseitigen oder auf den Stock zu setzen, Ausnahmen sind möglich. Ob ein Eingriff genehmigt werden muss, entscheidet die Naturschutzbehörde des Bezirks. Den fachgerechten Rückschnitt beschreibt die Seite <a href=\"gruenschnitt-hecke-hamburg-wandsbek.html\">Hecke und Grünschnitt in Wandsbek</a>.</p><p>In alten Schuppen und unter Carportdächern nisten manchmal Vögel. Ihre Brutstätten sind nach § 44 Bundesnaturschutzgesetz geschützt, und das gilt für alle europäischen Vogelarten, also auch für Amsel oder Hausrotschwanz. Ob das auch für ein gerade leeres Nest gilt, sollten Sie nicht selbst entscheiden. Sehen Sie im Frühjahr Vögel ein- und ausfliegen, sagen Sie es uns bei der Besichtigung, dann wird der Abriss unter Umständen verschoben.</p>"
     },
     {
-      "h2": "Denkmalschutz und Genehmigung in Sasel",
-      "html": "<p>Auch in Sasel stehen einzelne Gebäude unter Denkmalschutz, darunter Wohnhäuser. Gehört ein Haus oder Nebengebäude dazu, ist bereits für einen teilweisen Abriss eine denkmalrechtliche Genehmigung nötig. Ob das zutrifft, zeigt die Denkmalliste, im Zweifel fragen Sie beim Denkmalschutzamt nach. Über Bauanträge entscheidet das Fachamt Bauprüfung im Wandsbeker Bezirksamt. Kleine Nebengebäude dürfen in Hamburg häufig ohne Antrag abgerissen werden. Wo die Grenzen liegen, erklärt der <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber zur Abriss-Genehmigung</a>.</p><p>Termine zur Besichtigung für Ihren Abriss in Sasel: Mo–Fr ab 16:30 Uhr, Sa ab 9:00 Uhr. Den Nachbarstadtteil an der Alster beschreibt die Seite <a href=\"abriss-hamburg-poppenbuettel.html\">Poppenbüttel</a>, den ganzen Bezirk die Seite <a href=\"abriss-hamburg-wandsbek.html\">Wandsbek</a>.</p>"
+      "h2": "Recyclinghof am Volksdorfer Weg und Bauaufsicht in Wandsbek",
+      "html": "<p>Sasel hat einen eigenen Recyclinghof der Stadtreinigung am Volksdorfer Weg 196, geöffnet montags bis samstags von 8 bis 17 Uhr. Zwischen dem 1. September und dem 5. Dezember ist er nur von der Westseite zu erreichen. Der Hof nimmt auch Altholz der Kategorie A IV an. Sperrmüll im Sinne der Stadtreinigung sind weder Gartenlauben noch Bauschutt, für einen abgebauten Schuppen kommt die Sperrmüllabfuhr also nicht.</p><p>Ob für den Rückbau ein Antrag nötig ist, beantwortet die Bauaufsicht im Fachamt Bauprüfung des Bezirksamts Wandsbek am Schloßgarten 9, per E-Mail an geschaeftsstelle-wbz@wandsbek.hamburg.de. In Sasel stehen auch einzelne Gebäude unter Denkmalschutz, darunter Wohnhäuser. Gehört ein Haus oder Nebengebäude dazu, ist schon für einen teilweisen Abriss eine denkmalrechtliche Genehmigung nötig, im Zweifel fragen Sie beim Denkmalschutzamt nach. Den ganzen Bezirk beschreibt die Seite <a href=\"abriss-hamburg-wandsbek.html\">Abriss in Wandsbek</a>.</p>"
     }
   ],
   "stadtteile": [],
@@ -46,24 +46,44 @@
     {
       "q": "Das Schuppendach ist mit alter Dachpappe gedeckt. Ist das ein Problem?",
       "a": "Enthält die Dachpappe Teer, zählt sie zum gefährlichen Abfall und muss getrennt entsorgt werden. Ob Teer darin steckt, wird vor dem Abriss geprüft."
+    },
+    {
+      "q": "Können wir die Reste vom Schuppen selbst zum Recyclinghof Sasel fahren?",
+      "a": "Für kleine Mengen ja. Bauschutt nimmt der Hof laut Preisliste 2026 nur bis 500 Liter und gegen Gebühr an, Asbestzement nur nach telefonischer Beratung und Voranmeldung. Reißen wir den Schuppen ab, fahren wir alles selbst ab, die Entsorgung steckt dann im Festpreis."
     }
   ],
   "sources": [
     {
-      "title": "Hamburg-Sasel – Wikipedia (Ersterwähnung 1293, keine Gutsherrschaft, 1937, Siedlergrundstücke ab 1920, Höger-Siedlungshäuser Op de Elg 1921/22, Rathaus 1927, Grundstücksteilungen, Liste der Baudenkmäler)",
+      "title": "Hamburg-Sasel – Wikipedia (Ersterwähnung 1293, keine Gutsherrschaft, 1937, Siedlergrundstücke ab 1920, Höger-Siedlungshäuser Op de Elg 1921/22, Rathaus 1927, Einzelhäuser der 1950er, Grundstücksteilungen und Doppelhäuser, Liste der Baudenkmäler)",
       "url": "https://de.wikipedia.org/wiki/Hamburg-Sasel"
     },
     {
-      "title": "Stadtteile im Bezirk Wandsbek – hamburg.de",
-      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-wandsbek"
+      "title": "Wohnungsbauprogramm Wandsbek 2015, Sammelmappe Alstertal, Stadtteilprofil Sasel („überwiegend freistehende Einfamilienhäuser“, Nachverdichtungspotenziale)",
+      "url": "https://epub.sub.uni-hamburg.de/epub/volltexte/2016/50170/pdf/6.pdf"
     },
     {
-      "title": "FHH, BUKEA: Hinweise zur Abfallentsorgung bei Bau- und Abbrucharbeiten, Stand Juli 2020 (KMF bis Juni 2000, teerhaltige Dachpappe, imprägniertes Altholz)",
+      "title": "Stadtteile im Bezirk Wandsbek – hamburg.de (Sasel: viele Einfamilienhäuser, Rathaus am Saseler Markt)",
+      "url": "https://www.hamburg.de/stadtteile-bezirk-wandsbek--800954"
+    },
+    {
+      "title": "City Population: Stadtteile Hamburgs, gemeldete Einwohner 31.12.2024 (nach Statistisches Amt für Hamburg und Schleswig-Holstein): Sasel 24.287",
+      "url": "https://citypopulation.de/de/germany/hamburg/admin/"
+    },
+    {
+      "title": "FHH, BUKEA: Hinweise zur Abfallentsorgung bei Bau- und Abbrucharbeiten, Stand Juli 2020 (teerhaltige Dachpappe, imprägniertes Altholz)",
       "url": "https://www.hamburg.de/resource/blob/159446/6a0b6cdbb49a206d482d8ab8ecdde506/d-merkblatt-abfallentsorgung-bei-bau-und-abbrucharbeiten-data.pdf"
     },
     {
-      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, typische Bauprodukte)",
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, Asbestzement-Wellplatten)",
       "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
+    },
+    {
+      "title": "Hamburgische Baumschutzverordnung vom 28.02.2023, § 1 (Bäume ab 80 cm Stammumfang, Hecken ab 80 cm Höhe) und § 4 Abs. 2 (Wurzelbereich, bei Hecken plus 0,5 m) (umwelt-online)",
+      "url": "https://umwelt-online.de/recht/natursch/laender/hh/baum23.htm"
+    },
+    {
+      "title": "hamburg.de: Bäume fällen oder zurückschneiden – Genehmigung beantragen (Hecken ab 80 cm Mindesthöhe, Verbot vom 1. März bis 30. September, bezirkliche Naturschutzbehörde), aktualisiert 25.10.2026",
+      "url": "https://www.hamburg.de/service/info/11254164/n0/"
     },
     {
       "title": "§ 44 BNatSchG – Vorschriften für besonders geschützte Arten (Abs. 1 Nr. 3)",
@@ -74,18 +94,32 @@
       "url": "https://lxgesetze.de/bnatschg/7"
     },
     {
-      "title": "Hamburg: Denkmalrechtliche Genehmigung – Denkmalschutzamt, §§ 8, 9 DSchG, Bearbeitung bis zu zwei Monate (FIM-Portal)",
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung (Sasel, Volksdorfer Weg 196, Mo–Sa 8–17 Uhr, zwischen 01.09. und 05.12. nur von der Westseite erreichbar)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe ab 01.01.2026 (Bauschutt max. 500 Liter, Asbest nur nach telefonischer Beratung und Voranmeldung, Altholz Kategorie IV u. a. in Sasel)",
+      "url": "https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf"
+    },
+    {
+      "title": "hamburg.de: Sperrmüll entsorgen – kein Sperrmüll: Bauabfälle (auch Gartenlauben), Bauschutt, aktualisiert 26.10.2026",
+      "url": "https://www.hamburg.de/service/info/11279820/"
+    },
+    {
+      "title": "Hamburg: Denkmalrechtliche Genehmigung – Denkmalschutzamt, §§ 8, 9 DSchG (FIM-Portal)",
       "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012667/de/pdf"
     },
     {
-      "title": "Adressliste der Bauprüfdienststellen Hamburg, Stand 16.04.2025 (Fachamt Bauprüfung Wandsbek, Schloßgarten 9)",
+      "title": "Adressliste der Bauprüfdienststellen Hamburg, Stand 16.04.2025 (Fachamt Bauprüfung Wandsbek, Schloßgarten 9, E-Mail geschaeftsstelle-wbz@wandsbek.hamburg.de)",
       "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"
     }
   ],
   "notes_for_review": [
+    "Recyclinghof Sasel: Die Zufahrt nur von der Westseite (1.9.–5.12.) nennt hamburg.de ohne Jahr; nach dem 05.12.2026 prüfen und den Satz ggf. streichen.",
     "Denkmäler in Sasel nur aus der Liste im Wikipedia-Artikel (u. a. Saseler Markt 8 und 22, Mellingburgredder 1, 8, 11, 19, Op de Elg 21–29); amtliche Denkmalliste nicht eingesehen. Der Text nennt deshalb keine Adressen.",
     "Vogelschutz: Welche Hamburger Stelle für artenschutzrechtliche Fragen bei Abrissen zuständig ist (Bezirksamt oder BUKEA), ist nicht geprüft; der Text sagt nur „Naturschutzbehörde“.",
     "Für Sasel ist keine Erhaltungsverordnung und kein Bebauungsplan mit Erhaltungsbereich bekannt; im Geoportal gegenprüfen.",
-    "Frage an den Inhaber: Werden Fundamente und Bodenplatten beim Kleinabriss mit entfernt? Der Text sagt nur, dass das vor dem Angebot festgelegt wird."
+    "Kontakt Bauprüfung aus der Adressliste mit Stand 16.04.2025; die E-Mail ist die der Geschäftsstelle des WBZ.",
+    "Fundamente/Bodenplatten „gesondert berechnet“ nach src/preise.json (zuzueglich: Fundament oder Bodenplatte)."
   ]
 }
