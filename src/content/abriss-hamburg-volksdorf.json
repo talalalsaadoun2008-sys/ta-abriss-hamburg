@@ -3,10 +3,10 @@
   "type": "stadtteil",
   "menu": "Volksdorf",
   "title": "Abriss Hamburg-Volksdorf ✓ Kleinabriss ✓ Festpreis | T&A",
-  "description": "Gartenhaus, Garage oder Terrasse abreißen in Hamburg-Volksdorf, mit Rücksicht auf alte Bäume.",
+  "description": "Gartenhaus, Garage oder Terrasse abreißen in Hamburg-Volksdorf, mit Blick auf Baumschutz und Baujahr.",
   "label": "Stadtteil Volksdorf · Bezirk Wandsbek",
   "h1": "Abriss in Hamburg-Volksdorf: Gartenhaus und Garage",
-  "lead": "Volksdorf ist ein Walddorf mit großen Gärten und viel Grün. Wir reißen hier Gartenhäuser, Garagen, Carports und Terrassen ab und achten auf Wurzeln und Erhaltungsbereiche.",
+  "lead": "Volksdorf ist ein Walddorf mit großen Gärten und altem Baumbestand. Wir reißen hier Gartenhäuser, Garagen, Carports und Terrassen ab und klären vorher, was Wurzeln, Erhaltungsbereiche und Baujahr verlangen.",
   "facts": [
     "Kleinabriss im Garten",
     "Festpreis inkl. Entsorgung",
@@ -17,31 +17,35 @@
   "form_ort": "Volksdorf",
   "sections": [
     {
-      "h2": "Volksdorf: Walddorf mit Landhäusern und großen Grundstücken",
-      "html": "<p>Volksdorf gehört seit dem Spätmittelalter zu Hamburg. 1437 wurde das Dorf an die Stadt verpfändet und nie wieder ausgelöst, seitdem zählt es zu den Walddörfern. Mit der Kleinbahn ab 1904 und später der Walddörferbahn bekam das Dorf Anschluss an die Stadt. Ab etwa 1900 bauten wohlhabende Hamburger Familien Villen im Landhausstil, später wurden Flächen mit Grundstücken von etwa 1.000 bis 1.200 m² parzelliert. Bis 1948 entstanden vor allem Einzel- und Doppelhäuser, danach auch Reihenhaussiedlungen und ab 1972 höhere Wohnblocks. Heute ist Volksdorf überwiegend mit Einfamilienhäusern bebaut.</p><p>Wie das Dorf früher aussah, zeigt das 1962 gegründete Museumsdorf Volksdorf mit seinen alten Bauernhäusern. Im Süden liegt der Volksdorfer Wald, dazu kommen die Naturschutzgebiete Volksdorfer Teichwiesen und Duvenwischen.</p>"
+      "h2": "Volksdorf: Landhäuser, Reihenhäuser und Wohnblocks",
+      "html": "<p>1437 verpfändete der Grundherr Volksdorf an Hamburg, ausgelöst wurde das Pfand nie. Seitdem zählt das Dorf zu den Walddörfern. Ab 1912 fuhr die Walddörferbahn, ab 1920 durchgehend bis Barmbek, und Volksdorf wurde zum Wohnort für Hamburger Familien. Ab etwa 1900 entstanden Villen im Landhausstil, später wurden Flächen in Grundstücke von etwa 1.000 bis 1.200 m² parzelliert. Bis 1948 baute man vor allem Einzel- und Doppelhäuser, danach Reihenhaussiedlungen und ab 1972 auch höhere Wohnblocks. Die Stadt beschreibt die Bebauung heute als locker und von Einfamilienhäusern geprägt, an der Fußgängerzone Weiße Rose stehen Zweckbauten aus den 1970er Jahren.</p><p>Wer hier abreißt, trifft also auf sehr verschiedene Baujahre. An Garagen, Schuppen und Umbauten aus der Zeit vor dem Asbestverbot vom 31. Oktober 1993 können Wellplatten, Fensterbänke oder alte Bodenplatten Asbest enthalten. Das klären wir, bevor jemand zum Werkzeug greift. Belastetes Material baut nur ein zugelassener Fachbetrieb aus, den übrigen Rückbau erledigen wir danach.</p>"
     },
     {
-      "h2": "Kleinabriss auf großen Gartengrundstücken",
-      "html": "<p>Auf großen Grundstücken sammelt sich über Jahrzehnte einiges an: ein Geräteschuppen hinter der Hecke, eine Garage mit Flachdach, ein Carport, eine Terrasse aus Waschbetonplatten oder eine alte Gartenmauer. Beim <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> bauen wir solche Bauten ab, sortieren Holz, Metall und Bauschutt getrennt und übergeben die Fläche besenrein. Steht der Schuppen weit hinten im Garten, wird das Material beim Abriss in Volksdorf bis zum Container getragen. Wie weit, sehen wir bei der Besichtigung, und der Aufwand steht von Anfang an im Festpreis.</p>"
+      "h2": "Kleinabriss weit hinten im Garten",
+      "html": "<p>Auf den großen Volksdorfer Grundstücken steht der Geräteschuppen oft hinter Haus und Hecke, dazu kommen eine Garage mit Flachdach, ein Carport, eine Terrasse aus Waschbetonplatten oder eine alte Gartenmauer. Beim <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> tragen wir das Material bis zur Zufahrt, sortieren Holz, Metall und Bauschutt und übergeben die Fläche besenrein. Wie weit der Weg ist, sehen wir bei der kostenlosen Besichtigung, der Aufwand steht danach im Festpreis. Fundament und Bodenplatte nehmen wir auf Wunsch mit heraus, sie werden gesondert berechnet.</p><p>Unter alten Eichen und Buchen gilt die Hamburgische Baumschutzverordnung. Sie schützt Bäume ab 80 cm Stammumfang, gemessen in 130 cm Höhe, und für Bäume in Gruppen gelten niedrigere Werte. Geschützt ist auch der Wurzelbereich, also der Boden unter der Krone und 1,5 m darüber hinaus, dort sind Abgrabungen, Ausschachtungen und Versiegelungen verboten. Liegt die Bodenplatte einer Garage in diesem Bereich, legen wir vor dem Angebot fest, ob sie im Boden bleibt. Wurzeln eines geschützten Baums kappen oder ihn fällen darf man nur mit Genehmigung des Bezirksamts, den Ablauf beschreibt die Seite <a href=\"baumfaellung-hamburg-wandsbek.html\">Baumfällung in Wandsbek</a>.</p>"
     },
     {
-      "h2": "Alte Bäume: Was die Baumschutzverordnung beim Abriss in Volksdorf bedeutet",
-      "html": "<p>Wo große Bäume stehen, gilt die Hamburgische Baumschutzverordnung. Sie schützt einzelne Bäume, deren Stamm in 130 cm Höhe mindestens 80 cm Umfang hat, für Bäume in Gruppen gelten niedrigere Werte. Obstbäume sind ausgenommen, außer Walnuss und Esskastanie. Geschützt ist auch der Wurzelbereich: der Boden unter der Krone und noch 1,5 m darüber hinaus. Abgrabungen, Ausschachtungen und das Versiegeln des Bodens sind dort verboten.</p><p>Steht die alte Garage unter einer großen Eiche, kann schon das Herausnehmen der Bodenplatte in die Wurzeln eingreifen. Ob Fundament und Bodenplatte herauskommen, legen wir deshalb vor dem Angebot fest. Wer Wurzeln eines geschützten Baums kappen oder ihn fällen will, braucht eine Genehmigung des Bezirksamts.</p>"
+      "h2": "Erhaltungsbereiche und Denkmäler in Volksdorf",
+      "html": "<p>Mehrere Volksdorfer Bebauungspläne setzen Erhaltungsbereiche nach § 172 Baugesetzbuch fest. Volksdorf 40 gilt zwischen der U-Bahn-Trasse Volksdorf–Buchenkamp und dem Volksdorfer Wald, Volksdorf 41 nach einer Senatsantwort von 2021 unter anderem an der Schemmannstraße. Innerhalb dieser Bereiche ist bereits der Abbruch baulicher Anlagen genehmigungspflichtig, etwa eines Gartenhauses oder einer Mauer, auch wenn das Bauordnungsrecht keinen Antrag fordert. Versagt werden darf die Genehmigung nur, wenn die Anlage das Ortsbild prägt oder städtebaulich, geschichtlich oder künstlerisch bedeutsam ist.</p><p>Hinzu kommen Denkmäler. Die Stadt nennt Ohlendorffs Park als denkmalgeschützt, das Museumsdorf zeigt acht historische Höfe und Gebäude, einige aus dem 17. Jahrhundert. Für Eingriffe an einem eingetragenen Denkmal braucht es die Genehmigung des Denkmalschutzamts. Welche Abrisse in Hamburg sonst ohne Verfahren gehen, erklärt der <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber zur Abriss-Genehmigung</a>.</p>"
     },
     {
-      "h2": "Erhaltungsbereiche in Volksdorfer Bebauungsplänen",
-      "html": "<p>In Volksdorf gibt es Bebauungspläne mit Erhaltungsbereichen nach § 172 Baugesetzbuch. Der Plan Volksdorf 40 für das Gebiet zwischen der U-Bahn-Trasse Volksdorf–Buchenkamp und dem Volksdorfer Wald weist solche Bereiche aus. Auch der Plan Volksdorf 41 setzt Erhaltungsbereiche fest, nach einer Senatsantwort von 2021 zum Beispiel an der Schemmannstraße. Innerhalb dieser Bereiche ist bereits der Abbruch baulicher Anlagen genehmigungspflichtig, etwa eines Gartenhauses oder einer Mauer, unabhängig davon, ob das Bauordnungsrecht einen Antrag fordert. Eine Ablehnung ist nur möglich, wenn die Anlage das Ortsbild oder die Stadtgestalt prägt oder von städtebaulicher, geschichtlicher oder künstlerischer Bedeutung ist.</p><p>Ob Ihr Grundstück in einem Erhaltungsbereich liegt, sagt Ihnen das Bezirksamt Wandsbek. Dort ist auch das Fachamt Bauprüfung für Volksdorf zuständig. Die allgemeinen Regeln stehen im <a href=\"abriss-genehmigung-hamburg.html\">Ratgeber Abriss-Genehmigung</a>, zum ganzen Bezirk siehe <a href=\"abriss-hamburg-wandsbek.html\">Abriss in Wandsbek</a>.</p>"
+      "h2": "Bauaufsicht und Recyclinghof für Volksdorf",
+      "html": "<p>Bauaufsicht für Volksdorf ist das Fachamt Bauprüfung im Bezirksamt Wandsbek, Schloßgarten 9, 22041 Hamburg, Telefon 040 428 81-3345 (Adressliste der Hamburger Bauprüfdienststellen, Stand April 2025). Dort erfahren Sie auch, ob Ihr Grundstück in einem Erhaltungsbereich liegt. Andere Stadtteile des Bezirks stehen auf der Seite <a href=\"abriss-hamburg-wandsbek.html\">Abriss in Wandsbek</a>.</p><p>Wer ein paar Säcke selbst wegbringen will, fährt zum Recyclinghof im Nachbarstadtteil Sasel am Volksdorfer Weg 196. Er hat montags bis samstags von 8 bis 17 Uhr geöffnet und gehört zu den Höfen, die auch Altholz der Kategorie A IV annehmen. Mineralischen Bauschutt nehmen die Höfe laut Preisliste 2026 nur bis 500 Liter an. Für eine ganze Garage reicht das nicht, deshalb fahren wir den Schutt selbst ab, und die Entsorgung ist im Festpreis enthalten.</p>"
     }
   ],
   "stadtteile": [],
   "faq": [
     {
       "q": "Unser Grundstück liegt zwischen U-Bahn und Volksdorfer Wald. Brauchen wir für den Abriss des Gartenhauses eine Genehmigung?",
-      "a": "Möglicherweise. Liegt das Gartenhaus in einem Erhaltungsbereich des Bebauungsplans Volksdorf 40, braucht schon der Rückbau eine Genehmigung. Das Bezirksamt Wandsbek kann Ihnen sagen, ob Ihr Grundstück betroffen ist."
+      "a": "Möglicherweise. Liegt das Gartenhaus in einem Erhaltungsbereich des Bebauungsplans Volksdorf 40, braucht schon der Rückbau eine Genehmigung. Ob Ihr Grundstück betroffen ist, sagt Ihnen das Bezirksamt Wandsbek."
     },
     {
       "q": "Neben unserer Garage steht eine große Buche. Was ist beim Abriss zu beachten?",
       "a": "Hat die Buche in 130 cm Höhe 80 cm Stammumfang oder mehr, sind Baum und Wurzelbereich geschützt, Abgrabungen dort sind verboten. Für Eingriffe in die Wurzeln braucht es eine Genehmigung des Bezirksamts. Wie die Garage dann abgebaut wird, besprechen wir bei der Besichtigung."
+    },
+    {
+      "q": "Auf unserer Garage aus den 1970er Jahren liegen graue Wellplatten. Reißen Sie die mit ab?",
+      "a": "Nicht, wenn sie Asbest enthalten. Bei Faserzement aus der Zeit vor Oktober 1993 ist das möglich, deshalb wird es vorher geprüft. Belastete Platten nimmt ein zugelassener Fachbetrieb ab, danach reißen wir die Garage ab und fahren den Rest getrennt ab."
     },
     {
       "q": "Das Gartenhaus steht ganz hinten auf unserem großen Grundstück. Ist das ein Problem?",
@@ -50,8 +54,12 @@
   ],
   "sources": [
     {
-      "title": "Hamburg-Volksdorf – Wikipedia (Verpfändung 1437, Walddörfer, Kleinbahn 1904, Landhausvillen, Grundstücksgrößen, Bebauung bis 1948 und ab 1972, Museumsdorf 1962, Naturschutzgebiete)",
+      "title": "Hamburg-Volksdorf – Wikipedia (Verpfändung 1437, Walddörfer, Landhausvillen ab etwa 1900, Grundstücke 1.000–1.200 m², Bebauung bis 1948, Reihenhaussiedlungen, Wohnblocks ab 1972)",
       "url": "https://de.wikipedia.org/wiki/Hamburg-Volksdorf"
+    },
+    {
+      "title": "hamburg.de: Volksdorf – Ländliche Idylle im Nordosten (lockere Bebauung mit Einfamilienhäusern, Zweckbauten der 1970er an der Weißen Rose, Walddörferbahn ab 1912 und durchgehend bis Barmbek ab 1920, Ohlendorffs Park denkmalgeschützt, Museumsdorf mit acht historischen Höfen, Teichwiesen, Duvenwischen), abgerufen 27.10.2026",
+      "url": "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-wandsbek/volksdorf-377014"
     },
     {
       "title": "HmbGVBl. Nr. 20 vom 21.06.2005: Verordnung über den Bebauungsplan Volksdorf 40, § 2 Nr. 1 Erhaltungsbereiche (Archivkopie)",
@@ -66,7 +74,7 @@
       "url": "https://www.kleibauer-cdu.de/image/inhalte/738_bebauung_an_der_schemmannstrasse_und_erhalt_der_hammerschen_villa_wie_gut_sind_volksdorfs_bebauungsplaene_fuer_den_schutz_und_eine_massvolle_weiterent.pdf"
     },
     {
-      "title": "Hamburgische Baumschutzverordnung vom 28.02.2023, § 1 (Einzelbäume ab 80 cm, Baumgruppen ab 30 cm, Messhöhe 130 cm) und § 4 (Wurzelbereich Krone plus 1,5 m) (umwelt-online, Stand 12.05.2026)",
+      "title": "Hamburgische Baumschutzverordnung vom 28.02.2023, § 1 (Einzelbäume ab 80 cm, Baumgruppen, Messhöhe 130 cm) und § 4 (Wurzelbereich Krone plus 1,5 m, Abgrabungen, Versiegelung) (umwelt-online)",
       "url": "https://umwelt-online.de/recht/natursch/laender/hh/baum23.htm"
     },
     {
@@ -74,12 +82,34 @@
       "url": "https://www.fimportal.de/api/v0/xzufi-services/S100002/S1000020010000000139/de/pdf"
     },
     {
-      "title": "Adressliste der Bauprüfdienststellen Hamburg, Stand 16.04.2025 (Fachamt Bauprüfung Wandsbek, Schloßgarten 9)",
+      "title": "Hamburg: Denkmalrechtliche Genehmigung – Denkmalschutzamt, Maßnahmen an oder in einem Denkmal (FIM-Portal)",
+      "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012667/de/pdf"
+    },
+    {
+      "title": "Adressliste der Bauprüfdienststellen Hamburg, Stand 16.04.2025 (Fachamt Bauprüfung Wandsbek, Schloßgarten 9, 22041 Hamburg, Tel. +49 40 428 81-3345)",
       "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"
+    },
+    {
+      "title": "hamburg.de: Recyclinghöfe der Stadtreinigung (Sasel, Volksdorfer Weg 196, Mo–Fr 8–17, Sa 8–17 Uhr)",
+      "url": "https://www.hamburg.de/leben-in-hamburg/wohnen/stadtreinigung/recyclinghoefe-hamburg-379168"
+    },
+    {
+      "title": "Stadtreinigung Hamburg: Preisliste Recyclinghöfe ab 01.01.2026 (Bauschutt max. 500 Liter; Altholz Kategorie IV u. a. in Sasel; Adresse mit PLZ)",
+      "url": "https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf"
+    },
+    {
+      "title": "Umweltbundesamt: Asbest (Verbot seit 31.10.1993; Asbestzement-Dach- und Fassadenplatten, Floor-Flex-Platten, Kleber, Spachtelmassen)",
+      "url": "https://www.umweltbundesamt.de/node/24135"
+    },
+    {
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, Asbestzement in Dach- und Fassadenplatten, Fensterbänke, Bodenplatten; Entfernen nur durch Fachfirmen)",
+      "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
     }
   ],
   "notes_for_review": [
     "Erhaltungsbereiche: Volksdorf 40 laut HmbGVBl. 20/2005 und rückwirkender Inkraftsetzung 2019, Volksdorf 41 laut Senatsantwort Drs. 22/5094 (2021) „weiterhin rechtsverbindlich“. Genaue Lage nur in den Planzeichnungen; im Geoportal prüfen, ob weitere Volksdorfer Pläne Erhaltungsbereiche haben.",
-    "Frage an den Inhaber: Werden Fundamente und Bodenplatten beim Kleinabriss mit entfernt? Der Text sagt nur, dass das vor dem Angebot festgelegt wird."
+    "Kontakt Bauprüfung aus der Adressliste mit Stand 16.04.2025 (vor der neuen HBauO vom 1.1.2026); eine neuere Fassung war nicht auffindbar. Telefonnummer vor Veröffentlichung kurz prüfen.",
+    "Recyclinghof Sasel als Ziel für Volksdorf ist eine Lageeinschätzung (Nachbarstadtteil, gleicher Bezirk), keine amtliche Zuordnung. Die vorübergehende Zufahrtsregel in Sasel (1.9.–5.12.) steht nur auf der Sasel-Seite.",
+    "Fundament und Bodenplatte „gesondert berechnet“ nach src/preise.json (zuzueglich: Fundament oder Bodenplatte)."
   ]
 }
