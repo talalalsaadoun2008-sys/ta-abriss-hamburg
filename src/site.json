@@ -296,7 +296,17 @@
     {"slug": "abriss-wietzendorf", "name": "Wietzendorf", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
     {"slug": "abriss-bosau", "name": "Bosau", "kreis": "Kreis Ostholstein", "land": "Schleswig-Holstein"},
     {"slug": "abriss-ascheberg-holstein", "name": "Ascheberg (Holstein)", "kreis": "Kreis Plön", "land": "Schleswig-Holstein"},
-    {"slug": "abriss-ottersberg", "name": "Ottersberg", "kreis": "Landkreis Verden", "land": "Niedersachsen"}
+    {"slug": "abriss-ottersberg", "name": "Ottersberg", "kreis": "Landkreis Verden", "land": "Niedersachsen"},
+    {"slug": "abriss-timmendorfer-strand", "name": "Timmendorfer Strand", "kreis": "Kreis Ostholstein", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-scharbeutz", "name": "Scharbeutz", "kreis": "Kreis Ostholstein", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-hanerau-hademarschen", "name": "Hanerau-Hademarschen", "kreis": "Kreis Rendsburg-Eckernförde", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-sankt-michaelisdonn", "name": "Sankt Michaelisdonn", "kreis": "Kreis Dithmarschen", "land": "Schleswig-Holstein"},
+    {"slug": "abriss-otterndorf", "name": "Otterndorf", "kreis": "Landkreis Cuxhaven", "land": "Niedersachsen"},
+    {"slug": "abriss-amt-neuhaus", "name": "Amt Neuhaus", "kreis": "Landkreis Lüneburg", "land": "Niedersachsen"},
+    {"slug": "abriss-worpswede", "name": "Worpswede", "kreis": "Landkreis Osterholz", "land": "Niedersachsen"},
+    {"slug": "abriss-grasberg", "name": "Grasberg", "kreis": "Landkreis Osterholz", "land": "Niedersachsen"},
+    {"slug": "abriss-bad-fallingbostel", "name": "Bad Fallingbostel", "kreis": "Landkreis Heidekreis", "land": "Niedersachsen"},
+    {"slug": "abriss-fassberg", "name": "Faßberg", "kreis": "Landkreis Celle", "land": "Niedersachsen"}
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
