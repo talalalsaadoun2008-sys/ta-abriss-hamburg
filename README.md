@@ -11,7 +11,8 @@ Live unter https://ta-abriss-hamburg.de (GitHub Pages).
 - `assets/site.css`, `assets/site.js` – gemeinsames Design und Skript aller Seiten
 - `assets/fonts*` – Schriften (lokal, SIL Open Font License)
 - `img/` – Fotos
-- `src/site.json` – feste Seitenliste (Menü, Footer, Firmendaten)
+- `src/site.json` – feste Seitenliste (Menü, Footer, Firmendaten); `kernleistungen` = Leistungskarten der Ortsseiten und Leistungen in der Fußzeile, `fusszeile_ratgeber` = Ratgeber in der Fußzeile (das Menü zeigt immer alle)
+- `src/tools/rahmen_anteil.py` – misst, wie viel Text einer gebauten Seite seitenspezifisch ist; `src/tools/eingehende_links.py` – zählt, von wie vielen Seiten eine Seite verlinkt wird
 - `src/preise.json` – Richtpreise je Leistungsseite (Anleitung im Feld `hinweis`); ohne Zahlen erscheint kein Preis-Abschnitt
 - `src/build.py` – Generator (Python 3, nur Standardbibliothek)
 - `src/test/`, `src/test2/` – Testinhalte für die Vorlage (`test2` mit Stadtteil- und Umland-Seite)

@@ -10,7 +10,9 @@ Erzeugt:
   <slug>.html je JSON in src/content/ (Leistungen, Bezirke, Stadtteile, Umland, Ratgeber),
   einsatzgebiet.html (Übersicht aus src/site.json), impressum.html, datenschutz.html,
   index.html (nur die Bereiche zwischen den Markern @head, @header, @zahlen, @umland, @footer),
-  sitemap.xml; prüft robots.txt.
+  sitemap.xml (lastmod je Seite = letzte Git-Änderung ihrer Quelldatei, nicht das Build-Datum); prüft robots.txt.
+Seitenrahmen: Ortsseiten zeigen nur die Leistungskarten aus site.json „kernleistungen“ (plus Link „Alle …
+Leistungen“), die Fußzeile nur „kernleistungen“ und „fusszeile_ratgeber“; das Menü listet alle Seiten.
 Fotos: Liegt neben img/x.jpg eine gleich große img/x.webp (src/tools/make_webp.py), wird das Foto als
 <picture> mit WebP und dem JPG als Rückfall ausgegeben; sonst als <img> wie bisher.
 
@@ -113,6 +115,10 @@ class Site:
         self.uebersicht = d.get("einsatzgebiet") or {}
         self.menue_umland = d.get("menue_umland", [])
         self.startseite_umland = d.get("startseite_umland", [])
+        # Kurzer Seitenrahmen: Ortsseiten zeigen nur diese Leistungskarten, die Fußzeile nur diese Leistungen
+        # und Ratgeber (jeweils mit Link „Alle …“ auf die Startseite). Das Menü listet weiterhin alles.
+        self.kernleistungen = d.get("kernleistungen", [])
+        self.fusszeile_ratgeber = d.get("fusszeile_ratgeber", [])
         self.kind = {}
         self.entry = {}
         for kind, items in (("leistung", self.leistungen), ("bezirk", self.bezirke),
@@ -138,10 +144,13 @@ class Site:
             for k in ("kreis", "land"):
                 if not is_str(u.get(k)):
                     raise BuildError(f"site.json: Umland {u['slug']} braucht '{k}'")
-        for key in ("menue_umland", "startseite_umland"):
+        for key, art in (("menue_umland", "umland"), ("startseite_umland", "umland"), ("kernleistungen", "leistung"),
+                         ("fusszeile_ratgeber", "ratgeber")):
             for x in d.get(key, []):
-                if self.kind.get(x) != "umland":
-                    raise BuildError(f"site.json: {key}: '{x}' steht nicht in 'umland'")
+                if self.kind.get(x) != art:
+                    raise BuildError(f"site.json: {key}: '{x}' steht nicht in '{'leistungen' if art == 'leistung' else art}'")
+            if len(set(d.get(key, []))) != len(d.get(key, [])):
+                raise BuildError(f"site.json: {key}: Eintrag doppelt")
         for k in ("title", "description", "label", "h1", "lead", "hinweis"):
             if not is_str(self.uebersicht.get(k)):
                 raise BuildError(f"site.json: einsatzgebiet.{k} fehlt")
@@ -575,22 +584,41 @@ def render_menu(ctx, current, on_home, contact_href):
     return '<nav id="menu" class="menu" aria-label="Menü">\n  ' + "\n  ".join(parts) + "\n</nav>"
 
 
+def kern_leistungen(ctx):
+    """Leistungen für Ortsseiten-Karten und Fußzeile: 'kernleistungen' aus site.json (nur Seiten mit Inhalt),
+    ohne Eintrag dort alle Leistungen."""
+    s = ctx.site
+    kern = [s.entry[x] for x in s.kernleistungen if ctx.has(x)]
+    return kern or ctx.pages(s.leistungen)
+
+
 def render_footer(ctx, current, on_home, fab_href):
+    """Kurze Fußzeile: wichtigste Leistungen und Ratgeber mit Link „Alle …“, Bezirke, kurze Umland-Liste,
+    Über uns und Rechtliches. Vollständige Listen stehen im Menü und auf der Startseite."""
     s, f = ctx.site, ctx.site.firma
     li = lambda it: f'<li><a href="{esc(it["slug"])}.html"{cur(it["slug"] == current)}>{esc(it["name"])}</a></li>'
-    leist = "".join(li(x) for x in ctx.pages(s.leistungen))
+    mehr = lambda href, text, aktiv=False: (f'<p class="foot-all"><a href="{esc(href)}"{cur(aktiv)}>{esc(text)} '
+                                           f'<span aria-hidden="true">→</span></a></p>')
+    kern = kern_leistungen(ctx)
+    leist = "".join(li(x) for x in kern)
     bez = "".join(li(x) for x in ctx.pages(s.bezirke))
-    rest = "".join(li(x) for x in ctx.pages(s.ratgeber) + s.rechtliches)
-    uml = "".join(li(s.entry[x]) for x in s.menue_umland if ctx.has(x))  # kurze Ortsliste, Linktext = Ortsname
-    alle = (f'<p class="foot-all"><a href="{UEBERSICHT}.html"{cur(current == UEBERSICHT)}>Alle Orte im Einsatzgebiet '
-            f'<span aria-hidden="true">→</span></a></p>')
+    rat_alle = [x for x in ctx.pages(s.ratgeber) if x["slug"] != ABOUT]
+    rat = [x for x in rat_alle if x["slug"] in s.fusszeile_ratgeber] if s.fusszeile_ratgeber else rat_alle
+    rest = "".join(li(x) for x in ctx.pages([s.entry[ABOUT]] if ABOUT in s.entry else []) + s.rechtliches)
+    uml ="".join(li(s.entry[x]) for x in s.menue_umland if ctx.has(x))  # kurze Ortsliste, Linktext = Ortsname
+    alle = mehr(f"{UEBERSICHT}.html", "Alle Orte im Einsatzgebiet", current == UEBERSICHT)
+    ids = home_ids(ctx.home_src)
     cols = []
     if leist:
-        cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul></div>')
+        weitere = mehr(ctx.home_link("leistungen", on_home), "Alle Leistungen") if len(kern) < len(ctx.pages(s.leistungen)) else ""
+        cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul>{weitere}</div>')
     cols.append(f'  <div><h3>Bezirke</h3>' + (f'<ul class="two">{bez}</ul>' if bez else "") + f'{alle}</div>')
     if uml:
         cols.append(f'  <div class="foot-uml"><h3>Umland</h3><ul class="two">{uml}</ul></div>')
-    cols.append(f'  <div><h3>Ratgeber &amp; Rechtliches</h3><ul>{rest}</ul></div>')
+    rat_mehr = (mehr(ctx.home_link("ratgeber", on_home), "Alle Ratgeber")
+                if len(rat) < len(rat_alle) and "ratgeber" in ids else "")
+    rat_ul = f'<ul>{"".join(li(x) for x in rat)}</ul>' if rat else ""
+    cols.append(f'  <div class="foot-rat"><h3>Ratgeber &amp; Rechtliches</h3>{rat_ul}{rat_mehr}<ul>{rest}</ul></div>')
     out = [f'''<footer><div class="wrap foot">
   <div class="firma">
     <h3>{esc(f["name"])}</h3>
@@ -782,11 +810,37 @@ def stadtteil_page(ctx, bezirk_slug, name):
     return None
 
 
+def _nachbarn(liste, entry):
+    """Andere Einträge der Liste, von entry aus abwechselnd der nächste und der vorige, im Kreis herum."""
+    n = len(liste)
+    i = next(k for k, x in enumerate(liste) if x["slug"] == entry["slug"])
+    out = []
+    for d in range(1, n):
+        for x in (liste[(i + d) % n], liste[(i - d) % n]):
+            if x["slug"] != entry["slug"] and x not in out:
+                out.append(x)
+    return out
+
+
 def weitere_orte(ctx, entry):
-    """Andere Umland-Seiten: gleicher Kreis zuerst, dann gleiches Bundesland, dann die übrigen."""
-    others = [u for u in ctx.pages(ctx.site.umland) if u["slug"] != entry["slug"]]
-    rank = lambda u: 0 if u["kreis"] == entry["kreis"] else 1 if u["land"] == entry["land"] else 2
-    return sorted(others, key=rank)[:MAX_WEITERE_ORTE]  # sorted ist stabil: sonst Reihenfolge aus site.json
+    """Andere Umland-Seiten: gleicher Kreis zuerst, dann gleiches Bundesland, dann die übrigen.
+
+    Innerhalb jeder Gruppe die Nachbarn in der Reihenfolge von site.json (grob nach Entfernung von Hamburg),
+    abwechselnd danach und davor, im Kreis herum. So verlinkt jede Seite andere Orte, und jede Seite wird gleich
+    oft verlinkt (in Kreisen mit mehr als MAX_WEITERE_ORTE Seiten genau MAX_WEITERE_ORTE-mal) – nicht nur die
+    ersten Orte eines Kreises."""
+    alle = ctx.pages(ctx.site.umland)
+    if entry not in alle:
+        alle = alle + [entry]
+    kreis = [u for u in alle if u["kreis"] == entry["kreis"]]
+    land = [u for u in alle if u["land"] == entry["land"]]
+    out = []
+    for gruppe in (kreis, land, alle):
+        for u in _nachbarn(gruppe, entry):
+            if len(out) < MAX_WEITERE_ORTE and u not in out:
+                out.append(u)
+    rank = lambda u: (0 if u["kreis"] == entry["kreis"] else 1 if u["land"] == entry["land"] else 2, alle.index(u))
+    return sorted(out, key=rank)
 
 
 def contact_section(ctx, form_leistung, form_ort, data_page):
@@ -1154,16 +1208,21 @@ def render_content_page(ctx, c):
     cards_shown = False
     leist = ctx.pages(s.leistungen)
     if kind in ORTSTYPEN and leist:
+        # nur die Kernleistungen als Karten (kurzer Rahmen), alle übrigen über „Alle … Leistungen“ auf der Startseite
         cards_shown = True
-        cards = "\n    ".join(mini_card(ctx, x) for x in leist)
+        kern = kern_leistungen(ctx)
+        cards = "\n    ".join(mini_card(ctx, x) for x in kern)
+        n3 = " n3" if len(kern) % 3 == 0 and len(kern) % 4 else ""
+        alle = (f'\n  <p class="go-wrap"><a class="go-all" href="{esc(ctx.home_link("leistungen", False))}">Alle {len(leist)} '
+                f'Leistungen ansehen <span aria-hidden="true">→</span></a></p>' if len(kern) < len(leist) else "")
         after.append(f'''<section class="sec-alt"><div class="wrap">
   <div class="head reveal">
     <p class="label">Leistungen</p>
     <h2>Unsere Leistungen in {esc(entry["name"])}</h2>
   </div>
-  <div class="minis">
+  <div class="minis{n3}">
     {cards}
-  </div>
+  </div>{alle}
 </div></section>''')
     if faq:
         qa = "\n    ".join(f'<details><summary>{esc(q)}</summary><p>{ctx.fix_home_links(a)}</p></details>' for q, a in faq)
@@ -1244,7 +1303,9 @@ def render_content_page(ctx, c):
                 f'<span aria-hidden="true">→</span></a></p>')
         others = weitere_orte(ctx, entry)
         if others:
-            after.append(nav_section("Einsatzgebiet", "Weitere Orte im Umland", chip_links(others), alle))
+            im_kreis = all(u["kreis"] == entry["kreis"] for u in others) and re.match(r"(Land)?[Kk]reis ", entry["kreis"])
+            h2 = f"Weitere Orte im {entry['kreis']}" if im_kreis else "Weitere Orte im Umland"
+            after.append(nav_section("Einsatzgebiet", h2, chip_links(others), alle))
         else:
             after.append(f'<section><div class="wrap">{alle}\n</div></section>')
 
@@ -1630,9 +1691,64 @@ def check_images(files, warn):
                  "python3 src/tools/make_webp.py ausführen")
 
 
-def sitemap(site, slugs, today):
-    urls = [site.base] + [site.url(x) for x in slugs]
-    rows = "\n".join(f"  <url><loc>{esc(u)}</loc><lastmod>{today}</lastmod></url>" for u in urls)
+@functools.lru_cache(maxsize=None)
+def git_letzte_aenderungen(*pfade):
+    """{Pfad relativ zum Repo: Datum JJJJ-MM-TT der letzten Änderung laut Git} für alle Dateien unter den Pfaden,
+    mit einem einzigen git log (statt einem Aufruf je Seite). Dateien mit ungespeicherten Änderungen zählen als
+    heute (wie in git_daten). Ohne Git-Historie: leeres dict."""
+    heute = datetime.date.today().isoformat()
+    git = lambda *a: subprocess.run(["git", "-C", str(ROOT), *a], capture_output=True, text=True,
+                                    timeout=60, check=True).stdout
+    try:
+        log = git("log", "--format=%x01%aI", "--name-only", "--", *pfade)
+        offen = git("status", "--porcelain", "--untracked-files=all", "--", *pfade)
+    except (OSError, subprocess.SubprocessError):
+        return {}
+    daten, datum = {}, None
+    for line in log.splitlines():
+        if line.startswith("\x01"):
+            datum = line[1:11]
+        elif line.strip() and datum:
+            daten.setdefault(line.strip(), datum)  # git log läuft vom neuesten Commit rückwärts
+    for line in offen.splitlines():
+        p = line[3:].split(" -> ")[-1].strip().strip('"')
+        if p:
+            daten[p] = heute
+    return daten
+
+
+def lastmod_daten(ctx, slugs):
+    """Echtes Änderungsdatum je Seite für sitemap.xml: letzte Änderung ihrer Quelldatei laut Git
+    (Inhalts-JSON; Startseite: index.html; Übersicht: src/site.json; Leistungen mit Richtpreisen: auch
+    src/preise.json). Änderungen am gemeinsamen Seitenrahmen zählen nicht – sonst stünde nach jedem Build
+    überall „heute“, und Google ignoriert lastmod. Ohne Git-Datum: heute."""
+    rel = ctx.content_rel.rstrip("/")
+    daten = git_letzte_aenderungen(rel, "src/site.json", "src/preise.json", "index.html")
+    heute = ctx.today
+    preise = (ctx.preise or {}).get("seiten", {})
+
+    def quelle(slug):
+        if slug is None:
+            return [daten.get("index.html")]
+        if slug == UEBERSICHT:
+            return [daten.get("src/site.json")]
+        q = [daten.get(f"{rel}/{slug}.json")]
+        if slug in preise:
+            q.append(daten.get("src/preise.json"))
+        return q
+
+    out = {}
+    for slug in [None] + list(slugs):
+        q = [d for d in quelle(slug) if d]
+        out[slug] = max(q) if q else heute
+    return out
+
+
+def sitemap(site, slugs, today, lastmod=None):
+    """lastmod: {slug (None = Startseite): Datum}; ohne Eintrag gilt today."""
+    lastmod = lastmod or {}
+    urls = [(site.base, lastmod.get(None, today))] + [(site.url(x), lastmod.get(x, today)) for x in slugs]
+    rows = "\n".join(f"  <url><loc>{esc(u)}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + rows + "\n</urlset>\n")
 
@@ -2087,7 +2203,7 @@ def main(argv=None):
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
         slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages()] + has(site.bezirke + site.ratgeber)
                  + [UEBERSICHT] + has(site.stadtteile + site.umland))
-        files["sitemap.xml"] = sitemap(site, slugs, today)
+        files["sitemap.xml"] = sitemap(site, slugs, today, lastmod_daten(ctx, slugs))
     vorlage_check_pages(site, contents, files, warn)
     check_images(files, warn)
 

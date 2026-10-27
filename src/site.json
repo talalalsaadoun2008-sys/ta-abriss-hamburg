@@ -330,6 +330,8 @@
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
+  "kernleistungen": ["kleinabriss-hamburg", "entkernung-hamburg", "innenabbruch-hamburg", "entruempelung-hamburg", "gartenraeumung-hamburg", "schuttabholung-hamburg"],
+  "fusszeile_ratgeber": ["abriss-kosten-hamburg", "abriss-genehmigung-hamburg", "bauschutt-entsorgen-hamburg"],
   "einsatzgebiet": {
     "title": "Abriss in Hamburg und Umland: Einsatzgebiet | T&A Abriss",
     "description": "Abriss, Entkernung, Innenabbruch und Trockenbau in allen sieben Hamburger Bezirken und im Umland.",
