@@ -1,0 +1,111 @@
+{
+  "slug": "abriss-uelzen",
+  "type": "umland",
+  "menu": "Uelzen",
+  "title": "Abriss Uelzen ✓ Entkernung ✓ Festpreis | T&A",
+  "description": "Entkernung, Innenabbruch, Kleinabriss und Trockenbau in der Hansestadt Uelzen und ihren Ortsteilen.",
+  "label": "Landkreis Uelzen · Niedersachsen",
+  "h1": "Abriss in Uelzen: Entkernung und Umbau vom Altstadthaus bis zum Dorf",
+  "lead": "Haus aus der Wiederaufbauzeit, Altbau nahe St. Marien oder Garage in Oldenstadt: In der Hansestadt Uelzen übernehmen wir Entkernung, Innenabbruch, Kleinabriss und Trockenbau.",
+  "facts": [
+    "Termine auch abends und samstags",
+    "Anfahrt im Festpreis",
+    "Schuttabholung auch einzeln"
+  ],
+  "image": "trockenbau",
+  "form_leistung": "Entkernung",
+  "form_ort": "Uelzen",
+  "sections": [
+    {
+      "h2": "Hansestadt an der Ilmenau",
+      "html": "<p>Uelzen ist Kreisstadt des gleichnamigen Landkreises und eine Einheitsgemeinde. Ende 2025 zählte sie rund 32.700 Einwohner, die Stadtfläche misst knapp 137 Quadratkilometer. Zur Kernstadt kommen 18 Ortsteile, die meisten seit dem 1. Juli 1972, darunter Oldenstadt, Holdenstedt, Veerßen, Westerweyhe und Kirchweyhe. Den Titel Hansestadt trägt Uelzen seit April 2016.</p><p>Die Wurzeln liegen in Oldenstadt, wo um 970 ein Kanonissenstift entstand. Um 1250 gründeten Bewohner am Westufer der Ilmenau die Stadt, 1270 bekam sie Stadtrecht, 1374 trat sie der Hanse bei. Zwei Brände trafen den Ort schwer: 1646 brannten rund 160 Häuser nieder, 1826 noch einmal 74 Wohnhäuser in der östlichen Altstadt. Luftangriffe zerstörten bis Kriegsende 27 Prozent der bebauten Fläche. Der Wiederaufbau folgte ab 1947 Plänen von Konstanty Gutschow.</p>"
+    },
+    {
+      "h2": "Wiederaufbauhäuser, Gutshäuser, Dorfkerne",
+      "html": "<p>Neben Nachkriegsbauten gibt es in Uelzen viel Ältere: St. Marien, 1292 geweiht, das Alte Rathaus von 1347, das Gildehaus, Schloss Holdenstedt und Herrenhäuser in Masendorf, Molzen und Veerßen. Der Bahnhof von 1888 wurde zur Expo 2000 im Stil Hundertwassers umgebaut. In den Ortsteilen stehen dazu Hofstellen und Einfamilienhäuser.</p><p>Daraus ergeben sich typische Aufgaben:</p><ul><li><a href=\"entkernung-hamburg.html\">Entkernung</a> eines Hauses oder einer Wohnung vor der Modernisierung</li><li>Innenabbruch: Zwischenwände, Wanddurchbrüche mit Statiker, alte Bäder, Fliesen und Estrich</li><li>Trockenbau für neue Wände und Abkofferungen, auch als einzelner Auftrag</li><li>Kleinabriss von Carport, Garage, Laube oder Mauer</li></ul><p>Bei Baustoffen aus der Zeit vor 1993 kann Asbest im Spiel sein. Wir bauen ihn nie selbst aus, ein berechtigter Fachbetrieb übernimmt das.</p>"
+    },
+    {
+      "h2": "Bauaufsicht und Denkmalschutz im Rathaus",
+      "html": "<p>Uelzen hat den Status einer selbständigen Gemeinde und eine eigene untere Bauaufsichtsbehörde. Sie gehört zum Fachbereich Planung, Bauaufsicht und Liegenschaften im Rathaus am Herzogenplatz 2. Dieselbe Stelle ist untere Denkmalschutzbehörde, erteilt denkmalrechtliche Genehmigungen und berät bei Baumaßnahmen an Baudenkmalen und in ihrer Umgebung. Die zentrale Bauberatung teilt das Stadtgebiet entlang von Ilmenau und Stederau in Ost und West. Dort können Sie auch das Denkmalschutzkataster einsehen. Mittwochs und freitags ist die Bauaufsicht derzeit geschlossen, ein Termin ist sinnvoll.</p><p>Es gilt die Niedersächsische Bauordnung (NBauO). Den Abbruch eines Hochhauses oder eines Teils einer baulichen Anlage zeigen Sie nach § 60 Abs. 3 an, das geht online über das Landessystem NAVO. Kleinere freistehende Bauten fallen meist nicht darunter. Wie Ihr Fall liegt, klärt die Bauberatung.</p>"
+    },
+    {
+      "h2": "Baustelle auf der Straße und Festpreis",
+      "html": "<p>Wer Straßenflächen für Gerüste, Bauzäune oder gelagerte Baustoffe nutzt, zahlt nach der städtischen Sondernutzungsgebührensatzung je Quadratmeter. Für einen Container vor dem Haus fragen Sie also vorher bei der Stadt an.</p><p>Wir sehen uns Ihr Vorhaben kostenlos an, montags bis freitags ab 16:30 Uhr und samstags ab 9:00 Uhr, wenn Sie möchten per Video. Danach nennen wir einen Festpreis, in dem Entsorgung und Anfahrt stecken. Die Übergabe erfolgt besenrein. Zum <a href=\"index.html#anfrage\">Anfrageformular</a>. Nördlich der Stadt arbeiten wir ebenso, etwa in <a href=\"abriss-bad-bevensen.html\">Bad Bevensen</a>.</p>"
+    }
+  ],
+  "stadtteile": [
+    "Groß Liedern",
+    "Halligdorf",
+    "Hambrock",
+    "Hansen",
+    "Hanstedt II",
+    "Holdenstedt",
+    "Kirchweyhe",
+    "Klein Süstedt",
+    "Masendorf",
+    "Mehre",
+    "Molzen",
+    "Oldenstadt",
+    "Riestedt",
+    "Ripdorf",
+    "Tatern",
+    "Veerßen",
+    "Westerweyhe",
+    "Woltersburg"
+  ],
+  "faq": [
+    {
+      "q": "Ist für Uelzen das Bauamt des Landkreises zuständig?",
+      "a": "Nein. Für das Stadtgebiet ist die Bauaufsicht der Hansestadt selbst zuständig, im Rathaus am Herzogenplatz. Der Landkreis betreut die übrigen Gemeinden im Kreis."
+    },
+    {
+      "q": "Unser Haus liegt neben einem Baudenkmal. Spielt das für den Abriss der Garage eine Rolle?",
+      "a": "Möglicherweise. Die Stadt berät auch zu Arbeiten in der Umgebung von Baudenkmalen. Fragen Sie dort vorher nach, dann planen wir den Termin."
+    },
+    {
+      "q": "Machen Sie nach dem Abbruch auch die neuen Fliesen?",
+      "a": "Nein, Fliesenlegen, Sanitär und Elektro übernehmen wir nicht. Neue Wände im Trockenbau stellen wir dagegen selbst."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uelzen – dewiki.de: 32.703 Einwohner 31.12.2025, 136,84 km², 18 Ortsteile, Eingemeindungen 1972, Hansestadt seit 2016, Stift um 970, Stadtrecht 1270, Hanse 1374, Brände 1646/1826, 27 % Zerstörung, Gutschow 1947, Bahnhof 1888/Expo 2000, Baudenkmale",
+      "url": "https://dewiki.de/Lexikon/Uelzen"
+    },
+    {
+      "title": "Hauptsatzung der Hansestadt Uelzen (Status selbständige Gemeinde, Fachbereich Planung, Bauaufsicht und Liegenschaften)",
+      "url": "https://www.hansestadt-uelzen.de/PortalData/1/Resources/Hansestadt/Dokumente/Ortsrecht/1_Stadtverfassung/1.1.01_-_Hauptsatzung_der_Hansestadt_Uelzen.pdf"
+    },
+    {
+      "title": "Hansestadt Uelzen: Bauaufsicht (untere Bauaufsichtsbehörde und untere Denkmalschutzbehörde, Herzogenplatz 2, Mi und Fr geschlossen)",
+      "url": "https://www.hansestadt-uelzen.de/home/global/container-seite/Bauaufsicht.aspx"
+    },
+    {
+      "title": "Hansestadt Uelzen: Zentrale Bauberatung (Ost/West von Ilmenau/Stederau, Denkmalschutzkataster)",
+      "url": "https://www.hansestadt-uelzen.de/home/global/container-seite/Zentrale-Bauberatung.aspx"
+    },
+    {
+      "title": "Hansestadt Uelzen: Online-Plattform Bauen – Links (Abbruchanzeige nach § 60 Abs. 3 NBauO über NAVO)",
+      "url": "https://www.hansestadt-uelzen.de/home/buerger-service/planen-bauen-wohnen/online-plattform-bauen-links.aspx"
+    },
+    {
+      "title": "Sondernutzungsgebührensatzung der Stadt Uelzen (Bauzäune, Baubuden, Lagerung von Baustoffen, Gerüste je m²)",
+      "url": "https://www.hansestadt-uelzen.de/PortalData/1/Resources/Hansestadt/Dokumente/Ortsrecht/8_Sondernutzung/8.2_-_Sondernutzungsgebuehrensatzung_der_Stadt_Uelzen.pdf"
+    },
+    {
+      "title": "§ 60 NBauO – VORIS (Abbruch verfahrensfrei außer Hochhäuser/nicht im Anhang genannte Teile)",
+      "url": "https://voris.wolterskluwer-online.de/browse/document/6714cd1e-74d5-315a-821b-0291f6e1f458"
+    },
+    {
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 1993)",
+      "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
+    }
+  ],
+  "notes_for_review": [
+    "Faktencheck: Status selbständige Gemeinde (Hauptsatzung § 1 Abs. 2), FB 21 Planung, Bauaufsicht und Liegenschaften (§ 8 Abs. 2), Bauaufsicht = untere Bauaufsichts- und Denkmalschutzbehörde, Herzogenplatz 2, Abbruchanzeige § 60 Abs. 3 über NAVO – bestätigt.",
+    "Gildehaus: dewiki widersprüchlich (15. Jh. / um 1360) – Datierung gestrichen.",
+    "Sondernutzungsgebührensatzung (2002, 3. Änderung 10.12.2012) nennt Bauschuttcontainer nicht ausdrücklich; Text formuliert vorsichtig.",
+    "Einwohnerzahl 31.12.2025 aus dewiki-Infobox (Fließtext nennt ca. 33.500), nicht amtlich gegengeprüft.",
+    "NBauO § 60 laut VORIS aktuelle Fassung 'ab 01.07.2024'; Fassung ab 1.7.2025 dort nicht ausgewiesen."
+  ]
+}

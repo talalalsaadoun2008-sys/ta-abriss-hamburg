@@ -77,7 +77,7 @@ Enthalten: Arbeit, Abtransport und Entsorgung, beim Trockenbau Material und Mont
 
 ## Einsatzgebiet
 
-Alle sieben Hamburger Bezirke: Altona, Eimsbüttel, Hamburg-Mitte, Hamburg-Nord, Wandsbek, Harburg, Bergedorf. Dazu 211 Orte im Umland, etwa Norderstedt, Pinneberg, Wedel, Schenefeld, Halstenbek, Quickborn, Ahrensburg, Bargteheide.
+Alle sieben Hamburger Bezirke: Altona, Eimsbüttel, Hamburg-Mitte, Hamburg-Nord, Wandsbek, Harburg, Bergedorf. Dazu 221 Orte im Umland, etwa Norderstedt, Pinneberg, Wedel, Schenefeld, Halstenbek, Quickborn, Ahrensburg, Bargteheide.
 
 - [Alle Orte im Einsatzgebiet](https://ta-abriss-hamburg.de/einsatzgebiet.html)
 
