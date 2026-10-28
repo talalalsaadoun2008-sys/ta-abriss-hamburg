@@ -3,7 +3,7 @@
   "type": "umland",
   "menu": "Halstenbek",
   "title": "Abriss Halstenbek ✓ Kleinabriss ✓ Festpreis | T&A Abriss",
-  "description": "Gartenhaus, Garage, Carport oder Terrasse in Halstenbek abreißen, damit Platz für Neues frei wird.",
+  "description": "Gartenhaus, Garage oder Carport in Halstenbek abreißen, Reihenhaus entkernen – mit Entsorgung.",
   "label": "Kreis Pinneberg · Schleswig-Holstein",
   "h1": "Abriss in Halstenbek: Kleinabriss und Rückbau",
   "lead": "Halstenbek ist mit seinen Baumschulen groß geworden, auf früheren Baumschulflächen entstanden vor allem Eigenheime. Wir reißen Gartenhäuser, Garagen, Carports und Terrassen ab und arbeiten auch im Haus.",
@@ -18,42 +18,43 @@
   "sections": [
     {
       "h2": "Halstenbek: Baumschulen, Eigenheime, sieben Ortsteile",
-      "html": "<p>Halstenbek ist keine Stadt, sondern eine amtsfreie Gemeinde im Kreis Pinneberg. Im Osten grenzt sie an Eidelstedt und Lurup. Offizielle Ortsteile sind Halstenbek-Ort, Halstenbek-Dorf, Halstenbek-Krupunder, Brande, Nienhöfen, Baumschulen und Wohnmeile. Brande, Nienhöfen und Krupunder gehen auf frühere eigene Gemeinden zurück.</p><p>Geprägt hat den Ort die Baumschulwirtschaft. Sie wuchs nach dem Hamburger Brand von 1842, weil danach viele Bäume gebraucht wurden. In jüngerer Zeit wurden frühere Baumschulflächen zu Bauland, vor allem für Eigenheime. Nach dem Zweiten Weltkrieg musste zudem Wohnraum für Flüchtlinge geschaffen werden. Das älteste erhaltene Haus ist das „Tante Dora Haus“ von 1795 an der Hauptstraße, das frühere Armenhaus von 1843 an der Königstraße trägt ein Reetdach.</p>"
+      "html": "<p>Halstenbek ist keine Stadt, sondern eine amtsfreie Gemeinde im Kreis Pinneberg. Das Statistikamt Nord weist für den 31. März 2025 genau 18.118 Einwohner aus. Im Osten grenzt die Gemeinde an Eidelstedt und Lurup. Zu ihr gehören neben Halstenbek-Ort vor allem Krupunder und Brande mit Nienhöfen, die auf frühere preußische Gemeinden gleichen Namens zurückgehen. Die Wohnmeile ist dagegen kein Ortsteil, sondern die Einkaufsstraße mit vielen Möbelhäusern.</p><p>Geprägt hat den Ort die Baumschulwirtschaft. Sie wuchs nach dem Hamburger Brand von 1842, weil danach viele Bäume gebraucht wurden. Später wurden frühere Baumschulflächen zu Bauland, vor allem für Eigenheime, und nach dem Zweiten Weltkrieg musste Wohnraum für Flüchtlinge her. Als ältestes Haus gilt das „Tante Dora Haus“ von 1795 in der Hauptstraße 22, das zweitälteste ist das frühere Armenhaus von 1843 mit Reetdach in der Königstraße 24.</p>"
     },
     {
-      "h2": "Kleinabriss auf Halstenbeker Grundstücken",
-      "html": "<p>Auf Eigenheim-Grundstücken gibt es oft Bauten, die irgendwann Platz machen sollen: ein Gartenhaus mit morschem Boden, ein Geräteschuppen, ein Carport, eine Garage mit undichtem Dach oder eine alte Terrasse. Beim <strong>Kleinabriss</strong> bauen wir sie vollständig zurück, ebenso Zäune und Mauern. Bauschutt, Holz und Metall werden getrennt und fachgerecht entsorgt, das ist im Festpreis enthalten.</p><p>Wer neu plant, etwa einen größeren Wintergarten oder einen neuen Stellplatz, braucht oft zuerst eine freie Fläche, und genau dafür ist der Kleinabriss gedacht. Wellplatten auf alten Garagen und Schuppen können Asbestzement sein, wenn sie vor dem 31. Oktober 1993 verbaut wurden. Deshalb wird vorher geprüft. Belastete Platten nimmt nach den geltenden Schutzregeln ein berechtigter Fachbetrieb ab, danach reißen wir den Rest ab.</p>"
+      "h2": "Jedes dritte Haus ein Reihenhaus: was der Zensus zeigt",
+      "html": "<p>Wie sehr die Nachkriegsjahrzehnte Halstenbek geformt haben, zeigt die Gebäude- und Wohnungszählung des Zensus 2011. Zum Stichtag 9. Mai 2011 gab es in der Gemeinde 4.662 Gebäude mit Wohnraum. Fast die Hälfte davon, 49,5 Prozent, entstand zwischen 1949 und 1978, aus der Zeit vor 1919 stammen nur 3,2 Prozent. Zählt man alle Baujahre bis 1989 zusammen, sind es rund drei Viertel des Bestands. 44,5 Prozent der Wohngebäude stehen frei, 33,7 Prozent sind Reihenhäuser und 19,8 Prozent Doppelhaushälften.</p><p>Daraus folgt zweierlei. Erstens kann in vielen Halstenbeker Häusern und Garagen noch Material aus der Zeit vor dem Asbestverbot vom 31. Oktober 1993 stecken, etwa Wellplatten auf dem Garagendach, Fensterbänke aus Asbestzement, alte Bodenbeläge oder Fliesenkleber. Das wird vor dem ersten Hammerschlag geprüft, belastete Teile baut ein dafür zugelassener Fachbetrieb aus. Zweitens grenzen Reihen- und Doppelhäuser direkt an das Nachbarhaus. Die Haustrennwand bleibt bei einer <a href=\"entkernung-hamburg.html\">Entkernung</a> unberührt, und ehe eine tragende Innenwand fällt, rechnet ein Statiker, den wir mitbringen.</p>"
     },
     {
-      "h2": "Wann der Abriss nach der LBO ohne Verfahren geht",
-      "html": "<p>In Halstenbek gilt die Landesbauordnung Schleswig-Holstein. Sie stellt die Beseitigung vieler Bauten frei: alles, was sie als verfahrensfreies Bauvorhaben einstuft, außerdem freistehende Gebäude der Gebäudeklassen 1 und 3 sowie andere Anlagen bis 10 Meter Höhe, die keine Gebäude sind. Ein Kulturdenkmal fällt nie darunter. Für alles Übrige verlangt die LBO, dass der Abbruch mindestens einen Monat im Voraus bei der Bauaufsicht angezeigt wird.</p>"
+      "h2": "Gartenhaus, Garage, Terrasse: Kleinabriss auf dem Grundstück",
+      "html": "<p>Auf Eigenheim-Grundstücken stehen oft Bauten, die irgendwann Platz machen sollen: ein Gartenhaus mit morschem Boden, ein Geräteschuppen, ein Carport, eine Garage mit undichtem Dach oder eine alte Terrasse. Beim <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> bauen wir sie vollständig zurück, ebenso Zäune und Mauern. Ist die Garage noch voll, räumen wir sie vorher leer, denn Entrümpelung, Abriss und Gartenarbeiten bekommen Sie bei uns aus einer Hand. Bauschutt, Holz und Metall trennen wir auf dem Grundstück, die Entsorgung steckt im Festpreis, und am Ende ist die Fläche besenrein.</p>"
     },
     {
-      "h2": "Wer beim Abriss in Halstenbek wofür zuständig ist",
-      "html": "<p>Halstenbek hat keine eigene Bauaufsicht. Bauanträge, Bauberatung und Bauüberwachung übernimmt der Fachdienst Bauordnung des Kreises Pinneberg, der in der Kreisverwaltung in Elmshorn sitzt. Nur Genehmigungsfreistellungen gehen an die Gemeinde. Auch Straßenverkehrsbehörde ist für Halstenbek der Kreis: Verkehrsrechtliche Anordnungen für Baustellen sollen dort spätestens 14 Tage vor Beginn beantragt sein. Die Sondernutzung selbst, also etwa ein Container auf der Straße, ist in Schleswig-Holstein Sache der Gemeindeverwaltung.</p><p>Halstenbek gehört nach Angaben des Kreises zu den Gemeinden mit eigener Baumschutzsatzung. Zusätzlich können Bäume über einen Bebauungsplan oder ein Landschaftsschutzgebiet geschützt sein, wie es am Krupunder See besteht. Bäume mit Nestern oder besetzten Höhlen dürfen nicht gefällt werden, der Artenschutz gilt immer. Ob davon etwas Ihren Abriss betrifft, besprechen wir bei der Besichtigung.</p>"
+      "h2": "Bauaufsicht in Elmshorn, LBO, Bäume und Straße",
+      "html": "<p>Halstenbek hat keine eigene Bauaufsicht. Zuständig ist der Fachdienst Bauordnung des Kreises Pinneberg in der Kreisverwaltung, Kurt-Wagener-Straße 11–13, 25337 Elmshorn. Die Zentrale erreichen Sie unter 04121 4502-0, Termine vergibt der Kreis online. Nur Genehmigungsfreistellungen gehen an die Gemeinde.</p><p>Nach § 61 Abs. 3 der Landesbauordnung Schleswig-Holstein (LBO) ist die Beseitigung ohne Verfahren möglich bei Anlagen, die schon verfahrensfrei gebaut werden durften, bei freistehenden Gebäuden der Gebäudeklassen 1 und 3 und bei anderen Anlagen bis 10 Meter Höhe, die keine Gebäude sind. Für ein Kulturdenkmal gilt das nie. Jede andere Beseitigung muss der Kreis spätestens einen Monat vor dem ersten Abbruchtag als Anzeige auf dem Tisch haben. Soll ein Gebäude der Gebäudeklasse 2 weg, an das ein Nachbarhaus angebaut ist, wie bei Doppel- und Reihenhäusern, muss außerdem ein Tragwerksplaner aus der Liste der Architekten- und Ingenieurkammer die Standsicherheit des Nachbarhauses bestätigen.</p><p>Halstenbek gehört laut Kreis zu den Gemeinden mit eigener Baumschutzsatzung, am Krupunder See besteht ein Landschaftsschutzgebiet. Für einen Container auf öffentlicher Straße ist die Gemeinde Halstenbek in der Gustavstraße 6 zuständig (04101 491-0). Verkehrsrechtliche Anordnungen für Baustellen beantragen Sie dagegen beim Kreis, nach dessen Angaben spätestens 14 Tage vor Beginn.</p>"
     },
     {
-      "h2": "Weitere Leistungen und Anfahrt nach Halstenbek",
-      "html": "<p>Außer dem <a href=\"kleinabriss-hamburg.html\">Kleinabriss</a> bieten wir in Halstenbek die <a href=\"entkernung-hamburg.html\">Entkernung</a> von Wohnungen, den <a href=\"innenabbruch-hamburg.html\">Innenabbruch</a> in bewohnten Häusern und <a href=\"trockenbau-hamburg.html\">Trockenbau</a> für den Neuaufbau an. Wir kommen aus Hamburg-Altona, die Anfahrt ist Bestandteil des Festpreises. Für die Kreisstadt nebenan gibt es eine Seite zu <a href=\"abriss-pinneberg.html\">Pinneberg</a>. Schreiben Sie uns über das <a href=\"index.html#anfrage\">Anfrageformular</a>, was weg soll.</p>"
+      "h2": "Wohin mit Schutt, Asbest und Dämmwolle?",
+      "html": "<p>Recyclinghöfe im Kreis Pinneberg betreibt die GAB, keiner davon liegt in Halstenbek. Am meisten nimmt der Hof Tornesch-Ahrenlohe am Hasenkamp 15 an: Nach der Preistabelle für Privatkunden (Stand 1. Januar 2026) gibt es dort gegen Gebühr mineralischen Bauschutt, Bauabfälle, Teerpappe sowie Asbestzement und Dämmstoffe, die beiden Letzteren nur staubdicht in Gewebesäcken. In Wedel am Kronskamp 107 geht Bauschutt ebenfalls, Asbest dagegen nicht, und die Wertstoffannahme in Quickborn nimmt gar keinen Bauschutt.</p><p>Reißen wir ab, müssen Sie nichts davon selbst fahren: Wir laden auf und bringen alles nach Sorten getrennt weg. Für die Kreisstadt nebenan gibt es eine Seite zu <a href=\"abriss-pinneberg.html\">Pinneberg</a>. Was bei Ihnen weg soll, schreiben Sie uns über das <a href=\"index.html#anfrage\">Anfrageformular</a>.</p>"
     }
   ],
   "stadtteile": [
     "Halstenbek-Ort",
-    "Halstenbek-Dorf",
-    "Halstenbek-Krupunder",
+    "Krupunder",
     "Brande",
-    "Nienhöfen",
-    "Baumschulen",
-    "Wohnmeile"
+    "Nienhöfen"
   ],
   "faq": [
     {
       "q": "Ist die Gemeinde Halstenbek für meinen Garagenabriss zuständig?",
-      "a": "Für die Bauaufsicht nicht, das ist der Kreis Pinneberg. Die Gemeinde ist aber gefragt, wenn ein Container auf einer öffentlichen Straße stehen soll oder ein Baum betroffen ist, der unter die Baumschutzsatzung fällt."
+      "a": "Für die Bauaufsicht nicht, das ist der Kreis Pinneberg in Elmshorn. Die Gemeinde ist aber gefragt, wenn ein Container auf einer öffentlichen Straße stehen soll oder ein Baum betroffen ist, der unter die Baumschutzsatzung fällt."
     },
     {
-      "q": "Unser Carport hat ein Wellplattendach. Was passiert, wenn darin Asbest steckt?",
-      "a": "Vor dem Abriss wird geprüft, ob die Platten Asbest enthalten. Ist das so, baut ein berechtigter Fachbetrieb sie nach den Schutzregeln aus. Erst danach reißen wir das Carport ab und entsorgen den Rest getrennt."
+      "q": "Unser Reihenhaus in Halstenbek ist aus den Siebzigern. Was prüfen Sie vor dem Entkernen?",
+      "a": "Zuerst, ob Bodenbeläge, Kleber oder Platten aus der Bauzeit Asbest enthalten könnten, denn verboten wurde er erst 1993. Danach klären wir mit dem Statiker, welche Innenwände tragen. Die Wand zum Nachbarhaus bleibt in jedem Fall stehen."
+    },
+    {
+      "q": "Kann ich die alten Wellplatten vom Carport selbst nach Tornesch bringen?",
+      "a": "Abgeben dürfen Sie Asbestzement dort laut GAB-Preistabelle nur staubdicht in Gewebesäcken und gegen Gebühr. Das Abnehmen der Platten gehört aber in die Hände eines zugelassenen Fachbetriebs. Den Rest des Carports reißen wir danach ab und fahren ihn mit weg."
     },
     {
       "q": "Wie schnell bekomme ich ein Angebot für den Abriss meines Gartenhauses?",
@@ -62,54 +63,76 @@
   ],
   "sources": [
     {
-      "title": "Halstenbek (Wikipedia): amtsfreie Gemeinde, offizielle Ortsteile, Grenze zu Eidelstedt und Lurup, Baumschulen nach 1842, Baumschulflächen als Bauland für Eigenheime, Flüchtlinge, Tante Dora Haus 1795, Armenhaus 1843, Krupunder See",
+      "title": "Halstenbek (Wikipedia): amtsfreie Gemeinde, Grenze zu Eidelstedt und Lurup, Baumschulen nach 1842, Baumschulflächen als Bauland für Eigenheime, Flüchtlinge, Krupunder See",
       "url": "https://de.wikipedia.org/wiki/Halstenbek"
+    },
+    {
+      "title": "Halstenbek (DeWiki, Wikipedia-Spiegel): Ortsteile Halstenbek-Ort, Krupunder und Brande (mit Nienhöfen) auf preußische Gemeinden zurückgehend; Wohnmeile als Einkaufsstraße; ältestes Haus „Tante Dora Haus“ 1795, Hauptstraße 22; zweitältestes das ehemalige Armenhaus, Reetdachhaus Königstraße 24 von 1843; Landschaftsschutzgebiet Krupunder See",
+      "url": "https://dewiki.de/Lexikon/Halstenbek"
+    },
+    {
+      "title": "Statistikamt Nord: Ergebnisse des Zensus 2011, Gebäude und Wohnungen, Halstenbek (Stichtag 9.5.2011: 4.662 Gebäude mit Wohnraum; Baujahr 1949–1978 49,5 %, vor 1919 3,2 %; vor 1950 416, 1950–1969 1.255, 1970–1989 1.858, ab 1990 1.133; freistehend 44,5 %, gereiht 33,7 %, Doppelhaushälfte 19,8 %)",
+      "url": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/SHHeft_derivate_00001358/010560018018_Halstenbek_GWZ.pdf"
+    },
+    {
+      "title": "Statistikamt Nord: Bevölkerung der Gemeinden ab 10.000 Einwohnern am 31.03.2025, Fortschreibung auf Basis des Zensus 2022 (Halstenbek 18.118)",
+      "url": "https://www.statistik-nord.de/fileadmin/Dokumente/A_I_1_vj_25-1-Zensus2022_SH.pdf"
     },
     {
       "title": "Kreis Pinneberg: Fachdienst Bauordnung (Bauaufsicht für alle Kommunen außer Elmshorn, Pinneberg und Wedel)",
       "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Bauordnung.html"
     },
     {
-      "title": "Kreis Pinneberg: Ansprechpartner und Zuständigkeiten im Fachdienst Bauordnung (Genehmigungsfreistellung bei der Gemeinde)",
+      "title": "Kreis Pinneberg: Ansprechpartner und Zuständigkeiten im Fachdienst Bauordnung (Kurt-Wagener-Straße 11–13, 25337 Elmshorn; Zentrale 04121 4502-0; Online-Terminvergabe; Genehmigungsfreistellung bei der Gemeinde)",
       "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Bauordnung/Kontakt+_+Zust%C3%A4ndigkeiten.html"
-    },
-    {
-      "title": "Kreis Pinneberg: Baustellensicherung (Kreis ist Straßenverkehrsbehörde u. a. für Halstenbek; Antrag mindestens 14 Tage vor Baubeginn)",
-      "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Stra%C3%9Fenbau+und+Verkehrssicherheit/Team+Verkehrslenkung/Baustellensicherung.html"
-    },
-    {
-      "title": "Kreis Pinneberg: Baumschutz (Liste der Gemeinden mit eigener Baumschutzsatzung, u. a. Halstenbek; Schutz über B-Plan und Landschaftsschutzgebiete; Artenschutz)",
-      "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Umwelt/Team+Naturschutz/Baumschutz.html"
-    },
-    {
-      "title": "Schleswig-Holstein: Sondernutzung von öffentlichem Raum innerhalb einer Ortschaft beantragen (FIM-Portal, zuständig: Gemeinde-, Amts- oder Stadtverwaltung)",
-      "url": "https://www.fimportal.de/api/v0/xzufi-services/L100012/302468728/de/pdf"
     },
     {
       "title": "BauAufsÜV SH 2022 – Liste der Gemeinden mit eigener unterer Bauaufsicht (Halstenbek nicht enthalten)",
       "url": "https://lexaris.de/book/version/documentflat/head/1280747"
     },
     {
+      "title": "§ 61 LBO Schleswig-Holstein, Abs. 3 (Beseitigung: Satz 1 Nr. 1–3 verfahrensfrei, Kulturdenkmale ausgenommen, Anzeige einen Monat vorher, Satz 5 Gebäudeklasse 2: Standsicherheit angebauter Gebäude durch Person aus der Kammerliste bestätigt)",
+      "url": "https://gesetze.co/SH/LBO/61"
+    },
+    {
       "title": "Schleswig-Holstein: Beseitigung von Anlagen (FIM-Portal, § 61 Abs. 3 LBO)",
       "url": "https://www.fimportal.de/api/v0/leistung-stammtexte/L100012/8960240/pvog/de/pdf"
     },
     {
-      "title": "§ 61 LBO Schleswig-Holstein – Verfahrensfreie Bauvorhaben, Beseitigung von Anlagen (Abs. 3 Satz 1 Nr. 1 bis 3)",
-      "url": "https://gesetze.co/SH/LBO/61"
+      "title": "Kreis Pinneberg: Baumschutz (Liste der Gemeinden mit eigener Baumschutzsatzung, u. a. Halstenbek; Schutz über B-Plan und Landschaftsschutzgebiete; Artenschutz)",
+      "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Umwelt/Team+Naturschutz/Baumschutz.html"
     },
     {
-      "title": "§ 2 LBO Schleswig-Holstein – Begriffe (Gebäudeklassen 1 bis 3)",
-      "url": "https://www.haufe.de/id/norm/landesbauordnung-schleswig-holstein-2-begriffe-HI14984372_p2.html"
+      "title": "Kreis Pinneberg: Baustellensicherung (Kreis ist Straßenverkehrsbehörde u. a. für Halstenbek; Antrag mindestens 14 Tage vor Baubeginn)",
+      "url": "https://www.kreis-pinneberg.de/Verwaltung/Fachbereich+Bauen_+Umwelt+und+Verkehr/Fachdienst+Stra%C3%9Fenbau+und+Verkehrssicherheit/Team+Verkehrslenkung/Baustellensicherung.html"
     },
     {
-      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell (Verbot seit 31.10.1993, Asbestzement-Wellplatten)",
+      "title": "Schleswig-Holstein: Sondernutzung von öffentlichem Raum innerhalb einer Ortschaft beantragen (FIM-Portal, zuständig: Gemeinde-, Amts- oder Stadtverwaltung)",
+      "url": "https://www.fimportal.de/api/v0/xzufi-services/L100012/302468728/de/pdf"
+    },
+    {
+      "title": "Gemeinde Halstenbek: Pressemitteilung Sperrfrist für Baumfällungen (Kontakt: Gustavstraße 6, 25469 Halstenbek, 04101 491-0; Menüpunkt Umwelt und Baumschutz)",
+      "url": "https://www.halstenbek.de/verwaltung-politik/aktuelles/pressemitteilungen/2019/3/1/sperrfrist-fuer-baumfaellungen-hat-am-01032019-wieder-begonnen/"
+    },
+    {
+      "title": "GAB: Recyclinghöfe (Tornesch-Ahrenlohe, Hasenkamp 15; Wertstoffannahme Quickborn, Güttloh 1–5; Wedel, Kronskamp 107)",
+      "url": "https://www.gab-umweltservice.de/recyclinghoefe/"
+    },
+    {
+      "title": "GAB: Preistabelle Kreis Pinneberg für Privatkunden, Stand 1. Januar 2026 (Bauschutt Tornesch und Wedel, nicht Quickborn; Asbest, Dämmmaterial, Teerpappe nur Tornesch, Asbest und Dämmstoffe nur staubdicht in Gewebesäcken; Wedel bei Bauabfällen nur Steine, Fliesen, Keramik, Rigips, Altholz)",
+      "url": "https://www.gab-umweltservice.de/wp-content/uploads/2025/12/Preistabelle-Kreis-Pinneberg-0126.pdf"
+    },
+    {
+      "title": "Verbraucherzentrale: Asbest – gefährlich und immer noch aktuell, Stand 25.03.2025 (Verbot seit 31.10.1993; Asbestzement in Dächern und Fensterbänken, Bodenbeläge, Fliesenkleber; Entfernen nur durch Fachfirmen)",
       "url": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/asbest-gefaehrlich-und-immer-noch-aktuell-48383"
     }
   ],
   "notes_for_review": [
-    "Baumschutzsatzung Halstenbek: Belegt ist nur, dass es sie gibt (Liste des Kreises). Die Seiten auf halstenbek.de konnte ich nicht abrufen, deshalb stehen keine Details (Stammumfang usw.) im Text.",
-    "Sondernutzung: Eine Satzung oder Seite der Gemeinde Halstenbek zu Containern habe ich nicht abrufen können. Im Text steht die landesweite Regel (Gemeindeverwaltung).",
-    "Ortsteile laut Wikipedia „offizielle Ortsteile“. Eine Seite der Gemeinde dazu habe ich nicht gefunden.",
+    "Baumschutzsatzung Halstenbek: Belegt ist nur, dass es sie gibt (Liste des Kreises). Die Unterseite „Umwelt und Baumschutz“ auf halstenbek.de war nicht abrufbar, deshalb stehen keine Details (Stammumfang usw.) im Text.",
+    "Sondernutzung: Eine Satzung der Gemeinde Halstenbek zu Containern habe ich nicht gefunden. Im Text steht die landesweite Regel (Gemeindeverwaltung) mit der Adresse des Rathauses aus dem Impressum der Gemeinde-Website.",
+    "Zensus: Zahlen aus der Gebäude- und Wohnungszählung 2011 (Stichtag 9.5.2011). „Rund drei Viertel bis 1989“ ist selbst gerechnet: 416 + 1.255 + 1.858 = 3.529 von 4.662 (75,7 %). Neuere Gemeindewerte zum Baujahr aus dem Zensus 2022 habe ich nicht abrufen können.",
+    "GAB-Preistabelle: Die Zuordnung der Häkchen zu den Höfen stammt aus einer automatischen PDF-Auswertung (zweimal geprüft, gleiches Ergebnis). Die Seite der GAB nennt drei Höfe im Kreis Pinneberg (Tornesch, Quickborn, Wedel).",
+    "Ortsteile: Die frühere Fassung nannte sieben „offizielle Ortsteile“ (inkl. Halstenbek-Dorf, Baumschulen, Wohnmeile). Der Wikipedia-Spiegel dewiki.de nennt nur Halstenbek-Ort, Krupunder und Brande (mit Nienhöfen) und beschreibt die Wohnmeile als Einkaufsstraße; Wikivoyage nennt zwei Ortsteile. Text und Feld „stadtteile“ jetzt nur mit den übereinstimmend belegten Namen. Eine Seite der Gemeinde dazu habe ich nicht gefunden.",
     "LBO-Änderung 2026 (Unterrichtung 20/351, Drs. 20/4524): Stand des Verfahrens nicht prüfbar; laut Entwurf bleibt § 61 Abs. 3 unverändert."
   ]
 }
