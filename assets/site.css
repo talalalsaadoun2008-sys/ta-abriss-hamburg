@@ -621,3 +621,29 @@ footer .partner a{display:inline-block;padding-block:10px;margin-block:-10px;col
 .prose .kombi-cta{margin:var(--s3) 0 0}
 .prose .kombi-cta .btn{color:var(--accent-ink)}
 @media (max-width:600px){.kombi-cta .btn{width:100%;justify-content:center}}
+
+/* Nebenbei „aus einer Hand“ (Anzahl aus site.json, build.py eine_hand/dazu_zeile) */
+/* Kopfzeile: kleine Unterzeile unter dem Namen, Höhe der Kopfzeile bleibt gleich; auf dem Handy ausgeblendet */
+.brand small{display:none}
+@media (min-width:601px){
+  .brand{grid-template-columns:auto auto;grid-auto-flow:row;align-items:center;gap:0 .5rem}
+  .brand b{grid-row:1 / span 2}
+  .brand span{align-self:end;line-height:1}
+  .brand small{display:block;align-self:start;margin-top:.28rem;font-family:var(--f-mono);font-size:.6rem;line-height:1;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+}
+/* Startseite: Zeile über der H1 bricht auf dem Handy nur zwischen den Teilen um */
+.hero .label span{white-space:nowrap}
+@media (max-width:520px){.hero .label .lbl-sep{display:none}.hero .label .lbl-sep+span{display:block}}
+/* Leistungsseiten: „Aus einer Hand dazu: … → Kombi-Pakete“ unter den Häkchen */
+.dazu{font-size:.95rem;line-height:1.5;color:rgba(255,255,255,.8);animation:rise .8s .4s var(--ease-out) both}
+.dazu a{display:inline-block;padding-block:8px;margin-block:-8px;white-space:nowrap;color:#fff;font-weight:600;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
+.dazu a:hover{text-decoration-color:currentColor}
+.dazu .dazu-kombi{text-decoration:none}
+.dazu .dazu-kombi span{color:var(--accent);transition:transform .3s var(--ease-out);display:inline-block}
+.dazu .dazu-kombi:hover span{transform:translateX(3px)}
+@media (max-width:600px){.dazu{line-height:1.75}}
+/* Fußzeile: „… Leistungen aus einer Hand →“ im Firmenblock */
+footer .firma .foot-eh{margin:0}
+footer .firma .foot-eh a{color:var(--accent-text)}
+/* fünf Spalten nach Inhaltsbreite: Firmenblock begrenzen, sonst nimmt er allen freien Platz und die Abstände kippen */
+@media (min-width:901px){footer .wrap.foot:has(> .foot-uml)>.firma{max-width:19rem}}

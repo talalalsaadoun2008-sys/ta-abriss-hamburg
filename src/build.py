@@ -38,6 +38,11 @@ Alles aus einer Hand:
   ist ein Abschnitt mit einer <ol> der Schritte (Links auf Leistungsseiten); dazu erzeugt der Build eine Sprungliste
   und je Abschnitt den Knopf „Diese Kombination anfragen“, der im Formular die Leistungen aus der <ol> ankreuzt.
   Leistungsseiten zeigen „Oft zusammen gebucht“ aus site.json leistungen[].zusammen ([{slug, text}], 2–4 Einträge).
+  Nebenbei an vielen Stellen (Anzahl immer aus site.json gezählt, nie fest): Kopfzeile ab 601 px „<n> Leistungen aus
+  einer Hand“ unter dem Namen, Fußzeile im Firmenblock dieselbe Zeile mit Link auf die Kombi-Seite, Hero der Leistungs-
+  und Leistung-im-Bezirk-Seiten „Aus einer Hand dazu: …“ aus denselben zusammen-Daten (im Bezirk mit Links auf die
+  Seiten im selben Bezirk, wo es sie gibt), Ortsseiten „Alles aus einer Hand in <Ort>“ über den Leistungskarten,
+  Google-Beschreibung mit Häkchen „Alles aus einer Hand“ (meta_suffix).
 Anfrageformular: Die Kontaktsektion id="anfrage" in index.html ist die Quelle für alle Seiten. Die Ankreuzliste
   der Leistungen (Marker @leistungswahl) kommt aus site.json „formular_leistungen“ (Gruppen) und „formular_unklar“;
   form_leistung einer Seite wird dort vorangekreuzt.
@@ -592,17 +597,24 @@ def cur(is_current):
     return ' aria-current="page"' if is_current else ""
 
 
+def eine_hand(ctx):
+    """„17 Leistungen aus einer Hand“ – Anzahl der Leistungsseiten aus site.json (nur Seiten mit Inhalt), sonst None."""
+    n = len(ctx.pages(ctx.site.leistungen))
+    return f"{n} Leistungen aus einer Hand" if n >= 2 else None
+
+
 def render_header(ctx, current, on_home, contact_href):
     s = ctx.site
     brand = "#start" if on_home else ctx.home
     nav = "".join(f'<a href="{esc(ctx.home_link(a["anker"], on_home))}">{esc(a["kopfzeile"])}</a>'
                   for a in s.anker if a.get("kopfzeile"))
     bars = '<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>'
+    sub = f"<small>{esc(eine_hand(ctx))}</small>" if eine_hand(ctx) else ""  # nur ab 601 px sichtbar (site.css)
     out = []
     if ctx.preview:
         out.append('<div class="draft" role="note"><div class="wrap">Vorschau – noch nicht online</div></div>')
     out.append(f'''<header class="top"><div class="wrap">
-  <a class="brand" href="{esc(brand)}"><b><i>T&amp;A</i><i aria-hidden="true">T&amp;A</i></b><span>Abriss &amp; Rückbau</span></a>
+  <a class="brand" href="{esc(brand)}"><b><i>T&amp;A</i><i aria-hidden="true">T&amp;A</i></b><span>Abriss &amp; Rückbau</span>{sub}</a>
   <nav class="links" aria-label="Hauptnavigation">
     {nav}
   </nav>
@@ -685,8 +697,8 @@ def render_footer(ctx, current, on_home, fab_href):
     cols = []
     if leist:
         weitere = mehr(ctx.home_link("leistungen", on_home), "Alle Leistungen") if len(kern) < len(ctx.pages(s.leistungen)) else ""
-        if ctx.has(KOMBI):
-            weitere += mehr(f"{KOMBI}.html", "Kombi-Pakete: alles aus einer Hand", current == KOMBI)
+        if ctx.has(KOMBI):  # kurz, „aus einer Hand“ steht schon im Firmenblock
+            weitere += mehr(f"{KOMBI}.html", "Kombi-Pakete", current == KOMBI)
         cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul>{weitere}</div>')
     cols.append(f'  <div><h3>Bezirke</h3>' + (f'<ul class="two">{bez}</ul>' if bez else "") + f'{alle}</div>')
     if uml:
@@ -695,11 +707,15 @@ def render_footer(ctx, current, on_home, fab_href):
                 if len(rat) < len(rat_alle) and "ratgeber" in ids else "")
     rat_ul = f'<ul>{"".join(li(x) for x in rat)}</ul>' if rat else ""
     cols.append(f'  <div class="foot-rat"><h3>Ratgeber &amp; Rechtliches</h3>{rat_ul}{rat_mehr}<ul>{rest}</ul></div>')
+    # Firmenblock: „17 Leistungen aus einer Hand →“ auf die Kombi-Seite (ohne sie auf die Leistungen der Startseite)
+    eh = eine_hand(ctx)
+    eh = ("\n    " + mehr(f"{KOMBI}.html" if ctx.has(KOMBI) else ctx.home_link("leistungen", on_home), eh,
+                         current == KOMBI).replace('class="foot-all"', 'class="foot-all foot-eh"', 1) if eh else "")
     out = [f'''<footer><div class="wrap foot">
   <div class="firma">
     <h3>{esc(f["name"])}</h3>
     <p>Inh. {esc(f["inhaber"])}<br>{esc(f["strasse"])}<br>{esc(f["plz"])} {esc(f["ort"])}</p>
-    <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>
+    <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>{eh}
     <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a> · <a href="https://hinnerk-entruempelung.de/">Hinnerk – Entrümpelung Hamburg</a></p>
   </div>
 ''' + "\n".join(cols) + '\n</div></footer>']
@@ -1000,13 +1016,34 @@ def kombi_schritte(ctx, text):
     return out
 
 
-def subhero(ctx, image, label, h1, lead, facts=None):
+def dazu_zeile(ctx, le, bezirk=None):
+    """Kleine Zeile im Hero einer Leistungsseite: „Aus einer Hand dazu: A · B · C → Kombi-Pakete“ aus
+    site.json leistungen[].zusammen (nur Seiten mit Inhalt). Mit bezirk (Leistung in einem Bezirk) zeigt ein Link
+    auf die Seite derselben Leistung im Bezirk, wenn es sie gibt, sonst auf die Leistungsseite."""
+    links = []
+    for x in le.get("zusammen") or []:
+        if not ctx.has(x["slug"]):
+            continue
+        lo = lo_slug(x["slug"], bezirk["slug"]) if bezirk else None
+        href = lo if lo and ctx.has(lo) else x["slug"]
+        links.append(f'<a href="{esc(href)}.html">{esc(ctx.site.entry[x["slug"]]["name"])}</a>')
+    if not links:
+        return ""
+    kombi = (f' <a class="dazu-kombi" href="{KOMBI}.html"><span aria-hidden="true">→</span>&nbsp;Kombi-Pakete</a>'
+             if ctx.has(KOMBI) else "")
+    # „&nbsp;·“: der Punkt bleibt am Wort davor, umgebrochen wird nur zwischen den Leistungen (Handy)
+    return f'<p class="dazu"><span>Aus einer Hand dazu:</span> {"&nbsp;· ".join(links)}{kombi}</p>'
+
+
+def subhero(ctx, image, label, h1, lead, facts=None, dazu=""):
     f = ctx.site.firma
     img = ctx.site.bilder[image]
     facts_div = f'''
     <div class="facts">
       {facts_html(facts)}
     </div>''' if facts else ""
+    if dazu:
+        facts_div += "\n    " + dazu
     photo = picture_html(ctx.site.bild_src(image), {"class": "photo", "alt": img["alt"], "width": img["w"], "height": img["h"],
                                               "fetchpriority": "high"})
     return f'''<div class="subhero">
@@ -1203,8 +1240,10 @@ ICON_FILES = ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "logo.png")
 
 
 def meta_suffix(site):
-    """Häkchen-Zeile für die Google-Beschreibung der Leistungs- und Ortsseiten (Telefon aus site.json)."""
-    return f" ✓ Kostenlose Besichtigung ✓ Festpreis ☎ {site.firma['telefon']}"
+    """Häkchen-Zeile für die Google-Beschreibung der Leistungs- und Ortsseiten (Telefon aus site.json).
+    „Alles aus einer Hand“ statt „Kostenlose Besichtigung“ (steht in Hero und Knöpfen): mit drei Häkchen wären
+    alle Leistungsseiten über 160 Zeichen."""
+    return f" ✓ Alles aus einer Hand ✓ Festpreis ☎ {site.firma['telefon']}"
 
 
 def mit_haekchen(c):
@@ -1383,7 +1422,7 @@ def render_content_page(ctx, c):
         after.append(f'''<section class="sec-alt"><div class="wrap">
   <div class="head reveal">
     <p class="label">Leistungen</p>
-    <h2>Unsere Leistungen in {esc(entry["name"])}</h2>
+    <h2>Alles aus einer Hand in {esc(entry["name"])}</h2>
   </div>
   <div class="minis{n3}">
     {cards}
@@ -1492,7 +1531,8 @@ def render_content_page(ctx, c):
             after.append(f'<section><div class="wrap">{alle}\n</div></section>')
 
     crumbs = crumbs_html([(n, h) for n, h, _ in trail] + [(entry["name"], None)])
-    hero = subhero(ctx, c["image"], c["label"], c["h1"], c["lead"], c["facts"])
+    dazu = dazu_zeile(ctx, entry) if kind == "leistung" else dazu_zeile(ctx, lo_le, lo_bz) if kind == LEISTUNG_ORT else ""
+    hero = subhero(ctx, c["image"], c["label"], c["h1"], c["lead"], c["facts"], dazu)
     body = "\n\n".join([
         render_header(ctx, slug, False, "#anfrage"),
         '<main id="start">\n' + crumbs + "\n" + hero + '\n\n<div class="wrap page">\n  <div class="prose">\n    '
