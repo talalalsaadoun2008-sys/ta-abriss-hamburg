@@ -57,7 +57,7 @@ INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
 REQUIRED = ("slug", "type", "menu", "title", "description", "label", "h1", "lead", "facts",
             "image", "form_leistung", "form_ort", "sections", "faq")
-KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review", "note_stellen", "leistung", "bezirk"}
+KNOWN = set(REQUIRED) | {"stadtteile", "sources", "notes_for_review", "note_stellen", "leistung", "bezirk", "galerie"}
 MAX_WEITERE_ORTE = 8
 
 CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>'
@@ -419,6 +419,11 @@ def validate(c, path, site, errors, warn):
             e("'stadtteile' muss eine Liste mit Texten sein (darf leer sein)")
         elif st and c["type"] == "stadtteil":
             warn(f"{where}: 'stadtteile' wird bei Stadtteil-Seiten nicht angezeigt")
+    gal = c.get("galerie")  # eigene Arbeitsfotos: [{"bild": Schlüssel aus site.json bilder, "text": Bildunterschrift}]
+    if gal is not None:
+        if not (isinstance(gal, list) and gal and all(isinstance(g, dict) and g.get("bild") in site.bilder
+                                                       and is_str(g.get("text")) for g in gal)):
+            e("galerie: Liste von {bild (Schlüssel aus site.json bilder), text} erwartet")
     if c["type"] == "ratgeber" and (c["slug"] != ABOUT or c.get("sources")):
         src = c.get("sources")
         if not (isinstance(src, list) and src):
@@ -1234,6 +1239,21 @@ def render_content_page(ctx, c):
   </div>
   <div class="faq reveal">
     {qa}
+  </div>
+</div></section>''')
+    if c.get("galerie"):
+        figs = []
+        for g in c["galerie"]:
+            b = s.bilder[g["bild"]]
+            img = picture_html(s.bild_src(g["bild"]), {"width": b["w"], "height": b["h"], "alt": b["alt"], "loading": "lazy"})
+            figs.append(f'<figure class="reveal">{img}<figcaption>{esc(g["text"])}</figcaption></figure>')
+        after.append(f'''<section class="sec-tight"><div class="wrap">
+  <div class="head reveal">
+    <p class="label">Aus unserer Arbeit</p>
+    <h2>So sieht es bei uns aus</h2>
+  </div>
+  <div class="galerie">
+    {"\n    ".join(figs)}
   </div>
 </div></section>''')
     preise = preis_section(ctx, slug, entry["name"]) if kind == "leistung" else None

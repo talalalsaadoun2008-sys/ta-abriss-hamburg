@@ -7,7 +7,11 @@
   "label": "Leistung · Entkernung",
   "h1": "Entkernung in Hamburg: Wohnung, Haus und Gewerbefläche",
   "lead": "Vor einer Kernsanierung muss alles raus, bis nur noch der Rohbau steht. Wir entkernen Wohnungen, Häuser und Gewerbeflächen, trennen das Material und übergeben die Räume besenrein.",
-  "facts": ["Wohnungen und Gewerbeflächen", "Festpreis nach Besichtigung", "Besenreine Übergabe"],
+  "facts": [
+    "Wohnungen und Gewerbeflächen",
+    "Festpreis nach Besichtigung",
+    "Besenreine Übergabe"
+  ],
   "image": "entkernung",
   "form_leistung": "Entkernung",
   "form_ort": "",
@@ -57,16 +61,40 @@
     }
   ],
   "sources": [
-    {"title": "Asbest | Umweltbundesamt", "url": "https://umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/chemische-stoffe/asbest"},
-    {"title": "Parkett mit PAK-haltigem Kleber: Welche Firma kann es entfernen? – Verbraucherzentrale NRW", "url": "https://www.verbraucherzentrale.nrw/schadstoffe/gebaeude/parkett-mit-pakhaltigem-kleber-welche-firma-kann-es-entfernen-43280"},
-    {"title": "§ 8 GewAbfV – Getrennte Sammlung von bestimmten Bau- und Abbruchabfällen (LX Gesetze)", "url": "https://lxgesetze.de/gewabfv/8"},
-    {"title": "§ 13 NAV (Elektrische Anlage) – gesetze.legal", "url": "https://gesetze.legal/bund/nav/13"},
-    {"title": "§ 12 AVBWasserV – Kundenanlage (LX Gesetze)", "url": "https://lxgesetze.de/avbwasserv/12"},
-    {"title": "Sondernutzung von Straßen Erlaubnis bei Baumaßnahmen (Container auf öffentlicher Fläche, § 19 HWG), Leistungsbeschreibung Hamburg im FIM-Portal", "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012878/de/pdf"}
+    {
+      "title": "Asbest | Umweltbundesamt",
+      "url": "https://umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/chemische-stoffe/asbest"
+    },
+    {
+      "title": "Parkett mit PAK-haltigem Kleber: Welche Firma kann es entfernen? – Verbraucherzentrale NRW",
+      "url": "https://www.verbraucherzentrale.nrw/schadstoffe/gebaeude/parkett-mit-pakhaltigem-kleber-welche-firma-kann-es-entfernen-43280"
+    },
+    {
+      "title": "§ 8 GewAbfV – Getrennte Sammlung von bestimmten Bau- und Abbruchabfällen (LX Gesetze)",
+      "url": "https://lxgesetze.de/gewabfv/8"
+    },
+    {
+      "title": "§ 13 NAV (Elektrische Anlage) – gesetze.legal",
+      "url": "https://gesetze.legal/bund/nav/13"
+    },
+    {
+      "title": "§ 12 AVBWasserV – Kundenanlage (LX Gesetze)",
+      "url": "https://lxgesetze.de/avbwasserv/12"
+    },
+    {
+      "title": "Sondernutzung von Straßen Erlaubnis bei Baumaßnahmen (Container auf öffentlicher Fläche, § 19 HWG), Leistungsbeschreibung Hamburg im FIM-Portal",
+      "url": "https://fimportal.de/api/v0/xzufi-services/S100002/S1000020010000012878/de/pdf"
+    }
   ],
   "notes_for_review": [
     "„Haus entkernen“: Die Firmenangaben nennen nur Wohnungen und Gewerbeflächen. Der Text nennt zusätzlich Einfamilien- und Reihenhäuser (Suchbegriff „Haus entkernen vor Sanierung“). Bitte bestätigen oder streichen.",
     "Gehören Innentüren mit Zargen, Einbauschränke und Holztreppen-Verkleidungen zum Leistungsumfang? Im Text als typische Bestandteile genannt.",
     "Container: Stellt T&A den Container selbst? Der Text nennt die Sondernutzungserlaubnis nur als Preisfaktor und sagt nicht, wer sie beantragt."
+  ],
+  "galerie": [
+    {
+      "bild": "g-rohre",
+      "text": "Alte Kupfer- und Stahlrohre aus einer Entkernung, gesammelt für die Verwertung"
+    }
   ]
 }

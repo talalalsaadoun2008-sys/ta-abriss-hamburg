@@ -87,5 +87,19 @@
     "Bitte klären: Werden Wertgegenstände angerechnet (Wertanrechnung)? Werden Kühlschränke, Waschmaschinen und andere Elektrogeräte mitgenommen? Nimmt T&A Problemstoffe (Farben, Öle) mit? Gibt es Grenzen, z. B. bei stark vermüllten Wohnungen?",
     "Bild: nutzt vorerst „entkernung“ (leerer Raum mit Schutt). Ein eigenes Foto einer Entrümpelung wäre besser.",
     "Sperrmüll-Gebühren und Abgrenzung am 26.10.2026 auf hamburg.de geprüft (Seite Stand 25.10.2026)."
+  ],
+  "galerie": [
+    {
+      "bild": "g-keller",
+      "text": "Vorher und nachher: Kellerraum entrümpelt, der Schrank bleibt stehen"
+    },
+    {
+      "bild": "g-wohnzimmer",
+      "text": "Vorher und nachher: Wohnzimmer komplett leer geräumt"
+    },
+    {
+      "bild": "g-kueche",
+      "text": "Vorher und nachher: Küche geräumt bis auf den Boden"
+    }
   ]
 }

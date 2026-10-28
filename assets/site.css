@@ -548,3 +548,9 @@ footer .partner a{display:inline-block;padding-block:10px;margin-block:-10px;col
   .preis:has(>.rechner:not([hidden]))>.preis-info{grid-area:info}
 }
 @media (max-width:600px){.preis-info .btn{width:100%;justify-content:center}}
+
+/* Aus unserer Arbeit: eigene Fotos auf Leistungsseiten */
+.galerie{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1.25rem;align-items:start}
+.galerie figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.galerie img{display:block;width:100%;height:auto}
+.galerie figcaption{padding:.7rem .9rem;font-size:.95rem;line-height:1.4}

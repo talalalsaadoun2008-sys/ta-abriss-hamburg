@@ -7,7 +7,11 @@
   "label": "Leistung · Wanddurchbruch",
   "h1": "Wanddurchbruch in Hamburg: Öffnung für Tür oder Durchreiche",
   "lead": "Sie brauchen eine neue Tür, eine Durchreiche zur Küche oder einen Durchgang ins Nachbarzimmer? Wir brechen die Öffnung staubarm in die Wand und nehmen den Schutt mit. Ist die Wand tragend, geht es nur mit Statiker. Den bringen wir mit.",
-  "facts": ["Statiker bringen wir mit", "Staubarm, Räume geschützt", "Festpreis inkl. Entsorgung"],
+  "facts": [
+    "Statiker bringen wir mit",
+    "Staubarm, Räume geschützt",
+    "Festpreis inkl. Entsorgung"
+  ],
   "image": "wanddurchbruch",
   "form_leistung": "Innenabbruch",
   "form_ort": "",
@@ -69,19 +73,58 @@
     }
   ],
   "sources": [
-    {"title": "Hamburgische Bauordnung (HBauO) vom 6. Januar 2025, nichtamtliche Lesefassung (§ 12 Standsicherheit, § 27 tragende Wände, § 29 Trennwände, § 35 Treppenräume; Stand 25.09.2025)", "url": "https://www.hamburg.de/resource/blob/1120174/a1f3778eb712e7a95605fbc6872df915/hamburgische-bauordnung-hbauo-2025-nichtamtliche-lesefassung-data.pdf"},
-    {"title": "Hamburg: Adressliste der Bauprüfdienststellen", "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"},
-    {"title": "§ 5 WEG – Gegenstand und Inhalt des Sondereigentums", "url": "https://www.gesetze-im-internet.de/woeigg/__5.html"},
-    {"title": "§ 20 WEG – Bauliche Veränderungen", "url": "https://www.gesetze-im-internet.de/woeigg/__20.html"},
-    {"title": "LG Lüneburg, Urteil vom 14.11.2012, 6 S 80/12: Kündigung, wenn Mieter eine Wand entfernen (anwaltonline)", "url": "https://www.anwaltonline.com/mietrecht/urteile/9708/kuendigung-wenn-mieter-eine-wand-entfernen"},
-    {"title": "§ 172 BauGB – Erhaltung baulicher Anlagen (Erhaltungssatzung)", "url": "https://gesetze.legal/bund/baugb/172"},
-    {"title": "Merkblatt Soziale Erhaltungsverordnung (Bezirksamt Wandsbek, Stand September 2025; Nr. 3.1 Grundrissänderungen, Nr. 3.3 Wohnungszusammenlegung)", "url": "https://www.hamburg.de/resource/blob/76648/c8707432d444d3565ac78e99ec7bad47/merkblatt-soziale-erhaltungsverordnung-version-september-2025-data.pdf"},
-    {"title": "§ 9 Denkmalschutzgesetz Hamburg – Genehmigungsvorbehalt", "url": "https://www.haufe.de/id/norm/denkmalschutzgesetz-hamburg-9-genehmigungsvorbehalt-fuer-veraenderungen-von-denkmaelern-HI15091365_p9.html"},
-    {"title": "§ 13 NAV (Elektrische Anlage) – gesetze.legal", "url": "https://gesetze.legal/bund/nav/13"},
-    {"title": "§ 12 AVBWasserV – Kundenanlage (LX Gesetze)", "url": "https://lxgesetze.de/avbwasserv/12"},
-    {"title": "Asbest | Umweltbundesamt", "url": "https://umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/chemische-stoffe/asbest"},
-    {"title": "§ 11a GefStoffV – Anforderungen an Tätigkeiten mit Asbest (Baubeginn nach dem 31. Oktober 1993)", "url": "https://lxgesetze.de/gefstoffv/11a"},
-    {"title": "§ 5a GefStoffV – Mitwirkungs- und Informationspflichten für Veranlasser", "url": "https://lxgesetze.de/gefstoffv/5a"}
+    {
+      "title": "Hamburgische Bauordnung (HBauO) vom 6. Januar 2025, nichtamtliche Lesefassung (§ 12 Standsicherheit, § 27 tragende Wände, § 29 Trennwände, § 35 Treppenräume; Stand 25.09.2025)",
+      "url": "https://www.hamburg.de/resource/blob/1120174/a1f3778eb712e7a95605fbc6872df915/hamburgische-bauordnung-hbauo-2025-nichtamtliche-lesefassung-data.pdf"
+    },
+    {
+      "title": "Hamburg: Adressliste der Bauprüfdienststellen",
+      "url": "https://www.hamburg.de/resource/blob/190246/a81cf8dcbc090c2514546205f89a831d/adressliste-baupruefdienststellen-data.pdf"
+    },
+    {
+      "title": "§ 5 WEG – Gegenstand und Inhalt des Sondereigentums",
+      "url": "https://www.gesetze-im-internet.de/woeigg/__5.html"
+    },
+    {
+      "title": "§ 20 WEG – Bauliche Veränderungen",
+      "url": "https://www.gesetze-im-internet.de/woeigg/__20.html"
+    },
+    {
+      "title": "LG Lüneburg, Urteil vom 14.11.2012, 6 S 80/12: Kündigung, wenn Mieter eine Wand entfernen (anwaltonline)",
+      "url": "https://www.anwaltonline.com/mietrecht/urteile/9708/kuendigung-wenn-mieter-eine-wand-entfernen"
+    },
+    {
+      "title": "§ 172 BauGB – Erhaltung baulicher Anlagen (Erhaltungssatzung)",
+      "url": "https://gesetze.legal/bund/baugb/172"
+    },
+    {
+      "title": "Merkblatt Soziale Erhaltungsverordnung (Bezirksamt Wandsbek, Stand September 2025; Nr. 3.1 Grundrissänderungen, Nr. 3.3 Wohnungszusammenlegung)",
+      "url": "https://www.hamburg.de/resource/blob/76648/c8707432d444d3565ac78e99ec7bad47/merkblatt-soziale-erhaltungsverordnung-version-september-2025-data.pdf"
+    },
+    {
+      "title": "§ 9 Denkmalschutzgesetz Hamburg – Genehmigungsvorbehalt",
+      "url": "https://www.haufe.de/id/norm/denkmalschutzgesetz-hamburg-9-genehmigungsvorbehalt-fuer-veraenderungen-von-denkmaelern-HI15091365_p9.html"
+    },
+    {
+      "title": "§ 13 NAV (Elektrische Anlage) – gesetze.legal",
+      "url": "https://gesetze.legal/bund/nav/13"
+    },
+    {
+      "title": "§ 12 AVBWasserV – Kundenanlage (LX Gesetze)",
+      "url": "https://lxgesetze.de/avbwasserv/12"
+    },
+    {
+      "title": "Asbest | Umweltbundesamt",
+      "url": "https://umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/chemische-stoffe/asbest"
+    },
+    {
+      "title": "§ 11a GefStoffV – Anforderungen an Tätigkeiten mit Asbest (Baubeginn nach dem 31. Oktober 1993)",
+      "url": "https://lxgesetze.de/gefstoffv/11a"
+    },
+    {
+      "title": "§ 5a GefStoffV – Mitwirkungs- und Informationspflichten für Veranlasser",
+      "url": "https://lxgesetze.de/gefstoffv/5a"
+    }
   ],
   "notes_for_review": [
     "Entwurf 20.10.2026 (SEO-Punkt 10: nur eigene Leistungen). Laut Inhaber bestätigt: Wanddurchbruch z. B. für Türen, staubarm, Statiker bringt T&A mit, Stahlträger je nach Auftrag selbst oder Rohbaubetrieb, Asbest nie selbst, keine Elektro- und Installationsarbeiten.",
@@ -93,5 +136,11 @@
     "Staubschutz (Folie, Türen abkleben, Laufwege auslegen, geschlossene Säcke) wie auf der Innenabbruch-Seite, dort ebenfalls noch zur Bestätigung offen.",
     "Soziale Erhaltungsverordnung: Merkblatt Bezirksamt Wandsbek (Stand September 2025) am 20.10.2026 gelesen. Nr. 3.1 Grundrissänderungen und Nr. 3.3 Wohnungszusammenlegung: grundsätzlich keine Genehmigung; Genehmigungsvorbehalt gilt auch ohne Baugenehmigungspflicht. Wanddurchbrüche nennt das Merkblatt nicht ausdrücklich, deshalb steht im Text keine Aussage dazu.",
     "Bild: vorerst innenabbruch.jpg (Alt-Text „Wanddurchbruch mit dem Abbruchhammer“ passt). Ein eigenes Foto eines echten T&A-Durchbruchs wäre besser."
+  ],
+  "galerie": [
+    {
+      "bild": "g-wanddurchbruch",
+      "text": "Wanddurchbruch mit dem Abbruchhammer"
+    }
   ]
 }
