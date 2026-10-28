@@ -9,7 +9,7 @@ Aufruf (im Repo-Hauptordner):
 Erzeugt:
   <slug>.html je JSON in src/content/ (Leistungen, Bezirke, Stadtteile, Umland, Ratgeber),
   einsatzgebiet.html (Übersicht aus src/site.json), impressum.html, datenschutz.html,
-  index.html (nur die Bereiche zwischen den Markern @head, @header, @zahlen, @umland, @footer),
+  index.html (nur die Bereiche zwischen den Markern @head, @header, @zahlen, @umland, @leistungswahl, @footer),
   sitemap.xml (lastmod je Seite = letzte Git-Änderung ihrer Quelldatei, nicht das Build-Datum); prüft robots.txt.
 Seitenrahmen: Ortsseiten zeigen nur die Leistungskarten aus site.json „kernleistungen“ (plus Link „Alle …
 Leistungen“), die Fußzeile nur „kernleistungen“ und „fusszeile_ratgeber“; das Menü listet alle Seiten.
@@ -31,6 +31,16 @@ Leistung in einem Bezirk (type "leistung_ort", z. B. entruempelung-hamburg-alton
   Automatisch verlinkt (nur vorhandene Seiten): Leistungsseite („<Leistung> in Ihrem Bezirk“),
   Bezirksseite („Weitere Leistungen in <Bezirk>“), die Seite selbst (Leistung, Bezirk, andere Bezirke),
   sitemap.xml und llms.txt – nicht in Menü und Footer. Anleitung: src/content/LEISTUNG_ORT_ANLEITUNG.md
+
+Alles aus einer Hand:
+  kombi-pakete.html (src/content/kombi-pakete.json) läuft wie ueber-uns als ratgeber ohne Quellen-Pflicht, aber mit
+  WebPage-Daten, Brotkrumen „Leistungen“ und Link im Menü (Gruppe Leistungen) und in der Fußzeile. Jede Kombination
+  ist ein Abschnitt mit einer <ol> der Schritte (Links auf Leistungsseiten); dazu erzeugt der Build eine Sprungliste
+  und je Abschnitt den Knopf „Diese Kombination anfragen“, der im Formular die Leistungen aus der <ol> ankreuzt.
+  Leistungsseiten zeigen „Oft zusammen gebucht“ aus site.json leistungen[].zusammen ([{slug, text}], 2–4 Einträge).
+Anfrageformular: Die Kontaktsektion id="anfrage" in index.html ist die Quelle für alle Seiten. Die Ankreuzliste
+  der Leistungen (Marker @leistungswahl) kommt aus site.json „formular_leistungen“ (Gruppen) und „formular_unklar“;
+  form_leistung einer Seite wird dort vorangekreuzt.
 """
 import argparse
 import datetime
@@ -52,6 +62,9 @@ TYPES = ("leistung", "bezirk", "stadtteil", "umland", "ratgeber", LEISTUNG_ORT)
 ORTSTYPEN = ("bezirk", "stadtteil", "umland")
 UEBERSICHT = "einsatzgebiet"  # erzeugte Übersichtsseite einsatzgebiet.html
 ABOUT = "ueber-uns"  # Über-uns-Seite: läuft als ratgeber, aber mit AboutPage-Daten und ohne Quellen-Pflicht
+KOMBI = "kombi-pakete"  # Kombi-Pakete „Alles aus einer Hand“: ratgeber ohne Quellen-Pflicht, WebPage-Daten, unter Leistungen
+SONDERSEITEN = (ABOUT, KOMBI)  # stehen in site.json unter ratgeber, sind aber keine Ratgeber (Menü, Fußzeile, llms.txt)
+ZUSAMMEN_MIN, ZUSAMMEN_MAX = 2, 4  # Einträge in „Oft zusammen gebucht“ je Leistung
 SECTION_TAGS = {"p", "ul", "ol", "li", "strong", "em", "h3", "a"}
 INLINE_TAGS = {"strong", "em", "a"}
 A_ATTRS = {"href", "title", "rel"}
@@ -111,7 +124,8 @@ class Site:
         self.ratgeber = d["ratgeber"]
         self.rechtliches = d["rechtliches"]
         self.bilder = d["bilder"]
-        self.form_options = d["formular_leistungen"]
+        self.warnungen = []  # Hinweise aus site.json, gibt main() als Warnung aus
+        self.form_gruppen, self.form_unklar, self.form_options = self._formular(d)
         self.uebersicht = d.get("einsatzgebiet") or {}
         self.menue_umland = d.get("menue_umland", [])
         self.startseite_umland = d.get("startseite_umland", [])
@@ -173,6 +187,56 @@ class Site:
                     raise BuildError(f"site.json: Slug {lo} ist für die Seite {le['name']} in {bz['name']} reserviert")
                 self.lo_moeglich[lo] = (le["slug"], bz["slug"])
         self.leistung_orte = []  # Einträge {slug, name (= Bezirk), leistung, bezirk} der gefundenen Seiten
+        for le in self.leistungen:
+            if self.form_label(le["slug"]) is None:
+                self.warnungen.append(f"site.json: Leistung '{le['name']}' fehlt in formular_leistungen – im Anfrageformular "
+                                      f"nicht ankreuzbar (erwartet: '{le['name'].replace(' & ', ' und ')}')")
+            self._zusammen(le)
+
+    @staticmethod
+    def _formular(d):
+        """Ankreuzliste des Anfrageformulars: ([(Gruppe, [Leistung, …]), …], Text für „Weiß ich noch nicht“,
+        alle Texte als flache Liste). Erlaubte Werte für form_leistung sind alle Texte der flachen Liste."""
+        gruppen, unklar = d.get("formular_leistungen"), d.get("formular_unklar")
+        if not (isinstance(gruppen, list) and gruppen):
+            raise BuildError('site.json: formular_leistungen braucht Gruppen: [{"gruppe": "Abriss & Bau", "leistungen": [...]}, …]')
+        if not is_str(unklar):
+            raise BuildError('site.json: formular_unklar fehlt (z. B. "Weiß ich noch nicht")')
+        out, flach = [], []
+        for i, g in enumerate(gruppen, 1):
+            ls = g.get("leistungen") if isinstance(g, dict) else None
+            if not (isinstance(g, dict) and is_str(g.get("gruppe")) and isinstance(ls, list) and ls
+                    and all(is_str(x) for x in ls)):
+                raise BuildError(f"site.json: formular_leistungen[{i}] braucht 'gruppe' (Text) und 'leistungen' (Liste mit Texten)")
+            out.append((g["gruppe"], ls))
+            flach += ls
+        flach.append(unklar)
+        doppelt = sorted({x for x in flach if flach.count(x) > 1})
+        if doppelt:
+            raise BuildError(f"site.json: formular_leistungen/formular_unklar: doppelt: {', '.join(doppelt)}")
+        return out, unklar, flach
+
+    def _zusammen(self, le):
+        """„Oft zusammen gebucht“ einer Leistung prüfen: 2–4 Einträge {slug einer anderen Leistung, text}."""
+        z = le.get("zusammen")
+        if z is None:
+            self.warnungen.append(f"site.json: Leistung {le['slug']} hat kein 'zusammen' – kein Abschnitt „Oft zusammen gebucht“")
+            return
+        wo = f"site.json: Leistung {le['slug']}: zusammen"
+        if not (isinstance(z, list) and ZUSAMMEN_MIN <= len(z) <= ZUSAMMEN_MAX):
+            raise BuildError(f"{wo} braucht {ZUSAMMEN_MIN} bis {ZUSAMMEN_MAX} Einträge")
+        for i, x in enumerate(z, 1):
+            if not (isinstance(x, dict) and is_str(x.get("text")) and set(x) <= {"slug", "text"}):
+                raise BuildError(f"{wo}[{i}] braucht genau 'slug' und 'text'")
+            if self.kind.get(x.get("slug")) != "leistung" or x["slug"] == le["slug"]:
+                raise BuildError(f"{wo}[{i}]: '{x.get('slug')}' muss eine andere Leistung aus 'leistungen' sein")
+        if len({x["slug"] for x in z}) != len(z):
+            raise BuildError(f"{wo}: Leistung doppelt")
+
+    def form_label(self, slug):
+        """Text der Leistung im Anfrageformular („Hecke & Grünschnitt“ -> „Hecke und Grünschnitt“) oder None."""
+        n = self.entry[slug]["name"].replace(" & ", " und ")
+        return n if n in self.form_options else None
 
     def register_lo(self, c, path, errors):
         """Inhaltsdatei vom Typ leistung_ort als Seite anmelden (statt Eintrag in site.json). False bei Fehlern."""
@@ -406,11 +470,13 @@ def validate(c, path, site, errors, warn):
             for i, s in enumerate(src, 1):
                 if not (isinstance(s, dict) and is_str(s.get("title")) and re.match(r"https?://", str(s.get("url", "")))):
                     e(f"sources[{i}] braucht 'title' und eine http(s)-'url'")
-        le = site.entry.get(c.get("leistung"))
-        if le:
-            soll = le["name"].replace(" & ", " und ")
-            if soll in site.form_options and c["form_leistung"] != soll:
-                warn(f"{where}: form_leistung ist '{c['form_leistung']}', passend zur Leistung wäre '{soll}'")
+    # Leistungsseite und Leistung in einem Bezirk: die eigene Leistung soll im Formular vorangekreuzt sein
+    le = c.get("leistung") if c["type"] == LEISTUNG_ORT else c["slug"] if c["type"] == "leistung" else None
+    if isinstance(le, str) and site.kind.get(le) == "leistung":
+        le = site.entry[le]
+        soll = site.form_label(le["slug"])
+        if soll and c["form_leistung"] != soll:
+            warn(f"{where}: form_leistung ist '{c['form_leistung']}', passend zur Leistung wäre '{soll}'")
     if c["type"] == "bezirk":
         if not (isinstance(st, list) and st and all(is_str(x) for x in st)):
             e("bezirk braucht 'stadtteile' (Liste mit Texten)")
@@ -424,7 +490,7 @@ def validate(c, path, site, errors, warn):
         if not (isinstance(gal, list) and gal and all(isinstance(g, dict) and g.get("bild") in site.bilder
                                                        and is_str(g.get("text")) for g in gal)):
             e("galerie: Liste von {bild (Schlüssel aus site.json bilder), text} erwartet")
-    if c["type"] == "ratgeber" and (c["slug"] != ABOUT or c.get("sources")):
+    if c["type"] == "ratgeber" and (c["slug"] not in SONDERSEITEN or c.get("sources")):
         src = c.get("sources")
         if not (isinstance(src, list) and src):
             e("ratgeber braucht 'sources'")
@@ -436,7 +502,7 @@ def validate(c, path, site, errors, warn):
     if is_str(c.get("title")) and len(c["title"]) > 65:
         warn(f"{where}: title ist {len(c['title'])} Zeichen lang (Google zeigt ca. 60)")
     if is_str(c.get("description")):
-        n = len(c["description"]) + (0 if c.get("type") == "ratgeber" else len(meta_suffix(site)))
+        n = len(c["description"]) + (len(meta_suffix(site)) if mit_haekchen(c) else 0)
         if n > 160:
             warn(f"{where}: Google-Beschreibung ist mit Häkchen-Zeile {n} Zeichen lang (Google zeigt ca. 155)")
     return len(errors) == before  # nur fehlerfreie Inhalte gehen in die Linkprüfung
@@ -469,6 +535,7 @@ class Ctx:
         self.home_src = home_src
         self.content_rel = "src/content"
         self.preise = None  # Richtpreise aus src/preise.json (load_preise)
+        self.anfrage = None  # Kontaktbereich mit Ankreuzliste (contact_vorlage)
 
     def has(self, slug):
         """Gibt es die Seite im Build? Nur dann wird sie verlinkt."""
@@ -561,11 +628,13 @@ def render_menu(ctx, current, on_home, contact_href):
     page = lambda it: (it["slug"] + ".html", it["name"], it["slug"] == current)
     alle = (f'<a class="menu-all" href="{UEBERSICHT}.html"{cur(current == UEBERSICHT)}>Alle Stadtteile und Orte '
             f'<span aria-hidden="true">→</span></a>')
+    kombi = (f'<a class="menu-all" href="{KOMBI}.html"{cur(current == KOMBI)}>Alles aus einer Hand: Kombi-Pakete '
+             f'<span aria-hidden="true">→</span></a>' if ctx.has(KOMBI) else "")
     groups = [
-        ("g-leist", "m-leist", "Leistungen", [page(x) for x in ctx.pages(s.leistungen)], "cols", ""),
+        ("g-leist", "m-leist", "Leistungen", [page(x) for x in ctx.pages(s.leistungen)], "cols", kombi),
         ("g-bez", "m-bez", "Abriss nach Bezirk", [page(x) for x in ctx.pages(s.bezirke)], "cols", ""),
         ("g-uml", "m-uml", "Umland", [page(s.entry[x]) for x in s.menue_umland if ctx.has(x)], "cols", alle),
-        ("g-rat", "m-rat", "Ratgeber", [page(x) for x in ctx.pages(s.ratgeber)], "", ""),
+        ("g-rat", "m-rat", "Ratgeber", [page(x) for x in ctx.pages(s.ratgeber) if x["slug"] != KOMBI], "", ""),
         ("g-recht", "m-recht", "Rechtliches", [page(x) for x in s.rechtliches], "cols", ""),
     ]
     parts = [f'<div class="grp g-main">\n    {menu_list(main)}\n  </div>']
@@ -575,8 +644,8 @@ def render_menu(ctx, current, on_home, contact_href):
             lst = menu_list(items, lcls).replace("<ul", f'<ul aria-labelledby="{hid}"', 1)
             inner += [f'<p class="menu-h" id="{hid}">{esc(title)}</p>', lst]
         if extra:
-            if not items:  # noch keine Umland-Seite: Link bekommt eine eigene Überschrift
-                inner.append(f'<p class="menu-h" id="{hid}">Einsatzgebiet</p>')
+            if not items:  # noch keine Umland-Seite (oder Leistung): Link bekommt eine eigene Überschrift
+                inner.append(f'<p class="menu-h" id="{hid}">{"Einsatzgebiet" if extra == alle else esc(title)}</p>')
             inner.append(extra)
         if inner:
             parts.append(f'<div class="grp {gcls}">\n    ' + "\n    ".join(inner) + '\n  </div>')
@@ -607,7 +676,7 @@ def render_footer(ctx, current, on_home, fab_href):
     kern = kern_leistungen(ctx)
     leist = "".join(li(x) for x in kern)
     bez = "".join(li(x) for x in ctx.pages(s.bezirke))
-    rat_alle = [x for x in ctx.pages(s.ratgeber) if x["slug"] != ABOUT]
+    rat_alle = [x for x in ctx.pages(s.ratgeber) if x["slug"] not in SONDERSEITEN]
     rat = [x for x in rat_alle if x["slug"] in s.fusszeile_ratgeber] if s.fusszeile_ratgeber else rat_alle
     rest = "".join(li(x) for x in ctx.pages([s.entry[ABOUT]] if ABOUT in s.entry else []) + s.rechtliches)
     uml ="".join(li(s.entry[x]) for x in s.menue_umland if ctx.has(x))  # kurze Ortsliste, Linktext = Ortsname
@@ -616,6 +685,8 @@ def render_footer(ctx, current, on_home, fab_href):
     cols = []
     if leist:
         weitere = mehr(ctx.home_link("leistungen", on_home), "Alle Leistungen") if len(kern) < len(ctx.pages(s.leistungen)) else ""
+        if ctx.has(KOMBI):
+            weitere += mehr(f"{KOMBI}.html", "Kombi-Pakete: alles aus einer Hand", current == KOMBI)
         cols.append(f'  <div><h3>Leistungen</h3><ul class="two">{leist}</ul>{weitere}</div>')
     cols.append(f'  <div><h3>Bezirke</h3>' + (f'<ul class="two">{bez}</ul>' if bez else "") + f'{alle}</div>')
     if uml:
@@ -848,11 +919,42 @@ def weitere_orte(ctx, entry):
     return sorted(out, key=rank)
 
 
+WAHL_MARKER = "leistungswahl"  # Marker im Anfrageformular von index.html für die Ankreuzliste der Leistungen
+
+
+def form_wahl(site):
+    """Ankreuzliste „Was soll gemacht werden?“ (mehrere Leistungen, in Gruppen) aus site.json formular_leistungen.
+    Jede Gruppe ist ein eigenes fieldset mit legend; „Weiß ich noch nicht“ (data-unklar) schließt die anderen aus
+    (assets/site.js). Der Build kreuzt je Seite form_leistung an (contact_section)."""
+    def opt(text, unklar=False):
+        i = "l-" + _vp_slug(text)
+        return (f'<label class="opt{" opt-unklar" if unklar else ""}" for="{i}"><input type="checkbox" id="{i}" '
+                f'name="leistung" value="{esc(text)}"{" data-unklar" if unklar else ""}><span>{esc(text)}</span></label>')
+    out = ['    <fieldset class="wahl" id="wahl" aria-describedby="wahl-hint">',
+           '      <legend>Was soll gemacht werden?</legend>',
+           '      <p class="wahl-hint" id="wahl-hint">Mehrere ankreuzen möglich. Wir machen alles aus einer Hand.</p>']
+    for g, ls in site.form_gruppen:
+        out.append(f'      <fieldset class="wahl-gr"><legend>{esc(g)}</legend><div class="opts">'
+                   + "".join(opt(x) for x in ls) + '</div></fieldset>')
+    out.append('      <div class="opts">' + opt(site.form_unklar, True) + '</div>')
+    out.append(f'      <p class="err" id="err-wahl" role="alert" hidden>Bitte mindestens eine Leistung ankreuzen '
+               f'oder „{esc(site.form_unklar)}“.</p>')
+    out.append('    </fieldset>')
+    return "\n".join(out)
+
+
+def contact_vorlage(ctx):
+    """Kontaktbereich aus index.html mit frisch erzeugter Ankreuzliste (einmal je Build)."""
+    if ctx.anfrage is None:
+        m = re.findall(r'<section class="band" id="anfrage">.*?</section>', ctx.home_src, re.S)
+        if len(m) != 1:
+            raise BuildError('index.html: Kontaktbereich <section class="band" id="anfrage"> nicht eindeutig gefunden')
+        ctx.anfrage = fill_marker(m[0], WAHL_MARKER, form_wahl(ctx.site))
+    return ctx.anfrage
+
+
 def contact_section(ctx, form_leistung, form_ort, data_page):
-    m = re.findall(r'<section class="band" id="anfrage">.*?</section>', ctx.home_src, re.S)
-    if len(m) != 1:
-        raise BuildError('index.html: Kontaktbereich <section class="band" id="anfrage"> nicht eindeutig gefunden')
-    sec = m[0]
+    sec = contact_vorlage(ctx)
 
     def need(old, new):
         nonlocal sec
@@ -861,12 +963,41 @@ def contact_section(ctx, form_leistung, form_ort, data_page):
         sec = sec.replace(old, new)
 
     need('data-page="Startseite"', f'data-page="{esc(data_page)}"')
-    if form_leistung:
-        opt = f"<option>{esc(form_leistung)}</option>"
-        need(opt, f"<option selected>{esc(form_leistung)}</option>")
+    if form_leistung:  # Leistung der Seite ist vorangekreuzt (Wert aus formular_leistungen, geprüft in validate)
+        need(f'name="leistung" value="{esc(form_leistung)}"', f'name="leistung" value="{esc(form_leistung)}" checked')
     if form_ort.strip():
         need('<input id="ort" name="ort"', f'<input id="ort" name="ort" value="{esc(form_ort.strip())}"')
     return sec
+
+
+def zusammen_section(ctx, entry):
+    """„Oft zusammen gebucht“ auf einer Leistungsseite: 2–4 passende Leistungen aus site.json leistungen[].zusammen,
+    je mit kurzer Frage (nur Seiten mit Inhalt), dazu der Link auf die Kombi-Pakete."""
+    items = [(ctx.site.entry[x["slug"]], x["text"]) for x in entry.get("zusammen") or [] if ctx.has(x["slug"])]
+    if not items:
+        return ""
+    links = "".join(f'<a href="{esc(le["slug"])}.html"><span class="zus-q">{esc(t)}</span>'
+                    f'<span class="zus-n">{esc(le["name"])} <span aria-hidden="true">→</span></span></a>' for le, t in items)
+    kombi = (f'\n      <p class="zus-mehr"><a class="go-all" href="{KOMBI}.html">Typische Kombinationen ansehen '
+             f'<span aria-hidden="true">→</span></a></p>' if ctx.has(KOMBI) else "")
+    return (f'<section class="zusammen" aria-labelledby="zus-h">\n      <h2 id="zus-h">Oft zusammen gebucht</h2>\n'
+            f'      <p>Den nächsten Schritt übernehmen wir gleich mit: ein Ansprechpartner, eine Besichtigung, '
+            f'ein Festpreis für alles.</p>\n      <div class="zus">{links}</div>{kombi}\n    </section>')
+
+
+def kombi_schritte(ctx, text):
+    """Schritte einer Kombination: je <li> der ersten <ol> eines Abschnitts die erste verlinkte Leistung (Slug,
+    in Reihenfolge, nur Seiten mit Inhalt). Weitere Links im selben Schritt (z. B. eine Alternative) zählen nicht."""
+    m = re.search(r"<ol>(.*?)</ol>", text, re.S)
+    out = []
+    for li in re.findall(r"<li>(.*?)</li>", m.group(1), re.S) if m else []:
+        for _, href, _ in A_RE.findall(li):
+            x = internal_slug(ctx.site, html.unescape(href))
+            if x and ctx.site.kind.get(x) == "leistung" and ctx.has(x):
+                if x not in out:
+                    out.append(x)
+                break
+    return out
 
 
 def subhero(ctx, image, label, h1, lead, facts=None):
@@ -1076,6 +1207,11 @@ def meta_suffix(site):
     return f" ✓ Kostenlose Besichtigung ✓ Festpreis ☎ {site.firma['telefon']}"
 
 
+def mit_haekchen(c):
+    """Bekommt die Google-Beschreibung die Häkchen-Zeile? Alle außer Ratgeber; die Kombi-Seite ja (Angebotsseite)."""
+    return c.get("type") != "ratgeber" or c.get("slug") == KOMBI
+
+
 def page_head(ctx, *, title, description, canonical=None, og=None, ld=(), noindex=False):
     s = ctx.site
     out = ['<meta charset="utf-8">',
@@ -1118,6 +1254,8 @@ def render_content_page(ctx, c):
         trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
         ok = ctx.has(lo_le["slug"])
         trail.append((lo_le["name"], lo_le["slug"] + ".html" if ok else None, s.url(lo_le["slug"]) if ok else None))
+    elif slug == KOMBI:  # Startseite › Leistungen › Kombi-Pakete
+        trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
     elif kind == "ratgeber" and slug != ABOUT:
         trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
     elif slug == ABOUT:
@@ -1151,6 +1289,12 @@ def render_content_page(ctx, c):
     elif slug == ABOUT:
         ld.append({"@context": "https://schema.org", "@type": "AboutPage", "name": c["h1"], "url": url,
                    "description": c["description"], "about": firma_ref, "mainEntity": firma_ref, "inLanguage": "de-DE"})
+    elif slug == KOMBI:  # Angebotsseite, kein Artikel: WebPage, nennt die Leistungen der Kombinationen (gleiche @id)
+        genannt = list(dict.fromkeys(x for sec in c["sections"] for x in kombi_schritte(ctx, sec["html"])))
+        ld.append({"@context": "https://schema.org", "@type": "WebPage", "name": c["h1"], "url": url,
+                   "description": c["description"], "about": firma_ref, "inLanguage": "de-DE",
+                   "mentions": [{"@type": "Service", "@id": s.url(x) + "#leistung", "name": s.entry[x]["name"],
+                                 "url": s.url(x)} for x in genannt]})
     else:
         erst, zuletzt = git_daten(ROOT / ctx.content_rel / f"{slug}.json")
         ld.append({"@context": "https://schema.org", "@type": "Article", "headline": c["h1"],
@@ -1161,16 +1305,32 @@ def render_content_page(ctx, c):
     if faq:
         ld.append(faq_jsonld(s, [(x["q"], ctx.drop_dead_links(x["a"])) for x in c["faq"]]))
 
-    og = [("type", "article" if kind == "ratgeber" else "website"), ("locale", "de_DE"),
+    og = [("type", "article" if kind == "ratgeber" and slug != KOMBI else "website"), ("locale", "de_DE"),
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
           ("image", s.bild_url(c["image"])), ("url", url)]
-    meta = c["description"] if kind == "ratgeber" else c["description"] + meta_suffix(s)
+    meta = c["description"] + meta_suffix(s) if mit_haekchen(c) else c["description"]
     head = page_head(ctx, title=c["title"], description=meta, canonical=url, og=og, ld=ld)
 
-    # Inhalt
-    secs = []
+    # Inhalt; Kombi-Seite: Abschnitte mit Schritten (<ol> mit Leistungslinks) bekommen Anker, Sprungliste und Knopf,
+    # der die Leistungen im Formular ankreuzt (assets/site.js, data-kombi; ohne Skript nur Sprung zum Formular)
+    secs, sprung = [], []
     for sec in c["sections"]:
-        secs.append(f'<section>\n      <h2>{esc(sec["h2"])}</h2>\n      {ctx.content_html(sec["html"].strip())}\n    </section>')
+        attr = cta = ""
+        schritte = kombi_schritte(ctx, sec["html"]) if slug == KOMBI else []
+        if len(schritte) >= 2:
+            sid = "k-" + _vp_slug(sec["h2"])
+            attr = f' id="{sid}"'
+            sprung.append(f'<a href="#{sid}">{esc(sec["h2"])}</a>')
+            werte = "|".join(s.form_label(x) for x in schritte if s.form_label(x))
+            cta = (f'\n      <p class="kombi-cta"><a class="btn" href="#anfrage" data-kombi="{esc(werte)}">'
+                   f'Diese Kombination anfragen {ARR}</a></p>')
+        secs.append(f'<section{attr}>\n      <h2>{esc(sec["h2"])}</h2>\n      {ctx.content_html(sec["html"].strip())}{cta}\n    </section>')
+    if sprung:
+        secs.insert(0, '<nav class="chips kombi-nav" aria-label="Kombinationen auf dieser Seite">' + "".join(sprung) + '</nav>')
+    if kind == "leistung":
+        zus = zusammen_section(ctx, entry)
+        if zus:
+            secs.append(zus)
     if kind == "bezirk":
         chips = []
         for x in c["stadtteile"]:
@@ -1275,6 +1435,8 @@ def render_content_page(ctx, c):
         if others:
             cards = "\n    ".join(mini_card(ctx, x) for x in others)
             n3 = " n3" if len(others) == 3 else ""
+            kombi = (f'\n  <p class="go-wrap"><a class="go-all" href="{KOMBI}.html">Kombi-Pakete: mehrere Leistungen, '
+                     f'ein Festpreis <span aria-hidden="true">→</span></a></p>' if ctx.has(KOMBI) else "")
             after.append(f'''<section><div class="wrap">
   <div class="head reveal">
     <p class="label">Alles aus einer Hand</p>
@@ -1282,7 +1444,7 @@ def render_content_page(ctx, c):
   </div>
   <div class="minis{n3}">
     {cards}
-  </div>
+  </div>{kombi}
 </div></section>''')
     if kind == "bezirk":
         others = [x for x in ctx.pages(s.bezirke) if x["slug"] != slug]
@@ -1442,8 +1604,11 @@ def render_llms(ctx):
          "- Rückmeldung innerhalb eines Werktags",
          "- Festpreis nach der Besichtigung, Abtransport und Entsorgung inklusive",
          "- Termine auch abends und samstags",
-         "- Asbest entfernt immer ein dafür zugelassener Fachbetrieb, tragende Wände nur mit Statiker", "",
-         "## Leistungen", ""]
+         "- Asbest entfernt immer ein dafür zugelassener Fachbetrieb, tragende Wände nur mit Statiker"]
+    if ctx.has(KOMBI):
+        L.append("- Alles aus einer Hand: Entrümpeln, abreißen, neu aufbauen und Garten mit einem Ansprechpartner, "
+                 f"einer Besichtigung und einem Festpreis für alles. Typische Kombinationen: [Kombi-Pakete]({s.url(KOMBI)})")
+    L += ["", "## Leistungen", ""]
     for x in ctx.pages(s.leistungen):
         L.append(f"- [{x['name']}]({s.url(x['slug'])}): {x['kurz']}")
         lo = ctx.lo_pages(leistung=x["slug"])
@@ -1465,7 +1630,7 @@ def render_llms(ctx):
     if ctx.has(ABOUT):
         L.append(f"- [Über uns]({s.url(ABOUT)})")
     for x in ctx.pages(s.ratgeber):
-        if x["slug"] != ABOUT:
+        if x["slug"] not in SONDERSEITEN:
             L.append(f"- [{x['name']}]({s.url(x['slug'])})")
     L += [f"- [Impressum]({s.url('impressum')})", ""]
     return "\n".join(L)
@@ -1587,6 +1752,7 @@ def render_index(ctx):
     head = head_assets(ctx, extra_noindex=True) + [jsonld(business), jsonld(faq_jsonld(s, home_faq_pairs(src)))]
     out = fill_marker(src, "head", "\n".join(head))
     out = fill_marker(out, "header", render_header(ctx, "index", True, "#anfrage"))
+    out = fill_marker(out, WAHL_MARKER, form_wahl(s))
     out = fill_marker(out, "umland", home_umland(ctx))
     out = fill_marker(out, "zahlen", home_zahlen(ctx))
     out = fill_marker(out, "footer", render_footer(ctx, "index", True, "#anfrage"))
@@ -2140,6 +2306,7 @@ def main(argv=None):
     warnings, errors = [], []
     warn = warnings.append
     site = Site(SRC / "site.json")
+    warnings += site.warnungen
     content_dir = Path(args.content).resolve() if args.content else SRC / "content"
     out_dir = Path(args.out).resolve() if args.out else ROOT
     today = datetime.date.today().isoformat()

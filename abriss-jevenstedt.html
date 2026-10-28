@@ -72,6 +72,7 @@
       <li><a href="hof-raeumen-hamburg.html">Hof räumen</a></li>
       <li><a href="arbeiten-fuer-landwirte-hamburg.html">Arbeiten für Landwirte</a></li>
     </ul>
+    <a class="menu-all" href="kombi-pakete.html">Alles aus einer Hand: Kombi-Pakete <span aria-hidden="true">→</span></a>
   </div>
   <div class="grp g-bez">
     <p class="menu-h" id="m-bez">Abriss nach Bezirk</p>
@@ -274,19 +275,26 @@
       <label for="name">Name<input id="name" name="name" autocomplete="name" required></label>
       <label for="tel">Telefon<input id="tel" name="tel" type="tel" autocomplete="tel" required></label>
     </div>
-    <div class="row">
-      <label for="ort">Stadtteil oder PLZ<input id="ort" name="ort" value="Jevenstedt" placeholder="z. B. Ottensen"></label>
-      <label for="art">Leistung<select id="art" name="art">
-        <option>Kleinabriss</option><option selected>Entkernung</option><option>Innenabbruch</option><option>Trockenbau</option><option>Schuttabholung</option><option>Entrümpelung</option><option>Gartenräumung</option><option>Pflaster entfernen</option><option>Hecke und Grünschnitt</option><option>Baumfällung</option><option>Gartenpflege</option><option>Laub entfernen</option><option>Garten anlegen</option><option>Scheune abreißen</option><option>Hof räumen</option><option>Arbeiten für Landwirte</option><option>Weiß ich noch nicht</option>
-      </select></label>
-    </div>
+<!-- @leistungswahl -->
+    <fieldset class="wahl" id="wahl" aria-describedby="wahl-hint">
+      <legend>Was soll gemacht werden?</legend>
+      <p class="wahl-hint" id="wahl-hint">Mehrere ankreuzen möglich. Wir machen alles aus einer Hand.</p>
+      <fieldset class="wahl-gr"><legend>Abriss &amp; Bau</legend><div class="opts"><label class="opt" for="l-kleinabriss"><input type="checkbox" id="l-kleinabriss" name="leistung" value="Kleinabriss"><span>Kleinabriss</span></label><label class="opt" for="l-entkernung"><input type="checkbox" id="l-entkernung" name="leistung" value="Entkernung" checked><span>Entkernung</span></label><label class="opt" for="l-innenabbruch"><input type="checkbox" id="l-innenabbruch" name="leistung" value="Innenabbruch"><span>Innenabbruch</span></label><label class="opt" for="l-wanddurchbruch"><input type="checkbox" id="l-wanddurchbruch" name="leistung" value="Wanddurchbruch"><span>Wanddurchbruch</span></label><label class="opt" for="l-trockenbau"><input type="checkbox" id="l-trockenbau" name="leistung" value="Trockenbau"><span>Trockenbau</span></label></div></fieldset>
+      <fieldset class="wahl-gr"><legend>Räumen &amp; Entsorgen</legend><div class="opts"><label class="opt" for="l-entruempelung"><input type="checkbox" id="l-entruempelung" name="leistung" value="Entrümpelung"><span>Entrümpelung</span></label><label class="opt" for="l-schuttabholung"><input type="checkbox" id="l-schuttabholung" name="leistung" value="Schuttabholung"><span>Schuttabholung</span></label></div></fieldset>
+      <fieldset class="wahl-gr"><legend>Garten</legend><div class="opts"><label class="opt" for="l-gartenraeumung"><input type="checkbox" id="l-gartenraeumung" name="leistung" value="Gartenräumung"><span>Gartenräumung</span></label><label class="opt" for="l-pflaster-entfernen"><input type="checkbox" id="l-pflaster-entfernen" name="leistung" value="Pflaster entfernen"><span>Pflaster entfernen</span></label><label class="opt" for="l-hecke-und-gruenschnitt"><input type="checkbox" id="l-hecke-und-gruenschnitt" name="leistung" value="Hecke und Grünschnitt"><span>Hecke und Grünschnitt</span></label><label class="opt" for="l-baumfaellung"><input type="checkbox" id="l-baumfaellung" name="leistung" value="Baumfällung"><span>Baumfällung</span></label><label class="opt" for="l-gartenpflege"><input type="checkbox" id="l-gartenpflege" name="leistung" value="Gartenpflege"><span>Gartenpflege</span></label><label class="opt" for="l-laub-entfernen"><input type="checkbox" id="l-laub-entfernen" name="leistung" value="Laub entfernen"><span>Laub entfernen</span></label><label class="opt" for="l-garten-anlegen"><input type="checkbox" id="l-garten-anlegen" name="leistung" value="Garten anlegen"><span>Garten anlegen</span></label></div></fieldset>
+      <fieldset class="wahl-gr"><legend>Hof &amp; Landwirtschaft</legend><div class="opts"><label class="opt" for="l-scheune-abreissen"><input type="checkbox" id="l-scheune-abreissen" name="leistung" value="Scheune abreißen"><span>Scheune abreißen</span></label><label class="opt" for="l-hof-raeumen"><input type="checkbox" id="l-hof-raeumen" name="leistung" value="Hof räumen"><span>Hof räumen</span></label><label class="opt" for="l-arbeiten-fuer-landwirte"><input type="checkbox" id="l-arbeiten-fuer-landwirte" name="leistung" value="Arbeiten für Landwirte"><span>Arbeiten für Landwirte</span></label></div></fieldset>
+      <div class="opts"><label class="opt opt-unklar" for="l-weiss-ich-noch-nicht"><input type="checkbox" id="l-weiss-ich-noch-nicht" name="leistung" value="Weiß ich noch nicht" data-unklar><span>Weiß ich noch nicht</span></label></div>
+      <p class="err" id="err-wahl" role="alert" hidden>Bitte mindestens eine Leistung ankreuzen oder „Weiß ich noch nicht“.</p>
+    </fieldset>
+<!-- /@leistungswahl -->
+    <label for="ort">Stadtteil oder PLZ<input id="ort" name="ort" value="Jevenstedt" placeholder="z. B. Ottensen"></label>
     <div class="row">
       <label for="besichtigung">Besichtigung<select id="besichtigung" name="besichtigung">
         <option>Vor Ort</option><option>Per Video</option>
       </select></label>
       <label for="wunsch">Wunschtermin<input id="wunsch" name="wunsch"></label>
     </div>
-    <label for="text">Was soll gemacht werden?<textarea id="text" name="text" placeholder="z. B. Gartenhaus aus Holz, ca. 3 × 4 m, soll komplett weg"></textarea></label>
+    <label for="text">Beschreibung (freiwillig)<textarea id="text" name="text" placeholder="z. B. Wohnung mit 3 Zimmern, 2. Stock ohne Aufzug: erst entrümpeln, dann Bad und Küche raus"></textarea></label>
     <div class="send">
       <button class="btn" type="submit">Anfrage per E-Mail senden <span class="arr" aria-hidden="true">→</span></button>
       <button class="btn alt" type="button" id="wa">Per WhatsApp senden</button>
@@ -318,7 +326,7 @@
     <ul><li><a href="tel:+4917632896617">Telefon: 0176 32896617</a></li><li><a href="mailto:info@ta-abriss-hamburg.de">info@ta-abriss-hamburg.de</a></li></ul>
     <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a> · <a href="https://hinnerk-entruempelung.de/">Hinnerk – Entrümpelung Hamburg</a></p>
   </div>
-  <div><h3>Leistungen</h3><ul class="two"><li><a href="kleinabriss-hamburg.html">Kleinabriss</a></li><li><a href="entkernung-hamburg.html">Entkernung</a></li><li><a href="innenabbruch-hamburg.html">Innenabbruch</a></li><li><a href="entruempelung-hamburg.html">Entrümpelung</a></li><li><a href="gartenraeumung-hamburg.html">Gartenräumung</a></li><li><a href="schuttabholung-hamburg.html">Schuttabholung</a></li></ul><p class="foot-all"><a href="./#leistungen">Alle Leistungen <span aria-hidden="true">→</span></a></p></div>
+  <div><h3>Leistungen</h3><ul class="two"><li><a href="kleinabriss-hamburg.html">Kleinabriss</a></li><li><a href="entkernung-hamburg.html">Entkernung</a></li><li><a href="innenabbruch-hamburg.html">Innenabbruch</a></li><li><a href="entruempelung-hamburg.html">Entrümpelung</a></li><li><a href="gartenraeumung-hamburg.html">Gartenräumung</a></li><li><a href="schuttabholung-hamburg.html">Schuttabholung</a></li></ul><p class="foot-all"><a href="./#leistungen">Alle Leistungen <span aria-hidden="true">→</span></a></p><p class="foot-all"><a href="kombi-pakete.html">Kombi-Pakete: alles aus einer Hand <span aria-hidden="true">→</span></a></p></div>
   <div><h3>Bezirke</h3><ul class="two"><li><a href="abriss-hamburg-altona.html">Altona</a></li><li><a href="abriss-hamburg-eimsbuettel.html">Eimsbüttel</a></li><li><a href="abriss-hamburg-mitte.html">Hamburg-Mitte</a></li><li><a href="abriss-hamburg-nord.html">Hamburg-Nord</a></li><li><a href="abriss-hamburg-wandsbek.html">Wandsbek</a></li><li><a href="abriss-hamburg-harburg.html">Harburg</a></li><li><a href="abriss-hamburg-bergedorf.html">Bergedorf</a></li></ul><p class="foot-all"><a href="einsatzgebiet.html">Alle Orte im Einsatzgebiet <span aria-hidden="true">→</span></a></p></div>
   <div class="foot-uml"><h3>Umland</h3><ul class="two"><li><a href="abriss-norderstedt.html">Norderstedt</a></li><li><a href="abriss-pinneberg.html">Pinneberg</a></li><li><a href="abriss-ahrensburg.html">Ahrensburg</a></li><li><a href="abriss-reinbek.html">Reinbek</a></li><li><a href="abriss-wedel.html">Wedel</a></li><li><a href="abriss-buxtehude.html">Buxtehude</a></li></ul></div>
   <div class="foot-rat"><h3>Ratgeber &amp; Rechtliches</h3><ul><li><a href="abriss-kosten-hamburg.html">Abriss-Kosten in Hamburg</a></li><li><a href="abriss-genehmigung-hamburg.html">Abriss-Genehmigung in Hamburg</a></li><li><a href="bauschutt-entsorgen-hamburg.html">Bauschutt entsorgen in Hamburg</a></li></ul><p class="foot-all"><a href="./#ratgeber">Alle Ratgeber <span aria-hidden="true">→</span></a></p><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>

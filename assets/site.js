@@ -28,12 +28,25 @@
     if (wunsch) wunsch.value = label;
   })();
 
-  /* Anfrageformular: öffnet das E-Mail-Programm mit vorbereiteter Nachricht */
+  /* Anfrageformular: öffnet das E-Mail-Programm (oder WhatsApp) mit vorbereiteter Nachricht.
+     Leistungen: mehrere Kästchen name="leistung" (Ankreuzliste aus dem Build); „Weiß ich noch nicht“ (data-unklar)
+     schließt die anderen aus. Mindestens ein Kästchen muss angekreuzt sein. */
   (function(){
     var f = document.getElementById('f'), err = document.getElementById('err'), ok = document.getElementById('ok');
     if (!f) return;
     function el(id){ return document.getElementById(id); }
     function v(id){ var e = el(id); return e ? (e.value || '').trim() : ''; }
+    var wahl = el('wahl'), errWahl = el('err-wahl');
+    function boxes(){ return $$('input[name="leistung"]', f); }
+    function leistungen(){
+      var b = boxes();
+      if (!b.length) return v('art') ? [v('art')] : [];  /* ältere Seite mit Auswahlliste */
+      return b.filter(function(x){ return x.checked; }).map(function(x){ return x.value; });
+    }
+    function wahlFehler(on){
+      if (errWahl) errWahl.hidden = !on;
+      if (wahl) wahl.classList.toggle('invalid', on);
+    }
     function valid(){
       var bad = null;
       ['name','tel'].forEach(function(id){
@@ -43,13 +56,37 @@
         if (empty && !bad) bad = e;
       });
       if (err) err.hidden = !bad;
+      var keine = boxes().length > 0 && !leistungen().length;
+      wahlFehler(keine);
+      if (keine && !bad) bad = boxes()[0];
       if (bad) bad.focus();
       return !bad;
     }
+    f.addEventListener('change', function(e){
+      var t = e.target;
+      if (!t || t.name !== 'leistung') return;
+      if (t.checked) boxes().forEach(function(b){
+        /* „Weiß ich noch nicht“ und konkrete Leistungen schließen sich aus */
+        if (b !== t && (t.hasAttribute('data-unklar') || b.hasAttribute('data-unklar'))) b.checked = false;
+      });
+      if (leistungen().length) wahlFehler(false);
+    });
+    /* Kombi-Seite: „Diese Kombination anfragen“ kreuzt die Leistungen der Kombination an, dann Sprung zum Formular */
+    $$('[data-kombi]').forEach(function(a){
+      a.addEventListener('click', function(){
+        var want = (a.getAttribute('data-kombi') || '').split('|');
+        boxes().forEach(function(b){
+          if (want.indexOf(b.value) >= 0) b.checked = true;
+          else if (b.hasAttribute('data-unklar')) b.checked = false;
+        });
+        if (leistungen().length) wahlFehler(false);
+      });
+    });
     function msg(){
-      var page = (f.getAttribute('data-page') || '').trim();
+      var page = (f.getAttribute('data-page') || '').trim(), ls = leistungen();
       return 'Hallo T&A Abriss & Rückbau, ich möchte eine Besichtigung anfragen.\n\nName: ' + v('name') +
-        '\nTelefon: ' + v('tel') + '\nOrt: ' + (v('ort') || '-') + '\nLeistung: ' + v('art') +
+        '\nTelefon: ' + v('tel') + '\nOrt: ' + (v('ort') || '-') +
+        (ls.length > 1 ? '\nLeistungen: ' : '\nLeistung: ') + (ls.join(', ') || '-') +
         (v('besichtigung') ? '\nBesichtigung: ' + v('besichtigung') : '') +
         '\nWunschtermin: ' + (v('wunsch') || '-') + (page ? '\nSeite: ' + page : '') +
         (v('text') ? '\n\n' + v('text') : '');

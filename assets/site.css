@@ -554,3 +554,70 @@ footer .partner a{display:inline-block;padding-block:10px;margin-block:-10px;col
 .galerie figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .galerie img{display:block;width:100%;height:auto}
 .galerie figcaption{padding:.7rem .9rem;font-size:.95rem;line-height:1.4}
+
+/* ===================================================================
+   Alles aus einer Hand
+   =================================================================== */
+/* Startseite: Block direkt unter dem Hero (dunkles Band wie „Ablauf“) */
+.eh{padding-block:var(--s5)}
+.eh-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:var(--s5);align-items:center}
+.eh-kopf{display:grid;gap:var(--s3);justify-items:start;min-width:0}
+.eh-lead{font-size:1.25rem;line-height:1.45;max-width:30rem}
+.eh-kette{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .55rem;font-family:var(--f-display);font-weight:800;font-size:1.15rem;line-height:1.2;text-transform:uppercase;letter-spacing:.03em}
+.eh-kette span{display:inline-flex;align-items:center;gap:.55rem}
+.eh-kette span+span::before{content:"→";color:var(--accent);font-family:var(--f-body);font-weight:700}
+.eh-kopf .btn{margin-top:var(--s2)}
+.eh-punkte{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+.eh-punkte li{display:grid;gap:.45rem;align-content:start;min-width:0;padding:var(--s4) var(--s3) var(--s3);border-radius:10px;background:color-mix(in srgb,var(--band-ink) 6%,transparent);border:1px solid color-mix(in srgb,var(--band-ink) 10%,transparent)}
+.eh-punkte strong{display:flex;align-items:flex-start;gap:.5rem;font-family:var(--f-display);font-size:1.45rem;line-height:1.1}
+.eh-punkte svg{width:20px;height:20px;flex:none;margin-top:.08em;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.eh-punkte span{color:color-mix(in srgb,var(--band-ink) 78%,transparent);font-size:.98rem;line-height:1.45}
+@media (max-width:900px){.eh-grid{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .eh-punkte{grid-template-columns:1fr;gap:.6rem}
+  .eh-punkte li{padding:var(--s3)}
+  .eh-punkte strong{font-size:1.3rem}
+  .eh-kopf .btn{width:100%;justify-content:center}
+}
+
+/* Anfrageformular: mehrere Leistungen ankreuzen (Gruppen als fieldset, Kästchen als große Tippflächen) */
+.wahl,.wahl-gr{border:0;margin:0;padding:0;min-width:0}
+.wahl{display:grid;gap:.85rem}
+.wahl>legend{float:left;width:100%;padding:0;font-weight:600;font-size:.95rem}
+.wahl>legend+*{clear:both}
+.wahl-hint{margin-top:-.6rem;color:var(--muted);font-size:.92rem}
+.wahl-gr>legend{float:left;width:100%;padding:0;margin-bottom:.4rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.wahl-gr>legend+*{clear:both}
+.opts{display:flex;flex-wrap:wrap;gap:.4rem}
+.opt{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.4rem .85rem .4rem .65rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-weight:600;font-size:.95rem;line-height:1.2;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .2s,background .2s}
+.opt:hover{border-color:var(--ink)}
+.opt input{flex:none;width:1.15rem;height:1.15rem;min-height:0;margin:0;padding:0;accent-color:var(--accent);cursor:pointer}
+.opt input:focus{box-shadow:none}
+.opt:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface))}
+@supports selector(:has(*)){
+  .opt input:focus-visible{outline:none}
+  .opt:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+}
+.opt-unklar{border-style:dashed}
+.wahl.invalid .opt{border-color:var(--danger)}
+.wahl .err{margin-top:-.2rem}
+@media (max-width:600px){.opt{font-size:.92rem;padding-inline:.6rem .75rem}}
+
+/* Leistungsseiten: „Oft zusammen gebucht“ (Daten: site.json leistungen[].zusammen) */
+.prose>section.zusammen{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:var(--s4)}
+.zusammen h2{margin-bottom:var(--s2)}
+.zus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-bottom:var(--s2)}
+.prose .zus a{display:grid;gap:.15rem;align-content:center;min-height:44px;padding:.7rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:400;transition:border-color .2s,transform .3s var(--ease-out)}
+.prose .zus a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.zus-q{color:var(--muted);font-size:.95rem;line-height:1.3}
+.zus-n{font-family:var(--f-display);font-weight:700;font-size:1.35rem;line-height:1.1;color:var(--accent-text)}
+.zus-n span{display:inline-block;transition:transform .3s var(--ease-out)}
+.prose .zus a:hover .zus-n span{transform:translateX(4px)}
+.prose .zusammen .zus-mehr{margin:0}
+@media (max-width:600px){.zus{grid-template-columns:1fr}.prose>section.zusammen{padding:var(--s3)}}
+
+/* Kombi-Pakete: Sprungliste oben, Knopf je Kombination */
+.prose .kombi-nav{margin-bottom:var(--s5)}
+.prose .kombi-cta{margin:var(--s3) 0 0}
+.prose .kombi-cta .btn{color:var(--accent-ink)}
+@media (max-width:600px){.kombi-cta .btn{width:100%;justify-content:center}}
