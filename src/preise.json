@@ -29,14 +29,6 @@
         "bis": null
       }
     ],
-    "hausabriss-hamburg": [
-      {
-        "name": "Einfamilienhaus normaler Größe (Marktpreis laut Ratgebern)",
-        "einheit": "pauschal",
-        "ab": 20000,
-        "bis": 30000
-      }
-    ],
     "entkernung-hamburg": [
       {
         "name": "Entkernung",

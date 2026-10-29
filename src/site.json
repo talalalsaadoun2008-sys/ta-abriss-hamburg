@@ -13,7 +13,7 @@
     "email": "info@ta-abriss-hamburg.de",
     "maps": "https://maps.google.com/?cid=16462115453009829232",
     "profile": ["https://maps.google.com/?cid=16462115453009829232"],
-    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Schuttabholung, Entrümpelung, Gartenräumung, Pflaster entfernen, Heckenschnitt, Baumfällung, Gartenpflege, Laub entfernen, Garten anlegen, Scheunenabriss, Hofräumung und Arbeiten für Landwirte in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
+    "beschreibung": "Abrissbetrieb aus Hamburg-Altona: Kleinabriss, Hausabriss, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Schuttabholung, Entrümpelung, Gartenräumung, Pflaster entfernen, Heckenschnitt, Baumfällung, Gartenpflege, Laub entfernen, Garten anlegen, Scheunenabriss, Hofräumung und Arbeiten für Landwirte in Hamburg und Umland. Kostenlose Besichtigung, Festpreis inklusive Entsorgung.",
     "auch_genannt": ["T&A Abriss", "T&A Abriss Hamburg", "T&A Abriss und Rückbau", "TA Abriss Hamburg"]
   },
   "startseite_anker": [
@@ -28,7 +28,7 @@
     {"slug": "kleinabriss-hamburg", "name": "Kleinabriss", "bild": "abriss",
      "kurz": "Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Garage oder Schuppen ist noch voll?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Platten und Wege drumherum auch?"}, {"slug": "gartenraeumung-hamburg", "text": "Gleich den ganzen Garten räumen?"}, {"slug": "garten-anlegen-hamburg", "text": "Danach Rasen auf die freie Fläche?"}]},
-    {"slug": "hausabriss-hamburg", "name": "Hausabriss", "bild": "abriss",
+    {"slug": "hausabriss-hamburg", "name": "Hausabriss", "bild": "hausabriss",
      "kurz": "Ganze Gebäude abreißen, vom Einfamilienhaus bis zur Gewerbehalle, nach Besichtigung und Planung.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Das Haus ist noch eingerichtet?"}, {"slug": "baumfaellung-hamburg", "text": "Ein Baum steht dem Abriss im Weg?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Einfahrt und Terrasse gleich mit?"}, {"slug": "garten-anlegen-hamburg", "text": "Bleibt die Fläche frei? Rasen drauf?"}]},
     {"slug": "entkernung-hamburg", "name": "Entkernung", "bild": "entkernung",
@@ -440,6 +440,7 @@
       "h": 686,
       "alt": "Scheune abreißen: Rückbau eines alten Dachstuhls, Holz auf der Wiese"
     },
+    "hausabriss": {"datei": "scheune-abriss-dachstuhl.jpg", "w": 915, "h": 686, "alt": "Hausabriss von oben nach unten: Rückbau eines alten Dachstuhls"},
     "hof": {
       "datei": "hof-raeumen-holz-paletten.jpg",
       "w": 1200,
