@@ -34,7 +34,7 @@
     },
     {
       "h2": "Nachbarn, Lärm und Straße",
-      "html": "<p>Ein Hausabriss ist nicht zu überhören. Sagen Sie Ihren Nachbarn früh, wann es losgeht und wie lange es etwa dauert. Fotografieren Sie vorher Nachbarwände, Zäune und Einfahrten, dann lässt sich später klären, ob ein Riss neu ist. Trägt bei Doppel- oder Reihenhaus die gemeinsame Wand auch das Nachbarhaus, gehört eine Statikerin oder ein Statiker in die Planung.</p><p>Lärmintensive Bauarbeiten sind in Hamburg an Werktagen, auch samstags, von 20 bis 7 Uhr verboten. Gewerbliche Bauarbeiten an Sonn- und Feiertagen sind nur mit Ausnahmegenehmigung erlaubt. Laute Abschnitte legen wir deshalb auf Werktage zwischen 7 und 20 Uhr.</p><p>Stehen Container oder Fahrzeuge auf Gehweg oder Fahrbahn, ist vorher eine Sondernutzungserlaubnis des Bezirksamts nötig. Wer sie beantragt, legen wir bei der Besichtigung fest.</p>"
+      "html": "<p>Ein Hausabriss ist nicht zu überhören. Sagen Sie Ihren Nachbarn früh, wann es losgeht und wie lange es etwa dauert. Fotografieren Sie vorher Nachbarwände, Zäune und Einfahrten, dann lässt sich später klären, ob ein Riss neu ist. Trägt bei Doppel- oder Reihenhaus die gemeinsame Wand auch das Nachbarhaus, gehört eine Statikerin oder ein Statiker in die Planung.</p><p>Lärmintensive Bauarbeiten sind in Hamburg an Werktagen, auch samstags, von 20 bis 7 Uhr verboten. Gewerbliche Bauarbeiten an Sonn- und Feiertagen sind nur mit Ausnahmegenehmigung erlaubt. Laute Abschnitte legen wir deshalb auf Werktage zwischen 7 und 20 Uhr.</p><p>Stehen Container oder Fahrzeuge auf Gehweg oder Fahrbahn, ist vorher eine Sondernutzungserlaubnis des Bezirksamts nötig. Den Container stellen wir, die Erlaubnis beantragen wir für Sie gleich mit.</p>"
     },
     {
       "h2": "Alles aus einer Hand oder nur ein Teil davon",
@@ -172,7 +172,7 @@
     "site.json: Hausabriss in formular_leistungen (Gruppe Abriss & Bau) ergänzt, sonst bricht der Build ab (form_leistung). Nicht ergänzt: kernleistungen (Ortsseiten/Fußzeile), firma.beschreibung (JSON-LD, llms.txt-Kopf) und die von Hand gepflegten Leistungskarten in index.html – bitte entscheiden. Folge: Kopf- und Fußzeile zählen jetzt „18 Leistungen“, und „Alle 18 Leistungen ansehen“ führt auf index.html#leistungen, wo die Hausabriss-Karte noch fehlt.",
     "Bild: nutzt „abriss“ (Ziegelwand mit Vorschlaghammer). Ein Foto eines echten Hausabrisses wäre deutlich besser.",
     "Nicht behauptet (bewusst): eigene Maschinen, Bagger, Mitarbeiterzahl, Erfahrung, Referenzen, Zertifikate, eigene Statiker, Sprengung, Verfüllen der Baugrube, Dauer eines Abrisses. Übergabezustand der Fläche steht nur als „wie im Angebot festgelegt“.",
-    "Container/Sondernutzung: Wer den Container stellt und die Sondernutzungserlaubnis beantragt, ist offen (Text: „legen wir bei der Besichtigung gemeinsam fest“).",
-    "„Kostenlose Besichtigung vor Ort“ als Fakt übernommen, weil die Seite sonst überall kostenlose Besichtigung verspricht. Bitte bestätigen, dass das auch für große Objekte gilt."
+    "Container/Sondernutzung: Talal 29.10.2026: T&A stellt den Container und beantragt die Sondernutzungserlaubnis.",
+    "Kostenlose Besichtigung gilt laut Talal (29.10.2026) auch für große Objekte."
   ]
 }
