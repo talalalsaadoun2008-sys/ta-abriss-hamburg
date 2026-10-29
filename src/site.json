@@ -28,6 +28,9 @@
     {"slug": "kleinabriss-hamburg", "name": "Kleinabriss", "bild": "abriss",
      "kurz": "Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Garage oder Schuppen ist noch voll?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Platten und Wege drumherum auch?"}, {"slug": "gartenraeumung-hamburg", "text": "Gleich den ganzen Garten räumen?"}, {"slug": "garten-anlegen-hamburg", "text": "Danach Rasen auf die freie Fläche?"}]},
+    {"slug": "hausabriss-hamburg", "name": "Hausabriss", "bild": "abriss",
+     "kurz": "Ganze Gebäude abreißen, vom Einfamilienhaus bis zur Gewerbehalle, nach Besichtigung und Planung.",
+     "zusammen": [{"slug": "entruempelung-hamburg", "text": "Das Haus ist noch eingerichtet?"}, {"slug": "baumfaellung-hamburg", "text": "Ein Baum steht dem Abriss im Weg?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Einfahrt und Terrasse gleich mit?"}, {"slug": "garten-anlegen-hamburg", "text": "Bleibt die Fläche frei? Rasen drauf?"}]},
     {"slug": "entkernung-hamburg", "name": "Entkernung", "bild": "entkernung",
      "kurz": "Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Vorher noch alles ausräumen?"}, {"slug": "wanddurchbruch-hamburg", "text": "Eine neue Türöffnung gleich mit?"}, {"slug": "trockenbau-hamburg", "text": "Danach neue Wände und Decken?"}]},
@@ -499,7 +502,7 @@
     }
   },
   "formular_leistungen": [
-    {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau"]},
+    {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Hausabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau"]},
     {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung"]},
     {"gruppe": "Garten", "leistungen": ["Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen"]},
     {"gruppe": "Hof & Landwirtschaft", "leistungen": ["Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte"]}
