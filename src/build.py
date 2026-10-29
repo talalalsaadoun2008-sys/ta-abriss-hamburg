@@ -678,6 +678,13 @@ def kern_leistungen(ctx):
     return kern or ctx.pages(s.leistungen)
 
 
+def maps_li(f):
+    """Link zum Google-Unternehmensprofil im Fußbereich, sobald es in site.json steht."""
+    if not f.get("maps"):
+        return ""
+    return f'<li><a href="{esc(f["maps"])}" target="_blank" rel="noopener">Auf Google Maps ansehen</a></li>'
+
+
 def render_footer(ctx, current, on_home, fab_href):
     """Kurze Fußzeile: wichtigste Leistungen und Ratgeber mit Link „Alle …“, Bezirke, kurze Umland-Liste,
     Über uns und Rechtliches. Vollständige Listen stehen im Menü und auf der Startseite."""
@@ -715,7 +722,7 @@ def render_footer(ctx, current, on_home, fab_href):
   <div class="firma">
     <h3>{esc(f["name"])}</h3>
     <p>Inh. {esc(f["inhaber"])}<br>{esc(f["strasse"])}<br>{esc(f["plz"])} {esc(f["ort"])}</p>
-    <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li></ul>{eh}
+    <ul><li><a href="tel:{esc(f["telefon_link"])}">Telefon: {esc(f["telefon"])}</a></li><li><a href="mailto:{esc(f["email"])}">{esc(f["email"])}</a></li>{maps_li(f)}</ul>{eh}
     <p class="partner"><span>Partner für Entrümpelung:</span> <a href="https://hafenraeumer.de" rel="nofollow">HafenRäumer</a> · <a href="https://hinnerk-entruempelung.de/">Hinnerk – Entrümpelung Hamburg</a></p>
   </div>
 ''' + "\n".join(cols) + '\n</div></footer>']
@@ -1638,7 +1645,7 @@ def render_llms(ctx):
          f"- E-Mail: {f['email']}",
          f"- Adresse: {f['strasse']}, {f['plz']} {f['ort']} (Altona)",
          "- Erreichbar: Montag bis Samstag, 8 bis 20 Uhr",
-         f"- Website: {s.base}", "",
+         f"- Website: {s.base}"] + ([f"- Google-Unternehmensprofil (Google Maps): {f['maps']}"] if f.get("maps") else []) + ["",
          "## So arbeiten wir", "",
          "- Kostenlose und unverbindliche Besichtigung, vor Ort oder per Video",
          "- Rückmeldung innerhalb eines Werktags",
@@ -1777,6 +1784,8 @@ def render_index(ctx):
     }
     if f.get("profile"):  # belegte Einträge (Google, Branchenbücher), sobald sie online sind
         business["sameAs"] = f["profile"]
+    if f.get("maps"):  # Google-Unternehmensprofil (bestätigt 29.10.2026)
+        business["hasMap"] = f["maps"]
     if ctx.has(ABOUT):
         business["subjectOf"] = {"@type": "AboutPage", "url": s.url(ABOUT)}
     geo = f.get("geo")  # nur mit belegten Koordinaten in site.json, z. B. "geo": {"breite": 53.12345, "laenge": 9.12345}
