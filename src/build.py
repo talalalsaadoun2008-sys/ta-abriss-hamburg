@@ -134,6 +134,9 @@ class Site:
         self.uebersicht = d.get("einsatzgebiet") or {}
         self.menue_umland = d.get("menue_umland", [])
         self.startseite_umland = d.get("startseite_umland", [])
+        # Umland-Orte, die Google anzeigen soll. Alle anderen Umland-Seiten bleiben erreichbar, bekommen aber
+        # <meta name="robots" content="noindex"> und stehen nicht in der sitemap.xml (fehlt die Liste: alle im Index).
+        self.umland_im_index = d.get("umland_im_index")
         # Kurzer Seitenrahmen: Ortsseiten zeigen nur diese Leistungskarten, die Fußzeile nur diese Leistungen
         # und Ratgeber (jeweils mit Link „Alle …“ auf die Startseite). Das Menü listet weiterhin alles.
         self.kernleistungen = d.get("kernleistungen", [])
@@ -163,7 +166,8 @@ class Site:
             for k in ("kreis", "land"):
                 if not is_str(u.get(k)):
                     raise BuildError(f"site.json: Umland {u['slug']} braucht '{k}'")
-        for key, art in (("menue_umland", "umland"), ("startseite_umland", "umland"), ("kernleistungen", "leistung"),
+        for key, art in (("menue_umland", "umland"), ("startseite_umland", "umland"), ("umland_im_index", "umland"),
+                         ("kernleistungen", "leistung"),
                          ("fusszeile_ratgeber", "ratgeber")):
             for x in d.get(key, []):
                 if self.kind.get(x) != art:
@@ -220,6 +224,12 @@ class Site:
         if doppelt:
             raise BuildError(f"site.json: formular_leistungen/formular_unklar: doppelt: {', '.join(doppelt)}")
         return out, unklar, flach
+
+    def im_index(self, slug):
+        """False nur für Umland-Seiten, die nicht in umland_im_index stehen (die bekommen noindex)."""
+        if self.kind.get(slug) != "umland" or self.umland_im_index is None:
+            return True
+        return slug in self.umland_im_index
 
     def _zusammen(self, le):
         """„Oft zusammen gebucht“ einer Leistung prüfen: 2–4 Einträge {slug einer anderen Leistung, text}."""
@@ -1355,7 +1365,7 @@ def render_content_page(ctx, c):
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
           ("image", s.bild_url(c["image"])), ("url", url)]
     meta = c["description"] + meta_suffix(s) if mit_haekchen(c) else c["description"]
-    head = page_head(ctx, title=c["title"], description=meta, canonical=url, og=og, ld=ld)
+    head = page_head(ctx, title=c["title"], description=meta, canonical=url, og=og, ld=ld, noindex=not s.im_index(slug))
 
     # Inhalt; Kombi-Seite: Abschnitte mit Schritten (<ol> mit Leistungslinks) bekommen Anker, Sprungliste und Knopf,
     # der die Leistungen im Formular ankreuzt (assets/site.js, data-kombi; ohne Skript nur Sprung zum Formular)
@@ -2438,7 +2448,7 @@ def main(argv=None):
     if not args.preview:
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
         slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages()] + has(site.bezirke + site.ratgeber)
-                 + [UEBERSICHT] + has(site.stadtteile + site.umland))
+                 + [UEBERSICHT] + has(site.stadtteile) + [x for x in has(site.umland) if site.im_index(x)])
         files["sitemap.xml"] = sitemap(site, slugs, today, lastmod_daten(ctx, slugs))
     vorlage_check_pages(site, contents, files, warn)
     check_images(files, warn)

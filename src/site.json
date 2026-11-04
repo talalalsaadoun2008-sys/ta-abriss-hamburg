@@ -352,6 +352,7 @@
   ],
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
+  "umland_im_index": ["abriss-norderstedt", "abriss-pinneberg", "abriss-wedel", "abriss-schenefeld", "abriss-halstenbek", "abriss-quickborn", "abriss-rellingen", "abriss-boenningstedt", "abriss-ellerbek", "abriss-hasloh", "abriss-ahrensburg", "abriss-reinbek", "abriss-glinde", "abriss-oststeinbek", "abriss-barsbuettel", "abriss-grosshansdorf", "abriss-ammersbek", "abriss-tangstedt-stormarn", "abriss-bargteheide", "abriss-geesthacht", "abriss-wentorf-bei-hamburg", "abriss-boernsen", "abriss-aumuehle", "abriss-wohltorf", "abriss-escheburg", "abriss-dassendorf", "abriss-seevetal", "abriss-neu-wulmstorf", "abriss-rosengarten", "abriss-stelle", "abriss-buxtehude", "abriss-jork"],
   "kernleistungen": ["kleinabriss-hamburg", "entkernung-hamburg", "innenabbruch-hamburg", "entruempelung-hamburg", "gartenraeumung-hamburg", "schuttabholung-hamburg"],
   "fusszeile_ratgeber": ["abriss-kosten-hamburg", "abriss-genehmigung-hamburg", "bauschutt-entsorgen-hamburg"],
   "einsatzgebiet": {
