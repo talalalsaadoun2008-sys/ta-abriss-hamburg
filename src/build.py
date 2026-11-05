@@ -68,7 +68,8 @@ ORTSTYPEN = ("bezirk", "stadtteil", "umland")
 UEBERSICHT = "einsatzgebiet"  # erzeugte Übersichtsseite einsatzgebiet.html
 ABOUT = "ueber-uns"  # Über-uns-Seite: läuft als ratgeber, aber mit AboutPage-Daten und ohne Quellen-Pflicht
 KOMBI = "kombi-pakete"  # Kombi-Pakete „Alles aus einer Hand“: ratgeber ohne Quellen-Pflicht, WebPage-Daten, unter Leistungen
-SONDERSEITEN = (ABOUT, KOMBI)  # stehen in site.json unter ratgeber, sind aber keine Ratgeber (Menü, Fußzeile, llms.txt)
+ARBEITEN = "unsere-arbeiten"  # Fotos aus echten Aufträgen: ratgeber ohne Quellen-Pflicht, Galerie-Seite, neben „Über uns“
+SONDERSEITEN = (ABOUT, KOMBI, ARBEITEN)  # stehen in site.json unter ratgeber, sind aber keine Ratgeber (Menü, Fußzeile, llms.txt)
 ZUSAMMEN_MIN, ZUSAMMEN_MAX = 2, 4  # Einträge in „Oft zusammen gebucht“ je Leistung
 SECTION_TAGS = {"p", "ul", "ol", "li", "strong", "em", "h3", "a"}
 INLINE_TAGS = {"strong", "em", "a"}
@@ -707,7 +708,7 @@ def render_footer(ctx, current, on_home, fab_href):
     bez = "".join(li(x) for x in ctx.pages(s.bezirke))
     rat_alle = [x for x in ctx.pages(s.ratgeber) if x["slug"] not in SONDERSEITEN]
     rat = [x for x in rat_alle if x["slug"] in s.fusszeile_ratgeber] if s.fusszeile_ratgeber else rat_alle
-    rest = "".join(li(x) for x in ctx.pages([s.entry[ABOUT]] if ABOUT in s.entry else []) + s.rechtliches)
+    rest = "".join(li(x) for x in ctx.pages([s.entry[x] for x in (ABOUT, ARBEITEN) if x in s.entry]) + s.rechtliches)
     uml ="".join(li(s.entry[x]) for x in s.menue_umland if ctx.has(x))  # kurze Ortsliste, Linktext = Ortsname
     alle = mehr(f"{UEBERSICHT}.html", "Alle Orte im Einsatzgebiet", current == UEBERSICHT)
     ids = home_ids(ctx.home_src)
@@ -1312,10 +1313,10 @@ def render_content_page(ctx, c):
         trail.append((lo_le["name"], lo_le["slug"] + ".html" if ok else None, s.url(lo_le["slug"]) if ok else None))
     elif slug == KOMBI:  # Startseite › Leistungen › Kombi-Pakete
         trail.append(("Leistungen", ctx.home_link("leistungen", False), s.base + "#leistungen"))
-    elif kind == "ratgeber" and slug != ABOUT:
+    elif kind == "ratgeber" and slug not in (ABOUT, ARBEITEN):
         trail.append(("Ratgeber", ctx.home_link("fragen", False), s.base + "#fragen"))
-    elif slug == ABOUT:
-        pass  # Startseite › Über uns
+    elif slug in (ABOUT, ARBEITEN):
+        pass  # Startseite › Über uns / Unsere Arbeiten
     else:
         trail.append(("Einsatzgebiet", UEBERSICHT + ".html", s.url(UEBERSICHT)))
     if bezirk:
@@ -1345,6 +1346,11 @@ def render_content_page(ctx, c):
     elif slug == ABOUT:
         ld.append({"@context": "https://schema.org", "@type": "AboutPage", "name": c["h1"], "url": url,
                    "description": c["description"], "about": firma_ref, "mainEntity": firma_ref, "inLanguage": "de-DE"})
+    elif slug == ARBEITEN:  # Fotoseite, kein Artikel: ImageGallery mit den eigenen Arbeitsfotos
+        ld.append({"@context": "https://schema.org", "@type": "ImageGallery", "name": c["h1"], "url": url,
+                   "description": c["description"], "about": firma_ref, "inLanguage": "de-DE",
+                   "image": [{"@type": "ImageObject", "contentUrl": s.bild_url(g["bild"]), "caption": g["text"]}
+                             for g in c.get("galerie", [])]})
     elif slug == KOMBI:  # Angebotsseite, kein Artikel: WebPage, nennt die Leistungen der Kombinationen (gleiche @id)
         genannt = list(dict.fromkeys(x for sec in c["sections"] for x in kombi_schritte(ctx, sec["html"])))
         ld.append({"@context": "https://schema.org", "@type": "WebPage", "name": c["h1"], "url": url,
@@ -1361,7 +1367,7 @@ def render_content_page(ctx, c):
     if faq:
         ld.append(faq_jsonld(s, [(x["q"], ctx.drop_dead_links(x["a"])) for x in c["faq"]]))
 
-    og = [("type", "article" if kind == "ratgeber" and slug != KOMBI else "website"), ("locale", "de_DE"),
+    og = [("type", "article" if kind == "ratgeber" and slug not in (KOMBI, ARBEITEN) else "website"), ("locale", "de_DE"),
           ("site_name", f["name"]), ("title", c["title"]), ("description", c["description"]),
           ("image", s.bild_url(c["image"])), ("url", url)]
     meta = c["description"] + meta_suffix(s) if mit_haekchen(c) else c["description"]
@@ -1686,6 +1692,8 @@ def render_llms(ctx):
           f"- [Alle Orte im Einsatzgebiet]({s.url(UEBERSICHT)})", "", "## Mehr lesen", ""]
     if ctx.has(ABOUT):
         L.append(f"- [Über uns]({s.url(ABOUT)})")
+    if ctx.has(ARBEITEN):
+        L.append(f"- [Unsere Arbeiten: Fotos von echten Aufträgen]({s.url(ARBEITEN)})")
     for x in ctx.pages(s.ratgeber):
         if x["slug"] not in SONDERSEITEN:
             L.append(f"- [{x['name']}]({s.url(x['slug'])})")

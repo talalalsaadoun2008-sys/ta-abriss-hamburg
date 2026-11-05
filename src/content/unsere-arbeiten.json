@@ -1,0 +1,61 @@
+{
+  "slug": "unsere-arbeiten",
+  "type": "ratgeber",
+  "menu": "Unsere Arbeiten",
+  "title": "Unsere Arbeiten: Fotos aus Hamburg | T&A Abriss & Rückbau",
+  "description": "Fotos aus unserer Arbeit in Hamburg: Entrümpelung vorher und nachher, Entkernung, Innenabbruch, Wanddurchbruch, Trockenbau, Garten, Hof, Hecke und Scheune.",
+  "label": "Unsere Arbeiten",
+  "h1": "Unsere Arbeiten: Fotos von echten Aufträgen",
+  "lead": "Die Fotos auf dieser Seite sind bei unserer eigenen Arbeit entstanden. Sie zeigen, wie es bei einer Entrümpelung, einer Entkernung, im Garten oder auf dem Hof vor, während und nach unserem Einsatz aussieht. Nach weiteren Aufträgen kommen neue Fotos dazu.",
+  "facts": ["Eigene Fotos aus unserer Arbeit", "Kostenlose Besichtigung, auch per Video", "Festpreis inklusive Entsorgung"],
+  "image": "g-keller",
+  "form_leistung": "Weiß ich noch nicht",
+  "form_ort": "",
+  "stadtteile": [],
+  "sections": [
+    {
+      "h2": "Entrümpelung: vorher und nachher",
+      "html": "<p>Keller, Wohnzimmer und Küche: Wir tragen alles heraus, trennen schon beim Laden nach Möbeln, Holz, Metall, Elektrogeräten und Restmüll und übergeben die Räume besenrein. Was bleiben soll, legen wir vorher gemeinsam fest. Im Keller auf dem Foto ist zum Beispiel der Schrank stehen geblieben.</p><p>Mehr zum Ablauf lesen Sie unter <a href=\"entruempelung-hamburg.html\">Entrümpelung</a>.</p>"
+    },
+    {
+      "h2": "Entkernung, Innenabbruch und Wanddurchbruch",
+      "html": "<p>Bei einer <a href=\"entkernung-hamburg.html\">Entkernung</a> muss alles raus, bis nur noch der Rohbau steht. Das Material trennen wir, alte Kupfer- und Stahlrohre sammeln wir zum Beispiel für die Verwertung. Beim <a href=\"innenabbruch-hamburg.html\">Innenabbruch</a> bauen wir einzelne Bauteile gezielt zurück, etwa eine Wand oder ein altes Bad.</p><p>Einen <a href=\"wanddurchbruch-hamburg.html\">Wanddurchbruch</a> brechen wir staubarm in die Wand und nehmen den Schutt mit. Ist die Wand tragend, geht es nur mit Statiker. Den bringen wir mit.</p>"
+    },
+    {
+      "h2": "Trockenbau nach dem Rückbau",
+      "html": "<p>Nach dem Rückbau geht es direkt weiter: Wir ziehen Trennwände aus Gipskarton ein, hängen Decken ab und setzen Vorsatzschalen mit Dämmung. Abriss und Neuaufbau kommen aus einer Hand. Mehr unter <a href=\"trockenbau-hamburg.html\">Trockenbau</a>.</p>"
+    },
+    {
+      "h2": "Garten, Hof und Hecke",
+      "html": "<p>Wir räumen Gärten und Kleingarten-Parzellen, laden Paletten, Altholz und Gerümpel und fahren alles ab. Auf Höfen und in Scheunen trennen wir Holz, Metall und Abfall nach Sorten. Hecken schneiden wir mit Motor- oder Akku-Heckenschere und nehmen den Grünschnitt mit.</p><p>Mehr dazu: <a href=\"gartenraeumung-hamburg.html\">Gartenräumung</a>, <a href=\"hof-raeumen-hamburg.html\">Hof räumen</a>, <a href=\"gruenschnitt-hecke-hamburg.html\">Hecke und Grünschnitt</a> und <a href=\"gartenpflege-hamburg.html\">Gartenpflege</a>.</p>"
+    },
+    {
+      "h2": "Scheune und Dachstuhl",
+      "html": "<p>Alte Scheunen, Ställe und Schuppen reißen wir ab und entsorgen das Material getrennt. Vorher klären wir mit Ihnen Genehmigung, Dach und Schadstoffe. Asbest bauen wir nicht selbst aus, das übernimmt ein zugelassener Fachbetrieb. Mehr unter <a href=\"scheune-abreissen-hamburg.html\">Scheune abreißen</a>.</p>"
+    },
+    {
+      "h2": "So kommen Sie zu Ihrem Festpreis",
+      "html": "<ol><li><strong>Fotos schicken:</strong> Ein paar Bilder per WhatsApp an 0176 32896617 reichen für den Anfang.</li><li><strong>Kostenlose Besichtigung:</strong> Wir sehen uns alles an, vor Ort oder per Video.</li><li><strong>Festpreis:</strong> Danach bekommen Sie einen Festpreis. Abtransport und Entsorgung sind enthalten.</li></ol>"
+    }
+  ],
+  "faq": [],
+  "galerie": [
+    {"bild": "g-keller", "text": "Vorher und nachher: Kellerraum entrümpelt, der Schrank bleibt stehen"},
+    {"bild": "g-wohnzimmer", "text": "Vorher und nachher: Wohnzimmer komplett leer geräumt"},
+    {"bild": "g-kueche", "text": "Vorher und nachher: Küche geräumt bis auf den Boden"},
+    {"bild": "entruempelung", "text": "Entrümpelung: vollgestelltes Zimmer vor dem Ausräumen"},
+    {"bild": "g-rohre", "text": "Alte Kupfer- und Stahlrohre aus einer Entkernung, gesammelt für die Verwertung"},
+    {"bild": "entkernung", "text": "Entkernung: Rückbau von Decke und Dämmung im Dachgeschoss"},
+    {"bild": "innenabbruch", "text": "Innenabbruch: Raum nach dem Entfernen einer Wand"},
+    {"bild": "g-wanddurchbruch", "text": "Wanddurchbruch mit dem Abbruchhammer"},
+    {"bild": "wanddurchbruch", "text": "Wanddurchbruch: geöffnete Wand mit freigelegtem Mauerwerk"},
+    {"bild": "trockenbau", "text": "Trockenbau: Metallständerwerk mit Dämmung und Gipskartonplatten"},
+    {"bild": "g-garten", "text": "Garten vor der Räumung: Kisten, Töpfe und alte Fahrräder"},
+    {"bild": "garten", "text": "Gartenräumung: gestapelte Paletten und Altholz"},
+    {"bild": "hof", "text": "Hof räumen: Gitterbox mit Altholz, Paletten und Abfall"},
+    {"bild": "hecke", "text": "Hecke schneiden mit der Motorheckenschere"},
+    {"bild": "gartenpflege", "text": "Gartenpflege: Heckenschnitt mit der Akku-Heckenschere"},
+    {"bild": "scheune", "text": "Scheune abreißen: Rückbau eines alten Dachstuhls"}
+  ],
+  "notes_for_review": "Nur Fotos, die Talal als eigene bestätigt hat (Commits 1e98c35 und 3c14fd5, Bestätigung im Chat 05.11.). Fakten aus den verlinkten Leistungsseiten übernommen."
+}
