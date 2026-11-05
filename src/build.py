@@ -693,7 +693,10 @@ def maps_li(f):
     """Link zum Google-Unternehmensprofil im Fußbereich, sobald es in site.json steht."""
     if not f.get("maps"):
         return ""
-    return f'<li><a href="{esc(f["maps"])}" target="_blank" rel="noopener">Auf Google Maps ansehen</a></li>'
+    out = f'<li><a href="{esc(f["maps"])}" target="_blank" rel="noopener">Auf Google Maps ansehen</a></li>'
+    if f.get("bewerten"):  # offizieller Rezensionslink aus dem Google-Profil
+        out += f'<li><a href="{esc(f["bewerten"])}" target="_blank" rel="noopener">Auf Google bewerten</a></li>'
+    return out
 
 
 def render_footer(ctx, current, on_home, fab_href):
