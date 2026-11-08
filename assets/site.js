@@ -1,4 +1,4 @@
-/* T&A Abriss & Rückbau – gemeinsames Skript für alle Seiten (mit defer geladen).
+/* T&A Abriss, Rückbau & Entrümpelung – gemeinsames Skript für alle Seiten (mit defer geladen).
    Jede Funktion läuft nur, wenn ihre Elemente auf der Seite vorhanden sind. */
 (function(){
   'use strict';
@@ -84,7 +84,7 @@
     });
     function msg(){
       var page = (f.getAttribute('data-page') || '').trim(), ls = leistungen();
-      return 'Hallo T&A Abriss & Rückbau, ich möchte eine Besichtigung anfragen.\n\nName: ' + v('name') +
+      return 'Hallo T&A Abriss, Rückbau & Entrümpelung, ich möchte eine Besichtigung anfragen.\n\nName: ' + v('name') +
         '\nTelefon: ' + v('tel') + '\nOrt: ' + (v('ort') || '-') +
         (ls.length > 1 ? '\nLeistungen: ' : '\nLeistung: ') + (ls.join(', ') || '-') +
         (v('besichtigung') ? '\nBesichtigung: ' + v('besichtigung') : '') +

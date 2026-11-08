@@ -205,6 +205,9 @@ html{scroll-padding-bottom:calc(var(--fab-h) + 12px + env(safe-area-inset-bottom
   .header-cta{display:none}
   .brand span{font-size:1rem}
 }
+@media (max-width:374px){
+  .brand span{font-size:.8rem;letter-spacing:.02em}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}

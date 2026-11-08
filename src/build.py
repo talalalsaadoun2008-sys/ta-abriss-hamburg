@@ -621,11 +621,12 @@ def render_header(ctx, current, on_home, contact_href):
                   for a in s.anker if a.get("kopfzeile"))
     bars = '<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>'
     sub = f"<small>{esc(eine_hand(ctx))}</small>" if eine_hand(ctx) else ""  # nur ab 601 px sichtbar (site.css)
+    marke = s.firma["name"].removeprefix("T&A").strip()  # Schriftzug neben „T&A“, aus site.json
     out = []
     if ctx.preview:
         out.append('<div class="draft" role="note"><div class="wrap">Vorschau – noch nicht online</div></div>')
     out.append(f'''<header class="top"><div class="wrap">
-  <a class="brand" href="{esc(brand)}"><b><i>T&amp;A</i><i aria-hidden="true">T&amp;A</i></b><span>Abriss &amp; Rückbau</span>{sub}</a>
+  <a class="brand" href="{esc(brand)}"><b><i>T&amp;A</i><i aria-hidden="true">T&amp;A</i></b><span>{esc(marke)}</span>{sub}</a>
   <nav class="links" aria-label="Hauptnavigation">
     {nav}
   </nav>
