@@ -6,7 +6,7 @@
   "description": "Haus, Mehrfamilienhaus oder Halle abreißen in Hamburg: Planung, Asbestprüfung, Rückbau und Entsorgung.",
   "label": "Leistung · Hausabriss",
   "h1": "Hausabriss in Hamburg: vom Einfamilienhaus bis zur Halle",
-  "lead": "Ein altes Haus soll einem Neubau Platz machen, oder eine Halle wird nicht mehr gebraucht? T&A Abriss, Rückbau & Entrümpelung reißt ganze Gebäude in Hamburg und im Umland ab, vom Einfamilienhaus bis zum mehrgeschossigen Bau. Bevor die erste Wand fällt, stehen Besichtigung und Planung: Schadstoffe, Leitungen, Genehmigung und Nachbarn.",
+  "lead": "Ein altes Haus soll einem Neubau Platz machen, oder eine Halle wird nicht mehr gebraucht? T&A Abriss, Rückbau & Entrümpelung reißt ganze Gebäude in Hamburg und im Umland ab, vom Einfamilienhaus bis zum Hochhaus. Bevor die erste Wand fällt, stehen Besichtigung und Planung: Schadstoffe, Leitungen, Genehmigung und Nachbarn.",
   "facts": [
     "Kostenlose Besichtigung vor Ort",
     "Asbest nur durch Fachbetrieb",
@@ -18,7 +18,7 @@
   "sections": [
     {
       "h2": "Welche Gebäude wir komplett abreißen",
-      "html": "<p>Beim Hausabriss verschwindet ein Gebäude ganz. Am Ende ist das Grundstück frei für das, was Sie vorhaben. Wir reißen zum Beispiel ab:</p><ul><li><strong>Einfamilienhaus:</strong> freistehend, als Bungalow oder Siedlungshaus, mit oder ohne Keller.</li><li><strong>Doppelhaushälfte und Reihenhaus:</strong> Das Nachbarhaus hängt an derselben Wand. Wie die Trennung gelingt, legt die Planung vorher fest.</li><li><strong>Mehrfamilienhaus und mehrgeschossige Gebäude:</strong> Je höher und größer der Bau, desto mehr Vorlauf brauchen Nachweise und Genehmigung.</li><li><strong>Gewerbehallen, Werkstätten und Lager:</strong> aus Stahl, Beton, Mauerwerk oder Holz.</li><li><strong>Nebengebäude:</strong> Garage, Anbau oder Wintergarten, die mit dem Haus verschwinden sollen.</li></ul><p>Auch große Gebäude übernehmen wir, immer nach Besichtigung und Planung. Ein freistehender Bungalow braucht dabei weniger Vorbereitung als ein Wohnhaus mit fünf Etagen in enger Bebauung.</p>"
+      "html": "<p>Beim Hausabriss verschwindet ein Gebäude ganz. Am Ende ist das Grundstück frei für das, was Sie vorhaben. Wir reißen zum Beispiel ab:</p><ul><li><strong>Einfamilienhaus:</strong> freistehend, als Bungalow oder Siedlungshaus, mit oder ohne Keller.</li><li><strong>Doppelhaushälfte und Reihenhaus:</strong> Das Nachbarhaus hängt an derselben Wand. Wie die Trennung gelingt, legt die Planung vorher fest.</li><li><strong>Mehrfamilienhaus, mehrgeschossige Gebäude und Hochhäuser:</strong> Je höher und größer der Bau, desto mehr Vorlauf brauchen Nachweise und Genehmigung.</li><li><strong>Gewerbehallen, Werkstätten und Lager:</strong> aus Stahl, Beton, Mauerwerk oder Holz.</li><li><strong>Nebengebäude:</strong> Garage, Anbau oder Wintergarten, die mit dem Haus verschwinden sollen.</li></ul><p>Auch große Gebäude übernehmen wir, immer nach Besichtigung und Planung. Ein freistehender Bungalow braucht dabei weniger Vorbereitung als ein Wohnhaus mit fünf Etagen in enger Bebauung.</p>"
     },
     {
       "h2": "So läuft ein Hausabriss ab",
@@ -45,7 +45,7 @@
   "faq": [
     {
       "q": "Reißen Sie auch Mehrfamilienhäuser und große Gebäude ab?",
-      "a": "Ja. Wir übernehmen auch mehrgeschossige Wohnhäuser und Gewerbehallen. Vorher stehen eine Besichtigung und eine Planung, die zum Gebäude passt. Bei großen Bauten dauert die Vorbereitung länger, weil Nachweise, Statik und Genehmigung mehr Zeit brauchen."
+      "a": "Ja. Wir übernehmen auch mehrgeschossige Wohnhäuser, Hochhäuser und Gewerbehallen. Vorher stehen eine Besichtigung und eine Planung, die zum Gebäude passt. Bei großen Bauten dauert die Vorbereitung länger, weil Nachweise, Statik und Genehmigung mehr Zeit brauchen."
     },
     {
       "q": "Was kostet es, ein Einfamilienhaus abreißen zu lassen?",
@@ -163,7 +163,7 @@
     }
   ],
   "notes_for_review": [
-    "Entwurf 29.10.2026. Leistung laut Talal (29.10.2026): T&A macht auch große Abrisse, „bis zu Hochhäusern, wenn es sein muss“. Der Text sagt nur: auch große und mehrgeschossige Gebäude, immer nach Besichtigung und Planung. Das Wort „Hochhaus“ steht bewusst nicht im Text – bitte bestätigen, ob es rein soll.",
+    "Entwurf 29.10.2026. Leistung laut Talal (29.10.2026): T&A macht auch große Abrisse, „bis zu Hochhäusern, wenn es sein muss“. Der Text sagt nur: auch große und mehrgeschossige Gebäude, immer nach Besichtigung und Planung. Talal hat am 08.11.2026 bestätigt: „Wir bieten alles an. Von Hochhausabriss bis zu kleine Häuser.“ Hochhaus steht seit 10.11.2026 im Text.",
     "WIDERSPRUCH auf anderen Seiten (nicht geändert, Auftrag erlaubte nur kleine Ergänzungen): entkernung-hamburg.json („Den Abriss ganzer mehrgeschossiger Gebäude übernehmen wir nicht.“), abriss-hamburg-bergedorf.json, abriss-hamburg-sasel.json, abriss-hamburg-schnelsen.json („Ganze mehrgeschossige Gebäude/Häuser reißen wir nicht ab …“, „… gehört nicht zu unseren Leistungen“). Diese Sätze müssen angepasst werden, bevor die Seite online geht.",
     "Preise: Nur bundesweite Marktwerte aus Ratgebern (ImmoScout24 04/2024, Dr. Klein 06/2024, Commerzbank 05/2022), keine Hamburger Werte gefunden. Keine Quelle sagt, ob brutto oder netto. preise.json verlangt Endpreise inkl. USt (PAngV) – die Zeile „Einfamilienhaus“ (20.000–30.000 €) muss Talal als eigenen Richtpreis inkl. USt bestätigen oder ändern, sonst die Zeile wieder herausnehmen.",
     "Preis-Kasten: Der für alle Seiten gleiche Text „Nicht enthalten: … Fundament oder Bodenplatte …“ passt nur halb, denn die Marktbeispiele (Dr. Klein, Commerzbank) enthalten das Ausbaggern von Keller/Fundament im Gesamtpreis. Bitte entscheiden, ob Keller/Bodenplatte bei T&A im Hausabriss-Preis enthalten sind.",

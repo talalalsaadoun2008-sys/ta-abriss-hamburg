@@ -30,7 +30,7 @@
      "kurz": "Bauten und Bauteile, die komplett weg sollen, vom Gartenhaus bis zur Garage.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Garage oder Schuppen ist noch voll?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Platten und Wege drumherum auch?"}, {"slug": "gartenraeumung-hamburg", "text": "Gleich den ganzen Garten räumen?"}, {"slug": "garten-anlegen-hamburg", "text": "Danach Rasen auf die freie Fläche?"}]},
     {"slug": "hausabriss-hamburg", "name": "Hausabriss", "bild": "hausabriss",
-     "kurz": "Ganze Gebäude abreißen, vom Einfamilienhaus bis zur Gewerbehalle, nach Besichtigung und Planung.",
+     "kurz": "Ganze Gebäude abreißen, vom Einfamilienhaus bis zum Hochhaus, nach Besichtigung und Planung.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Das Haus ist noch eingerichtet?"}, {"slug": "baumfaellung-hamburg", "text": "Ein Baum steht dem Abriss im Weg?"}, {"slug": "pflaster-entfernen-hamburg", "text": "Einfahrt und Terrasse gleich mit?"}, {"slug": "garten-anlegen-hamburg", "text": "Bleibt die Fläche frei? Rasen drauf?"}]},
     {"slug": "entkernung-hamburg", "name": "Entkernung", "bild": "entkernung",
      "kurz": "Räume bis auf den Rohbau zurück, z. B. vor einer Sanierung.",
@@ -354,7 +354,8 @@
   "menue_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-reinbek", "abriss-wedel", "abriss-buxtehude"],
   "startseite_umland": ["abriss-norderstedt", "abriss-pinneberg", "abriss-ahrensburg", "abriss-buxtehude"],
   "umland_im_index": ["abriss-norderstedt", "abriss-pinneberg", "abriss-wedel", "abriss-schenefeld", "abriss-halstenbek", "abriss-quickborn", "abriss-rellingen", "abriss-boenningstedt", "abriss-ellerbek", "abriss-hasloh", "abriss-ahrensburg", "abriss-reinbek", "abriss-glinde", "abriss-oststeinbek", "abriss-barsbuettel", "abriss-grosshansdorf", "abriss-ammersbek", "abriss-tangstedt-stormarn", "abriss-bargteheide", "abriss-geesthacht", "abriss-wentorf-bei-hamburg", "abriss-boernsen", "abriss-aumuehle", "abriss-wohltorf", "abriss-escheburg", "abriss-dassendorf", "abriss-seevetal", "abriss-neu-wulmstorf", "abriss-rosengarten", "abriss-stelle", "abriss-buxtehude", "abriss-jork"],
-  "kernleistungen": ["kleinabriss-hamburg", "entkernung-hamburg", "innenabbruch-hamburg", "entruempelung-hamburg", "gartenraeumung-hamburg", "schuttabholung-hamburg"],
+  "leistung_orte_im_index": [],
+  "kernleistungen": ["hausabriss-hamburg", "kleinabriss-hamburg", "entkernung-hamburg", "innenabbruch-hamburg", "entruempelung-hamburg", "gartenraeumung-hamburg"],
   "fusszeile_ratgeber": ["abriss-kosten-hamburg", "abriss-genehmigung-hamburg", "bauschutt-entsorgen-hamburg"],
   "einsatzgebiet": {
     "title": "Abriss in Hamburg und Umland: Einsatzgebiet | T&A Abriss",

@@ -138,6 +138,12 @@ class Site:
         # Umland-Orte, die Google anzeigen soll. Alle anderen Umland-Seiten bleiben erreichbar, bekommen aber
         # <meta name="robots" content="noindex"> und stehen nicht in der sitemap.xml (fehlt die Liste: alle im Index).
         self.umland_im_index = d.get("umland_im_index")
+        # Seiten „Leistung in einem Bezirk“, die Google anzeigen soll. Alle anderen bleiben erreichbar und verlinkt,
+        # bekommen aber noindex und stehen nicht in der sitemap.xml (fehlt der Schlüssel: alle im Index).
+        self.lo_im_index = d.get("leistung_orte_im_index")
+        if self.lo_im_index is not None and not (isinstance(self.lo_im_index, list)
+                                                 and all(is_str(x) for x in self.lo_im_index)):
+            raise BuildError("site.json: leistung_orte_im_index muss eine Liste mit Slugs sein (leer = keine im Index)")
         # Kurzer Seitenrahmen: Ortsseiten zeigen nur diese Leistungskarten, die Fußzeile nur diese Leistungen
         # und Ratgeber (jeweils mit Link „Alle …“ auf die Startseite). Das Menü listet weiterhin alles.
         self.kernleistungen = d.get("kernleistungen", [])
@@ -227,10 +233,14 @@ class Site:
         return out, unklar, flach
 
     def im_index(self, slug):
-        """False nur für Umland-Seiten, die nicht in umland_im_index stehen (die bekommen noindex)."""
-        if self.kind.get(slug) != "umland" or self.umland_im_index is None:
-            return True
-        return slug in self.umland_im_index
+        """False für Umland-Seiten, die nicht in umland_im_index stehen, und für Seiten „Leistung in einem
+        Bezirk“, die nicht in leistung_orte_im_index stehen (die bekommen noindex)."""
+        art = self.kind.get(slug)
+        if art == "umland" and self.umland_im_index is not None:
+            return slug in self.umland_im_index
+        if art == LEISTUNG_ORT and self.lo_im_index is not None:
+            return slug in self.lo_im_index
+        return True
 
     def _zusammen(self, le):
         """„Oft zusammen gebucht“ einer Leistung prüfen: 2–4 Einträge {slug einer anderen Leistung, text}."""
@@ -2459,7 +2469,8 @@ def main(argv=None):
     files["llms.txt"] = render_llms(ctx)
     if not args.preview:
         has = lambda items: [x["slug"] for x in ctx.pages(items)]
-        slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages()] + has(site.bezirke + site.ratgeber)
+        slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages() if site.im_index(x["slug"])]
+                 + has(site.bezirke + site.ratgeber)
                  + [UEBERSICHT] + has(site.stadtteile) + [x for x in has(site.umland) if site.im_index(x)])
         files["sitemap.xml"] = sitemap(site, slugs, today, lastmod_daten(ctx, slugs))
     vorlage_check_pages(site, contents, files, warn)
