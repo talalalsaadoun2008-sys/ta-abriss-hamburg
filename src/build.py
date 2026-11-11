@@ -123,6 +123,10 @@ class Site:
         self.base = d["base_url"]
         self.firma = d["firma"]
         self.anker = d["startseite_anker"]
+        self.kopfzeile = d.get("kopfzeile", [])
+        for k in self.kopfzeile:
+            if not (isinstance(k, dict) and is_str(k.get("text")) and (is_str(k.get("seite")) or is_str(k.get("anker")))):
+                raise BuildError("site.json: kopfzeile braucht Einträge mit 'text' und 'seite' (Slug) oder 'anker'")
         self.leistungen = d["leistungen"]
         self.bezirke = d["bezirke"]
         self.stadtteile = d.get("stadtteile", [])
@@ -627,8 +631,17 @@ def eine_hand(ctx):
 def render_header(ctx, current, on_home, contact_href):
     s = ctx.site
     brand = "#start" if on_home else ctx.home
-    nav = "".join(f'<a href="{esc(ctx.home_link(a["anker"], on_home))}">{esc(a["kopfzeile"])}</a>'
-                  for a in s.anker if a.get("kopfzeile"))
+    # Kopfzeile: echte Seiten (site.json „kopfzeile“, z. B. {"text", "seite"}) oder Anker auf der Startseite ({"text", "anker"}).
+    # Echte Seiten, damit Google feste Unterseiten als Sitelinks unter dem Suchergebnis zeigen kann.
+    def kopf_link(k):
+        if k.get("seite"):
+            return k["seite"] + ".html", k["seite"] == current
+        return ctx.home_link(k["anker"], on_home), False
+    if s.kopfzeile:
+        items = [(kopf_link(k), k["text"]) for k in s.kopfzeile if not k.get("seite") or ctx.has(k["seite"])]
+    else:
+        items = [((ctx.home_link(a["anker"], on_home), False), a["kopfzeile"]) for a in s.anker if a.get("kopfzeile")]
+    nav = "".join(f'<a href="{esc(h)}"{cur(c)}>{esc(t)}</a>' for (h, c), t in items)
     bars = '<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>'
     sub = f"<small>{esc(eine_hand(ctx))}</small>" if eine_hand(ctx) else ""  # nur ab 601 px sichtbar (site.css)
     marke = s.firma["name"].removeprefix("T&A").strip()  # Schriftzug neben „T&A“, aus site.json
@@ -1830,7 +1843,13 @@ def render_index(ctx):
         business["hasOfferCatalog"] = {"@type": "OfferCatalog", "name": "Leistungen", "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "@id": s.url(x["slug"]) + "#leistung",
                                                "name": x["name"], "url": s.url(x["slug"])}} for x in leist]}
-    head = head_assets(ctx, extra_noindex=True) + [jsonld(business), jsonld(faq_jsonld(s, home_faq_pairs(src)))]
+    # Name der Website für Google (Website-Name über dem Suchergebnis statt der Domain), aus site.json
+    website = {"@context": "https://schema.org", "@type": "WebSite", "@id": s.base + "#website",
+               "name": f.get("website_name") or f["name"], "url": s.base, "publisher": {"@id": s.base + "#firma"}}
+    if f.get("auch_genannt"):
+        website["alternateName"] = [f["name"]] + [x for x in f["auch_genannt"] if x != website["name"]]
+    head = head_assets(ctx, extra_noindex=True) + [jsonld(website), jsonld(business),
+                                                   jsonld(faq_jsonld(s, home_faq_pairs(src)))]
     out = fill_marker(src, "head", "\n".join(head))
     out = fill_marker(out, "header", render_header(ctx, "index", True, "#anfrage"))
     out = fill_marker(out, WAHL_MARKER, form_wahl(s))
