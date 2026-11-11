@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://ta-abriss-hamburg.de/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/kleinabriss-hamburg.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/hausabriss-hamburg.html</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://ta-abriss-hamburg.de/entkernung-hamburg.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://ta-abriss-hamburg.de/entkernung-hamburg.html</loc><lastmod>2026-11-06</lastmod><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entkernung-alte-rohre.jpg</image:loc></image:image></url>
   <url><loc>https://ta-abriss-hamburg.de/innenabbruch-hamburg.html</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://ta-abriss-hamburg.de/wanddurchbruch-hamburg.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://ta-abriss-hamburg.de/wanddurchbruch-hamburg.html</loc><lastmod>2026-10-28</lastmod><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-wanddurchbruch-abbruchhammer.jpg</image:loc></image:image></url>
   <url><loc>https://ta-abriss-hamburg.de/trockenbau-hamburg.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/schuttabholung-hamburg.html</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://ta-abriss-hamburg.de/entruempelung-hamburg.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://ta-abriss-hamburg.de/gartenraeumung-hamburg.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://ta-abriss-hamburg.de/entruempelung-hamburg.html</loc><lastmod>2026-11-08</lastmod><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-keller-vorher-nachher.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-wohnzimmer-vorher-nachher.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-kueche-vorher-nachher.jpg</image:loc></image:image></url>
+  <url><loc>https://ta-abriss-hamburg.de/gartenraeumung-hamburg.html</loc><lastmod>2026-11-08</lastmod><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-gartenraeumung-vorher.jpg</image:loc></image:image></url>
   <url><loc>https://ta-abriss-hamburg.de/pflaster-entfernen-hamburg.html</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/gruenschnitt-hecke-hamburg.html</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/baumfaellung-hamburg.html</loc><lastmod>2026-11-08</lastmod></url>
@@ -36,7 +36,7 @@
   <url><loc>https://ta-abriss-hamburg.de/container-genehmigung-hamburg.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/kombi-pakete.html</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/ueber-uns.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://ta-abriss-hamburg.de/unsere-arbeiten.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://ta-abriss-hamburg.de/unsere-arbeiten.html</loc><lastmod>2026-11-08</lastmod><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-keller-vorher-nachher.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-wohnzimmer-vorher-nachher.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entruempelung-kueche-vorher-nachher.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-entkernung-alte-rohre.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-wanddurchbruch-abbruchhammer.jpg</image:loc></image:image><image:image><image:loc>https://ta-abriss-hamburg.de/img/arbeit-gartenraeumung-vorher.jpg</image:loc></image:image></url>
   <url><loc>https://ta-abriss-hamburg.de/einsatzgebiet.html</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/abriss-hamburg-ottensen.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://ta-abriss-hamburg.de/abriss-hamburg-blankenese.html</loc><lastmod>2026-10-28</lastmod></url>

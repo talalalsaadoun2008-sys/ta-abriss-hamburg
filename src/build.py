@@ -2030,13 +2030,27 @@ def lastmod_daten(ctx, slugs):
     return out
 
 
-def sitemap(site, slugs, today, lastmod=None):
-    """lastmod: {slug (None = Startseite): Datum}; ohne Eintrag gilt today."""
-    lastmod = lastmod or {}
-    urls = [(site.base, lastmod.get(None, today))] + [(site.url(x), lastmod.get(x, today)) for x in slugs]
-    rows = "\n".join(f"  <url><loc>{esc(u)}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
+EIGENE_FOTOS = re.compile(r'<img\b[^>]*\bsrc="(img/arbeit-[^"]+\.jpg)"')  # nur echte Fotos aus eigenen Aufträgen
+
+
+def eigene_fotos(html_text):
+    """Eigene Arbeitsfotos (img/arbeit-*.jpg) einer Seite, in Reihenfolge, ohne Doppelte – für die Bilder-Sitemap."""
+    return list(dict.fromkeys(EIGENE_FOTOS.findall(html_text or "")))
+
+
+def sitemap(site, slugs, today, lastmod=None, bilder=None):
+    """lastmod: {slug (None = Startseite): Datum}; ohne Eintrag gilt today.
+    bilder: {slug (None = Startseite): [img/arbeit-….jpg]} – eigene Fotos als <image:image> (Google-Bildersuche)."""
+    lastmod, bilder = lastmod or {}, bilder or {}
+    urls = [(None, site.base)] + [(x, site.url(x)) for x in slugs]
+    def row(slug, u):
+        img = "".join(f"<image:image><image:loc>{esc(site.base + p)}</image:loc></image:image>"
+                      for p in bilder.get(slug, []))
+        return f"  <url><loc>{esc(u)}</loc><lastmod>{lastmod.get(slug, today)}</lastmod>{img}</url>"
+    rows = "\n".join(row(s, u) for s, u in urls)
+    ns = ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' if any(bilder.values()) else ""
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + rows + "\n</urlset>\n")
+            f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"{ns}>\n' + rows + "\n</urlset>\n")
 
 
 # ---------------------------------------------------------------------------
@@ -2491,7 +2505,9 @@ def main(argv=None):
         slugs = (has(site.leistungen) + [x["slug"] for x in ctx.lo_pages() if site.im_index(x["slug"])]
                  + has(site.bezirke + site.ratgeber)
                  + [UEBERSICHT] + has(site.stadtteile) + [x for x in has(site.umland) if site.im_index(x)])
-        files["sitemap.xml"] = sitemap(site, slugs, today, lastmod_daten(ctx, slugs))
+        bilder = {x: eigene_fotos(files.get(f"{x}.html")) for x in slugs}
+        bilder[None] = eigene_fotos(files.get("index.html") or home_src)
+        files["sitemap.xml"] = sitemap(site, slugs, today, lastmod_daten(ctx, slugs), bilder)
     vorlage_check_pages(site, contents, files, warn)
     check_images(files, warn)
 
