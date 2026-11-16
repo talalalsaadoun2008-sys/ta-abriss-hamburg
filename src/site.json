@@ -54,6 +54,9 @@
     {"slug": "schuttabholung-hamburg", "name": "Schuttabholung", "bild": "schutt",
      "kurz": "Schutt von Ihrer Renovierung abholen lassen, auch ohne Abriss.",
      "zusammen": [{"slug": "entruempelung-hamburg", "text": "Auch Möbel und Gerümpel weg?"}, {"slug": "innenabbruch-hamburg", "text": "Noch etwas abzubrechen?"}, {"slug": "trockenbau-hamburg", "text": "Danach neu aufbauen?"}]},
+    {"slug": "rueckbau-nach-wasserschaden-hamburg", "name": "Rückbau nach Wasserschaden", "bild": "innenabbruch",
+     "kurz": "Nasse Böden, Wände und Dämmung zurückbauen und entsorgen, abgestimmt mit der Versicherung.",
+     "zusammen": [{"slug": "trockenbau-hamburg", "text": "Nach der Trocknung neu aufbauen?"}, {"slug": "entruempelung-hamburg", "text": "Nasse Möbel und Hausrat raus?"}, {"slug": "schuttabholung-hamburg", "text": "Nur den Schutt abholen lassen?"}]},
     {"slug": "entruempelung-hamburg", "name": "Entrümpelung", "bild": "entruempelung",
      "kurz": "Wohnung, Keller, Dachboden oder Garage leer räumen, auch ganze Haushalte.",
      "zusammen": [{"slug": "entkernung-hamburg", "text": "Danach gleich entkernen?"}, {"slug": "innenabbruch-hamburg", "text": "Nur Bad oder Küche raus?"}, {"slug": "schuttabholung-hamburg", "text": "Schutt liegt auch noch da?"}, {"slug": "gartenraeumung-hamburg", "text": "Der Garten gehört auch dazu?"}]},
@@ -86,7 +89,10 @@
      "zusammen": [{"slug": "scheune-abreissen-hamburg", "text": "Danach die Scheune abreißen?"}, {"slug": "arbeiten-fuer-landwirte-hamburg", "text": "Alte Zäune und Pfähle weg?"}, {"slug": "entruempelung-hamburg", "text": "Auch das Wohnhaus räumen?"}]},
     {"slug": "arbeiten-fuer-landwirte-hamburg", "name": "Arbeiten für Landwirte", "bild": "landwirte",
      "kurz": "Zäune ab- und aufbauen, Feldränder und Knicks, Aufräumen nach Sturm.",
-     "zusammen": [{"slug": "hof-raeumen-hamburg", "text": "Lager oder Stall aufräumen?"}, {"slug": "scheune-abreissen-hamburg", "text": "Ein Nebengebäude soll weg?"}, {"slug": "baumfaellung-hamburg", "text": "Ein Baum nach dem Sturm?"}]}
+     "zusammen": [{"slug": "hof-raeumen-hamburg", "text": "Lager oder Stall aufräumen?"}, {"slug": "scheune-abreissen-hamburg", "text": "Ein Nebengebäude soll weg?"}, {"slug": "baumfaellung-hamburg", "text": "Ein Baum nach dem Sturm?"}]},
+    {"slug": "hausverwaltung-gewerbe-hamburg", "name": "Für Hausverwaltungen & Gewerbe", "bild": "entkernung",
+     "kurz": "Wohnungen räumen, entkernen, Gewerbeflächen zurückbauen: ein Ansprechpartner, ein Festpreis.",
+     "zusammen": [{"slug": "entruempelung-hamburg", "text": "Wohnung nach Auszug leer räumen?"}, {"slug": "entkernung-hamburg", "text": "Vor der Sanierung entkernen?"}, {"slug": "rueckbau-nach-wasserschaden-hamburg", "text": "Ein Wasserschaden im Haus?"}, {"slug": "kleinabriss-hamburg", "text": "Alte Garage oder Schuppen weg?"}]}
   ],
   "bezirke": [
     {"slug": "abriss-hamburg-altona", "name": "Altona", "gebiet": "Hamburg-Altona", "entfernung": "Sitz"},
@@ -515,7 +521,7 @@
     }
   },
   "formular_leistungen": [
-    {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Hausabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau"]},
+    {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Hausabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau", "Rückbau nach Wasserschaden"]},
     {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung"]},
     {"gruppe": "Garten", "leistungen": ["Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen"]},
     {"gruppe": "Hof & Landwirtschaft", "leistungen": ["Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte"]}
