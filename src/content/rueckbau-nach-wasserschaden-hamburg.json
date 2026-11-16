@@ -6,7 +6,7 @@
   "description": "Nach Rohrbruch in Hamburg: nasse Böden, Wände und Dämmung zurückbauen, abgestimmt mit der Versicherung.",
   "label": "Leistung · Rückbau nach Wasserschaden",
   "h1": "Rückbau nach Wasserschaden in Hamburg",
-  "lead": "Nach einem Rohrbruch oder einer ausgelaufenen Waschmaschine sind Böden, Wände und Dämmung oft durchnässt. Was der Sachverständige oder die Trocknungsfirma nicht mehr retten kann, muss raus. T&A Abriss, Rückbau & Entrümpelung baut die beschädigten Teile zurück, entsorgt sie getrennt und baut auf Wunsch im Trockenbau wieder auf. Leckortung, Trocknung und Schimmelsanierung übernehmen Fachfirmen.",
+  "lead": "Nach einem Rohrbruch bauen wir nasse Böden, Wände und Dämmung zurück und entsorgen alles. Trocknung und Schimmel übernehmen Fachfirmen.",
   "facts": [
     "Abgestimmt mit der Versicherung",
     "Fotos für Ihre Unterlagen",
@@ -17,39 +17,39 @@
   "form_ort": "",
   "sections": [
     {
-      "h2": "Zuerst: Was Sie nach dem Wasserschaden tun sollten",
-      "html": "<ol><li><strong>Wasser und Strom abstellen:</strong> Haupthahn zu, keine elektrischen Geräte im nassen Bereich benutzen. Stehendes Wasser kann die Feuerwehr abpumpen (Notruf 112).</li><li><strong>Fotografieren:</strong> Schadenstelle, Ursache und beschädigte Gegenstände, am besten auch als Video.</li><li><strong>Melden:</strong> Den Schaden unverzüglich Ihrer Versicherung melden. Wer zur Miete wohnt, meldet sich zuerst beim Vermieter oder bei der Hausverwaltung.</li><li><strong>Nichts vorschnell wegwerfen:</strong> Beschädigte Gegenstände braucht die Versicherung oft als Nachweis. Bewahren Sie sie auf, solange nichts anderes vereinbart ist.</li><li><strong>Klären, was übernommen wird:</strong> Fragen Sie Ihre Versicherung, welche Maßnahmen sie übernimmt und ob ein Sachverständiger kommt.</li></ol><p>Erst danach bauen wir zurück. So bleibt nachvollziehbar, was beschädigt war.</p>"
+      "h2": "Zuerst diese 4 Dinge tun",
+      "html": "<ol><li><strong>Wasser und Strom abstellen.</strong> Stehendes Wasser pumpt die Feuerwehr ab (112).</li><li><strong>Alles fotografieren:</strong> Schaden, Ursache, nasse Sachen.</li><li><strong>Versicherung anrufen.</strong> Wer zur Miete wohnt, ruft zuerst den Vermieter an.</li><li><strong>Nichts wegwerfen.</strong> Die Versicherung braucht die Sachen oft als Nachweis.</li></ol>"
     },
     {
-      "h2": "Was wir zurückbauen",
-      "html": "<ul><li>Durchnässte Bodenbeläge wie Laminat, Parkett, Teppich und PVC, mit Sockelleisten</li><li>Trockenbauwände und abgehängte Decken aus Gipskarton</li><li>Nasse Dämmung aus Wänden, Decken und Dachschrägen</li><li>Putz, Tapete und Fliesen, wo sie ab müssen</li><li>Estrich, wenn der Sachverständige oder die Trocknungsfirma entscheidet, dass er raus muss</li><li>Einbauküchen, Schränke und Möbel, die nicht mehr zu retten sind</li></ul><p>Alles wird getrennt entsorgt. Wir fotografieren vorher und nachher, damit Sie die Bilder bei der Versicherung einreichen können. Auf Wunsch bekommen Sie die Entsorgungsbelege.</p><p><strong>Ältere Häuser:</strong> Begann der Bau vor dem 31. Oktober 1993, können alte Bodenplatten, Kleber oder Spachtelmassen Asbest enthalten. Dann wird vorher geprüft, und den Ausbau übernimmt ein dafür berechtigter Fachbetrieb. Mehr im Ratgeber <a href=\"asbest-erkennen-vor-abriss.html\">Asbest vor Abriss und Umbau</a>.</p>"
+      "h2": "Das bauen wir zurück",
+      "html": "<ul><li>Nasse Böden: Laminat, Parkett, Teppich, PVC</li><li>Wände und Decken aus Gipskarton</li><li>Nasse Dämmung</li><li>Putz, Tapete und Fliesen</li><li>Küche und Möbel, die nicht mehr zu retten sind</li><li>Estrich, wenn der Gutachter sagt, er muss raus</li></ul><p>Alles wird getrennt entsorgt. Sie bekommen Fotos und Belege für die Versicherung.</p>"
     },
     {
-      "h2": "Was Fachfirmen übernehmen",
-      "html": "<p>Leckortung und Reparatur der Leitung, die technische Trocknung und die Schimmelsanierung gehören in die Hände von Fachfirmen. Bei Schimmel auf mehr als einem halben Quadratmeter rät die Verbraucherzentrale, schnell Fachleute einzuschalten. Den Rückbau stimmen wir mit der Trocknungsfirma ab, damit er zum richtigen Zeitpunkt passiert. Nach der Trocknung bauen wir auf Wunsch im <a href=\"trockenbau-hamburg.html\">Trockenbau</a> neu auf.</p>"
+      "h2": "Das machen Fachfirmen",
+      "html": "<p>Leck finden, Trocknung und Schimmel. Wir stimmen uns mit ihnen ab. Nach der Trocknung bauen wir auf Wunsch mit <a href=\"trockenbau-hamburg.html\">Trockenbau</a> neu auf.</p>"
     },
     {
-      "h2": "Ablauf und Preis",
-      "html": "<ol><li><strong>Anfrage:</strong> Fotos vom Schaden und, wenn vorhanden, die Schadennummer Ihrer Versicherung.</li><li><strong>Kostenlose Besichtigung:</strong> vor Ort, auf Wunsch per Video.</li><li><strong>Festpreis:</strong> schriftlich, zum Einreichen bei der Versicherung.</li><li><strong>Rückbau und Entsorgung:</strong> zum vereinbarten Termin.</li><li><strong>Übergabe:</strong> mit Fotos, auf Wunsch mit Entsorgungsbelegen.</li></ol><p>Ob und wie viel Ihre Versicherung übernimmt, entscheidet der Versicherer. Das hängt vom Vertrag und von der Ursache ab. Auf Ihre Anfrage melden wir uns innerhalb eines Werktags.</p>"
+      "h2": "So einfach geht es",
+      "html": "<ol><li><strong>Fotos schicken</strong>, wenn vorhanden mit Schadennummer der Versicherung</li><li><strong>Besichtigung:</strong> kostenlos</li><li><strong>Festpreis:</strong> schriftlich, für Ihre Versicherung</li><li><strong>Rückbau und Entsorgung</strong></li><li><strong>Übergabe</strong> mit Fotos und Belegen</li></ol>"
     }
   ],
   "stadtteile": [],
   "faq": [
     {
       "q": "Zahlt die Versicherung den Rückbau?",
-      "a": "Das entscheidet Ihr Versicherer. Je nach Ursache kann die Wohngebäude-, die Hausrat- oder eine Haftpflichtversicherung zuständig sein. Schäden durch Starkregen oder Überschwemmung deckt nur eine Elementarschadenversicherung. Klären Sie das vor dem Auftrag, unser schriftlicher Festpreis hilft dabei."
-    },
-    {
-      "q": "Darf ich beschädigte Sachen gleich wegwerfen?",
-      "a": "Besser nicht. Machen Sie Fotos und bewahren Sie beschädigte Teile auf, bis Ihre Versicherung etwas anderes sagt. Sie dienen oft als Nachweis."
+      "a": "Das entscheidet Ihr Versicherer, je nach Vertrag und Ursache. Schäden durch Starkregen oder Überschwemmung zahlt nur eine Elementarschadenversicherung. Unser schriftlicher Festpreis hilft Ihnen bei der Klärung."
     },
     {
       "q": "Entfernen Sie auch Schimmel?",
-      "a": "Nein, Schimmelsanierung übernehmen Fachfirmen. Bei Befall auf mehr als einem halben Quadratmeter rät die Verbraucherzentrale, schnell Fachleute einzuschalten. Sehen wir beim Rückbau Schimmel, sagen wir Ihnen sofort Bescheid."
+      "a": "Nein, das macht eine Fachfirma. Ist Schimmel größer als ein halber Quadratmeter, rät die Verbraucherzentrale, schnell Fachleute zu holen."
     },
     {
-      "q": "Ich wohne zur Miete. Wen rufe ich an?",
-      "a": "Zuerst Ihren Vermieter oder die Hausverwaltung. Schäden am Gebäude regelt in der Regel der Vermieter, Ihre eigenen Möbel betreffen Ihre Hausratversicherung."
+      "q": "Mein Haus ist alt. Was ist mit Asbest?",
+      "a": "Wurde das Haus vor Ende Oktober 1993 gebaut, prüfen wir vorher. Asbest entfernt ein Fachbetrieb, nicht wir."
+    },
+    {
+      "q": "Wie schnell melden Sie sich?",
+      "a": "Innerhalb eines Werktags."
     }
   ],
   "sources": [
