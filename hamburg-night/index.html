@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamburg Night – Partys ab 16 in Hamburg</title>
+<meta name="description" content="Hamburg Night: Partys und Events ab 16 in Hamburg. Infos zur nächsten Party, Regeln, Safe Night und Kontakt über Instagram und TikTok.">
+<link rel="canonical" href="https://ta-abriss-hamburg.de/hamburg-night/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0F2A22">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hamburg Night – Partys ab 16 in Hamburg">
+<meta property="og:description" content="Partys und Events ab 16 in Hamburg. Infos zur nächsten Party auf Instagram.">
+<meta property="og:url" content="https://ta-abriss-hamburg.de/hamburg-night/">
+<meta property="og:image" content="https://ta-abriss-hamburg.de/hamburg-night/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hamburg Night","url":"https://ta-abriss-hamburg.de/hamburg-night/","logo":"https://ta-abriss-hamburg.de/hamburg-night/logo.png","sameAs":["https://www.instagram.com/hamburg_1_night/","https://www.tiktok.com/@hamburg_night"]}</script>
+<style>
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400 900;font-display:swap;src:url(fonts/bodoni-moda-italic.woff2) format('woff2')}
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/jost.woff2) format('woff2')}
+/* VOICE: elegant, ruhig, Nachtleben mit Stil – wenige Farben, viel Luft
+   IDEA: wie eine edle Einladungskarte für eine Nacht in Hamburg
+   PICTURE: Hafen-Silhouette mit Kränen und Wasser unter einem goldenen Mond, das Logo davor
+   COLOUR and TYPE: tiefes Flaschengrün, Gold, Champagner – Bodoni Moda kursiv + Jost
+   LAYOUT: ein Plakat oben, darunter ruhige Bänder: nächste Party, Regeln, Safe Night, Kontakt */
+:root{color-scheme:dark;--bg:#0F2A22;--bg2:#0B211B;--deep:#081812;--gold:#D4B26A;--gold2:#E8D3A8;--ink:#F3EDE1;--mute:#B9C4BC;--line:rgba(212,178,106,.28)}
+:root[data-theme=light],:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Jost,system-ui,sans-serif;font-weight:300;overflow-x:clip}
+a{color:var(--gold)}
+.wrap{max-width:1140px;margin:0 auto}
+.band{padding:clamp(48px,7vw,96px) max(5vw,18px)}
+.serif{font-family:"Bodoni Moda",Georgia,serif}
+
+/* Navigation */
+nav{position:sticky;top:0;z-index:5;background:rgba(11,33,27,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,18px);flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;align-items:center;line-height:1;text-decoration:none;color:var(--gold)}
+.brand small{font-size:10px;letter-spacing:.4em;padding-left:.4em}
+.brand b{font:italic 500 28px/1 "Bodoni Moda",serif}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:var(--ink);text-decoration:none;font-size:15px;border-radius:22px}
+nav ul a:hover,nav ul a:focus-visible{background:rgba(212,178,106,.14);color:var(--gold2);outline:none}
+
+/* Hero */
+.hero{position:relative;min-height:min(88vh,760px);display:grid;place-items:center;text-align:center;overflow:hidden;background:var(--bg2)}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;padding:72px 18px 160px;display:flex;flex-direction:column;align-items:center}
+.logo small{display:block;font-size:clamp(14px,2.4vw,20px);letter-spacing:.5em;padding-left:.5em;color:var(--gold)}
+.logo b{display:block;font:italic 400 clamp(92px,19vw,200px)/.95 "Bodoni Moda",serif;color:var(--gold);font-variation-settings:"opsz" 28;margin-top:6px}
+.hero p{margin:18px 0 30px;font-size:clamp(17px,2.2vw,21px);color:var(--ink);max-width:30ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:500 16px Jost,sans-serif;text-decoration:none;transition:transform .2s,background .2s}
+.btn.gold{background:var(--gold);color:#13241D}
+.btn.gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.line{border:1px solid var(--gold);color:var(--gold)}
+.btn.line:hover{background:rgba(212,178,106,.12);transform:translateY(-2px)}
+.btn:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.btn svg{width:20px;height:20px}
+
+/* Inhalte */
+h2{font:italic 400 clamp(36px,5vw,52px)/1.05 "Bodoni Moda",serif;color:var(--gold);margin:0 0 18px;text-wrap:balance}
+.lead{color:var(--mute);max-width:62ch;margin:0}
+.next{background:var(--bg)}
+.ticket{margin-top:34px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--bg2)}
+.ticket .l{padding:clamp(24px,4vw,44px);border-right:1px dashed var(--line)}
+.ticket .r{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.row{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row span{width:7.5em;flex:none;color:var(--mute);font-size:15px}
+.row strong{font-weight:500;color:var(--ink)}
+.soon{font:italic 400 clamp(28px,3.6vw,38px)/1.1 "Bodoni Moda",serif;color:var(--gold2);margin:0}
+
+.rules{background:var(--bg2)}
+.grid{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--bg)}
+.card h3{margin:12px 0 6px;font:500 19px/1.3 Jost,sans-serif;color:var(--ink)}
+.card p{margin:0;color:var(--mute);font-size:16px}
+.ic{width:42px;height:42px;color:var(--gold)}
+
+.safe{background:var(--bg)}
+.safe .box{margin-top:30px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:clamp(24px,4vw,44px);border-radius:22px;background:linear-gradient(160deg,#143A2F,#0B211B);border:1px solid var(--line)}
+.safe .box svg{width:110px;height:110px;color:var(--gold)}
+.safe ul{margin:12px 0 0;padding-left:20px;color:var(--mute)}
+.safe li{margin:6px 0}
+
+.contact{background:var(--deep);text-align:center}
+.contact .btns{margin-top:28px}
+.handle{font:italic 400 22px "Bodoni Moda",serif;color:var(--gold2)}
+
+footer{background:var(--deep);border-top:1px solid var(--line);padding:26px max(5vw,18px);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer button{background:none;border:0;color:var(--gold);font:inherit;cursor:pointer;min-height:44px;padding:0;text-decoration:underline}
+.imp{display:none;margin-top:18px;max-width:68ch;color:var(--mute);font-size:15px}
+.imp.show{display:block}
+.imp h3{font:italic 400 28px "Bodoni Moda",serif;color:var(--gold);margin:6px 0 10px}
+.imp strong{color:var(--ink);font-weight:500}
+.legal{display:flex;gap:8px;align-items:center}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero .in>*{animation:rise .9s ease both}
+.hero .in>*:nth-child(2){animation-delay:.15s}.hero .in>*:nth-child(3){animation-delay:.3s}
+
+@media(max-width:760px){
+ .ticket{grid-template-columns:minmax(0,1fr)}
+ .ticket .l{border-right:0;border-bottom:1px dashed var(--line)}
+ .grid{grid-template-columns:minmax(0,1fr)}
+ .safe .box{grid-template-columns:minmax(0,1fr);text-align:left}
+ .safe .box svg{width:72px;height:72px}
+ nav .wrap{justify-content:center}
+ nav ul{justify-content:center}
+ nav ul a{padding:0 10px;font-size:14px}
+}
+.mmoon{display:none;width:54px;height:54px;margin-bottom:18px}
+@media(max-width:700px){.mmoon{display:block}}
+@media(max-width:400px){.row span{width:6em}.btn{width:100%}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Hauptmenü">
+ <div class="wrap">
+  <a class="brand" href="#top" aria-label="Hamburg Night Startseite"><small>HAMBURG</small><b>night</b></a>
+  <ul>
+   <li><a href="#party">Nächste Party</a></li>
+   <li><a href="#regeln">Regeln</a></li>
+   <li><a href="#safe">Safe Night</a></li>
+   <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero" id="top">
+ <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+   <radialGradient id="glow" cx="78%" cy="22%" r="45%"><stop offset="0" stop-color="#1D4A3C"/><stop offset="1" stop-color="#0B211B"/></radialGradient>
+   <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E2C24"/><stop offset="1" stop-color="#071712"/></linearGradient>
+   <g id="crane"><path d="M0 0v-210M-6 0h12M0-210h-150M0-210h46M-150-210v34M0-196l-130 -14M0-196l40-14" stroke="#08190F" stroke-width="7" fill="none"/><rect x="-14" y="-190" width="28" height="22" fill="#08190F"/><path d="M-150-176v40" stroke="#C9A45C" stroke-width="1.2" opacity=".55"/></g>
+  </defs>
+  <rect width="1440" height="800" fill="url(#glow)"/>
+  <g fill="#E8D3A8" opacity=".55">
+   <circle cx="210" cy="120" r="1.6"/><circle cx="420" cy="70" r="1.2"/><circle cx="640" cy="150" r="1.4"/><circle cx="880" cy="60" r="1.1"/><circle cx="990" cy="190" r="1.3"/><circle cx="1300" cy="300" r="1.2"/><circle cx="120" cy="330" r="1.1"/><circle cx="760" cy="260" r="1"/>
+  </g>
+  <circle cx="1120" cy="170" r="70" fill="#D4B26A" opacity=".12"/>
+  <path d="M1150 112a62 62 0 1 0 34 104a52 52 0 0 1-34-104z" fill="#D4B26A"/>
+  <path d="M0 610l70-6v-40h40v-30h30v70l60 4v-70h26v-40h34v110l90 6 40-30h120l50 24v-58h40v64l80 4v-30l30-20 30 20v36l120 6 60-40 70 40v-10h60v-60h20v60l90 4v-50h40v54l100 6v-80h30v-20h40v100l80 6V800H0z" fill="#081812"/>
+  <use href="#crane" x="260" y="612"/><use href="#crane" x="1330" y="612" transform="translate(2660 0) scale(-1 1)"/><use href="#crane" x="1180" y="612"/>
+  <rect y="640" width="1440" height="160" fill="url(#water)"/>
+  <g stroke="#D4B26A" stroke-linecap="round" fill="none">
+   <path d="M1080 668h80M1100 690h50M1110 712h34M1120 732h18" stroke-width="3" opacity=".55"/>
+   <path d="M120 690h120M420 720h90M760 700h140M1260 760h110M560 760h70" stroke-width="1.2" opacity=".22"/>
+  </g>
+ </svg>
+ <div class="in">
+  <svg class="mmoon" viewBox="0 0 60 60" aria-hidden="true"><path d="M38 8a24 24 0 1 0 14 34A20 20 0 0 1 38 8z" fill="#D4B26A"/></svg>
+  <h1 class="logo" aria-label="Hamburg Night"><small>HAMBURG</small><b>night</b></h1>
+  <p>Partys &amp; Events ab 16 in Hamburg. Gute Musik, gute Leute, sichere Nächte.</p>
+  <div class="btns">
+   <a class="btn gold" href="https://www.instagram.com/hamburg_1_night/" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+    Auf Instagram folgen</a>
+   <a class="btn line" href="#party">Nächste Party</a>
+  </div>
+ </div>
+</header>
+
+<main>
+<section class="band next" id="party">
+ <div class="wrap">
+  <h2>Nächste Party</h2>
+  <p class="lead">Wir planen gerade die nächste Nacht. Datum, Location und Tickets kommen zuerst auf Instagram – folg uns, damit du nichts verpasst.</p>
+  <div class="ticket">
+   <div class="l">
+    <div class="row"><span>Datum</span><strong>folgt in Kürze</strong></div>
+    <div class="row"><span>Location</span><strong>Hamburg, gut erreichbar mit Bus &amp; Bahn</strong></div>
+    <div class="row"><span>Einlass</span><strong>ab 16 Jahren, nur mit Ausweis</strong></div>
+    <div class="row"><span>Tickets</span><strong>über unseren Link auf Instagram</strong></div>
+   </div>
+   <div class="r">
+    <p class="soon">Bald geht’s los.</p>
+    <a class="btn gold" href="https://www.instagram.com/hamburg_1_night/" rel="noopener">Infos auf Instagram</a>
+    <a class="btn line" href="https://www.tiktok.com/@hamburg_night" rel="noopener">Videos auf TikTok</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band rules" id="regeln">
+ <div class="wrap">
+  <h2>Regeln</h2>
+  <p class="lead">Damit alle eine gute Nacht haben, gelten bei uns ein paar klare Regeln – nach dem Jugendschutzgesetz.</p>
+  <div class="grid">
+   <div class="card">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13h3"/></svg>
+    <h3>Einlass ab 16 – nur mit Ausweis</h3>
+    <p>Wir kontrollieren am Eingang. Ohne Ausweis kein Einlass.</p>
+   </div>
+   <div class="card">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+    <h3>Unter 18: bis 24 Uhr</h3>
+    <p>Wer unter 18 ist, darf bis Mitternacht bleiben. Länger nur mit Begleitung durch eine erziehungsbeauftragte Person (Muttizettel).</p>
+   </div>
+   <div class="card">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3h8l-1 7a3 3 0 0 1-6 0L8 3zM12 13v7M8.5 20h7"/><path d="M4 4l16 16"/></svg>
+    <h3>Alkohol nach Gesetz</h3>
+    <p>Bier, Wein und Sekt erst ab 16, Schnaps und Mischgetränke erst ab 18. Unter 18 wird nicht geraucht.</p>
+   </div>
+   <div class="card">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+    <h3>Respekt für alle</h3>
+    <p>Kein Stress, keine Gewalt, kein Belästigen. Wer sich nicht benimmt, muss gehen.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band safe" id="safe">
+ <div class="wrap">
+  <h2>Safe Night</h2>
+  <div class="box">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 3l7 2.6v5.6c0 4.4-3 7.8-7 9.8-4-2-7-5.4-7-9.8V5.6L12 3z"/><path d="M8.6 12.2l2.4 2.4 4.6-4.8"/></svg>
+   <div>
+    <p class="lead" style="color:var(--ink)">Bei uns sollst du dich sicher fühlen – den ganzen Abend und auf dem Heimweg.</p>
+    <ul>
+     <li>Wenn etwas nicht passt, sprich unser Team oder die Security an.</li>
+     <li>Achte auf deine Freunde und geh nicht allein nach Hause.</li>
+     <li>Fragen vorher? Schreib uns einfach auf Instagram.</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band contact" id="kontakt">
+ <div class="wrap">
+  <h2>Kontakt</h2>
+  <p class="lead" style="margin:0 auto">Fragen zu Tickets, Gästeliste oder Zusammenarbeit? Schreib uns direkt.</p>
+  <p class="handle">@hamburg_1_night</p>
+  <p class="lead" style="margin:0 auto">E-Mail: <a href="mailto:nighthamburg@gmail.com">nighthamburg@gmail.com</a></p>
+  <div class="btns">
+   <a class="btn gold" href="https://www.instagram.com/hamburg_1_night/" rel="noopener">Nachricht auf Instagram</a>
+   <a class="btn line" href="https://www.tiktok.com/@hamburg_night" rel="noopener">TikTok @hamburg_night</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 Hamburg Night · Partys ab 16 in Hamburg</span>
+  <span class="legal"><button type="button" data-t="imp" aria-expanded="false" aria-controls="imp">Impressum</button> · <button type="button" data-t="dsg" aria-expanded="false" aria-controls="dsg">Datenschutz</button></span>
+ </div>
+ <div class="wrap">
+  <section class="imp" id="imp" aria-label="Impressum">
+   <h3>Impressum</h3>
+   <p><strong>Angaben gemäß § 5 DDG</strong><br>Talal Alsaadoun<br>Hamburg Night – Party- und Eventveranstaltungen<br>Dosestraße 11<br>22767 Hamburg</p>
+   <p><strong>Kontakt</strong><br>E-Mail: nighthamburg@gmail.com<br>Instagram: @hamburg_1_night</p>
+   <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>Talal Alsaadoun, Dosestraße 11, 22767 Hamburg</p>
+   <p><strong>Haftung für Links</strong><br>Diese Seite enthält Links zu Instagram und TikTok. Für die Inhalte dieser Seiten sind allein deren Betreiber verantwortlich.</p>
+  </section>
+  <section class="imp" id="dsg" aria-label="Datenschutzerklärung">
+   <h3>Datenschutzerklärung</h3>
+   <p><strong>Verantwortlicher</strong><br>Talal Alsaadoun, Dosestraße 11, 22767 Hamburg, nighthamburg@gmail.com</p>
+   <p><strong>Keine Cookies, kein Tracking</strong><br>Diese Seite setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und lädt keine Schriften oder Inhalte von fremden Servern.</p>
+   <p><strong>Hosting</strong><br>Die Seite wird über GitHub Pages (GitHub, Inc., USA) bereitgestellt. Beim Aufruf verarbeitet der Anbieter technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit, um die Seite auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Dabei können Daten in die USA übertragen werden.</p>
+   <p><strong>Instagram und TikTok</strong><br>Wenn du auf einen Link zu Instagram oder TikTok klickst, verlässt du diese Seite. Dort gelten die Datenschutzbestimmungen von Meta bzw. TikTok.</p>
+   <p><strong>Kontakt per E-Mail oder Instagram</strong><br>Wenn du uns schreibst, nutzen wir deine Angaben nur, um deine Anfrage zu beantworten.</p>
+   <p><strong>Deine Rechte</strong><br>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Schreib uns dafür an nighthamburg@gmail.com.</p>
+  </section>
+ </div>
+</footer>
+
+<script>
+{
+ for(const b of document.querySelectorAll('footer button[data-t]')){
+  b.addEventListener('click',()=>{
+   const id=b.dataset.t;
+   for(const x of document.querySelectorAll('footer button[data-t]')){
+    const p=document.getElementById(x.dataset.t), on=x===b && !p.classList.contains('show');
+    p.classList.toggle('show',on); x.setAttribute('aria-expanded',on);
+   }
+   const p=document.getElementById(id); if(p.classList.contains('show')) p.scrollIntoView({block:'nearest'});
+  });
+ }
+}
+</script>
+</body>
+</html>
