@@ -650,3 +650,5 @@ footer .firma .foot-eh{margin:0}
 footer .firma .foot-eh a{color:var(--accent-text)}
 /* fünf Spalten nach Inhaltsbreite: Firmenblock begrenzen, sonst nimmt er allen freien Platz und die Abstände kippen */
 @media (min-width:901px){footer .wrap.foot:has(> .foot-uml)>.firma{max-width:19rem}}
+.steps .step-ico{position:absolute;top:var(--s4);right:var(--s3);width:2.4rem;height:2.4rem;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:color-mix(in srgb,var(--band-ink) 70%,transparent)}
+.minis .mini img[src$=".svg"]{background:var(--bg)}
