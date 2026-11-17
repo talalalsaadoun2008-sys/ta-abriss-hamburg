@@ -522,7 +522,7 @@
   },
   "formular_leistungen": [
     {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Hausabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau", "Rückbau nach Wasserschaden"]},
-    {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung"]},
+    {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung", "Für Hausverwaltungen und Gewerbe"]},
     {"gruppe": "Garten", "leistungen": ["Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen"]},
     {"gruppe": "Hof & Landwirtschaft", "leistungen": ["Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte"]}
   ],
