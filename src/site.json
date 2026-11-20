@@ -387,6 +387,7 @@
     {"slug": "laube-abreissen-hamburg", "name": "Laube im Kleingarten abreißen"},
     {"slug": "bad-rausreissen-hamburg", "name": "Bad rausreißen"},
     {"slug": "container-genehmigung-hamburg", "name": "Container auf der Straße"},
+    {"slug": "wohnung-besenrein-uebergeben-hamburg", "name": "Wohnung besenrein übergeben"},
     {"slug": "kombi-pakete", "name": "Kombi-Pakete"},
     {"slug": "ueber-uns", "name": "Über uns"},
     {"slug": "unsere-arbeiten", "name": "Unsere Arbeiten"}
@@ -522,7 +523,7 @@
   },
   "formular_leistungen": [
     {"gruppe": "Abriss & Bau", "leistungen": ["Kleinabriss", "Hausabriss", "Entkernung", "Innenabbruch", "Wanddurchbruch", "Trockenbau", "Rückbau nach Wasserschaden"]},
-    {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung"]},
+    {"gruppe": "Räumen & Entsorgen", "leistungen": ["Entrümpelung", "Schuttabholung", "Für Hausverwaltungen und Gewerbe"]},
     {"gruppe": "Garten", "leistungen": ["Gartenräumung", "Pflaster entfernen", "Hecke und Grünschnitt", "Baumfällung", "Gartenpflege", "Laub entfernen", "Garten anlegen"]},
     {"gruppe": "Hof & Landwirtschaft", "leistungen": ["Scheune abreißen", "Hof räumen", "Arbeiten für Landwirte"]}
   ],
